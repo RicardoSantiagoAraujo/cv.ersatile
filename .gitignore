@@ -9,10 +9,10 @@
 *./auxiliary_files/
 *./auxiliary_files/*
 
-# Ignore everything in the folder
+# Ignore everything in the profiles folder ...
 cv/profiles/*
-
-# Except the specific files you want to track
+# ... Except the specific files you want to track.
+# track only example CVs, to avoid publishing private data. If instead you wish to track your personal cvs/data, you must add your profile here or exclude the above line.
 !cv/profiles/examples/
 
 # MacOS unwanted files

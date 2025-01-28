@@ -1,5 +1,5 @@
-# RSA-curriculum
-Repository for curriculum vitae/resume as was as application letters (motivation, cover,...)
+# C.V.ersatile
+Repository to share a highly versatile and customizable curriculum vitae template.
 
 ### Converting from pdf to word:
 pandoc <source_name.tex> -o <destination_name.docx>

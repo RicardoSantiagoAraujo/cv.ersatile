@@ -17,9 +17,9 @@
 \usepackage{tabularx,colortbl, multirow} % Advanced table configurations
 \usepackage{microtype} % To enable letterspacing
 \usepackage{graphicx} % add picture
-\graphicspath{%
-  {\pathToRoot/shared_tex/../assets}% shared assets
+\graphicspath{% by order of priority
   {assets}% profile specific assets
+  {\pathToRoot/shared_tex/../assets}% shared assets
   }
 
 

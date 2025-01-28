@@ -49,6 +49,20 @@
        {#6}%
 }
 
+\newcommand{\mySignatureInline}
+{%
+       \ifthenelse{\boolean{isIncludeMySignature}}%
+       {%
+              \includegraphics%
+              [%
+              % height=\baselineskip%
+              height=\fontcharht\font`\B% figure should be as high as a “B”
+              ]%
+              {\mySignature}%
+       }%
+       {}%
+}%
+
 
 \begin{mySectionContents}%
        %
@@ -63,6 +77,8 @@
                   \setTitleFont
                   % \scshape % Switches to small caps font style.
                   \textls[100]{\myTitle} % Your name at the top
+                  % ===== INLINE SIGNATURE
+                  \mySignatureInline%
            }%
            \medbreak%
            {%

@@ -5,6 +5,9 @@
 *.synctex.gz
 *.aux
 *.xmpi
+*.xml
+*.toc
+*.bcf
 *.pdf
 *./auxiliary_files/
 *./auxiliary_files/*

@@ -1,0 +1,191 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Curriculum Vitae
+% LaTeX Template
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\parindent}{0pt}% paragraph indent
+
+\usepackage{ifthen}
+\input{\pathToRoot/shared_tex/counters.tex}
+\input{\pathToRoot/shared_tex/fonts/default_fonts.tex}
+\input{\pathToRoot/shared_tex/colors/default_colors.tex}
+\input{\pathToRoot/shared_tex/bibliography.tex}
+
+\usepackage{scrlayer-scrpage} % Provides headers and footers configuration
+\usepackage{marvosym} % Allows the use of symbols
+\usepackage{tabularx,colortbl, multirow} % Advanced table configurations
+\usepackage{microtype} % To enable letterspacing
+\usepackage{graphicx} % add picture
+\graphicspath{%
+  {\pathToRoot/shared_tex/../assets}% shared assets
+  {assets}% profile specific assets
+  }
+
+
+\usepackage{tikz}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[document]{ragged2e} % justification
+\usepackage[ % /!\ Possibly overwritten downstream
+    left=2cm, % change margins
+    right=2cm,
+    a4paper,
+    % landscape,% seems to only work when set in the document command
+    verbose% to print to log, needed to access parameters
+    ]{geometry}
+\usepackage{datenumber,fp} % to calculate my age
+\usepackage{comment}
+\usepackage{fontawesome5} % lots of useful icons
+\usepackage[hidelinks]{hyperref}
+
+
+
+
+
+\input{\pathToRoot/shared_tex/section_headers.tex}
+
+\pagestyle{scrheadings} % Print the headers and footers on all pages
+
+\addtolength{\voffset}{-0.5in} % Adjust the vertical offset - less whitespace at the top of the page
+\addtolength{\textheight}{3.25cm} % Adjust the text height - less whitespace at the bottom of the page
+
+
+% Define a LaTeX macro to extract the last two digits of the current year.
+\def\Year{\expandafter\YEAR\the\year}
+\def\YEAR#1#2#3#4{#3#4}
+
+% frame settings (FOR PORTRAIT PICTURE)
+\fboxsep=1mm%padding thickness
+\fboxrule=1pt%border thickness
+
+
+\renewcommand{\headfont}{\normalfont\rmfamily\scshape} % Font settings for footer
+
+
+
+\input{\pathToRoot/shared_tex/content_boxes.tex}
+
+% Change bg color and other settings in draft mode
+\isDraft{%
+    \pagecolor{draftBgColor}%
+    % Tabular header color
+    \renewcommand{\myCellColor}{\cellcolor{myGrayMed}}%
+    \colorlet{myColorTableBorders}{myGrayLight}%
+    % Override section text color
+    % \colorlet{sectionTitleColor}{myGrayDark}
+    \colorlet{sectionTitleColor}{myWhite}
+    \colorlet{sectionTitleBgColor}{myBlack}
+    % \setmainfont{Open Dyslexic} % must first install on computer to work
+    %
+    %%%% Show structural frame
+    \usepackage{showframe}
+    \renewcommand*\ShowFrameColor{\color{myColorSecondary}}
+    \renewcommand*\ShowFrameLinethickness{1pt}
+}{}
+
+
+\usepackage{pgffor} % Include this package for \foreach
+\usepackage{amssymb} % For symbols
+
+% Create scores in a range
+\newcommand{\score}[1]{%
+  \newcommand{\bulletGap}{\hspace{0.4em}}%
+  \foreach \i in {1, ..., 5} {%
+    \ifnum \the\numexpr \i - 1  < #1% subtract 1 to act as "<="
+        \textcolor{myIconColor}{\bullet\bulletGap}% Filled dot for score
+    \else%
+        \textcolor{myIconColor}{\circ\bulletGap}% Open dot for no score
+    \fi%
+  }%
+}
+
+% Justification options
+\hyphenpenalty=1000% hyphenation penalty (higher -> less hyphenation)
+\newcommand{\myJustification}{%
+    % \raggedright%
+    \justifying%
+    % \raggedleft%
+}
+
+\usepackage{xparse}
+\usepackage{array}
+\NewDocumentCommand{\spiltSectionHorizontally}{
+  % Split into up to 4 parts
+  % All options
+  % follow struncture [size](content)[size](content)...
+  O{0} D(){}
+  O{0} D(){}
+  O{0} D(){}
+  O{0} D(){}
+  }{%
+    \begin{tabular*}{\textwidth}
+        {
+            p{#1\textwidth}
+            p{#3\textwidth}
+            p{#5\textwidth}
+            p{#7\textwidth}
+        }
+        %  PART 1
+        \begin{minipage}{#1\textwidth}
+            #2
+        \end{minipage}%
+        &
+        %  PART 2
+        \begin{minipage}{#3\textwidth}
+            #4
+        \end{minipage}
+        &
+        %  PART 3
+        \begin{minipage}{#5\textwidth}
+            #6
+        \end{minipage}
+        &
+        %  PART 4
+        \begin{minipage}{#7\textwidth}
+            #8
+        \end{minipage}
+        \\
+        \end{tabular*}%
+}%
+
+\usepackage[inline]{enumitem} % to customize lists
+
+% EXPANDED LIST (LINEBREAKS BETWEEN ITEMS)
+\newlist{mylist}{enumerate}{1}
+\setlist[mylist]{
+  % label=(\arabic*),
+  label=--,
+  itemsep=0pt,
+  parsep=0pt,
+  leftmargin=* % 0pt could take it too far left
+  }
+
+% COLLAPSED LIST (INLINE ITEMS)
+\newlist{mylist_collapsed}{enumerate*}{1}
+\setlist[mylist_collapsed]{
+label=(\textbf{\arabic*})
+}
+
+\newenvironment{customlist} % Define the new environment
+  {
+    \ifthenelse{\boolean{isCollapseLists}}% Check if the argument is "enumerate"
+    {\begin{mylist_collapsed}}% If yes, start
+    {\begin{mylist}}%
+    }%
+  {%
+  \ifthenelse{\boolean{isCollapseLists}}% Check if the argument is "enumerate"
+  {\end{mylist_collapsed}}% If yes, start
+  {\end{mylist}}%
+  }%
+
+\input{\pathToRoot/shared_tex/header/header.tex}
+\input{\pathToRoot/shared_tex/header/toc.tex}
+\input{\pathToRoot/shared_tex/list_sections/list_sections.tex}
+\input{\pathToRoot/shared_tex/table_sections/table_sections.tex}
+\input{\pathToRoot/shared_tex/footer.tex}
+\input{\pathToRoot/shared_tex/pagination.tex}
+\input{\pathToRoot/shared_tex/languages.tex}
+\input{\pathToRoot/shared_tex/dates.tex}
+\input{\pathToRoot/shared_tex/info_overlay.tex}
+\input{\pathToRoot/shared_tex/background.tex}

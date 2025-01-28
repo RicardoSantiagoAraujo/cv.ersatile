@@ -1,0 +1,147 @@
+\usepackage[
+    % pages=some % to use bg only in some pages and then \BgThispage
+]{background}
+%alternatively use draftwatermark package
+
+\usepackage{xfp}%%% calculate ratio between lengths
+
+%%% List of images to be used in BG alternately. Can be single one.
+\newcommand{\myBgImgList}{% placeholder bg images
+    example-image-a,%
+    example-image-b,%
+    example-image-c,% trailing commas are ok, but not in the middle of the list
+}
+
+%%% Determine length if background image list
+\AfterEndPreamble{%
+    \newcounter{myBgImgListLength}%%% store in counter
+    \foreach \el [count=\n] in \myBgImgList{%
+    \ifx\el\empty\else% ignore if empty
+        \setcounter{myBgImgListLength}{\n}%
+    \fi
+    }%
+}
+
+%%% Set width and height of all images
+\newcommand{\myBgImgWidth}{0.5\paperwidth}
+\newcommand{\myBgImgHeight}{0.5\paperheight}
+%%% Determine how many horizontal/vertical repeats are needed
+\AfterEndPreamble{%
+    \edef\repeatsX{\fpeval{\paperwidth/\myBgImgWidth+0}}%
+    \edef\repeatsY{\fpeval{\paperheight/\myBgImgHeight+0}}%
+}
+%%% Optional horizontal/vertical spacer between bg images
+\newcommand{\spacerX}{0cm}
+\newcommand{\spacerY}{0cm}
+
+%%% Create counter to keep track of bg image number
+\newcounter{bgImgCounter}
+\setcounter{bgImgCounter}{0}
+
+%%% Create a background image unit. The image alternates based on the provided list.
+\newcommand{\myBgUnit}{%
+    % \thebgImgCounter %
+    % \length\myBgImgList%
+     %\hfill%
+     % Iterate over image list
+    \foreach \el [count=\n] in \myBgImgList%
+    {%
+    \ifnum\n=\value{bgImgCounter}%
+        % ignore if list element is empty
+        \ifx\el\empty\else%
+            % Include image as graphics
+            \expandafter\includegraphics\expandafter%
+            [%
+            width=\myBgImgWidth,
+            height=\myBgImgHeight
+            ]%
+            {%
+                \el%
+            }%
+        \fi%
+        % If bg img counter reaches the length of the list, then reset it to 0 to repeat the list as many times as needed
+        \ifnum\thebgImgCounter = \themyBgImgListLength%
+            \setcounter{bgImgCounter}{0}%
+        \fi%
+    \else%
+    \fi%%
+    }%
+}
+
+%%% Create row to fill page horizontally
+\newcommand{\createRowOfImages}{% the number of figure repeats does not affect pdf file size
+    \foreach \n in {1,...,\repeatsX}{%
+        \stepcounter{bgImgCounter}%%% increade background image counter by 1
+        \myBgUnit%
+        % \n>% to debug
+        % \repeatsX% to debug
+        \hspace{\spacerX}% last one gets ignored, which is good
+    }%
+}%
+
+%%% Stack up rows to fill page vertically
+\newcommand{\repeatingBg}{%
+    \begin{minipage}%
+        {10\paperwidth}% WIDTH: keep it high for safety
+        \centering%
+        \vspace{\spacerY}%
+        \foreach \n in {1,...,\repeatsY}{% high enough number, does not affect pdf size
+            \setlength{\lineskip}{0pt}% to remove vertical space between figures
+            \createRowOfImages\\% add row
+            % \n...% to debug
+            % \repeatsY% to debug
+            \vspace{\spacerY}%
+        }%
+    \end{minipage}%
+}
+
+%%% Important variables
+\newcommand{\myBgScale}{1}% Scale up/down bg image
+\newcommand{\myBgOpacity}{0.2}% Background opacity 0-1
+\newcommand{\myBgAngle}{0}% Rotate background
+\newcommand{\myBgHshift}{0\paperwidth}% shift background horizontally
+\newcommand{\myBgVshift}{0\paperheight}% shift backround vertically
+
+\isDraft
+{% in draft mode, add dummy background
+    % Define the watermark
+    \backgroundsetup{
+    scale=4, % Scale of the watermark
+    color=myGrayMed, % Color of the watermark
+    opacity=0.15, % Opacity of the watermark
+    angle=60, % Rotation angle of the watermark
+    position=current page.center, % Position of the watermark
+    hshift=0\paperwidth, % Horizontal shift
+    vshift=0\paperwidth, % Vertical shift
+    contents={%
+    \begin{minipage}%
+        {1\paperwidth}% WIDTH: keep it high for safety
+        \centering%
+        \bfseries%
+        \foreach \n in {0,...,25}{%
+            DRAFT BACKGROUND.\hspace{0.5cm}\vspace{0.1cm}
+        }%
+    \end{minipage}%
+    }%
+    }%
+}
+{% in final version, use desired background
+    % Define the watermark
+    \expandafter\backgroundsetup\expandafter{
+        scale=\myBgScale, % Scale of the watermark
+        % color=myGrayMed, % Color of the watermark
+        opacity=\myBgOpacity, % Opacity of the watermark
+        angle=\myBgAngle, % Rotation angle of the watermark
+        position=current page.center, % Position of the watermark
+        hshift=-\myBgHshift, % Horizontal shift
+        vshift=\myBgVshift, % Vertical shift
+        contents={%
+            %%% Repeating image
+            \ifthenelse{\equal{\myBgImgList}{}}% only show image if list is not empty
+            {%
+                %no background image
+            }
+            {\repeatingBg}%
+        }%
+        }%
+}

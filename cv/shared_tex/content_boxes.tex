@@ -1,0 +1,83 @@
+\usepackage{tcolorbox}
+\tcbuselibrary{breakable, skins}
+\tcbset{
+    commonDraftStyle/.style={
+        colback=sectionDraftContentsBgColor,
+        opacityback=.95,% bg color opacity of the box
+        colframe=white,
+        coltext=sectionDraftContentsTextColor,
+        boxrule=0.1pt,
+        sharp corners,
+        left=0pt,
+        right=0pt,
+        top=0pt,
+        bottom=0pt,
+        before skip=0pt,
+        after skip=0pt,
+        breakable % Allow breaking across pages
+    },
+    commonFinalStyle/.style={
+        colback=sectionFinalContentsBgColor,
+        opacityback=.9,% bg color opacity of the box
+        colframe=black,
+        coltext=sectionFinalContentsTextColor,
+        boxrule=0pt,
+        sharp corners,
+        left=0pt,
+        right=0pt,
+        top=0pt,
+        bottom=0pt,
+        before skip=0pt,
+        after skip=0pt,
+        enhanced,
+        frame hidden,
+        breakable % Allow breaking across pages
+    }
+}
+\newtcolorbox{myDraftStyle}[1][]{commonDraftStyle,#1}
+\newtcolorbox{myFinalStyle}[1][]{commonFinalStyle,#1}
+
+
+
+
+\newenvironment{mySectionContents}
+% ======= BEFORE
+{
+    % \par\medskip
+    \isDraft{
+      % If \isDraft is "true", this part will be executed
+      \setDraftFont%
+      \begin{myDraftStyle}%
+    }{%
+      % If \isDraft is not "true", this part will be executed
+      \begin{myFinalStyle}%
+    }%
+    \myJustification% justification
+}%
+% ======= AFTER
+{%
+    \isDraft%
+    {%
+      \end{myDraftStyle}%
+    }%
+    {%
+      \end{myFinalStyle}%
+    }%
+%   \medskip
+}%
+
+
+\NewDocumentCommand{\myContentsTitle}
+{
+  m% label
+  m% description
+}
+{%
+\begin{myFinalStyle}[colback=myGrayLight!50!bgColor]
+  {%
+    \scshape#1%
+    \ifthenelse{\equal{#1}{}}{}{:}% add ":" conditionally
+  }%
+  \ \textbf{#2}\par%
+\end{myFinalStyle}
+}

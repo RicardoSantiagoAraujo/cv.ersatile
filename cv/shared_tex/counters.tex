@@ -1,0 +1,30 @@
+\newcounter{publicationCounter}
+\setcounter{publicationCounter}{1} % Initialize the counter
+
+\NewDocumentCommand{\pubsEntry}
+{
+    m% entry id
+    O{}% optional address for hyperlink. If empty,won't link
+}{%
+% \noindent%
+    %%% NUMBERING ================================
+    \cellcolor{myGrayDark}% change row bg color
+    % \numberPublication% if number should be in separate column
+    &% ------------------------------------------------
+    %%% CONTENT ================================
+    % \cellcolor{myGrayLight}% change row bg color
+    \numberPublication\ \ % if number should be in same column as text
+    \href{#2}{#1}%
+    % &\cellcolor{myGrayDark} test % change row bg color%
+    \\% END TABLE ROW
+    % \hrule% horizontal line
+}%
+
+\newcommand{\numberPublication}{%
+    {%
+    \color{myGrayDark!50!myBlack}%
+    \bfseries%
+    [\thepublicationCounter]%
+    }%
+    \addtocounter{publicationCounter}{1}%
+}

@@ -1,0 +1,126 @@
+\documentclass[
+    a4paper,
+    oneside,
+    final,
+    9pt, % font size
+    % landscape % page orientation (seems to not work through geom package)
+    ]{scrartcl} % Paper options using the scrartcl class
+%
+\newcommand{\pathToRoot}{./../../..}% path to root folder
+\input{\pathToRoot/shared_tex/variables/default_variables.tex}
+\input{\pathToRoot/shared_tex/versions.tex}
+%
+%
+% MAIN VARIABLES +++++++++++++++++++++++++++++++++
+\renewcommand{\myVersion}{full}
+\renewcommand{\myPersonId}{johnDoe}
+\renewcommand{\myLanguage}{en}
+\setbool{isDraft}{false} % true or false
+%
+% OTHER CV SETTINGS +++++++++++++++++++++++++++++++++
+\setbool{isIncludeTOC}{true} % add table of contents
+\setbool{isFooter}{false} % true or false. /!\ Might be invisible if not enough bottom margin
+\setbool{isIncludeInfoRibbons}{true} % true or false
+\setlength{\parindent}{0pt}% paragraph indent
+%
+\input{\pathToRoot/shared_tex/cv_settings.tex}
+%
+% Justification options
+\hyphenpenalty=1000% hyphenation penalty (higher -> less hyphenation)
+\renewcommand{\myJustification}{%
+    % \raggedright%
+    \justifying%
+    % \raggedleft%
+}
+%
+% SECTION TITLES +++++++++++++++++++++++++++++++++
+\renewcommand{\mySectionTitleStyleOverwrite}{%
+    % \color{myColorDanger}%
+}
+%Spacing above and below sections
+% how to use: \titlespacing*{<command>}{<left>}{<before-sep>}{<after-sep>}
+\titlespacing*{\section}
+{0pt} %left spacing
+{0.5cm} %before spacing
+{0.3cm} %after spacing
+%
+% Vertical separation between tables
+\renewcommand{\myTablesSeparator}{\vspace{-2pt}}
+%
+% PAGE DIMENSIONS +++++++++++++++++++++++++++++++++
+\newgeometry{
+ left=1cm,
+ right=1cm,
+ top=1cm,
+ bottom=1cm, % must leave enough space for footer to be visible
+}
+%  \usepackage[subtle]{savetrees} % "subtle", "moderate", "extreme" or comment out
+%
+% CV HEADER +++++++++++++++++++++++++++++++++
+\setbool{isIncludeHeaderInfos}{true} % true or false
+\setbool{isIncludeWebsite}{false} % "true" or false
+\setbool{isIncludeMovingMessage}{true} % true or false
+\setbool{isIncludeMyPhoto}{true} % true or false
+\renewcommand{\myJobTitle}{Science, data and software}
+\renewcommand{\myHeaderHeight}{4cm}
+\renewcommand{\myPictureWidth}{2cm}
+\renewcommand{\myTitleFontSize}{20}
+\renewcommand{\mySubtitleFontSize}{14}
+%
+%  Lists
+\setbool{isCollapseLists}{false} % true or false
+%
+% DATES +++++++++++++++++++++++++++++++++
+\setbool{isIncludeDateDiff}{true} % true or false
+%
+% TABULAR SPACING +++++++++++++++++++++++++++++++++
+\renewcommand{\myhlinePadding}{0.1cm}% height of horizontal rulers
+\renewcommand{\arraystretch}{1.0} % Adjust this value for desired row height : affects all rows unless overwritten in a specific section
+\renewcommand{\myTableContentsSpaceAboveAdj}{-8pt} % Adjust space above text contents of table
+%
+%%% PUBLICATIONS +++++++++++++++++++++++++++++++++
+\renewcommand{\mySpacingBetweenPublications}{1.2}
+\renewcommand{\myPublicationsFontSize}{\scriptsize}
+%%% PAGINATION +++++++++++++++++++++++++++++++++
+\setbool{isIncludePagination}{true} % add page numbers
+\renewcommand{\paginationPositionXYAdj}{-0.5cm, 0.5cm}
+%
+%%% BACKGROUND +++++++++++++++++++++++++++++++++
+%%% List of images to be used in BG alternately. Can be single one.
+\renewcommand{\myBgImgList}{% placeholder bg images
+    example-image-a,%
+    example-image-b,%
+    % example-image-c,%
+    % trailing commas are ok, but not in the middle of the list
+}
+%%% Set width and height of all images
+\renewcommand{\myBgImgWidth}{0.33\paperwidth}
+\renewcommand{\myBgImgHeight}{0.33\paperheight}
+%
+%%% Optional horizontal/vertical spacer between bg images
+\renewcommand{\spacerX}{0.5cm}
+\renewcommand{\spacerY}{0.5cm}
+%
+\renewcommand{\myBgScale}{1.3}% Scale up/down bg image
+\renewcommand{\myBgOpacity}{0.2}% Background opacity 0-1
+\renewcommand{\myBgAngle}{10}% Rotate background
+\renewcommand{\myBgHshift}{0\paperwidth}% shift background horizontally
+\renewcommand{\myBgVshift}{0\paperheight}% shift backround vertically
+%
+% INCLUDE ONLY CHOSEN SECTIONS +++++++++++++++++++++++++++++++++
+\addonlyfiles{%
+    header,%
+    description,%
+    experience,%
+    education,%
+    research,%
+    popScience,%
+    teaching,%
+    % programming,%
+    % other,%
+    works,%
+    awards,%
+    certificates,%
+    publications,%
+}
+\input{\pathToRoot/shared_tex/cv_body.tex}

@@ -1,0 +1,50 @@
+%%%%%%%% DEFAULT PERSON DATA
+\newcommand{\myName}{Default Name}
+\newcommand{\myTitle}{\myName, Default Title}
+\newcommand{\birthDay}{1}
+\newcommand{\birthMonth}{1}
+\newcommand{\birthYear}{1900}
+\newcommand{\myStreet}{Default Street Address}
+\newcommand{\myCity}{Default City}
+\newcommand{\myCountry}{Default Country}
+\newcommand{\myNationality}{Default Nationality}
+\newcommand{\myEmail}{Default Email Address}
+\newcommand{\myLinkedIn}{DefaultLinkedInID}
+\newcommand{\myLinkedInHyperlink}{\href{https://www.linkedin.com/in/\myLinkedIn}{\myLinkedIn}}
+\newcommand{\myGithub}{DefaultGitHubUsername}
+\newcommand{\myGithubHyperlink}{\href{https://github.com/\myGithub}{\myGithub}}
+\newcommand{\myPhone}{Default Phone Number}
+\newcommand{\mySite}{Default Website Address}
+\newcommand{\mySiteHyperlink}{\href{https://\mySite}{\mySite}}
+\newcommand{\myPicture}{example-image}%%% placeholder image from mwe package
+\newcommand{\myPictureCropTop}{0mm}%%% can be negative to add empty space!
+\newcommand{\myPictureCropRight}{0mm}
+\newcommand{\myPictureCropBottom}{0mm}
+\newcommand{\myPictureCropLeft}{0mm}
+\newcommand{\myDrivingLicence}{B}
+
+% Use to adjust style of cv picture:
+% \tcbset{myPictureStyleExtras/.style={}
+
+%%% LOAD VARIABLES FOR CHOSEN USER AFTER PREAMBLE IF THEY HAVE BEEN SET
+\BeforeBeginEnvironment{document}{
+    \tcbset{myPictureStyleExtras/.style={}}% define empty style in case it is not defined elsewhere
+    \InputIfFileExists
+        {%
+        variables/general.tex%
+        }%
+        {% if file exists, run this before
+        }%
+        {% if file does not exist, run this instead
+        }%
+}
+
+
+
+\newcommand{\myJobTitle}{Title goes here}
+\newcommand{\myHeaderHeight}{3cm}
+\newcommand{\myPictureWidth}{3cm}
+% Table dimensions
+\newcommand{\myTableWidth}{1\linewidth}
+\newcommand{\myRowWidth}{1\linewidth}
+\setlength{\tabcolsep}{5pt} % Set horizontal padding to zero in table cells (doesnt affect multicolumns)

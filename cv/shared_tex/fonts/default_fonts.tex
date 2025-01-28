@@ -1,0 +1,100 @@
+%%%%% Font parameters
+
+\usepackage[T1]{fontenc} % for proper enconding of accents that can be copy pasted
+\usepackage[utf8]{inputenc}
+\usepackage{fontspec} % Allows for custom fonts (compatible with XeLaTeX or LuaLaTeX; but not with pdfLaTeX)
+% \usepackage[%
+%     % fontsize=12pt
+%     ]{fontsize} % Set font size
+% Set main font with fontspec (if all off, default to Computer Modern)
+% \setmainfont{Cambria}
+% \setmainfont{Arial}
+% \setmainfont{Times New Roman}
+% \setmainfont{Helvetica}
+% \usepackage{helvet} % use helvetica alternative
+
+% WHEN SETTING FONT FROM A FILE, YOU CAN SPECIFY IT LIKE THIS IF IT IS FAILING
+% \setmainfont[
+%     Path = /your/font/path/,
+%   Extension = .otf ,
+%   BoldFont = HelveticaNeueLTPro-Md.otf ,
+% ]{HelveticaNeueLTPro-Roman.otf}
+
+
+% \usepackage{ebgaramond} % Use the EB Garamond font (pdfLaTeX compatible)
+
+%%% use sans serif text
+% \renewcommand{\familydefault}{\sfdefault}
+
+%%% use use dyslexic friendly font:
+% \setmainfont{Open Dyslexic} % must first install on computer to work
+
+
+\newcommand{\applyFonts}[2]{
+    % #1 first option
+    % #2 backup
+    \IfFontExistsTF{#1}
+    {%
+        \setmainfont{#1}%
+        %[BoldFont=CambriaB]% shortcut fix to use bold cambria on windows
+    }%
+    {% Fallback option
+        \setmainfont{#2}%
+    }%
+}
+
+%%%%%% SETTING DEFAULT FONTS WITH BACKUPS IF NOT AVAILABLE
+%%% MAIN FONT
+\newcommand{\myMainFont}{Latin Modern Roman}
+\newcommand{\myMainFontBackup}{Times New Roman}
+\newcommand{\setMainFont}{%
+    %%% Run immediately after \begin{document}, similar to \AtBeginDocument but the latter is outdated
+    \AfterEndPreamble{
+        \applyFonts{\myMainFont}{\myMainFontBackup}
+    }%
+}%
+\setMainFont
+
+
+
+
+%%% DRAFT MAIN FONT
+\newcommand{\myDraftFont}{Latin Modern Roman}
+\newcommand{\myDraftFontBackup}{Times New Roman}
+\newcommand{\setDraftFont}{%
+    %%% Run immediately after \begin{document}, similar to \AtBeginDocument but the latter is outdated
+    \AfterEndPreamble{
+        \applyFonts{\myDraftFont}{\myDraftFontBackup}
+    }%
+}%
+
+
+%%% TITLE FONT
+\newcommand{\myTitleFont}{Helvetica}
+\newcommand{\myTitleFontBackup}{Times New Roman}
+\newcommand{\setTitleFont}{
+    \applyFonts{\myTitleFont}{\myTitleFontBackup}
+}%
+
+%%% SUBTITLE FONT
+\newcommand{\mySubtitleFont}{Helvetica}
+\newcommand{\mySubtitleFontBackup}{Times New Roman}
+\newcommand{\setSubtitleFont}{
+    \applyFonts{\mySubtitleFont}{\mySubtitleFontBackup}
+}%
+
+
+
+%%% LOAD FONTS FOR CHOSEN PERSON IF THEY HAVE BEEN SET
+\InputIfFileExists
+    {%
+    variables/fonts.tex%
+    }%
+    {% if file exists, run this before
+    }%
+    {% if file does not exist, run this instead
+    }%
+
+%%% Default font size values for CV title/subtitle
+\newcommand{\myTitleFontSize}{17}
+\newcommand{\mySubtitleFontSize}{14}

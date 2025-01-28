@@ -1,0 +1,55 @@
+
+\usepackage{xcolor} % For background color
+% Command to set background color
+
+\usepackage{transparent}
+
+% DEFAULT COLORS
+\definecolor{myColorPrimary}{rgb}{1,0,1}
+\definecolor{myColorSecondary}{rgb}{0,1,1}
+\definecolor{myBlack}{gray}{0}
+\definecolor{myWhite}{gray}{1}
+\definecolor{myGrayDark}{gray}{0.25}
+\definecolor{myGrayMed}{gray}{0.5}
+\definecolor{myGrayLight}{gray}{0.9}
+\definecolor{bgColor}{rgb}{1,1,1}
+\definecolor{textColor}{rgb}{0,0,0}
+\definecolor{draftBgColor}{rgb}{0.1,0.0,0.05}
+\definecolor{myColorSuccess}{rgb}{0,1,0}
+\definecolor{myColorWarning}{rgb}{0,0.5,1}
+\definecolor{myColorDanger}{rgb}{1,0,0}
+
+% Tabular header color
+% Custom colors for the section table headers
+\newcommand{\myCellColor}{%
+    \cellcolor{myGrayLight}% BG COLOR
+}
+% Color for the border around table cells
+\colorlet{myColorTableBorders}{myGrayLight}%
+
+% Section titles
+\colorlet{sectionTitleColor}{myGrayDark}
+\colorlet{sectionTitleBgColor}{myWhite}
+\pagecolor{bgColor} % Set your desired background color here
+
+% Icons
+\colorlet{myIconColor}{myGrayDark}
+
+%%% LOAD COLORS  FOR CHOSEN PERSON IF THEY HAVE BEEN SET
+\InputIfFileExists
+    {%
+    variables/colors.tex%
+    }%
+    {% if file exists, run this before
+    }%
+    {% if file does not exist, run this instead
+    }%
+
+
+
+% DRAFT VERSION COLORS
+\definecolor{sectionDraftContentsBgColor}{rgb}{0.1, 0.1, 0.1}
+\definecolor{sectionDraftContentsTextColor}{RGB}{255, 255, 175}
+% FINAL VERSION COLORS
+\colorlet{sectionFinalContentsBgColor}{bgColor}
+\colorlet{sectionFinalContentsTextColor}{textColor}

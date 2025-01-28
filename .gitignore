@@ -1,0 +1,35 @@
+# LaTeX auxiliary files
+*.fdb_latexmk
+*.fls
+*.log
+*.synctex.gz
+*.aux
+*.xmpi
+*.pdf
+*./auxiliary_files/
+*./auxiliary_files/*
+
+# Ignore everything in the folder
+cv/profiles/*
+
+# Except the specific files you want to track
+!cv/profiles/examples/
+
+# MacOS unwanted files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk

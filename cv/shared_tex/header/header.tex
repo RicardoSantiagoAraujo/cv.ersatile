@@ -1,0 +1,59 @@
+% ENGLISH VERSION (DEFAULT)
+\newcommand{\visitMySite}{To visit my website, go to \textbf{\mySiteHyperlink}.}
+\newcommand{\readyToMove}{Ready to relocate.}
+
+\ifthenelse{\equal{\myLanguage}{fr}}{
+    % FRENCH VERSION
+    \renewcommand{\visitMySite}{ Pour visiter mon portfolio en ligne, allez sur \textbf{\mySiteHyperlink}.}
+    \renewcommand{\readyToMove}{Prêt à déménager.}
+}{}
+
+\ifthenelse{\boolean{isIncludeMyPhoto}}{
+       \newcommand{\leftWidth}{0.75\textwidth}
+       \newcommand{\rightWidth}{0.2\textwidth}
+}{
+       \newcommand{\leftWidth}{1\textwidth}
+       \newcommand{\rightWidth}{0\textwidth}
+}
+
+\newtcolorbox{headerInfoBox}[1][]
+{%
+       enhanced,%
+       halign=center,%
+       valign=center,%
+       on line,%
+       boxsep=-2pt,%
+       arc=5px,%
+       % left=0pt,%
+       % right=0pt,%
+       % top=0pt,%
+       % bottom=0pt,%
+       colframe=bgColor,%
+       colback=myGrayLight,%
+       opacityback=0,%
+       % drop fuzzy shadow=myGrayDark,%
+       hbox,% adjust width to content
+       #1%
+}
+
+% header info item
+\newcommand{\headerInfoItem}[2]{%
+       \begin{headerInfoBox}%
+              % tcolorbox helps avoid line breaks
+              \small%
+              \color{myIconColor}#1%
+              \ \ %
+              \color{myBlack}#2%
+       \end{headerInfoBox}%
+}
+
+
+% Separator to divide header info items
+\newcommand{\headerInfoSpacer}{
+       %%% Adjust spaces as necessary
+       % \hfill
+       \hspace{0cm}%
+       % \large\textperiodcentered% Add dot between item
+       % \hfill
+       \hspace{0.05cm}%
+}

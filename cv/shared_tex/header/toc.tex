@@ -1,0 +1,45 @@
+\usepackage{tocloft}
+\setlength{\cftsecnumwidth}{1em}% set the width to the section number area in the ToC
+
+\makeatletter %%% Removing the section numbers
+\renewcommand{\cftsecpresnum}{\begin{lrbox}{\@tempboxa}}
+\renewcommand{\cftsecaftersnum}{\end{lrbox}}
+\makeatother
+
+% Change toc title
+\AfterEndPreamble{% after preamble as it is overwritten elsewhere
+    \renewcommand{\contentsname}{%
+        \noindent\rule[7pt]% space below ruler
+        {\linewidth}% width of ruler
+        {0.4pt}% height of ruler
+        \par% horizontal line
+        Contents of curriculum vitæ%
+    }%
+}%
+
+% Style toc title
+\renewcommand{\cfttoctitlefont}{%
+    \color{sectionTitleColor}%
+    \large%
+    \bfseries%
+    \scshape% small caps
+    % \MakeUppercase%
+}
+% Style toc entries
+\renewcommand{\cftsecfont}{%
+    \setTitleFont%
+    \mySectionTitleStyleDefault%
+    }
+
+% Macro to add TOC
+\NewDocumentCommand{\myTOC}
+{}
+{%
+    \ifthenelse{\boolean{isIncludeTOC}}%
+    {%
+        \tableofcontents%
+        \thispagestyle{empty}% to replace default toc footer with nothing
+        \vspace{0.5cm}% empty space
+    }%
+    {}%
+}

@@ -1,0 +1,126 @@
+
+% ENGLISH VERSION (DEFAULT)
+\newcommand{\myCuriosity}{Curiosity}
+\newcommand{\myRigor}{Rigor}
+\newcommand{\myAdaptability}{Adaptability}
+\newcommand{\myPedagogy}{Pedagogy}
+\newcommand{\myOrganisation}{Organisation}
+\newcommand{\myCollaboration}{Collaboration}
+
+\ifthenelse{\equal{\myLanguage}{fr}}{
+    % FRENCH VERSION
+    \renewcommand{\myCuriosity}{Curiosité}
+    \renewcommand{\myRigor}{Rigueur}
+    \renewcommand{\myAdaptability}{Adaptabilité}
+    \renewcommand{\myPedagogy}{Pédagogie}
+    \renewcommand{\myOrganisation}{Organisation}
+    \renewcommand{\myCollaboration}{Collaboration}
+}{}
+
+
+
+
+% Define key/value pairs to include in the diagram
+% Value is between 0 and 1
+\newcommand{\myValues}{
+    \myAdaptability/1,
+    \myOrganisation/0.7,
+    \myRigor/1,
+    \myPedagogy/0.9,
+    \myCollaboration/0.8,
+    \myCuriosity/1
+    }
+
+% define size of circle
+\newcommand{\maxRadius}{1}
+% choose how many cicles to divide it into
+\newcommand{\numberOfCircles}{5}
+
+
+% Initialize a counter to store the length of the list
+\newcounter{listlength}
+
+% Define a macro to calculate the length of a list
+\newcommand{\getListLength}[2]{%
+    \setcounter{#1}{0}% Reset the counter
+    \foreach \item in #2 {%
+        \stepcounter{#1}% Increment the counter for each element
+    }%
+}
+
+% Use the macro to calculate the length of \myList
+\getListLength{listlength}{\myValues}
+
+% Output the length of the list
+% The length of the list is: \thelistlength.
+
+
+
+
+\begin{tikzpicture}[scale=1] % Adjust the scale factor as needed
+    %%%%% 0,0 is center
+
+    % DRAW CIRCLES
+    \pgfmathsetmacro{\step}{\maxRadius / \numberOfCircles}
+    \foreach \r in {0,\step,...,\maxRadius}{
+        \draw[opacity=0.15] (0,0) circle (\r cm);}
+
+
+
+    % FILL WITH INFO
+    \foreach \key/\val [count=\i from 0, count=\j] in \myValues
+    {
+        \pgfmathsetmacro{\angle}{360 / \thelistlength}
+        \pgfmathsetmacro{\k}{int(Mod(\i+1,\thelistlength))}
+
+        % ADD CROSSLINE
+        \draw[opacity=0.5] (0,0) -- ++ ({\k*\angle}:\maxRadius) coordinate (lab);
+
+        % ADD LABELS
+        \path[opacity=1] (0,0) -- ++ (\k*\angle:\maxRadius) coordinate[label=\k*\angle: \scriptsize\key] ();
+
+        % ADD DOTS
+        \node (A\i) [
+            circle,
+            draw,
+            semithick,
+            fill=white,
+            inner sep=2pt,
+            opacity=0.6,
+            anchor=center
+            ] at (\k*\angle:\maxRadius*\val) {};
+
+        % ADD NODES
+        \node (A\i) [anchor=center, inner sep=0pt] at (\k*\angle:\maxRadius*\val) {};
+    }
+
+
+    \pgfmathsetmacro{\upperlimit}{\thelistlength - 1}
+    \foreach \i in {0,...,\upperlimit}
+    {
+        \pgfmathsetmacro{\k}{int(Mod(\i+1,\thelistlength))}
+
+        % OUTER CONNECTING LINE
+        \draw[
+            very thick,
+            blue,
+            shorten <=2pt,
+            shorten >=2pt
+            ] (A\i) -- (A\k);
+
+
+
+        % INNER FILL
+        \draw[draw = none, fill=gray, opacity=0.3] (A\i) -- (0,0)  -- (A\k);
+
+        % ADD CIRCLES
+        \node (DOT\i) [
+            circle,
+            inner sep=0.1pt,
+            draw,
+            minimum size=0.2cm,
+            semithick,
+            fill=white
+            ] (myNode) at (A\i) {};
+    }
+\end{tikzpicture}

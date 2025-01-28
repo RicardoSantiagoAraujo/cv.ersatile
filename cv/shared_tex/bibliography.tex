@@ -1,0 +1,52 @@
+\usepackage[
+    %sorting=none,
+    sorting=nty, %name, title, year
+    citestyle=authoryear,
+    bibstyle=authoryear,
+    mincitenames=1,
+    maxcitenames=4,
+    doi=false,
+    isbn=false,
+    url=false,
+    eprint=false
+]{biblatex} %Imports biblatex package
+
+
+\BeforeBeginEnvironment{document}{%
+    % Shared Biblio
+    \addbibresource{\pathToRoot/assets/bibliography_files/bibliography.bib}
+    % Bibliography for citations
+    \addbibresource{assets/bibliography_files/bibliography.bib}
+    % My publications
+    \addbibresource{assets/bibliography_files/my_publications.tex%
+    }
+}
+
+
+\NewDocumentCommand{\inputPublicationsList}
+{
+    m% publications list file
+}
+{%
+    \InputIfFileExists{#1}
+    {}
+    {\color{myColorDanger}\textbf{publications list file (\detokenize{#1}) does not exist}}
+}
+
+\newcommand{\mySpacingBetweenPublications}{1}
+\newcommand{\myPublicationsFontSize}{\scriptsize}
+
+\NewDocumentEnvironment{myPublicationsTable}{}
+{%
+    \renewcommand{\arraystretch}{\mySpacingBetweenPublications}% change all spacings at once
+    \setlength\tabcolsep{0pt}% change cell margin
+    \noindent%
+    \myPublicationsFontSize%
+    \tabularx{\myTableWidth}{m{0cm} X}% first column controls left margin, may add content to it
+    % \noalign{\global\arrayrulewidth=0.1mm} % change line width from here on
+    % \arrayrulecolor{myGrayDark} % change line color from here on
+}
+{%
+    % \myhline %=========================================
+    \endtabularx%
+}

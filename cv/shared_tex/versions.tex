@@ -1,0 +1,148 @@
+%%%%%%%%% VERSIONS
+%  THESE VALUES ARE LIKELY TO BE OVERWITTEN DOWNSTREAM
+
+\usepackage{etoolbox} %necessary for booleans
+%%% Rules:
+% Everything cammelcase!
+\newcommand{\createAndSetBoolean}[2]{
+  % #1: boolean name
+  % #2: set to true or false
+  \newbool{#1}\setbool{#1}{#2}
+}
+
+\newcommand{\myVersion}{full}
+% Options: popScience, webdev, datascience, generic; full
+% full versions has ALL the section contents included
+% generic version sectios are either equivalent to full version's, or empty
+% when there is no particular version, generic is taken by default
+
+\newcommand{\myPersonId}{}
+% Options: rsa (Ricardo Santiago Araujo), jd (Julia Dayon)
+
+\newcommand{\myLanguage}{en}
+% Language options: en, fr
+
+
+\createAndSetBoolean{isDraft}{true} % true or false
+\createAndSetBoolean{isIncludeWebsite}{true} % true or false
+\createAndSetBoolean{isIncludeMovingMessage}{true} % true or false
+\createAndSetBoolean{isIncludeHeaderInfos}{true} % true or false
+\createAndSetBoolean{isIncludeMyPhoto}{true} % true or false
+\createAndSetBoolean{isCollapseLists}{true} % true or false
+\createAndSetBoolean{isIncludeDateDiff}{true} % true or false
+\createAndSetBoolean{isFooter}{true} % true or false
+\createAndSetBoolean{isIncludeInfoRibbons}{false} % true or false
+\createAndSetBoolean{isIncludeTOC}{false} % true or false
+\createAndSetBoolean{isIncludePagination}{false} % true or false
+
+
+
+
+
+
+\usepackage{xstring} % Needed for string manipulation
+
+% Reproduce includeonly functionality with input
+\newcommand{\addonlyfiles}[1]{%
+  \def\onlyfiles{#1}%
+}
+
+% Macro to keep track of current section
+\newcommand{\currentSection}{}
+
+
+% Create new command: \addContent
+\NewDocumentCommand\addContent{
+  +m % Arg 1 (Mandatory): Section
+  +O{\myVersion} % Arg 2 (Optional): Version
+  +O{\myLanguage} % Arg 3 (Optional): Language
+  }{
+  \renewcommand{\currentSection}{#1}
+  % #1
+  % #2
+  % #3
+  \def\specificFileAddress{elements/#1/#1\_#2\_#3.tex}
+  \def\genericFileAddress{elements/#1/#1\_generic\_#3.tex}
+  % \textcolor{green}{Specific input: \specificFileAddress} % Print the file address string to check
+  \IfSubStr{\onlyfiles}{#1}{ %%% only if it is part of \addonlyfiles list
+  %
+    \InputIfFileExists{\specificFileAddress}
+      {%
+        % then
+        % Add code here
+        % APPLY THIS BEFORE SPECIFIC INPUT
+      }%
+      {%
+      % else
+      % INPUT GENERIC VERSION
+      % \textcolor{myColorDanger}{Generic input: \genericFileAddress} % Print the file address string to check
+      % SHOW THIS BEFORE GENERIC INPUT
+      \InputIfFileExists{\genericFileAddress}
+      {% if generic file exists, run this before it
+      }
+      {% if it generic file does not exist, run this}
+        \textcolor{myColorDanger}{Generic input missing: \genericFileAddress} % Print the file address string to check
+      }%
+      }%
+  }
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\NewDocumentCommand{\isDraft}
+{
+  m% if draft mode
+  m% if not draft mode
+}
+{%
+  \ifthenelse{\boolean{isDraft}}
+  {#1}
+  {#2}
+}%
+
+
+%%% Command to print sections from within sections, which provides a warning when referenced section is missing
+\NewDocumentCommand{\inputSectionIfFileExists}%
+{%
+    m% file path
+}
+{%
+    \InputIfFileExists{#1}
+    {%
+    % then
+    % Add code here
+    % APPLY THIS BEFORE SPECIFIC INPUT
+    }%
+    {%
+    % else
+        % \hrule%
+        \section{%
+            \color{myColorWarning}%
+            \centering%
+            \bfseries%
+            \hrule%
+            Missing Section Contents for %
+            \color{myColorDanger}%
+            \currentSection %
+            % \hrule% causes error
+        }
+        \begin{mySectionContents}
+            \centering%
+            %%% FILE ADDRESS
+            \color{myColorDanger}%
+            \detokenize{#1} %
+            (\detokenize{\myPersonId}: \myPersonId)\\%
+            %%% MESSAGE TEXT
+            \color{myColorWarning}%
+            File has not yet been created, or the path is wrong.\\%
+            %%% USEFUL VARIABLES TO KNOW
+            \color{myColorSuccess}%
+            \hrule
+            Section: \currentSection\hspace{1cm} %
+            Version: \myVersion\hspace{1cm} %
+            Language: \myLanguageLong (\myLanguage)\hspace{1cm} %
+            Person: \myPersonId %
+        \end{mySectionContents}
+    }
+}%

@@ -1,0 +1,29 @@
+%%% List style used in sections such as Awards, Certificates, etc
+% Tick mark for 1st level
+\renewcommand\labelitemi{}
+% Tick mark for 2nd level
+\renewcommand\labelitemii{-}
+
+% Awards section title
+\NewDocumentCommand{\mySectionListHeader}
+{
+    m
+}
+{%
+    {%
+        \color{myGrayDark}%
+        \bfseries%
+        #1%
+    }%
+}%
+
+% Custom list entry
+\NewDocumentCommand{\myListItem}
+{
+    m % mandatory item label
+    m % mandatory item content
+    O{} % optional link. If empty, hyperlink is inactive
+}
+{%
+    \item[\color{myGrayDark!50!myBlack}\bfseries#1 -]\href{#3}{#2}%
+}

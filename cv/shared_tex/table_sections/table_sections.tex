@@ -1,0 +1,137 @@
+
+% Vertical separation between tables DEFAULT /!\ May be overwritten downstream
+\newcommand{\myTablesSeparator}{\vspace{30pt}}
+
+
+\NewDocumentEnvironment{myTableEnv}
+{
+  O{\myTableWidth}% table width
+  m % column definitions
+}
+% \newenvironment{myTableEnv}
+{%
+  % \table%
+  \noindent\tabularx{#1}{#2}%
+  \hline% first horizontal line
+}
+{%
+  \endtabularx%
+  % \endtable%
+  \par%
+}
+
+%%% Table lines (horizontal/vertical):
+\setlength\arrayrulewidth{0.1pt}% thickness of rule
+\arrayrulecolor{myColorTableBorders}% color of rule
+% % Change space above/below
+% \let\savehline\hline%
+% \def\hline{%
+%   % by subtracting arrayrulewidth, the ruler adds no height
+%   \noalign{\vskip-0.5\arrayrulewidth}% space above
+%   \savehline%
+%   \noalign{\vskip-0.5\arrayrulewidth}% space below
+% }%
+
+\NewDocumentCommand{\myRow}
+{%
+  m% 1 left label
+  m% 2 left content
+  m% 3 right label
+  m% 4 right content
+}
+{%
+    % \hline%
+    %%% LEFT ===================
+    \myLabelValueCellPair{#1}{#2}
+    &% .................
+    %%% RIGHT ===================
+    \myLabelValueCellPair{#3}{#4}
+    \\%
+    \hline%
+}
+
+\NewDocumentCommand{\myLabelValueCellPair}
+{%
+  m% 1 label
+  m% 2 content
+}
+{%
+  {%
+    \hfill% push right
+    \raggedleft% also push right
+    \myCellColor%
+    % \scshape%
+    #1% Right Label
+  }%
+  &% ..................
+  {%
+    \myCellColor%
+    % \bfseries%
+    #2% Right Content
+  }%
+}
+
+
+
+\NewExpandableDocumentCommand{\myCell}
+{
+  m% 1 number of columns to use up
+  O{c}% alignment (c)enter, (l)eft, (r)ight, p(normal), m(iddle), b(ottom), etc
+  m% content
+}
+{%
+  \ifnum#1>1%
+    % if multiple columns are required
+    \multicolumn%
+    {#1}%
+    {>{\centering\hsize=\dimexpr#1\hsize+#1\tabcolsep+\arrayrulewidth\relax}#2}%
+    {%
+      \myCellColor%
+      #3%
+    }%
+  \else%
+    % if only one column is required
+    \myCellColor%
+    #3%
+  \fi%
+}
+
+%%% command to sum values in a list eg {1,2,3} returns 6
+\newcommand\sumlist[1]{\the\numexpr\sumlistaux#1,\relax\relax}
+\def\sumlistaux#1,#2\relax{#1\ifx\relax#2\else+\sumlistaux#2\relax\fi}
+
+
+\newcommand{\myTableContentsSpaceAboveAdj}{-5pt} % Table content vertical separator DEFAULT /!\ POSSIBLY OVERWITTEN DOWNSTREAM
+%%% BODY OF SECTION CONTENTS USED INSIDE A TABLE TO FILL WHOLE WIDTH
+\newcommand{\myTableContents}[1]{%
+    \multicolumn{4}%%% number should correspond to the default total number of columns
+    {@{}p{\myRowWidth}@{}}%
+    {%
+        \vspace{\myTableContentsSpaceAboveAdj}%
+        \myJustification%
+        #1%
+    }%
+}
+
+
+% Line separator DEFAULT /!\ POSSIBLY OVERWITTEN DOWNSTREAM\
+\newcommand{\myhlinePadding}{2mm}%
+\newcommand{\myhline}{
+  \noalign{\vskip+\myhlinePadding}% space above
+  \hline%\hline%
+  \noalign{\vskip+\myhlinePadding}% space below
+}
+
+%%% Specific macro for misc section rows
+\NewDocumentCommand{\miscSkillRow}
+{
+  m% label
+  m% content
+}
+{%
+  {%
+  % \bfseries%
+  #1}%
+  &%
+  #2\\%
+}

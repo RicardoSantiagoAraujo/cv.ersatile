@@ -1,0 +1,133 @@
+\usepackage{atbegshi,picture}
+
+\newcommand{\myCompileTimeMessage}{%
+\textit{Curriculum vitae} compiled in \DTMsetdatestyle{includeDay}\DTMToday\ at \DTMcurrenttime.%
+}
+\newcommand{\myAuthorMessage}{%
+\LaTeX\ template by \myName.%
+}
+\newcommand{\myLanguageMessage}{%
+\myLanguageLong\ version.%
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Ribbon contents
+%
+\newcommand{\ribbonTextL}{Ribbon text (Left)}
+\renewcommand{\ribbonTextL}{\myCompileTimeMessage}
+%
+\newcommand{\ribbonTextR}{Ribbon text (Right)}
+\renewcommand{\ribbonTextR}{\myAuthorMessage \hspace{0.3\paperheight} \myLanguageMessage}
+%
+\newcommand{\ribbonTextT}{Ribbon text (Top)}
+\renewcommand{\ribbonTextT}{\myAuthorMessage}
+%
+\newcommand{\ribbonTextB}{Ribbon text (Bottom)}
+\renewcommand{\ribbonTextB}{\myCompileTimeMessage}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Ribbon shift
+% /!\ must use same units everywhere for calculations to work
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\ribbonShiftToCenter}{0pt}
+%%% Ribbon widths
+\newcommand{\ribbonWidthMax}{20pt} %%% Maximum ribbon width
+\newcommand{\ribbonWidthL}{\csname Gm@lmargin\endcsname} % set margin with value set with geometry
+\newcommand{\ribbonWidthR}{\csname Gm@rmargin\endcsname} % set margin with value set with geometry
+\newcommand{\ribbonWidthT}{\csname Gm@tmargin\endcsname} % set margin with value set with geometry
+\newcommand{\ribbonWidthB}{\csname Gm@bmargin\endcsname} % set margin with value set with geometry
+
+% Check if ribbon width is exceeded, and limit it
+\ifdim \ribbonWidthL > \ribbonWidthMax
+\renewcommand{\ribbonWidthL}{\ribbonWidthMax}\fi
+\ifdim \ribbonWidthR > \ribbonWidthMax
+\renewcommand{\ribbonWidthR}{\ribbonWidthMax}\fi
+\ifdim \ribbonWidthT > \ribbonWidthMax
+\renewcommand{\ribbonWidthT}{\ribbonWidthMax}\fi
+\ifdim \ribbonWidthB > \ribbonWidthMax
+\renewcommand{\ribbonWidthB}{\ribbonWidthMax}\fi
+
+
+\definecolor{ribbonBgColorStart}{gray}{0.9}
+\definecolor{ribbonBgColorEnd}{gray}{1}
+\definecolor{ribbonTextColor}{gray}{0.5}
+
+% Define the custom style
+\tikzset{
+    myRibbonFillStyle/.style={
+      %black!5
+      % for gradient instead:
+      left color=ribbonBgColorStart,
+      right color=ribbonBgColorEnd,
+      shading = axis,
+      % minimum width=2cm,
+      % minimum height=1cm,
+      draw=bgColor % to ensure no border in final version
+    },
+    myRibbonTextStyle/.style={
+      rectangle,
+      text=black,
+      font=\scriptsize,%\bfseries
+      color=myGrayMed,% text color
+      % minimum width=2cm,
+      % minimum height=1cm
+    }
+}
+
+\usetikzlibrary{calc}
+\ifthenelse{\boolean{isIncludeInfoRibbons}}{
+\AtBeginShipout{\AtBeginShipoutUpperLeft{
+      \ifthenelse{\boolean{true}}{%always true, may replace later
+            %%% WARNING: HYPERLINKS DO NOT WORK IN ROTATED TEXT)
+            \begin{tikzpicture}[remember picture,overlay]%
+                  %%% LEFTSIDE
+                  \fill[myRibbonFillStyle,
+                        shading angle = 90
+                        ]
+                        ($(current page.north west)+(\ribbonShiftToCenter,0)$)rectangle ++(\ribbonWidthL,-\paperheight);
+                  \node[myRibbonTextStyle,
+                        rotate=90]
+                        (leftNode) at ($(current page.west)+(\ribbonShiftToCenter+\ribbonWidthL/2, 0)$)
+                  {\ribbonTextL};
+                  %
+                  %
+                  %%% RIGHTSIDE
+                  \fill[myRibbonFillStyle,
+                        shading angle = -90
+                        ]
+                        ($(current page.north east)-(\ribbonShiftToCenter,0)$) rectangle ++(-\ribbonWidthR,-\paperheight);
+                  \node[myRibbonTextStyle,
+                        rotate=-90
+                        ]
+                        (rightNode) at ($(current page.east)-(\ribbonShiftToCenter+\ribbonWidthR/2, 0)$)
+                  {\ribbonTextR};
+                  %
+                  %
+                %%% TOP
+                \fill[myRibbonFillStyle,
+                        shading angle = 0,
+                        opacity=0
+                        ]
+                        ($(current page.north west)-(0,\ribbonShiftToCenter)$)rectangle ++(\paperwidth, -\ribbonWidthT);
+                \node[myRibbonTextStyle,
+                rotate=0
+                ]
+                (leftNode) at ($(current page.north)-(0,\ribbonShiftToCenter+\ribbonWidthT/2)$)
+                {\ribbonTextT};
+                  %
+                  %
+                %%% BOTTOM
+                \fill[myRibbonFillStyle,
+                        shading angle = 180,
+                        opacity=0
+                        ]
+                        ($(current page.south west)+(0,\ribbonShiftToCenter)$)rectangle ++(\paperwidth, +\ribbonWidthB);
+                \node[myRibbonTextStyle,
+                rotate=180
+                ]
+                (leftNode) at ($(current page.south)+(0,\ribbonShiftToCenter+\ribbonWidthB/2)$)
+                {\ribbonTextB};
+
+            \end{tikzpicture}%
+      }{}
+}}
+}
+{}

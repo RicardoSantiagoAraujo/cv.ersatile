@@ -1,0 +1,46 @@
+\usepackage{lastpage}
+
+% Strategy to add pagination as footer. Better to use the other method as it is not dependent on page margins.
+% \rofoot{\thepage\ of \pageref{LastPage}}
+
+
+% Define the custom style
+\tikzset{
+    myPaginationStyle/.style={
+      color=myGrayDark,
+      anchor=south east,
+      % minimum width=2cm,
+      % minimum height=1cm,
+      fill=bgColor,
+      draw=bgColor % to ensure no border in final version
+    }
+}
+
+
+\newcommand{\paginationPositionXYAdj}
+{%
+    %relative to lower right conter of page
+    -1cm, 1cm% default, may be overwritten
+}%
+
+\AfterEndPreamble{%
+    \ifthenelse{\boolean{isIncludePagination}}{
+    \AtBeginShipout{\AtBeginShipoutUpperLeftForeground{
+    %%% WARNING: HYPERLINKS DO NOT WORK IN ROTATED TEXT)
+    \begin{tikzpicture}[remember picture,overlay]%
+            %%% Pagination
+            \node[myPaginationStyle
+                ]
+                (pageNode) at
+                (
+                    $(current page.south east)+(\paginationPositionXYAdj)$
+                )
+            {\thepage\ of \pageref{LastPage}};
+            %
+            %
+    \end{tikzpicture}%
+    }
+    }
+    }
+    {}%
+}

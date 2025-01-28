@@ -1,0 +1,40 @@
+%----------------------------------------------------------------------------------------
+%	FOOTER SECTION
+%----------------------------------------------------------------------------------------
+
+% c[o|e]foot = center
+% r[o|e]foot = right
+% l[o|e]foot = left
+% o/e = odd/even
+
+% SET FOOTER
+\ifthenelse{\boolean{isFooter}}{
+    % If \isFooter is "true", this part will be executed
+
+    \cfoot{
+    \fontsize{10.5}{17}\selectfont % Letter spacing and font size
+    \textls[150]{
+        % mailing address
+        \myStreet
+        { \large\textperiodcentered}
+        \myCity
+        { \large\textperiodcentered}
+        \myCountry}\\
+
+        % email and phone number
+    \textls[150]{
+        % email
+        {\Large\Letter}
+        \myEmail
+        \ %
+        % phone number
+        {\Large\Telefon}
+        \myPhone}
+    }
+
+}{
+    % If \isFooter is not "true", this part will be executed
+
+    %  To remove footer, ovewrite with empty:
+    \cfoot{}
+}

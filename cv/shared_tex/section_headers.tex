@@ -1,0 +1,59 @@
+\usepackage{titlesec} % Allows creating custom \section's
+
+% /!\ POSSIBLY OVERWRITTEN IN SPECIFIC VERSION FILE
+%Spacing above and below sections
+% how to use: \titlespacing*{<command>}{<left>}{<before-sep>}{<after-sep>}
+\titlespacing*{\section}
+{0pt} %left spacing
+{1.0cm} %before spacing
+{0.45cm} %after spacing
+
+% \titleformat{<command>}[<shape>]{<format>}{<label>}{<sec>}{<before-code>}[<after-code>]
+\titleformat
+{\section} % Section title formatting
+{% <shape> changes performed inside the colorSectionBox tcolorbox
+}
+{% Add numbering
+  %
+  % \thesection.% better to add it inside tcolorbox in colorSectionBox
+}
+{%Left indent
+  0em
+}
+{% Before code
+  \colorSectionBox%
+}
+[% After code
+  \titlerule%
+]
+
+% To color section header background
+\newcommand{\colorSectionBox}[1]{%
+  \colorbox%
+    {%
+    sectionTitleBgColor% section background color
+    }%
+    {%
+    \parbox{\dimexpr\textwidth-2\fboxsep}%
+        {%
+            \mySectionTitleStyleDefault% style section title
+            \mySectionTitleStyleOverwrite% style section title overwriting, if desired
+            #1%
+        }%
+    }%
+  }
+
+% Section title style, can be overwritten
+\newcommand{\mySectionTitleStyleDefault}{%
+  \setTitleFont% title font
+  \color{sectionTitleColor}% text color
+  \large% font size
+  \scshape% small caps
+  \lsstyle% increase spacing between letters
+  % \raggedright (push left)
+  % \centering%
+  % \thesection.\ % to include section number
+}
+
+\newcommand{\mySectionTitleStyleOverwrite}{% renew this command to change default title style, if desired
+}

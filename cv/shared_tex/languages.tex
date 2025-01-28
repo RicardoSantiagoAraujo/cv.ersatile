@@ -1,0 +1,42 @@
+
+% make sure to update language in document as well
+\ifthenelse{\equal{\myLanguage}{en}}{
+  \usepackage[english]{babel}
+  \usepackage[en-GB]{datetime2}
+  \newcommand{\myLanguageLong}{English}
+  \newcommand{\myPeriod}{Period}
+  \newcommand{\myYearPlural}{years}
+  \newcommand{\myYearSingular}{year}
+  \newcommand{\myMonthPlural}{months}
+  \newcommand{\myMonthSingular}{month}
+  \newcommand{\myPosition}{Position}
+  \newcommand{\myLocation}{Location}
+  \newcommand{\researchInstitution}{Institution}
+  \newcommand{\myWhat}{What?}
+  \newcommand{\myWhen}{When?}
+  \newcommand{\myPresent}{present}
+  \newcommand{\myYearsOld}{years old}
+
+}{}%
+\ifthenelse{\equal{\myLanguage}{fr}}{
+  \usepackage[french]{babel}
+  \usepackage[french]{datetime2}
+  \newcommand{\myLanguageLong}{French}
+  \newcommand{\myPeriod}{Période}
+  \newcommand{\myYearPlural}{ans}
+  \newcommand{\myYearSingular}{an}
+  \newcommand{\myMonthPlural}{mois}
+  \newcommand{\myMonthSingular}{mois}
+  \newcommand{\myPosition}{Position}
+  \newcommand{\myLocation}{Location}
+  \newcommand{\researchInstitution}{Institution}
+  \newcommand{\myWhat}{Quoi?}
+  \newcommand{\myWhen}{Quand?}
+  \newcommand{\myPresent}{présent}
+  \newcommand{\myYearsOld}{ans}
+}{}%
+
+
+
+
+\DTMlangsetup{ord=raise,showdayofmonth=false}

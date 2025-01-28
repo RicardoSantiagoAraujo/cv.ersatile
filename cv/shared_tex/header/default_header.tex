@@ -1,0 +1,116 @@
+
+
+\tcbset{
+       myPictureStyleDefault/.style={
+            % breakable,
+              left=0pt,
+              right=0pt,
+              top=0pt,
+              bottom=0pt,
+              colback=white,
+              colframe=myGrayMed,
+              enlarge left by=0mm,
+              boxsep=0pt,
+              boxrule=1pt,
+              arc=0pt,
+              % outer arc=3pt,
+              % title=\imagename,
+              finish={
+                     \isDraft{
+                            \node[fill=myGrayLight!50!white,fill opacity=0.5,text opacity=1]
+                            at (frame.center) {\scriptsize\bfseries\ttfamily\color{myGrayDark!50!black}\imagename};}{}
+              }
+       },
+       % myPictureStyleExtras/.style={}
+}
+
+\NewDocumentCommand{\myStyledGraphic}
+{
+       m % graphics width
+       O{\myPictureCropLeft}
+       O{\myPictureCropBottom}
+       O{\myPictureCropRight}
+       O{\myPictureCropTop}
+       m % graphics file
+       O{}% Extra styles to overwrite default if desired
+}
+{%
+       \tcbincludegraphics % tcbincludegraphics is part of tcolorbox package
+       [%
+              width=#1,
+              myPictureStyleDefault,
+              #7,
+       %      includegraphics options:
+              graphics options={%
+                   width=3cm,
+                   trim= #2 #3 #4 #5  % trim={left bottom right top},clip]
+                   }%
+       ]%
+       {#6}%
+}
+
+
+\begin{mySectionContents}%
+       %
+    \noindent%
+    \hspace{0.2cm}% horizontal indent
+    %============= TEXT
+    \begin{minipage}[c][\myHeaderHeight]{\leftWidth}%
+           {%
+                  % ===== TITLE
+                  \fontsize{\myTitleFontSize}{\myTitleFontSize} % Sets the font size and line height
+                  \selectfont % Applies the previously set font size.
+                  \setTitleFont
+                  % \scshape % Switches to small caps font style.
+                  \textls[100]{\myTitle} % Your name at the top
+           }%
+           \medbreak%
+           {%
+                  % ===== SUBTITLE
+                  \fontsize{\mySubtitleFontSize}{\myTitleFontSize} % Sets the font size and line height
+                  \selectfont %Applies the previously set font size.
+                  \setSubtitleFont
+                  % \scshape % Switches to small caps font style.
+                  \myJobTitle
+           }%
+           \smallbreak%
+           % ===== HEADER INFOS
+           \ifthenelse{\boolean{isIncludeHeaderInfos}}{%
+              \input{./elements/header/header_info.tex}%
+           }{}%
+           %
+           % ===== LINK TO WEBSITE
+           \ifthenelse{\boolean{isIncludeWebsite}}{%
+                  \smallbreak%
+                  \raggedright\visitMySite%
+           }{}%
+           %
+           % ===== AVAILABILITY TO MOVE
+           \ifthenelse{\boolean{isIncludeMovingMessage}}{%
+                  \smallbreak%
+                  \raggedright\readyToMove%
+           }{}%
+    \end{minipage}%
+    \hfill%
+    %
+    %============= IMAGE
+    \ifthenelse{\boolean{isIncludeMyPhoto}}{%
+           \begin{minipage}[t]{\rightWidth}%
+                         \hfill%
+                  %\vspace*{-3cm}\smash{\includegraphics[width=3cm,trim=-5cm 1 0 -1cm]{images/norway.JPG}}
+                  \makebox[0pt][r]{
+                         \raisebox{-0.4\height}
+                         {%
+                            \myStyledGraphic
+                                   {\myPictureWidth}
+                                   {\myPicture}
+                                   [myPictureStyleExtras]% extra styles created elsewhere
+                         }%
+                  }%
+           \end{minipage}%
+    }{}%
+    %
+    \vspace{0cm}% Extra whitespace after the large name at the top
+    %
+    \myTOC%
+\end{mySectionContents}%

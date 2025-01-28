@@ -1,0 +1,170 @@
+%=================== AGE
+\AfterPreamble{
+  %Age calculation:
+  \newcounter{dateone}%
+  \newcounter{datetwo}%
+  \setmydatenumber{dateone}{\birthYear}{\birthMonth}{\birthDay}%
+  \setmydatenumber{datetwo}{\the\year}{\the\month}{\the\day}%
+  \FPsub\result{\thedatetwo}{\thedateone}
+  \FPdiv\myAge{\result}{365.2425}
+  \newcommand{\myAgeFloor}{\FPtrunc\myAge{\myAge}{0}\myAge}% round age
+}
+
+
+
+
+%=================== DATES
+\usepackage{datetime2}
+\usepackage{datetime2-calc}
+
+\DTMnewdatestyle{excludeDay}{%
+  \renewcommand{\DTMdisplaydate}[4]{%
+    % This style excludes the day
+    \DTMmonthname{##2}\nobreakspace%  (full) Month
+    % \number##3,\space%                day,
+    \number##1%                       year
+  }%
+  \renewcommand{\DTMDisplaydate}{\DTMdisplaydate}%
+}
+
+\DTMnewdatestyle{includeDay}{%
+  \renewcommand{\DTMdisplaydate}[4]{%
+    % This style includes the day
+    \DTMmonthname{##2}\nobreakspace%  (full) Month
+    \number##3,\space%                day,
+    \number##1%                       year
+  }%
+  \renewcommand{\DTMDisplaydate}{\DTMdisplaydate}%
+}
+
+
+% Set date style for whole doc
+\DTMsetdatestyle{excludeDay}
+
+
+% Command to format the date after splitting it
+% and apply default format (-1) if no format is specified
+\newcommand{\customDateFormat}[2][excludeDay]{%
+    \StrBefore[1]{#2}{-}[\MyYear]% Extract year
+    \StrBetween[1, 2]{#2}{-}{-}[\MyMonth]% Extract month
+    \StrBehind[2]{#2}{-}[\MyDay]% Extract day
+    %
+    % Print for testing
+    % Year: \MyYear \newline
+    % Month: \MyMonth \newline
+    % Day: \MyDay \newline
+    %
+    \DTMsetdatestyle{#1}% Specify format
+    \DTMdisplaydate{\MyYear}{\MyMonth}{\MyDay}\xspace% Display the date with the specified format
+}
+
+\usepackage{intcalc}
+% Calculate date difference
+\newcommand{\dateDifference}[2]{%
+  % Saving the two dates
+  \DTMsavedate{mydate1}{#1}%
+  \ifthenelse{%
+    \equal{#2}{}}% if second value is empty
+    {% IF
+      \DTMsavenow{mydate2}%
+    }%
+    {% ELSE
+      \DTMsavedate{mydate2}{#2}%
+    }%
+  % Calculating the difference between the two dates
+  \newcount\dayCount%
+  \DTMsaveddatediff{mydate2}{mydate1}{\dayCount}%
+  %
+  % Display difference
+  %%%% IN DAYS
+  % \pgfmathsetmacro{\dayCount}{\dayCount}% count from 1st day of month
+  % \number\dayCount\ days%
+  %%%% IN MONTHS (APPROXIMATION)
+  % \pgfmathsetmacro{\monthCount}{\dayCount/30.44 + 1}% +1 to round up
+  % \FPtrunc\monthCount{\monthCount}{0}\monthCount\ months%
+  %%%% IN YEARS (APPROXIMATION)
+  % \pgfmathsetmacro{\yearCount}{\dayCount/365.25 + 0.1}% +0.1 to round up
+  % \FPtrunc\yearCount{\yearCount}{1}\yearCount\ years%
+  %%%% IN YEARS, MONTHS (APPROXIMATION)
+  \newcommand{\yearPart}{\intcalcDiv{\dayCount+30}{365}}% add + 30 to dayCount to include current month
+  \newcommand{\yearModule}{\intcalcMod{\dayCount+30}{365}}% add + 30 to dayCount to include current month
+  \newcommand{\monthPart}{\intcalcDiv{\yearModule}{30}}%
+  %%%% Open parenthesis if at least 1 month has passed
+  \ifnum\yearPart>0 $($\else\ifnum\monthPart>1$($\fi\fi%
+  % ------------ years
+  \ifnum\yearPart>0
+    \yearPart
+    \ifnum\yearPart>1
+      \ \myYearPlural%
+    \else
+      \ \myYearSingular%
+    \fi%
+  \fi
+  % separator
+  \ifnum\yearPart>0
+    \ifnum\monthPart>0
+      , %
+    \fi%
+  \fi
+  % ------------ months
+  \ifthenelse{\yearPart>0}
+  {% above 1 year
+    \ifnum\monthPart>0
+      \monthPart
+      \ifnum\monthPart>1
+        \ \myMonthPlural%
+      \else
+        \ \myMonthSingular%
+      \fi%
+    \fi%
+  }
+  {% below 1 year
+    % do not print if it only one month
+    \ifnum\monthPart>1
+      \monthPart\ \myMonthPlural%
+    \else%
+      % DO NOT PRINT%
+    \fi%
+  }%
+  %%%% Close parenthesis if at least 1 month has passed
+  \ifnum\yearPart>0 $)$\else\ifnum\monthPart>1$)$\fi\fi%
+}
+
+% Center align smaller text in a line
+\newcommand*\raiseup[2]{%
+        \begingroup
+        \setbox0\hbox{#1\strut #2}%
+        \leavevmode
+        \raise\dimexpr \ht\strutbox - \ht0\box0
+        \endgroup
+}
+
+% Display Date range
+% Define a new command \dateRange that takes multiple arguments
+\NewDocumentCommand{\dateRange}{O{excludeDay} O{isIncludeDateDiff} m m}{
+    % Optional: #1 date format (otherwise uses excludeDay, which is the chosen default)
+    % Optional: #2 whether to display date range or not (default is set as a variable elsewhere)
+    % Mandatory: #3 beginning date
+    % Mandatory: #4 end date
+    \customDateFormat[#1]{#3} %
+    \ -- %
+    \ifthenelse{
+        \equal{#4}{}}% if second value is empty
+        {% IF
+          \myPresent%
+        }%
+        {% ELSE
+          \customDateFormat[#1]{#4}%
+        }%
+        % Show date difference
+        \ifthenelse{
+        \boolean{#2}}{% if second value is empty} 
+          \color{myGrayDark}\ %
+          \raiseup{\scriptsize}{%
+            % (%
+            \dateDifference{#3}{#4}%
+            % )%
+          }%
+        }
+        {}
+        }

@@ -2,9 +2,9 @@
 Repository to share a highly versatile and customizable curriculum vitae template.
 
 ### Converting from pdf to word:
+```
 pandoc <source_name.tex> -o <destination_name.docx>
-
-
+```
 
 ###  Troubleshooting bibliography in LaTeX documents
 #### Running Biber

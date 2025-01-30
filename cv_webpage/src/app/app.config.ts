@@ -9,6 +9,9 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { providePrimeNG } from 'primeng/config';
 import Aura from '@primeng/themes/aura';
 
+// Style defined by me
+import {MyPreset} from './mypreset';
+
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
@@ -18,7 +21,7 @@ export const appConfig: ApplicationConfig = {
     provideAnimationsAsync(),
     providePrimeNG({
         theme: {
-            preset: Aura, //Aura, Material, Lara and Nora
+            preset: MyPreset, //Default options included with primeng: Aura, Material, Lara and Nora
             options: {
               darkModeSelector: '.my-app-dark'
             }

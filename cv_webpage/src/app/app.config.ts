@@ -18,8 +18,12 @@ export const appConfig: ApplicationConfig = {
     provideAnimationsAsync(),
     providePrimeNG({
         theme: {
-            preset: Aura
-        }
+            preset: Aura, //Aura, Material, Lara and Nora
+            options: {
+              darkModeSelector: '.my-app-dark'
+            }
+        },
+        ripple: true // Ripple is an optional animation for the supported components such as buttons
     })
   ]
 };

@@ -1,29 +1,41 @@
-from classes.experience import Experience
+from classes.experience import Experience # type: ignore
 from datetime import date
 
 contentDict = {
-    "livingpackets": Experience(
-        EXP_postTitle={"Title": "Data analyst"},
-        EXP_employer={"Employer": "Living Packets"},
+    "experienceA": Experience(
+        EXP_postTitle={"": "Software Engineer"},
+        EXP_employer={"Company": "Dynamic Startup"},
         EXP_startDate={"Start":date(2025, 2, 24)},
         EXP_endDate={"End":date.today()},
-        EXP_location={"Location": "Nantes"},
-        EXP_content={"Content":"Content goes here"},
+        EXP_location={"Location": "London, England"},
+        EXP_columnsDef={"": "|p{0.25cm} | X | p{2.5cm}| p{4cm}|"},
+        EXP_include={"":"true"},
+        EXP_content={"Content":
+            '''
+            \\begin{customlist}
+                \item Contributed to three projects using Node.js, React, SQL, and Git for version control.
+                \item Development of critical features for the frontend and database management.
+                \item Significant optimization of application performance.
+            \end{customlist}
+            '''
+            },
     ),
-    "soprasteria": Experience(
-        EXP_postTitle={"Title": "Software Enginner"},
-        EXP_employer={"Employer": "Sopra Steria"},
-        EXP_startDate={"Start":date(2023, 1, 14)},
-        EXP_endDate={"End":date(2025, 1, 14)},
-        EXP_location={"Location": "Toulouse"},
-        EXP_content={"Content":"Content goes here"},
-    ),
-    "phd": Experience(
-        EXP_postTitle={"Title": "PhD Student"},
-        EXP_employer={"Funding": "CNRS"},
-        EXP_startDate={"Start":date(2019, 10, 1)},
-        EXP_endDate={"End":date(2023, 4, 1)},
-        EXP_location={"Location": "Toulouse"},
-        EXP_content={"Content":"Content goes here"},
+    "experienceB": Experience(
+        EXP_postTitle={"": "Frontend Developer"},
+        EXP_employer={"Company": "Large corporation"},
+        EXP_startDate={"Start":date(2025, 2, 24)},
+        EXP_endDate={"End":date.today()},
+        EXP_location={"Location": "Bristol, UK"},
+        EXP_columnsDef={"": "|p{0.25cm} | X | p{2.5cm}| p{4cm}|"},
+        EXP_include={"":"true"},
+        EXP_content={"Content":
+            '''
+           \\begin{customlist}
+                \item Worked on UX and UI features for three different projects.
+                \item Used Sass and Tailwind to build professional websites.
+                \item Collaborated closely with an international team, alongside key stakeholders, within the Agile SCRUM framework.
+            \end{customlist}
+            '''
+            },
     ),
 }

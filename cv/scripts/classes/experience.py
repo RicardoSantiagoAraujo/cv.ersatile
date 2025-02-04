@@ -7,7 +7,9 @@ class Experience:
                  EXP_startDate:dict[str, date] = {"STARTDATE KEY: ":date(1,1,1)},
                  EXP_endDate:dict[str, date] = {"ENDDATE KEY: ":date.today()},
                  EXP_location: dict[str, str] = {"LOCATION KEY: ": "LOCATION VALUE"},
-                 EXP_content:dict[str, date] = {"CONTENT KEY: ":"CONTENT"}
+                 EXP_content:dict[str, date] = {"CONTENT KEY: ":"CONTENT"},
+                 EXP_include: dict[str, bool] = {"INCLUDE ENTRY" : "true"},
+                 EXP_columnsDef: dict[str, str] = {"": ""}
                  ):
         self.EXP_postTitle = EXP_postTitle
         self.EXP_employer = EXP_employer
@@ -15,3 +17,5 @@ class Experience:
         self.EXP_endDate = EXP_endDate
         self.EXP_location = EXP_location
         self.EXP_content = EXP_content
+        self.EXP_include = EXP_include
+        self.EXP_columnsDef = EXP_columnsDef

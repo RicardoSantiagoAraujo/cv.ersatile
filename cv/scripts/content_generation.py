@@ -1,14 +1,18 @@
 from classes.experience import Experience
+from classes.education import Education
 from datetime import date
 import sys
 import os
 from enums.output_type import OutputType
-
+from enums.section_type import SectionType
 
 # Function to import a dictionary from a different path by adding it to the recognized paths
-def import_contents_dict(path):
+def import_contents_dict(path, section:str):
     sys.path.insert(0, path)
-    from experience import contentDict  # type: ignore (ignore python warning)
+    if section == SectionType("experience").value:
+        from experience import contentDict  # type: ignore (ignore python warning)
+    if section == SectionType("education").value:
+        from education import contentDict  # type: ignore (ignore python warning)
 
     return contentDict
 
@@ -88,5 +92,5 @@ def formatListStrings(x, output_type:OutputType):
         if (output_type==OutputType("html")):
             x = "<ul>\n" + "".join([f"\t\t<li>{i}</li>\n" for i in x]) + "\t</ul>"
         if (output_type==OutputType("latex")):
-            x = "\\begin{customlist}\n" + "".join([f"\t\t\t\item {i}\n" for i in x]) + "\t\t\end{customlist}"
+            x = "\\begin{customlist}\n" + "".join([f"\t\t\t\\item {i}\n" for i in x]) + "\t\t\\end{customlist}"
     return x

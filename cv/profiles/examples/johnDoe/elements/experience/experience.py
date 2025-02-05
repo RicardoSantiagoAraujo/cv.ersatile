@@ -11,13 +11,11 @@ contentDict = {
         EXP_columnsDef={"": "|p{0.25cm} | X | p{2.5cm}| p{4cm}|"},
         EXP_include={"":"true"},
         EXP_content={"Content":
-            '''
-            \\begin{customlist}
-                \item Contributed to three projects using Node.js, React, SQL, and Git for version control.
-                \item Development of critical features for the frontend and database management.
-                \item Significant optimization of application performance.
-            \end{customlist}
-            '''
+            [
+                "Contributed to three projects using Node.js, React, SQL, and Git for version control.",
+                "Development of critical features for the frontend and database management.",
+                "Significant optimization of application performance.",
+            ]
             },
     ),
     "experienceB": Experience(

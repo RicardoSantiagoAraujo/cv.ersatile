@@ -1,0 +1,50 @@
+
+\section{Education}
+\begin{mySectionContents}
+%
+%
+% ==================================================
+\iftrue % true/false to include/exclude
+\begin{myTableEnv}{|p{2cm} | X | p{2.5cm}| p{6cm}}
+    \myRow
+        {\myPeriod}{\dateRange[excludeDay][false]{2016-2-0}{2016-7-0}}% When
+        {University}{University of Briston} % Employer/Institution
+    \myRow
+        {Degree}{Master in Computer Science} % Role/Title
+        {\myLocation}{Briston, UK}% Where
+    %%% DESCRIPTION ==================
+    \myTableContents{
+    }
+\end{myTableEnv}
+%
+%
+\myTablesSeparator
+%
+%
+\fi
+%
+%
+% ==================================================
+\iftrue % true/false to include/exclude
+\begin{myTableEnv}{|p{2cm} | X | p{2.5cm}| p{6cm}}
+    \myRow
+        {\myPeriod}{\dateRange[excludeDay][false]{2013-9-0}{2016-7-0}}% When
+        {University}{UCL} % Employer/Institution
+    \myRow
+        {Degree}{Bachelor in Computer Science} % Role/Title
+        {\myLocation}{London, UK}% Where
+    %%% DESCRIPTION ==================
+
+    \myTableContents{
+        First rank honors in class.
+    }
+\end{myTableEnv}
+%
+%
+\myTablesSeparator
+%
+%
+\fi
+%
+%
+\end{mySectionContents}

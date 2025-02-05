@@ -1,0 +1,19 @@
+
+%
+% ==============================================
+\ifVAL_EDU_include % true/false to include/exclude
+\begin{myTableEnv}{VAL_EDU_columnsDef}%
+    \myRow
+        {KEY_EDU_level}{\bfseries VAL_EDU_level} % Role/Title
+        {KEY_EDU_institution}{KEY_EDU_institution} % Employer/Institution
+    \myRow
+        {}{\dateRange{VAL_EDU_startDate}{VAL_EDU_endDate}}% When
+        {KEY_EDU_location}{VAL_EDU_location}% Where
+    %%% DESCRIPTION ==================
+    \myTableContents{%
+        VAL_EDU_content%
+    }%
+\end{myTableEnv}%
+%
+\fi
+%

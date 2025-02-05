@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-     <title>Second HTML</title>
+     <title>Personal webpage</title>
+     <link rel="stylesheet" href="style/main.css">
      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript">
     $.ajax({
@@ -9,13 +10,11 @@
         dataType: 'html',
         success: function(response) {
             $(response).clone().appendTo("#printHere");
-            $(response).clone().appendTo("#printHere");
-            $(response).clone().appendTo("#printHere");
         }
     });
     </script>
   </head>
   <body>
-     <p id="printHere">print the input here 3 times</p>
+     <div id="printHere"></div>
   </body>
 </html>

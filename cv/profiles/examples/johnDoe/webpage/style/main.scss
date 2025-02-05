@@ -1,0 +1,16 @@
+.experience--entry{
+    background-color: gray;
+    // display: none;
+    .experience--entry--header{
+        background-color: lightgray;
+        display: flex;
+        flex-direction: row;
+        li{
+            // background-color: grey;
+            width: 25%;
+        }
+    }
+    .experience--entry--contents{
+        background-color: white;
+    }
+}

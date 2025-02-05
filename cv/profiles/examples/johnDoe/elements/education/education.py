@@ -3,12 +3,12 @@ from datetime import date
 
 contentDict = {
     "educationA": Education(
-        EDU_level={"": "Software Engineer"},
-        EDU_institution={"Company": "Dynamic Startup"},
+        EDU_level={"": "Master in Computer Science"},
+        EDU_institution={"University": "University of Bristol"},
         EDU_startDate={"Start":date(2022, 1, 1)},
         EDU_endDate={"End":""},
         EDU_location={"Location": "London, England"},
-        EDU_columnsDef={"": "|p{0.25cm} | X | p{2.5cm}| p{4cm}|"},
+        EDU_columnsDef={"": "|p{2cm} | X | p{2.5cm}| p{6cm}|"},
         EDU_include={"":"true"},
         EDU_content={"Content":
             [
@@ -24,7 +24,7 @@ contentDict = {
         EDU_startDate={"Start":date(2014, 1, 1)},
         EDU_endDate={"End":date(2022, 6, 1)},
         EDU_location={"Location": "Bristol, UK"},
-        EDU_columnsDef={"": "|p{0.25cm} | X | p{2.5cm}| p{4cm}|"},
+        EDU_columnsDef={"": "|p{2cm} | X | p{2.5cm}| p{6cm}|"},
         EDU_include={"":"true"},
         EDU_content={"Content":
             [

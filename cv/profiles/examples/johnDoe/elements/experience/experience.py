@@ -5,8 +5,8 @@ contentDict = {
     "experienceA": Experience(
         EXP_postTitle={"": "Software Engineer"},
         EXP_employer={"Company": "Dynamic Startup"},
-        EXP_startDate={"Start":date(2025, 2, 24)},
-        EXP_endDate={"End":date.today()},
+        EXP_startDate={"Start":date(2022, 1, 1)},
+        EXP_endDate={"End":""},
         EXP_location={"Location": "London, England"},
         EXP_columnsDef={"": "|p{0.25cm} | X | p{2.5cm}| p{4cm}|"},
         EXP_include={"":"true"},
@@ -23,8 +23,8 @@ contentDict = {
     "experienceB": Experience(
         EXP_postTitle={"": "Frontend Developer"},
         EXP_employer={"Company": "Large corporation"},
-        EXP_startDate={"Start":date(2025, 2, 24)},
-        EXP_endDate={"End":date.today()},
+        EXP_startDate={"Start":date(2014, 1, 1)},
+        EXP_endDate={"End":date(2022, 6, 1)},
         EXP_location={"Location": "Bristol, UK"},
         EXP_columnsDef={"": "|p{0.25cm} | X | p{2.5cm}| p{4cm}|"},
         EXP_include={"":"true"},

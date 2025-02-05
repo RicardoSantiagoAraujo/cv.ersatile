@@ -8,6 +8,7 @@
 *.xml
 *.toc
 *.bcf
+*.bcf-SAVE-ERROR
 *.pdf
 *./auxiliary_files/
 *./auxiliary_files/*

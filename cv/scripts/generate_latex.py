@@ -60,11 +60,16 @@ def get_obj_attributes(obj):
 
 def replace_placeholders_in_template(tex_template, placeholder_strings, entry_object):
     # Iterate over attributes and replace them into the template
+    print(date.today().strftime('%Y-%m-%d'))
+    print(list(entry_object.EXP_startDate.values())[0])
+    print(list(entry_object.EXP_endDate.values())[0])
     for attr in placeholder_strings:
         # print(attr)
         dict = getattr(entry_object, attr)
         key=list(dict.keys())[0]
         val=list(dict.values())[0]
+        # if date, format properly
+        val=formatDate(val)
         tex_template = tex_template.replace(f"KEY_{attr}", str(key))
         tex_template = tex_template.replace(f"VAL_{attr}", str(val))
     return tex_template
@@ -76,6 +81,10 @@ def generate_latex_file(latex_content, output_file_path):
 
     print("LaTeX file generated successfully!")
 
+def formatDate(d):
+    if (type(d)==date):
+        d = d.strftime('%Y-%m-%d')
+    return d
 
 if __name__ == "__main__":
     generate_latex()

@@ -29,13 +29,11 @@ contentDict = {
         EXP_columnsDef={"": "|p{0.25cm} | X | p{2.5cm}| p{4cm}|"},
         EXP_include={"":"true"},
         EXP_content={"Content":
-            '''
-           \\begin{customlist}
-                \item Worked on UX and UI features for three different projects.
-                \item Used Sass and Tailwind to build professional websites.
-                \item Collaborated closely with an international team, alongside key stakeholders, within the Agile SCRUM framework.
-            \end{customlist}
-            '''
+            [
+                "Worked on UX and UI features for three different projects.",
+                "Used Sass and Tailwind to build professional websites.",
+                "Collaborated closely with an international team, alongside key stakeholders, within the Agile SCRUM framework.",
+            ]
             },
     ),
 }

@@ -2,6 +2,7 @@ from classes.experience import Experience
 from datetime import date
 import sys
 import os
+from enums.output_type import OutputType
 
 
 # Function to import a dictionary from a different path by adding it to the recognized paths
@@ -12,7 +13,7 @@ def import_contents_dict(path):
     return contentDict
 
 
-def generate_contents(source_dict, template_path: str, inbetween_content=""):
+def generate_contents(source_dict:dict, template_path: str, inbetween_content:str="", output_type:OutputType=OutputType("latex")):
     # Define the generated content as a string
     generated_content = r""""""
     # Iterate over each entry in provided dictionary
@@ -24,7 +25,7 @@ def generate_contents(source_dict, template_path: str, inbetween_content=""):
             template_content = template_file.read()
             # Replace placeholder strings in template to generate an entry
             new_content = replace_placeholders_in_template(
-                template_content, entry_obj_attributes, entry_obj
+                template_content, entry_obj_attributes, entry_obj, output_type
             )
             # Add newly create entry into the output file
             generated_content += new_content
@@ -43,7 +44,7 @@ def get_obj_attributes(obj):
     return obj_attributes
 
 
-def replace_placeholders_in_template(template, placeholder_strings, entry_object):
+def replace_placeholders_in_template(template:str, placeholder_strings:list, entry_object, output_type:OutputType):
     # Iterate over attributes and replace them into the template
     for attr in placeholder_strings:
         # print(attr)
@@ -52,6 +53,11 @@ def replace_placeholders_in_template(template, placeholder_strings, entry_object
         val = list(dict.values())[0]
         # if date, format properly
         val = formatDate(val)
+        # if string, format properly
+        val = formatString(val)
+        # if list of strings, format properly
+        val = formatListStrings(val,output_type)
+        # Replace in template
         template = template.replace(f"KEY_{attr}", str(key))
         template = template.replace(f"VAL_{attr}", str(val))
     return template
@@ -65,7 +71,22 @@ def generate_output_file(output_content, output_file_path):
     print("Output file generated successfully!")
 
 
-def formatDate(d):
-    if type(d) == date:
-        d = d.strftime("%Y-%m-%d")
-    return d
+def formatDate(x):
+    if type(x) == date:
+        x = x.strftime("%Y-%m-%d")
+    return x
+
+def formatString(x):
+    # if type(x) == str:
+    #     x = x
+    return x
+
+
+def formatListStrings(x, output_type:OutputType):
+    if type(x) == list:
+        # x = x.strftime("%Y-%m-%d")
+        if (output_type==OutputType("html")):
+            x = "<ul>\n" + "".join([f"\t\t<li>{i}</li>\n" for i in x]) + "\t</ul>"
+        if (output_type==OutputType("latex")):
+            x = "\\begin{customlist}\n" + "".join([f"\t\t\t\item {i}\n" for i in x]) + "\t\t\end{customlist}"
+    return x

@@ -3,6 +3,7 @@ from datetime import date
 import sys
 import os
 from content_generation import *
+from enums.output_type import OutputType
 
 # Get directory where the script is located
 script_directory = os.path.dirname(os.path.realpath(__file__))
@@ -25,6 +26,7 @@ def generate_html():
             contentDict,
             f"./templates/{section}/template.html",
             "<!-- ====== Spacer ====== -->\n",
+            OutputType("html")
         )
         generate_output_file(
             output_content,

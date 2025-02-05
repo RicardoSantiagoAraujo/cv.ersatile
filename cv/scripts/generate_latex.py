@@ -3,6 +3,7 @@ from datetime import date
 import sys
 import os
 from content_generation import *
+from enums.output_type import OutputType
 
 # Get directory where the script is located
 script_directory = os.path.dirname(os.path.realpath(__file__))
@@ -22,7 +23,10 @@ def generate_latex():
             f"../profiles/examples/{profile}/elements/{section}"
         )
         output_content = generate_contents(
-            contentDict, f"./templates/{section}/template.tex", "\n\\myTablesSeparator%"
+            contentDict,
+            f"./templates/{section}/template.tex",
+            "\n\\myTablesSeparator%",
+            OutputType("latex")
         )
         generate_output_file(
             output_content,

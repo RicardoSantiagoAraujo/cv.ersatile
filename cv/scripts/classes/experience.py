@@ -1,4 +1,5 @@
 from datetime import date
+from typing import Union
 
 class Experience:
     def __init__(self,
@@ -7,7 +8,7 @@ class Experience:
                  EXP_startDate:dict[str, date] = {"STARTDATE KEY: ":date(1,1,1)},
                  EXP_endDate:dict[str, date] = {"ENDDATE KEY: ":date.today()},
                  EXP_location: dict[str, str] = {"LOCATION KEY: ": "LOCATION VALUE"},
-                 EXP_content:dict[str, date] = {"CONTENT KEY: ":"CONTENT"},
+                 EXP_content:dict[str, Union[str, list[str]]] = {"CONTENT KEY: ":"CONTENT"},
                  EXP_include: dict[str, bool] = {"INCLUDE ENTRY" : "true"},
                  EXP_columnsDef: dict[str, str] = {"": ""}
                  ):

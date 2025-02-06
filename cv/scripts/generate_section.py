@@ -7,18 +7,18 @@ from content_generation import *
 from enums.output_type import OutputType
 from enums.section_type import SectionType
 from enums.languages import Language
+from enums.profiles import Profile
 
 # Get directory where the script is located
 script_directory = os.path.dirname(os.path.realpath(__file__))
 # Set it as working directory
 os.chdir(script_directory)
 
-
 #### Python script to generate a HTML file
 def generate_html():
     # check if correct number of arguments is passed:
     if len(sys.argv) == 5:
-        profile = sys.argv[1]
+        profile = Profile(sys.argv[1]).value
         section = SectionType(sys.argv[2]).value
         lang = Language(sys.argv[3]).value
         filetype = OutputType(sys.argv[4]).value

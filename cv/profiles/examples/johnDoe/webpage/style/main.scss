@@ -1,6 +1,6 @@
-.experience--entry{
+.table-entry{
     background-color: gray;
-    .experience--entry--header{
+    .table-entry__header{
         background-color: lightgray;
         display: flex;
         flex-direction: row;
@@ -9,7 +9,7 @@
             width: 25%;
         }
     }
-    .experience--entry--contents{
+    .table-entry__contents{
         background-color: white;
     }
 }

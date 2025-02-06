@@ -7,18 +7,18 @@ from content_generation import *
 from enums.output_type import OutputType
 from enums.constant_type import ConstantType
 from enums.languages import Language
+from enums.profiles import Profile
 
 # Get directory where the script is located
 script_directory = os.path.dirname(os.path.realpath(__file__))
 # Set it as working directory
 os.chdir(script_directory)
 
-
 #### Python script to generate a LaTeX file
 def generate_latex():
     # check if correct number of arguments is passed:
     if len(sys.argv) == 5:
-        profile = sys.argv[1]
+        profile = Profile(sys.argv[1]).value
         constant_type = ConstantType(sys.argv[2]).value
         lang = Language(sys.argv[3]).value
         filetype = OutputType(sys.argv[4]).value

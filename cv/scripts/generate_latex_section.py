@@ -27,7 +27,7 @@ def generate_latex():
         )
         output_content = generate_contents(
             contentDict,
-            f"./templates/{section}/template.tex",
+            f"./templates/sections/{section}/template.tex",
             "\n\\myTablesSeparator%",
             OutputType("latex")
         )

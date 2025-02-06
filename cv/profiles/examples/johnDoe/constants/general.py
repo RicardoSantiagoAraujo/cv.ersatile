@@ -17,10 +17,10 @@ contentDict = {
         VAR_site = {"":"johndoe.com"},
         VAR_picture = {"":"images/johnDoe_portrait.png"},
         VAR_signature = {"":"images/signatures/signature.png"},
-        VAR_pictureCropTop = {"":"10mm"},
-        VAR_pictureCropRight = {"":"10mm"},
-        VAR_pictureCropBottom = {"":"20mm"},
-        VAR_pictureCropLeft = {"":"10mm"},
-        VAL_VAR_myPictureStyleExtras = {"": ""}
+        VAR_picCropTop = {"":"10mm"},
+        VAR_picCropRight = {"":"10mm"},
+        VAR_picCropBottom = {"":"20mm"},
+        VAR_picCropLeft = {"":"10mm"},
+        VAR_myPictureStyleExtras = {"": ""}
         )
     }

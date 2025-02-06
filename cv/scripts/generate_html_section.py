@@ -27,7 +27,7 @@ def generate_html():
         )
         output_content = generate_contents(
             contentDict,
-            f"./templates/{section}/template.html",
+            f"./templates/sections/{section}/template.html",
             "<!-- ====== Spacer ====== -->\n",
             OutputType("html")
         )

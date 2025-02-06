@@ -5,14 +5,17 @@ import sys
 import os
 from enums.output_type import OutputType
 from enums.section_type import SectionType
+from enums.constant_type import ConstantType
 
 # Function to import a dictionary from a different path by adding it to the recognized paths
-def import_contents_dict(path, section:str):
+def import_contents_dict(path, type:str):
     sys.path.insert(0, path)
-    if section == SectionType("experience").value:
+    if type == SectionType("experience").value:
         from experience import contentDict  # type: ignore (ignore python warning)
-    if section == SectionType("education").value:
+    if type == SectionType("education").value:
         from education import contentDict  # type: ignore (ignore python warning)
+    if type == ConstantType("general").value:
+        from general import contentDict  # type: ignore (ignore python warning)
 
     return contentDict
 

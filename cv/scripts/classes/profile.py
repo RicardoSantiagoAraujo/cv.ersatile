@@ -14,10 +14,10 @@ class Profile:
                 VAR_site: dict[str, str],
                 VAR_picture: dict[str, str],
                 VAR_signature: dict[str, str],
-                VAR_pictureCropTop: dict[str, str],
-                VAR_pictureCropRight: dict[str, str],
-                VAR_pictureCropBottom: dict[str, str],
-                VAR_pictureCropLeft: dict[str, str],
+                VAR_picCropTop: dict[str, str], # "pic" instead of "picture" to avoid being replaced by VAR_picture
+                VAR_picCropRight: dict[str, str],
+                VAR_picCropBottom: dict[str, str],
+                VAR_picCropLeft: dict[str, str],
                 VAR_myPictureStyleExtras : dict[str, str]
                  ):
         self.VAR_name = VAR_name
@@ -34,8 +34,8 @@ class Profile:
         self.VAR_site = VAR_site
         self.VAR_picture = VAR_picture
         self.VAR_signature = VAR_signature
-        self.VAR_pictureCropTop = VAR_pictureCropTop
-        self.VAR_pictureCropRight = VAR_pictureCropRight
-        self.VAR_pictureCropBottom = VAR_pictureCropBottom
-        self.VAR_pictureCropLeft = VAR_pictureCropLeft
+        self.VAR_picCropTop = VAR_picCropTop
+        self.VAR_picCropRight = VAR_picCropRight
+        self.VAR_picCropBottom = VAR_picCropBottom
+        self.VAR_picCropLeft = VAR_picCropLeft
         self.VAR_myPictureStyleExtras = VAR_myPictureStyleExtras

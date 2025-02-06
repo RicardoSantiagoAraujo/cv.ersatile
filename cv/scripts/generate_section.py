@@ -6,6 +6,7 @@ import os
 from content_generation import *
 from enums.output_type import OutputType
 from enums.section_type import SectionType
+from enums.languages import Language
 
 # Get directory where the script is located
 script_directory = os.path.dirname(os.path.realpath(__file__))
@@ -19,7 +20,7 @@ def generate_html():
     if len(sys.argv) == 5:
         profile = sys.argv[1]
         section = SectionType(sys.argv[2]).value
-        lang = sys.argv[3]
+        lang = Language(sys.argv[3]).value
         filetype = OutputType(sys.argv[4]).value
 
         contentDict = import_contents_dict(
@@ -29,32 +30,30 @@ def generate_html():
 
         # Choose input template and outfile file paths depending on the desired filetype
         if filetype == "latex":
-            template_path = f"./templates/sections/{section}/template.html"
+            template_path = f"./templates/sections/{section}/template.tex"
             output_path = f"../profiles/examples/{profile}/elements/{section}/{section}_contents_{lang}.tex"
+            separator =  "\n\\myTablesSeparator%"
         elif filetype == "html":
             template_path = f"./templates/sections/{section}/template.html"
             output_path = f"../profiles/examples/{profile}/webpage/{section}/{section}_contents_{lang}.html"
+            separator = "<!-- ====== Spacer ====== -->\n"
 
         output_content = generate_contents(
             contentDict,
             template_path,
-            "<!-- ====== Spacer ====== -->\n",
-            OutputType("html")
+            separator,
+            OutputType(filetype)
         )
         generate_output_file(
             output_content,
             output_path,
         )
     else:
-        print(
-            """
-              =================================================================
-              COMMAND USE:
-              python <profile id> generate_section.py <section> <language id> <output file type>
-
-              example: python generate_section.py johnDoe experience en html
-              =================================================================
-              """
+        print_instructions(
+        ("profile id", f"id of the person whose CV is to be generated;", "johnDoe"),
+        ("section" , f"CV section to be generated {[e.value for e in SectionType]}", SectionType),
+        ("languade id" , f"language version of the CV content {[e.value for e in Language]}", Language),
+        ("file type" , f"type of file to be generated {[e.value for e in OutputType]}", OutputType),
         )
 
 

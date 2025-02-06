@@ -6,6 +6,7 @@ import os
 from content_generation import *
 from enums.output_type import OutputType
 from enums.constant_type import ConstantType
+from enums.languages import Language
 
 # Get directory where the script is located
 script_directory = os.path.dirname(os.path.realpath(__file__))
@@ -19,14 +20,14 @@ def generate_latex():
     if len(sys.argv) == 5:
         profile = sys.argv[1]
         constant_type = ConstantType(sys.argv[2]).value
-        lang = sys.argv[3]
+        lang = Language(sys.argv[3]).value
         filetype = OutputType(sys.argv[4]).value
 
         contentDict = import_contents_dict(
             f"../profiles/examples/{profile}/constants",
             constant_type
         )
-        
+
         # Choose input template and outfile file paths depending on the desired filetype
         if filetype == "latex":
             template_path = f"./templates/constants/{constant_type}/template.tex"
@@ -40,7 +41,7 @@ def generate_latex():
             contentDict,
             template_path,
             "",
-            OutputType("latex")
+            OutputType(filetype)
         )
 
 
@@ -49,17 +50,12 @@ def generate_latex():
             output_path,
         )
     else:
-        print(
-            """
-              =================================================================
-              COMMAND USE:
-              python <profile id> generate_constants.py <constant type> <language id> <output file type>
-
-              example: python generate_constants.py johnDoe general en html
-              =================================================================
-              """
+        print_instructions(
+        ("profile id", f"id of the person whose CV is to be generated;", "johnDoe"),
+        ("constant type" , f"Constant type to be generated {[e.value for e in ConstantType]}", ConstantType),
+        ("languade id" , f"language version of the CV content {[e.value for e in Language]}", Language),
+        ("file type" , f"type of file to be generated {[e.value for e in OutputType]}", OutputType),
         )
-
 
 if __name__ == "__main__":
     generate_latex()

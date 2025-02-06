@@ -6,11 +6,25 @@
      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript">
     $.ajax({
-        url: './experience/experience_contents_en.html',
+        url: './general.html',
         dataType: 'html',
         success: function(response) {
             $(response).clone().appendTo("#printHere");
         }
+    });
+    $.ajax({
+    url: './experience/experience_contents_en.html',
+    dataType: 'html',
+    success: function(response) {
+        $(response).clone().appendTo("#printHere");
+    }
+    });
+    $.ajax({
+    url: './education/education_contents_en.html',
+    dataType: 'html',
+    success: function(response) {
+      $(response).clone().appendTo("#printHere");
+    }
     });
     </script>
   </head>

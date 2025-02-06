@@ -16,33 +16,46 @@ os.chdir(script_directory)
 #### Python script to generate a LaTeX file
 def generate_latex():
     # check if correct number of arguments is passed:
-    if len(sys.argv) == 4:
+    if len(sys.argv) == 5:
         profile = sys.argv[1]
         constant_type = ConstantType(sys.argv[2]).value
         lang = sys.argv[3]
+        filetype = OutputType(sys.argv[4]).value
 
         contentDict = import_contents_dict(
             f"../profiles/examples/{profile}/constants",
             constant_type
         )
+        
+        # Choose input template and outfile file paths depending on the desired filetype
+        if filetype == "latex":
+            template_path = f"./templates/constants/{constant_type}/template.tex"
+            output_path = f"../profiles/examples/{profile}/constants/{constant_type}.tex"
+        elif filetype == "html":
+            template_path = f"./templates/constants/{constant_type}/template.html"
+            output_path = f"../profiles/examples/{profile}/webpage/{constant_type}.html"
+
+
         output_content = generate_contents(
             contentDict,
-            f"./templates/constants/{constant_type}/template.tex",
-            "\n\\myTablesSeparator%",
+            template_path,
+            "",
             OutputType("latex")
         )
+
+
         generate_output_file(
             output_content,
-            f"../profiles/examples/{profile}/constants/{constant_type}.tex",
+            output_path,
         )
     else:
         print(
             """
               =================================================================
               COMMAND USE:
-              python <profile id> generate_latex_constants.py <section> <language id>
+              python <profile id> generate_constants.py <constant type> <language id> <output file type>
 
-              example: python generate_latex_constants.py johnDoe experience en
+              example: python generate_constants.py johnDoe general en html
               =================================================================
               """
         )

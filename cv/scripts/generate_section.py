@@ -13,40 +13,50 @@ script_directory = os.path.dirname(os.path.realpath(__file__))
 os.chdir(script_directory)
 
 
-#### Python script to generate a LaTeX file
-def generate_latex():
+#### Python script to generate a HTML file
+def generate_html():
     # check if correct number of arguments is passed:
-    if len(sys.argv) == 4:
+    if len(sys.argv) == 5:
         profile = sys.argv[1]
         section = SectionType(sys.argv[2]).value
         lang = sys.argv[3]
+        filetype = OutputType(sys.argv[4]).value
 
         contentDict = import_contents_dict(
             f"../profiles/examples/{profile}/elements/{section}",
             section
         )
+
+        # Choose input template and outfile file paths depending on the desired filetype
+        if filetype == "latex":
+            template_path = f"./templates/sections/{section}/template.html"
+            output_path = f"../profiles/examples/{profile}/elements/{section}/{section}_contents_{lang}.tex"
+        elif filetype == "html":
+            template_path = f"./templates/sections/{section}/template.html"
+            output_path = f"../profiles/examples/{profile}/webpage/{section}/{section}_contents_{lang}.html"
+
         output_content = generate_contents(
             contentDict,
-            f"./templates/sections/{section}/template.tex",
-            "\n\\myTablesSeparator%",
-            OutputType("latex")
+            template_path,
+            "<!-- ====== Spacer ====== -->\n",
+            OutputType("html")
         )
         generate_output_file(
             output_content,
-            f"../profiles/examples/{profile}/elements/{section}/{section}_contents_{lang}.tex",
+            output_path,
         )
     else:
         print(
             """
               =================================================================
               COMMAND USE:
-              python <profile id> generate_latex_section.py <section> <language id>
+              python <profile id> generate_section.py <section> <language id> <output file type>
 
-              example: python generate_latex_section.py johnDoe experience en
+              example: python generate_section.py johnDoe experience en html
               =================================================================
               """
         )
 
 
 if __name__ == "__main__":
-    generate_latex()
+    generate_html()

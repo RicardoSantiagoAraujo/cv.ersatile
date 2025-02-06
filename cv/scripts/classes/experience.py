@@ -3,14 +3,14 @@ from typing import Union
 
 class Experience:
     def __init__(self,
-                 EXP_postTitle: dict[str, str] = {"POSTTITLE KEY: ": "POSTTITLE VALUE"},
-                 EXP_employer: dict[str, str] = {"EMPLOYER KEY: ": "EMPLOYER VALUE"},
-                 EXP_startDate:dict[str, date] = {"STARTDATE KEY: ":date(1,1,1)},
-                 EXP_endDate:dict[str, date] = {"ENDDATE KEY: ":date.today()},
-                 EXP_location: dict[str, str] = {"LOCATION KEY: ": "LOCATION VALUE"},
-                 EXP_content:dict[str, Union[str, list[str]]] = {"CONTENT KEY: ":"CONTENT"},
-                 EXP_include: dict[str, bool] = {"INCLUDE ENTRY" : "true"},
-                 EXP_columnsDef: dict[str, str] = {"": ""}
+                 EXP_postTitle: dict[str, str],
+                 EXP_employer: dict[str, str],
+                 EXP_startDate:dict[str, date],
+                 EXP_endDate:dict[str, date],
+                 EXP_location: dict[str, str],
+                 EXP_content:dict[str, Union[str, list[str]]],
+                 EXP_include: dict[str, bool],
+                 EXP_columnsDef: dict[str, str]
                  ):
         self.EXP_postTitle = EXP_postTitle
         self.EXP_employer = EXP_employer

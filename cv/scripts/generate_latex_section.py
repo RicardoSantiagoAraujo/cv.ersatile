@@ -13,8 +13,8 @@ script_directory = os.path.dirname(os.path.realpath(__file__))
 os.chdir(script_directory)
 
 
-#### Python script to generate a HTML file
-def generate_html():
+#### Python script to generate a LaTeX file
+def generate_latex():
     # check if correct number of arguments is passed:
     if len(sys.argv) == 4:
         profile = sys.argv[1]
@@ -27,26 +27,26 @@ def generate_html():
         )
         output_content = generate_contents(
             contentDict,
-            f"./templates/{section}/template.html",
-            "<!-- ====== Spacer ====== -->\n",
-            OutputType("html")
+            f"./templates/{section}/template.tex",
+            "\n\\myTablesSeparator%",
+            OutputType("latex")
         )
         generate_output_file(
             output_content,
-            f"../profiles/examples/{profile}/webpage/{section}/{section}_contents_{lang}.html",
+            f"../profiles/examples/{profile}/elements/{section}/{section}_contents_{lang}.tex",
         )
     else:
         print(
             """
               =================================================================
               COMMAND USE:
-              python <profile id> generate_html.py <section> <language id>
+              python <profile id> generate_latex_section.py <section> <language id>
 
-              example: python generate_html.py johnDoe experience en
+              example: python generate_latex_section.py johnDoe experience en
               =================================================================
               """
         )
 
 
 if __name__ == "__main__":
-    generate_html()
+    generate_latex()

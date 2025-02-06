@@ -50,7 +50,7 @@ def generate_html():
         )
     else:
         print_instructions(
-        ("profile id", f"id of the person whose CV is to be generated;", "johnDoe"),
+        ("profile id", f"id of the person whose CV is to be generated {[e.value for e in Profile]}", Profile),
         ("section" , f"CV section to be generated {[e.value for e in SectionType]}", SectionType),
         ("languade id" , f"language version of the CV content {[e.value for e in Language]}", Language),
         ("file type" , f"type of file to be generated {[e.value for e in OutputType]}", OutputType),

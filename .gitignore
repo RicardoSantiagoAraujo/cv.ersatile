@@ -42,3 +42,5 @@ Temporary Items
 *.pyc
 *.css
 *.css.map
+*.js
+*.js.map

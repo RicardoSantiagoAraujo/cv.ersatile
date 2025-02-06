@@ -3,32 +3,9 @@
   <head>
      <title>Personal webpage</title>
      <link rel="stylesheet" href="style/main.css">
-     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript">
-    $.ajax({
-        url: './general.html',
-        dataType: 'html',
-        success: function(response) {
-            $(response).clone().appendTo("#printHere");
-        }
-    });
-    $.ajax({
-    url: './experience/experience_contents_en.html',
-    dataType: 'html',
-    success: function(response) {
-        $(response).clone().appendTo("#printHere");
-    }
-    });
-    $.ajax({
-    url: './education/education_contents_en.html',
-    dataType: 'html',
-    success: function(response) {
-      $(response).clone().appendTo("#printHere");
-    }
-    });
-    </script>
   </head>
   <body>
      <div id="printHere"></div>
   </body>
+  <script src="scripts/main.js"></script>
 </html>

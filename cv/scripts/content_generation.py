@@ -4,6 +4,7 @@ from datetime import date
 import sys
 import os
 from pathlib import Path
+import json
 # Enums
 from enum import EnumType
 from enums.output_type import OutputType
@@ -125,3 +126,19 @@ def print_instructions(*args:tuple):# kwargs is a dictionary
     \t=================================================================
     """
     )
+
+
+
+def generate_json(inputDict: dict, profile: str, name: str, lang: str):
+    # Convert objects to dictionaries, place each one in a merged dictionary
+    merged_data = {}
+    for label, obj in inputDict.items():
+        merged_data[label] =  obj.__dict__
+
+    # save dictionary as json
+    with open(f"../profiles/{profile}/webpage/data/{name}_{lang}.json", "w") as outfile:
+        json.dump(merged_data, outfile,
+                    indent = 4,
+                    sort_keys = True,
+                    default = str
+                    )

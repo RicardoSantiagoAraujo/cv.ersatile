@@ -5,7 +5,7 @@ import os
 script_directory = os.path.dirname(os.path.realpath(__file__))
 # Set it as working directory
 os.chdir(script_directory)
-print(script_directory)
+# print(script_directory)
 from content_generation import *
 ### Classes
 from classes.experience import Experience
@@ -16,8 +16,8 @@ from enums.constant_type import ConstantType
 from enums.languages import Language
 from enums.profiles import Profile
 
-#### Python script to generate a LaTeX file
-def generate_latex():
+#### Python script to generate a file
+def generate_constants():
     # check if correct number of arguments is passed:
     if len(sys.argv) == 5:
         profile = Profile(sys.argv[1]).value
@@ -26,17 +26,21 @@ def generate_latex():
         filetype = OutputType(sys.argv[4]).value
 
         contentDict = import_contents_dict(
-            f"../profiles/examples/{profile}/constants",
+            f"../profiles/{profile}/constants",
             constant_type
         )
+
+        generate_json(contentDict, profile, constant_type, lang)
+
+
 
         # Choose input template and outfile file paths depending on the desired filetype
         if filetype == "latex":
             template_path = f"./templates/constants/{constant_type}/template.tex"
-            output_path = f"../profiles/examples/{profile}/constants/{constant_type}.tex"
+            output_path = f"../profiles/{profile}/constants/{constant_type}.tex"
         elif filetype == "html":
             template_path = f"./templates/constants/{constant_type}/template.html"
-            output_path = f"../profiles/examples/{profile}/webpage/{constant_type}.html"
+            output_path = f"../profiles/{profile}/webpage/{constant_type}.html"
 
 
         output_content = generate_contents(
@@ -60,4 +64,4 @@ def generate_latex():
         )
 
 if __name__ == "__main__":
-    generate_latex()
+    generate_constants()

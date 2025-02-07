@@ -5,7 +5,7 @@ import os
 script_directory = os.path.dirname(os.path.realpath(__file__))
 # Set it as working directory
 os.chdir(script_directory)
-print(script_directory)
+# print(script_directory)
 from content_generation import *
 ### Classes
 from classes.experience import Experience
@@ -22,8 +22,8 @@ script_directory = os.path.dirname(os.path.realpath(__file__))
 # Set it as working directory
 os.chdir(script_directory)
 
-#### Python script to generate a HTML file
-def generate_html():
+#### Python script to generate a file
+def generate_section():
     # check if correct number of arguments is passed:
     if len(sys.argv) == 5:
         profile = Profile(sys.argv[1]).value
@@ -32,18 +32,21 @@ def generate_html():
         filetype = OutputType(sys.argv[4]).value
 
         contentDict = import_contents_dict(
-            f"../profiles/examples/{profile}/elements/{section}",
+            f"../profiles/{profile}/elements/{section}",
             section
         )
+
+        generate_json(contentDict, profile, section, lang)
+
 
         # Choose input template and outfile file paths depending on the desired filetype
         if filetype == "latex":
             template_path = f"./templates/sections/{section}/template.tex"
-            output_path = f"../profiles/examples/{profile}/elements/{section}/{section}_contents_{lang}.tex"
+            output_path = f"../profiles/{profile}/elements/{section}/{section}_contents_{lang}.tex"
             separator =  "\n\\myTablesSeparator%"
         elif filetype == "html":
             template_path = f"./templates/sections/{section}/template.html"
-            output_path = f"../profiles/examples/{profile}/webpage/{section}/{section}_contents_{lang}.html"
+            output_path = f"../profiles/{profile}/webpage/{section}/{section}_contents_{lang}.html"
             separator = "<!-- ====== Spacer ====== -->\n"
 
         output_content = generate_contents(
@@ -66,4 +69,4 @@ def generate_html():
 
 
 if __name__ == "__main__":
-    generate_html()
+    generate_section()

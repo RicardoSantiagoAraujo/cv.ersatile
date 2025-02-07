@@ -3,7 +3,7 @@
 {
     "compilerOptions": {
       "target": "ES5",
-      "module": "CommonJS",
+      "module": "es6",
       "sourceMap": true
     }
   }

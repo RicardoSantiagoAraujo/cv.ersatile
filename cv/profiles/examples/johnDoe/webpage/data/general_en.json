@@ -1,60 +1,60 @@
 {
     "profile": {
-        "VAR_birthDay": {
+        "CONST_birthDay": {
             "": 1
         },
-        "VAR_birthMonth": {
+        "CONST_birthMonth": {
             "": 1
         },
-        "VAR_birthYear": {
+        "CONST_birthYear": {
             "": 1993
         },
-        "VAR_city": {
+        "CONST_city": {
             "": "London"
         },
-        "VAR_country": {
+        "CONST_country": {
             "": "UK"
         },
-        "VAR_email": {
+        "CONST_email": {
             "": "john.doe@gmail.com"
         },
-        "VAR_linkedIn": {
+        "CONST_linkedIn": {
             "": "john-doe"
         },
-        "VAR_myPictureStyleExtras": {
+        "CONST_myPictureStyleExtras": {
             "": ""
         },
-        "VAR_name": {
+        "CONST_name": {
             "": "John Doe"
         },
-        "VAR_phone": {
+        "CONST_phone": {
             "": "1234567890"
         },
-        "VAR_picCropBottom": {
+        "CONST_picCropBottom": {
             "": "20mm"
         },
-        "VAR_picCropLeft": {
+        "CONST_picCropLeft": {
             "": "10mm"
         },
-        "VAR_picCropRight": {
+        "CONST_picCropRight": {
             "": "10mm"
         },
-        "VAR_picCropTop": {
+        "CONST_picCropTop": {
             "": "10mm"
         },
-        "VAR_picture": {
+        "CONST_picture": {
             "": "images/johnDoe_portrait.png"
         },
-        "VAR_signature": {
+        "CONST_signature": {
             "": "images/signatures/signature.png"
         },
-        "VAR_site": {
+        "CONST_site": {
             "": "johndoe.com"
         },
-        "VAR_street": {
+        "CONST_street": {
             "": "1 Downing Street"
         },
-        "VAR_title": {
+        "CONST_title": {
             "": "MSc"
         }
     }

@@ -32,16 +32,15 @@ def generate_constants():
 
         generate_json(contentDict, profile, constant_type, lang)
 
-
-
         # Choose input template and outfile file paths depending on the desired filetype
         if filetype == "latex":
             template_path = f"./templates/constants/{constant_type}/template.tex"
             output_path = f"../profiles/{profile}/constants/{constant_type}.tex"
-        elif filetype == "html":
-            template_path = f"./templates/constants/{constant_type}/template.html"
-            output_path = f"../profiles/{profile}/webpage/{constant_type}.html"
-
+        elif filetype == "ts":
+            template_path = f"./templates/constants/{constant_type}/template.ts"
+            output_path = f"../profiles/{profile}/webpage/scripts/constants/{constant_type}.ts"
+        else:
+            return print(f"/!\\ {filetype} generation not available for {Path(__file__).name}")
 
         output_content = generate_contents(
             contentDict,

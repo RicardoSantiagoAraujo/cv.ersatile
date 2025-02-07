@@ -3,24 +3,24 @@ from datetime import date
 
 contentDict = {
     "profile": Profile(
-        VAR_name = {"" : "John Doe"},
-        VAR_title = {"" : "MSc"},
-        VAR_birthDay = {"" : 1},
-        VAR_birthMonth = {"" : 1},
-        VAR_birthYear = {"" : 1993},
-        VAR_street = {"" : "1 Downing Street"},
-        VAR_city = {"" : "London"},
-        VAR_country = {"": "UK"},
-        VAR_email = {"":"john.doe@gmail.com"},
-        VAR_linkedIn = {"":"john-doe"},
-        VAR_phone = {"":"1234567890"},
-        VAR_site = {"":"johndoe.com"},
-        VAR_picture = {"":"images/johnDoe_portrait.png"},
-        VAR_signature = {"":"images/signatures/signature.png"},
-        VAR_picCropTop = {"":"10mm"},
-        VAR_picCropRight = {"":"10mm"},
-        VAR_picCropBottom = {"":"20mm"},
-        VAR_picCropLeft = {"":"10mm"},
-        VAR_myPictureStyleExtras = {"": ""}
+        CONST_name = {"" : "John Doe"},
+        CONST_title = {"" : "MSc"},
+        CONST_birthDay = {"" : 1},
+        CONST_birthMonth = {"" : 1},
+        CONST_birthYear = {"" : 1993},
+        CONST_street = {"" : "1 Downing Street"},
+        CONST_city = {"" : "London"},
+        CONST_country = {"": "UK"},
+        CONST_email = {"":"john.doe@gmail.com"},
+        CONST_linkedIn = {"":"john-doe"},
+        CONST_phone = {"":"1234567890"},
+        CONST_site = {"":"johndoe.com"},
+        CONST_picture = {"":"images/johnDoe_portrait.png"},
+        CONST_signature = {"":"images/signatures/signature.png"},
+        CONST_picCropTop = {"":"10mm"},
+        CONST_picCropRight = {"":"10mm"},
+        CONST_picCropBottom = {"":"20mm"},
+        CONST_picCropLeft = {"":"10mm"},
+        CONST_myPictureStyleExtras = {"": ""}
         )
     }

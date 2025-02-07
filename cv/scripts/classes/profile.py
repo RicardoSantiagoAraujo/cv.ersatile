@@ -1,41 +1,41 @@
 class Profile:
     def __init__(self,
-                VAR_name: dict[str, str],
-                VAR_title: dict[str, str],
-                VAR_birthDay:dict[str, int],
-                VAR_birthMonth:dict[str, int],
-                VAR_birthYear: dict[str, int],
-                VAR_street:dict[str, str],
-                VAR_city: dict[str, str],
-                VAR_country: dict[str, str],
-                VAR_email: dict[str, str],
-                VAR_linkedIn: dict[str, str],
-                VAR_phone: dict[str, str],
-                VAR_site: dict[str, str],
-                VAR_picture: dict[str, str],
-                VAR_signature: dict[str, str],
-                VAR_picCropTop: dict[str, str], # "pic" instead of "picture" to avoid being replaced by VAR_picture
-                VAR_picCropRight: dict[str, str],
-                VAR_picCropBottom: dict[str, str],
-                VAR_picCropLeft: dict[str, str],
-                VAR_myPictureStyleExtras : dict[str, str]
+                CONST_name: dict[str, str],
+                CONST_title: dict[str, str],
+                CONST_birthDay:dict[str, int],
+                CONST_birthMonth:dict[str, int],
+                CONST_birthYear: dict[str, int],
+                CONST_street:dict[str, str],
+                CONST_city: dict[str, str],
+                CONST_country: dict[str, str],
+                CONST_email: dict[str, str],
+                CONST_linkedIn: dict[str, str],
+                CONST_phone: dict[str, str],
+                CONST_site: dict[str, str],
+                CONST_picture: dict[str, str],
+                CONST_signature: dict[str, str],
+                CONST_picCropTop: dict[str, str], # "pic" instead of "picture" to avoid being replaced by CONST_picture
+                CONST_picCropRight: dict[str, str],
+                CONST_picCropBottom: dict[str, str],
+                CONST_picCropLeft: dict[str, str],
+                CONST_myPictureStyleExtras : dict[str, str]
                  ):
-        self.VAR_name = VAR_name
-        self.VAR_title = VAR_title
-        self.VAR_birthDay = VAR_birthDay
-        self.VAR_birthMonth = VAR_birthMonth
-        self.VAR_birthYear = VAR_birthYear
-        self.VAR_street = VAR_street
-        self.VAR_city = VAR_city
-        self.VAR_country = VAR_country
-        self.VAR_email = VAR_email
-        self.VAR_linkedIn = VAR_linkedIn
-        self.VAR_phone = VAR_phone
-        self.VAR_site = VAR_site
-        self.VAR_picture = VAR_picture
-        self.VAR_signature = VAR_signature
-        self.VAR_picCropTop = VAR_picCropTop
-        self.VAR_picCropRight = VAR_picCropRight
-        self.VAR_picCropBottom = VAR_picCropBottom
-        self.VAR_picCropLeft = VAR_picCropLeft
-        self.VAR_myPictureStyleExtras = VAR_myPictureStyleExtras
+        self.CONST_name = CONST_name
+        self.CONST_title = CONST_title
+        self.CONST_birthDay = CONST_birthDay
+        self.CONST_birthMonth = CONST_birthMonth
+        self.CONST_birthYear = CONST_birthYear
+        self.CONST_street = CONST_street
+        self.CONST_city = CONST_city
+        self.CONST_country = CONST_country
+        self.CONST_email = CONST_email
+        self.CONST_linkedIn = CONST_linkedIn
+        self.CONST_phone = CONST_phone
+        self.CONST_site = CONST_site
+        self.CONST_picture = CONST_picture
+        self.CONST_signature = CONST_signature
+        self.CONST_picCropTop = CONST_picCropTop
+        self.CONST_picCropRight = CONST_picCropRight
+        self.CONST_picCropBottom = CONST_picCropBottom
+        self.CONST_picCropLeft = CONST_picCropLeft
+        self.CONST_myPictureStyleExtras = CONST_myPictureStyleExtras

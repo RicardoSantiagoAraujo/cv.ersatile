@@ -46,8 +46,10 @@ def generate_section():
             separator =  "\n\\myTablesSeparator%"
         elif filetype == "html":
             template_path = f"./templates/sections/{section}/template.html"
-            output_path = f"../profiles/{profile}/webpage/{section}/{section}_contents_{lang}.html"
+            output_path = f"../profiles/{profile}/webpage/sections/{section}/{section}_contents_{lang}.html"
             separator = "<!-- ====== Spacer ====== -->\n"
+        else:
+            return print(f"/!\\ {filetype} generation not available for f{Path(__file__).name}")
 
         output_content = generate_contents(
             contentDict,

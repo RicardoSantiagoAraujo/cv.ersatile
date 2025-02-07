@@ -1,13 +1,21 @@
-from classes.experience import Experience
-from classes.education import Education
 from datetime import date
 import sys
 import os
+# Get directory where the script is located
+script_directory = os.path.dirname(os.path.realpath(__file__))
+# Set it as working directory
+os.chdir(script_directory)
+print(script_directory)
 from content_generation import *
+### Classes
+from classes.experience import Experience
+from classes.education import Education
+### Enums
 from enums.output_type import OutputType
-from enums.section_type import SectionType
+from enums.constant_type import ConstantType
 from enums.languages import Language
 from enums.profiles import Profile
+
 
 # Get directory where the script is located
 script_directory = os.path.dirname(os.path.realpath(__file__))

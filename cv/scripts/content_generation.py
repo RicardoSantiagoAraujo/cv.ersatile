@@ -51,7 +51,8 @@ def generate_contents(source_dict:dict, template_path: str, inbetween_content:st
 def get_obj_attributes(obj):
     # Get list of non-special attributes of entry class
     obj_attributes = [a for a in dir(obj) if not a.startswith("__")]
-    # print(entry_obj_attributes)
+    # Sort by descending order
+    obj_attributes = sorted(obj_attributes, key=len,  reverse=True)
     return obj_attributes
 
 

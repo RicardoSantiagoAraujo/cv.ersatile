@@ -1,3 +1,50 @@
+html{
+    background-color: black;
+}
+
+body{
+    width: 80%;
+    margin: auto;
+    margin-top: 2vh;
+    background-color: white;
+}
+
+header{
+    background-color: red;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .header__left{
+        background-color: green;
+        width: 80%;
+        h1{
+            font-size: 5rem;
+        }
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            background-color: pink;
+            justify-content: space-evenly;
+            li{
+                list-style-type: none;
+
+            }
+        }
+    }
+    .header__right{
+        background-color: yellow;
+        width: 20%;
+        img{
+            width: 100%;
+        }
+
+    }
+}
+
+section{
+}
+
+
 .table-entry{
     background-color: gray;
     .table-entry__header{

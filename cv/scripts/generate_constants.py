@@ -7,9 +7,6 @@ script_directory = os.path.dirname(os.path.realpath(__file__))
 os.chdir(script_directory)
 # print(script_directory)
 from content_generation import *
-### Classes
-from classes.experience import Experience
-from classes.education import Education
 ### Enums
 from enums.output_type import OutputType
 from enums.constant_type import ConstantType

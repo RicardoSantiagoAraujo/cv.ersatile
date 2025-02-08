@@ -1,0 +1,19 @@
+
+%
+% ==============================================
+\ifVAL_RES_include % true/false to include/exclude
+\begin{myTableEnv}{VAL_RES_columnsDef}
+    \myRow
+        {KEY_RES_startDate}{\customDateFormat{VAL_RES_startDate}}
+        {KEY_RES_institute}{VAL_RES_institute}
+    \myRow
+        {KEY_RES_title}{VAL_RES_title}
+        {KEY_RES_location}{VAL_RES_location}
+    %%% DESCRIPTION ==================
+    \myTableContents{%
+    VAL_RES_content%
+    }
+\end{myTableEnv}
+%
+\fi
+%

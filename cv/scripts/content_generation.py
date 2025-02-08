@@ -1,5 +1,3 @@
-from classes.experience import Experience
-from classes.education import Education
 from datetime import date
 import sys
 import os
@@ -15,10 +13,19 @@ from enums.languages import Language
 # Function to import a dictionary from a different path by adding it to the recognized paths
 def import_contents_dict(path, type:str):
     sys.path.insert(0, path)
+    ### Section types
     if type == SectionType("experience").value:
         from experience import contentDict  # type: ignore (ignore python warning)
     if type == SectionType("education").value:
         from education import contentDict  # type: ignore (ignore python warning)
+    if type == SectionType("popScience").value:
+        from popScience import contentDict  # type: ignore (ignore python warning)
+    if type == SectionType("research").value:
+        from research import contentDict  # type: ignore (ignore python warning)
+    if type == SectionType("teaching").value:
+        from teaching import contentDict  # type: ignore (ignore python warning)
+
+    ### Constants
     if type == ConstantType("general").value:
         from general import contentDict  # type: ignore (ignore python warning)
 
@@ -78,6 +85,13 @@ def replace_placeholders_in_template(template:str, placeholder_strings:list, ent
 
 def generate_output_file(output_content, output_file_path):
     # Open a new .tex file and write the LaTeX content into it
+    # Check whether the specified path exists or not
+    output_file_dir = os.path.dirname(output_file_path)
+    isExist = os.path.exists(output_file_dir)
+    if not isExist:
+        # Create a new directory because it does not exist
+        os.makedirs(output_file_dir)
+        print("The new directory is created!")
     with open(output_file_path, "w") as output_file:
         output_file.write(output_content)
     print("\n")

@@ -63,3 +63,6 @@ function addHeader(){
 addHeader()
 addSection("experience")
 addSection("education")
+addSection("popScience")
+addSection("research")
+addSection("teaching")

@@ -37,10 +37,12 @@ def generate_section():
 
 
         # Choose input template and outfile file paths depending on the desired filetype
+        separator = ""
         if filetype == "latex":
             template_path = f"./templates/sections/{section}/template.tex"
             output_path = f"../profiles/{profile}/elements/{section}/{section}_contents_{lang}.tex"
-            separator =  "\n\\myTablesSeparator%"
+            if section in ["experience", "education", "popScience", "research", "teaching"]:
+                separator =  "\n\\myTablesSeparator%"
         elif filetype == "html":
             template_path = f"./templates/sections/{section}/template.html"
             output_path = f"../profiles/{profile}/webpage/sections/{section}/{section}_contents_{lang}.html"

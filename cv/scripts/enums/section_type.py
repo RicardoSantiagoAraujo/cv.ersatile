@@ -6,3 +6,4 @@ class SectionType(enum.Enum):
     popScience = 'popScience'
     teaching = 'teaching'
     research = 'research'
+    publications = 'publications'

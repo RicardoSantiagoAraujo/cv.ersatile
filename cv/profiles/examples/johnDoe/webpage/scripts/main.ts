@@ -20,7 +20,10 @@ function addSection(section_name: string){
       })
       .then((htmlContent) => {
         // Do something with the HTML content
-        document.querySelector("section."+sec_class)!.innerHTML += htmlContent; // Insert HTML into a DOM element
+        // Wrap it into a div element
+        let content_container = document.createElement('div');
+        content_container.innerHTML = htmlContent;
+        document.querySelector("section."+sec_class)!.append(content_container); // Insert HTML into a DOM element
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -66,3 +69,4 @@ addSection("education")
 addSection("popScience")
 addSection("research")
 addSection("teaching")
+addSection("publications")

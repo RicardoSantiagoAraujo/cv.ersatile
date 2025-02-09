@@ -24,6 +24,8 @@ def import_contents_dict(path, type:str):
         from research import contentDict  # type: ignore (ignore python warning)
     if type == SectionType("teaching").value:
         from teaching import contentDict  # type: ignore (ignore python warning)
+    if type == SectionType("publications").value:
+        from publications import contentDict  # type: ignore (ignore python warning)
 
     ### Constants
     if type == ConstantType("general").value:

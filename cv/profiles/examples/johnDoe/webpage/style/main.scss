@@ -4,9 +4,14 @@ html{
 
 body{
     width: 80%;
+    padding: 0cm;
     margin: auto;
     margin-top: 2vh;
     background-color: white;
+}
+
+header, section{
+    padding: 0.5cm 1cm;
 }
 
 header{

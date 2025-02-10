@@ -19,7 +19,14 @@ def import_contents_dict(path:str, type:str, version:str, lang:str):
     return contentDict
 
 
-def generate_contents(source_dict:dict, template_path: str, inbetween_content:str="", output_type:OutputType=OutputType("latex")):
+def generate_contents(
+    source_dict:dict,
+    template_path: str,
+    pre_content:str="",
+    post_content:str="",
+    inbetween_content:str="",
+    output_type:OutputType=OutputType("latex")
+    ):
     # Define the generated content as a string
     generated_content = r""""""
     # Iterate over each entry in provided dictionary
@@ -39,6 +46,8 @@ def generate_contents(source_dict:dict, template_path: str, inbetween_content:st
             ### add inbetween content as long as last entry is not reached
             if i != (len(source_dict) - 1):
                 generated_content += inbetween_content
+            ### add prefix and suffix
+            generated_content = f"{pre_content}{generated_content}{post_content}"
     # Return generated string
     return generated_content
 

@@ -1,7 +1,7 @@
 from classes.research import Research # type: ignore
 from datetime import date
 
-contentDict_en = {
+contentDict_full_en = {
     "example": Research(
         RES_title={"": ""},
         RES_institute={"": "CS Institute"},

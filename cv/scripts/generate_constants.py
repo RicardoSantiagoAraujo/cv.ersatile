@@ -44,10 +44,12 @@ def generate_constants():
             return print(f"/!\\ {filetype} generation not available for {Path(__file__).name}")
 
         output_content = generate_contents(
-            contentDict,
-            template_path,
-            "",
-            OutputType(filetype)
+            source_dict = contentDict,
+            template_path = template_path,
+            pre_content="",
+            post_content="",
+            inbetween_content = "",
+            output_type = OutputType(filetype)
         )
 
 

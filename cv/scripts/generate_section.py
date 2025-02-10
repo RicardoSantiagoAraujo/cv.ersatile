@@ -36,23 +36,28 @@ def generate_section():
 
         # Choose input template and outfile file paths depending on the desired filetype
         separator = ""
+        auto_warning = " /!\ CONTENT GENERATED WITH PYTHON SCRIPT, CHANGES MADE DIRECTLY HERE MAY BE OVERWRITTEN /!\ "
         if filetype == "latex":
             template_path = f"./templates/sections/{section}/template.tex"
             output_path = f"../profiles/{profile}/elements/{section}/{section}_contents_{version}_{lang}.tex"
+            auto_warning = f"%{auto_warning}"
             if section in ["experience", "education", "popScience", "research", "teaching"]:
                 separator =  "\n\\myTablesSeparator%"
         elif filetype == "html":
             template_path = f"./templates/sections/{section}/template.html"
             output_path = f"../profiles/{profile}/webpage/sections/{section}/{section}_contents_{version}_{lang}.html"
             separator = "<!-- ====== Spacer ====== -->\n"
+            auto_warning = f"<!-- {auto_warning} -->\n"
         else:
             return print(f"/!\\ {filetype} generation not available for f{Path(__file__).name}")
 
         output_content = generate_contents(
-            contentDict,
-            template_path,
-            separator,
-            OutputType(filetype)
+            source_dict = contentDict,
+            template_path = template_path,
+            pre_content=auto_warning,
+            post_content="",
+            inbetween_content = separator,
+            output_type = OutputType(filetype)
         )
         generate_output_file(
             output_content,

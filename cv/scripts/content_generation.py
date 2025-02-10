@@ -11,26 +11,10 @@ from enums.constant_type import ConstantType
 from enums.languages import Language
 
 # Function to import a dictionary from a different path by adding it to the recognized paths
-def import_contents_dict(path, type:str):
+def import_contents_dict(path:str, type:str):
     sys.path.insert(0, path)
-    ### Section types
-    if type == SectionType("experience").value:
-        from experience import contentDict  # type: ignore (ignore python warning)
-    if type == SectionType("education").value:
-        from education import contentDict  # type: ignore (ignore python warning)
-    if type == SectionType("popScience").value:
-        from popScience import contentDict  # type: ignore (ignore python warning)
-    if type == SectionType("research").value:
-        from research import contentDict  # type: ignore (ignore python warning)
-    if type == SectionType("teaching").value:
-        from teaching import contentDict  # type: ignore (ignore python warning)
-    if type == SectionType("publications").value:
-        from publications import contentDict  # type: ignore (ignore python warning)
-
-    ### Constants
-    if type == ConstantType("general").value:
-        from general import contentDict  # type: ignore (ignore python warning)
-
+    # __import__ works like "from ... import ...", but import can be decided at runtime
+    contentDict=__import__(type, fromlist=["contentDict"]).contentDict
     return contentDict
 
 

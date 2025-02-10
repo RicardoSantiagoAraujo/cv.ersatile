@@ -1,7 +1,7 @@
 from classes.experience import Experience # type: ignore
 from datetime import date
 
-contentDict_en = {
+contentDict_full_en = {
     "experienceA": Experience(
         EXP_postTitle={"": "Software Engineer"},
         EXP_employer={"Company": "Dynamic Startup"},

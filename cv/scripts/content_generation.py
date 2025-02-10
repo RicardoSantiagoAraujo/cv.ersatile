@@ -5,17 +5,17 @@ from pathlib import Path
 import json
 # Enums
 from enum import EnumType
-from enums.output_type import OutputType
-from enums.section_type import SectionType
-from enums.constant_type import ConstantType
+from enums.output_types import OutputType
+from enums.section_types import SectionType
+from enums.constant_types import ConstantType
 from enums.languages import Language
 
 # Function to import a dictionary from a different path by adding it to the recognized paths
-def import_contents_dict(path:str, type:str, lang:str):
+def import_contents_dict(path:str, type:str, version:str, lang:str):
     sys.path.insert(0, path)
     # __import__ works like "from ... import ...", but import can be decided at runtime
-    module = __import__(type, fromlist=["contentDict_{lang}"])
-    contentDict=getattr(module, f"contentDict_{lang}")
+    module = __import__(type, fromlist=[f"contentDict_{version}_{lang}"])
+    contentDict=getattr(module, f"contentDict_{version}_{lang}")
     return contentDict
 
 
@@ -130,14 +130,14 @@ def print_instructions(*args:tuple):# kwargs is a dictionary
 
 
 
-def generate_json(inputDict: dict, profile: str, name: str, lang: str):
+def generate_json(inputDict: dict, profile: str, name: str, version: str, lang: str):
     # Convert objects to dictionaries, place each one in a merged dictionary
     merged_data = {}
     for label, obj in inputDict.items():
         merged_data[label] =  obj.__dict__
 
     # save dictionary as json
-    with open(f"../profiles/{profile}/webpage/data/{name}_{lang}.json", "w") as outfile:
+    with open(f"../profiles/{profile}/webpage/data/{name}_{version}_{lang}.json", "w") as outfile:
         json.dump(merged_data, outfile,
                     indent = 4,
                     sort_keys = True,

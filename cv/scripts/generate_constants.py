@@ -24,7 +24,8 @@ def generate_constants():
 
         contentDict = import_contents_dict(
             f"../profiles/{profile}/constants",
-            constant_type
+            constant_type,
+            lang
         )
 
         generate_json(contentDict, profile, constant_type, lang)

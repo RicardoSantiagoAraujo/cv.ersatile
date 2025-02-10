@@ -11,10 +11,11 @@ from enums.constant_type import ConstantType
 from enums.languages import Language
 
 # Function to import a dictionary from a different path by adding it to the recognized paths
-def import_contents_dict(path:str, type:str):
+def import_contents_dict(path:str, type:str, lang:str):
     sys.path.insert(0, path)
     # __import__ works like "from ... import ...", but import can be decided at runtime
-    contentDict=__import__(type, fromlist=["contentDict"]).contentDict
+    module = __import__(type, fromlist=["contentDict_{lang}"])
+    contentDict=getattr(module, f"contentDict_{lang}")
     return contentDict
 
 

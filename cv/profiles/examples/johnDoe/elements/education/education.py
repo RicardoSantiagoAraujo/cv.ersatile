@@ -1,7 +1,7 @@
 from classes.education import Education # type: ignore
 from datetime import date
 
-contentDict = {
+contentDict_en = {
     "educationA": Education(
         EDU_level={"": "Master in Computer Science"},
         EDU_institution={"University": "University of Bristol"},

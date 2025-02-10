@@ -30,7 +30,8 @@ def generate_section():
 
         contentDict = import_contents_dict(
             f"../profiles/{profile}/elements/{section}",
-            section
+            section,
+            lang
         )
 
         generate_json(contentDict, profile, section, lang)

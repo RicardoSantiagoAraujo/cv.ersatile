@@ -36,7 +36,7 @@ def generate_section():
 
         # Choose input template and outfile file paths depending on the desired filetype
         separator = ""
-        auto_warning = " /!\ CONTENT GENERATED WITH PYTHON SCRIPT, CHANGES MADE DIRECTLY HERE MAY BE OVERWRITTEN /!\ "
+        auto_warning = " /!\\ CONTENT GENERATED WITH PYTHON SCRIPT, CHANGES MADE DIRECTLY HERE MAY BE OVERWRITTEN /!\\ "
         if filetype == "latex":
             template_path = f"./templates/sections/{section}/template.tex"
             output_path = f"../profiles/{profile}/elements/{section}/{section}_contents_{version}_{lang}.tex"

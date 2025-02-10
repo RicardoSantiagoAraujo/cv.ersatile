@@ -20,8 +20,8 @@ def generate_constants():
     if len(sys.argv) == 6:
         profile = Profile(sys.argv[1]).value
         constant_type = ConstantType(sys.argv[2]).value
-        version:str = Version(sys.argv[3]).value
-        lang = Language(sys.argv[4]).value
+        version:str = Version(sys.argv[3]).value # not actually useful here
+        lang = Language(sys.argv[4]).value # not actually useful here
         filetype = OutputType(sys.argv[5]).value
 
         contentDict = import_contents_dict(

@@ -1,6 +1,9 @@
 import { const_general } from "./constants/general.js";
 
-console.log(const_general)
+const version: string="full";
+const lang:string ="en";
+
+
 function addSection(section_name: string){
     var sec_el: HTMLElement = document.createElement('section');
     let sec_class: string = "section-" + section_name;
@@ -11,7 +14,7 @@ function addSection(section_name: string){
     `;
     document.body!.appendChild(sec_el);
 
-    fetch(`./sections/${section_name}/${section_name}_contents_en.html`)
+    fetch(`./sections/${section_name}/${section_name}_contents_${version}_${lang}.html`)
     .then((response) => {
         if (!response.ok) {
           throw new Error('Failed to fetch HTML file');
@@ -50,9 +53,7 @@ function addHeader(){
       document.querySelector("header."+header_class)!.innerHTML += htmlContent; // Insert HTML into a DOM element
       for (let key in const_general) {
         let value = const_general[key];
-        console.log(key + " : " + value);
-        console.log(`header.${header_class} .const_${key}`)
-        let el = document.querySelector(`header.${header_class} .const_${key}`);
+        let el = document.querySelector(`header.${header_class} [data-general=${key}]`);
         if (el){
           el.innerHTML = value;
         }

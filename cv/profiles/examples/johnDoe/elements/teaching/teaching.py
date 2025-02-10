@@ -1,7 +1,7 @@
 from classes.teaching import Teaching # type: ignore
 from datetime import date
 
-contentDict_en = {
+contentDict_full_en = {
     "example": Teaching(
         TEACH_title={"Position": "UX design course teaching assistant"},
         TEACH_institute={"": ""},

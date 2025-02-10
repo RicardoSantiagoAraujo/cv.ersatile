@@ -1,7 +1,7 @@
 from classes.profile import Profile # type: ignore
 from datetime import date
 
-contentDict_en = {
+contentDict_full_en = {
     "profile": Profile(
         CONST_name = {"" : "John Doe"},
         CONST_title = {"" : "MSc"},

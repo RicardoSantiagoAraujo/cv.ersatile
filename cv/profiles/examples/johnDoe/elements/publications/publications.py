@@ -1,7 +1,7 @@
 from classes.publications import Publication # type: ignore
 from datetime import date
 
-contentDict_en = {
+contentDict_full_en = {
     "example1": Publication(
         PUB_key={"": "mypublications:johnDoe"},
         PUB_fullText={"": "Entry contents"},

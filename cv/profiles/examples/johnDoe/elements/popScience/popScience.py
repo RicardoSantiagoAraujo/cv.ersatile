@@ -1,7 +1,7 @@
 from classes.popScience import PopScience # type: ignore
 from datetime import date
 
-contentDict_en = {
+contentDict_full_en = {
     "example": PopScience(
         POPSCI_title={"": "Organisation of workshop"},
         POPSCI_initiative={"Initiative": "PopSci Project"},

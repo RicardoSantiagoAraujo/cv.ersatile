@@ -1,4 +1,4 @@
-from classes.publications import Publication # type: ignore
+from classes.sections.publications import Publication # type: ignore
 from datetime import date
 
 contentDict_full_en = {

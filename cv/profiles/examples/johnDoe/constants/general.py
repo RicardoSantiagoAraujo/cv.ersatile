@@ -1,8 +1,8 @@
-from classes.profile import Profile # type: ignore
+from classes.constants.general import General # type: ignore
 from datetime import date
 
 contentDict_full_en = {
-    "profile": Profile(
+    "example": General(
         CONST_name = {"" : "John Doe"},
         CONST_title = {"" : "MSc"},
         CONST_birthDay = {"" : 1},

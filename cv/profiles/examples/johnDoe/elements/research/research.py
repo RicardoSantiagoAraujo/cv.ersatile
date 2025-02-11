@@ -1,4 +1,4 @@
-from classes.research import Research # type: ignore
+from classes.sections.research import Research # type: ignore
 from datetime import date
 
 contentDict_full_en = {

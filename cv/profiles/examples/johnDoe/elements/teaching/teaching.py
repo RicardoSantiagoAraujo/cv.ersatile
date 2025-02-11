@@ -1,4 +1,4 @@
-from classes.teaching import Teaching # type: ignore
+from classes.sections.teaching import Teaching # type: ignore
 from datetime import date
 
 contentDict_full_en = {

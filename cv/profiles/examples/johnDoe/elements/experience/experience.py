@@ -1,4 +1,4 @@
-from classes.experience import Experience # type: ignore
+from classes.sections.experience import Experience # type: ignore
 from datetime import date
 
 contentDict_full_en = {

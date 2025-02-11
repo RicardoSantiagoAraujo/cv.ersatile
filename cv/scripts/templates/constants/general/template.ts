@@ -17,5 +17,7 @@ export var const_general : {[key: string]: string } =
     picCropTop :"VAL_CONST_picCropTop",
     picCropRight :"VAL_CONST_picCropRight",
     picCropBottom :"VAL_CONST_picCropBottom",
-    picCropLeft :"VAL_CONST_picCropLeft"
+    picCropLeft :"VAL_CONST_picCropLeft",
+
+    birthDate :"VAL_CONST_birthDate",
 }

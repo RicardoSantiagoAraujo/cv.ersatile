@@ -1,4 +1,4 @@
-from classes.popScience import PopScience # type: ignore
+from classes.sections.popScience import PopScience # type: ignore
 from datetime import date
 
 contentDict_full_en = {

@@ -1,4 +1,4 @@
-class Profile:
+class General:
     def __init__(self,
                 CONST_name: dict[str, str],
                 CONST_title: dict[str, str],
@@ -39,3 +39,5 @@ class Profile:
         self.CONST_picCropBottom = CONST_picCropBottom
         self.CONST_picCropLeft = CONST_picCropLeft
         self.CONST_myPictureStyleExtras = CONST_myPictureStyleExtras
+
+        self.CONST_birthDate:dict[str,str] = {"" : f"{list(CONST_birthYear.values())[0]}-{list(CONST_birthMonth.values())[0]}-{list(CONST_birthDay.values())[0]}"}

@@ -1,5 +1,8 @@
 {
-    "profile": {
+    "example": {
+        "CONST_birthDate": {
+            "": "1993-1-1"
+        },
         "CONST_birthDay": {
             "": 1
         },

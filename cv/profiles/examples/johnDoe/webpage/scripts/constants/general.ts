@@ -17,5 +17,7 @@ export var const_general : {[key: string]: string } =
     picCropTop :"10mm",
     picCropRight :"10mm",
     picCropBottom :"20mm",
-    picCropLeft :"10mm"
+    picCropLeft :"10mm",
+
+    birthDate :"1993-1-1",
 }

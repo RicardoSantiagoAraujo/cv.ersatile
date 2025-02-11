@@ -4,3 +4,4 @@ class OutputType(enum.Enum):
     html = 'html'
     latex = 'latex'
     ts = 'ts'
+    scss = 'scss'

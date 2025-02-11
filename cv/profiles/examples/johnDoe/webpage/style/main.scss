@@ -1,8 +1,10 @@
-@import 'sections/header';
-@import 'sections/common';
+@use 'constants/colors' as color;
+
+@use 'sections/header';
+@use 'sections/common';
 
 html{
-    background-color: black;
+    background-color: color.$myBlack;
 }
 
 body{
@@ -10,5 +12,5 @@ body{
     padding: 0cm;
     margin: auto;
     margin-top: 2vh;
-    background-color: white;
+    background-color: color.$bgColor;
 }

@@ -40,6 +40,9 @@ def generate_constants():
         elif filetype == "ts":
             template_path = f"./templates/constants/{constant_type}/template.ts"
             output_path = f"../profiles/{profile}/webpage/scripts/constants/{constant_type}.ts"
+        elif filetype == "scss":
+            template_path = f"./templates/constants/{constant_type}/_template.scss"
+            output_path = f"../profiles/{profile}/webpage/style/constants/_{constant_type}.scss"
         else:
             return print(f"/!\\ {filetype} generation not available for {Path(__file__).name}")
 

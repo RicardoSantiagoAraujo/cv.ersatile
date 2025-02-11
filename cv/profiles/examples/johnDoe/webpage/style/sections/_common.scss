@@ -1,3 +1,5 @@
+@use '../constants/colors' as color;
+
 header, section{
     padding: 0.5cm 1cm;
 }
@@ -13,9 +15,9 @@ section{
 
 
 .table-entry{
-    background-color: gray;
+    background-color: color.$myGrayMed;
     .table-entry__header{
-        background-color: lightgray;
+        background-color: color.$myGrayLight;
         display: flex;
         flex-direction: row;
         li{
@@ -25,6 +27,6 @@ section{
         }
     }
     .table-entry__contents{
-        background-color: white;
+        background-color: color.$bgColor;
     }
 }

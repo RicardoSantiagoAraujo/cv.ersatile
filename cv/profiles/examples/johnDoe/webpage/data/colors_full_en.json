@@ -1,28 +1,52 @@
 {
     "example": {
         "CONST_bgColor": {
-            "RGB": "0,0,0"
+            "rgb": "1,0.9,1"
+        },
+        "CONST_bgColor_scss": {
+            "": "1 0.9 1"
         },
         "CONST_black": {
-            "RGB": "0,0,0"
+            "rgb": "0,0,0"
+        },
+        "CONST_black_scss": {
+            "": "0 0 0"
         },
         "CONST_colorPrimary": {
-            "RGB": "0,0,0"
+            "rgb": "1,0,1"
+        },
+        "CONST_colorPrimary_scss": {
+            "": "1 0 1"
         },
         "CONST_colorSecondary": {
-            "RGB": "0,0,0"
+            "rgb": "0,1,1"
+        },
+        "CONST_colorSecondary_scss": {
+            "": "0 1 1"
         },
         "CONST_grayDark": {
-            "RGB": "0,0,0"
+            "rgb": "0.5,5,1"
+        },
+        "CONST_grayDark_scss": {
+            "": "0.5 5 1"
         },
         "CONST_grayLight": {
-            "RGB": "0,0,0"
+            "rgb": "0,0.5,1"
+        },
+        "CONST_grayLight_scss": {
+            "": "0 0.5 1"
         },
         "CONST_grayMed": {
-            "RGB": "0,0,0"
+            "rgb": "0.5,0,1"
+        },
+        "CONST_grayMed_scss": {
+            "": "0.5 0 1"
         },
         "CONST_textColor": {
-            "RGB": "0,0,0"
+            "rgb": "0,0,0"
+        },
+        "CONST_textColor_scss": {
+            "": "0 0 0"
         }
     }
 }

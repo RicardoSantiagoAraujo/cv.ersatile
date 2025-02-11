@@ -3,17 +3,17 @@ from typing import Union
 
 class Publication:
     def __init__(self,
-                 PUB_key: dict[str, str],
-                 PUB_fullText: dict[str, str],
-                 PUB_include: dict[str, bool],
+                 key: dict[str, str],
+                 fullText: dict[str, str],
+                 include: dict[str, bool],
                  ):
-        self.PUB_key = PUB_key
-        self.PUB_fullText = PUB_fullText
+        self.PUB_key = key
+        self.PUB_fullText = fullText
         # Generate atribute specifically for latex
-        key = str(list(PUB_key.values())[0])
-        fullText = str(list(PUB_fullText.values())[0])
+        key_val = str(list(key.values())[0])
+        fullText_val = str(list(fullText.values())[0])
         self.PUB_latexEntry = {
-            "":("\\fullcite{" + key + "}")
-            if key != "" else fullText
+            "":("\\fullcite{" + key_val + "}")
+            if key_val != "" else fullText_val
         }
-        self.PUB_include = PUB_include
+        self.PUB_include = include

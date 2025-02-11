@@ -3,13 +3,13 @@ from datetime import date
 
 contentDict_full_en = {
     "example1": Publication(
-        PUB_key={"": "mypublications:johnDoe"},
-        PUB_fullText={"": "Entry contents"},
-        PUB_include={"":"true"},
+        key={"": "mypublications:johnDoe"},
+        fullText={"": "Entry contents"},
+        include={"":"true"},
     ),
     "example2": Publication(
-        PUB_key={"": ""},
-        PUB_fullText={"": "John Doe (Feb. 2023). “The Joy of Fullstack Developing”"},
-        PUB_include={"":"true"},
+        key={"": ""},
+        fullText={"": "John Doe (Feb. 2023). “The Joy of Fullstack Developing”"},
+        include={"":"true"},
     ),
 }

@@ -1,0 +1,28 @@
+{
+    "example": {
+        "CONST_bgColor": {
+            "RGB": "0,0,0"
+        },
+        "CONST_black": {
+            "RGB": "0,0,0"
+        },
+        "CONST_colorPrimary": {
+            "RGB": "0,0,0"
+        },
+        "CONST_colorSecondary": {
+            "RGB": "0,0,0"
+        },
+        "CONST_grayDark": {
+            "RGB": "0,0,0"
+        },
+        "CONST_grayLight": {
+            "RGB": "0,0,0"
+        },
+        "CONST_grayMed": {
+            "RGB": "0,0,0"
+        },
+        "CONST_textColor": {
+            "RGB": "0,0,0"
+        }
+    }
+}

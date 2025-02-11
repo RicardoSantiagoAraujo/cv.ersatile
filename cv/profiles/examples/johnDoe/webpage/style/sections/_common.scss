@@ -1,0 +1,30 @@
+header, section{
+    padding: 0.5cm 1cm;
+}
+
+
+
+section{
+    h1{
+        text-transform: capitalize;
+        margin-left: 1rem;
+    }
+}
+
+
+.table-entry{
+    background-color: gray;
+    .table-entry__header{
+        background-color: lightgray;
+        display: flex;
+        flex-direction: row;
+        li{
+            // background-color: grey;
+            list-style-type: none;
+            width: 25%;
+        }
+    }
+    .table-entry__contents{
+        background-color: white;
+    }
+}

@@ -1,3 +1,6 @@
+@import 'sections/header';
+@import 'sections/common';
+
 html{
     background-color: black;
 }
@@ -8,65 +11,4 @@ body{
     margin: auto;
     margin-top: 2vh;
     background-color: white;
-}
-
-header, section{
-    padding: 0.5cm 1cm;
-}
-
-header{
-    background-color: red;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    .header__left{
-        background-color: green;
-        width: 80%;
-        h1{
-            font-size: 5rem;
-        }
-        ul{
-            display: flex;
-            flex-wrap: wrap;
-            background-color: pink;
-            justify-content: space-evenly;
-            li{
-                list-style-type: none;
-
-            }
-        }
-    }
-    .header__right{
-        background-color: yellow;
-        width: 20%;
-        img{
-            width: 100%;
-        }
-
-    }
-}
-
-section{
-    h1{
-        text-transform: capitalize;
-        margin-left: 1rem;
-    }
-}
-
-
-.table-entry{
-    background-color: gray;
-    .table-entry__header{
-        background-color: lightgray;
-        display: flex;
-        flex-direction: row;
-        li{
-            // background-color: grey;
-            list-style-type: none;
-            width: 25%;
-        }
-    }
-    .table-entry__contents{
-        background-color: white;
-    }
 }

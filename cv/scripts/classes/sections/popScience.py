@@ -3,20 +3,20 @@ from typing import Union
 
 class PopScience:
     def __init__(self,
-                 POPSCI_title: dict[str, str],
-                 POPSCI_initiative: dict[str, str],
-                 POPSCI_startDate:dict[str, date],
-                 POPSCI_endDate:dict[str, date],
-                 POPSCI_location: dict[str, str],
-                 POPSCI_content:dict[str, Union[str, list[str]]],
-                 POPSCI_include: dict[str, bool],
-                 POPSCI_columnsDef: dict[str, str]
+                 title: dict[str, str],
+                 initiative: dict[str, str],
+                 startDate:dict[str, date],
+                 endDate:dict[str, date],
+                 location: dict[str, str],
+                 content:dict[str, Union[str, list[str]]],
+                 include: dict[str, bool],
+                 columnsDef: dict[str, str]
                  ):
-        self.POPSCI_title = POPSCI_title
-        self.POPSCI_initiative = POPSCI_initiative
-        self.POPSCI_startDate = POPSCI_startDate
-        self.POPSCI_endDate = POPSCI_endDate
-        self.POPSCI_location = POPSCI_location
-        self.POPSCI_content = POPSCI_content
-        self.POPSCI_include = POPSCI_include
-        self.POPSCI_columnsDef = POPSCI_columnsDef
+        self.POPSCI_title = title
+        self.POPSCI_initiative = initiative
+        self.POPSCI_startDate = startDate
+        self.POPSCI_endDate = endDate
+        self.POPSCI_location = location
+        self.POPSCI_content = content
+        self.POPSCI_include = include
+        self.POPSCI_columnsDef = columnsDef

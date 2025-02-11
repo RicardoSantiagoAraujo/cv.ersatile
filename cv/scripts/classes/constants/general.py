@@ -1,43 +1,43 @@
 class General:
     def __init__(self,
-                CONST_name: dict[str, str],
-                CONST_title: dict[str, str],
-                CONST_birthDay:dict[str, int],
-                CONST_birthMonth:dict[str, int],
-                CONST_birthYear: dict[str, int],
-                CONST_street:dict[str, str],
-                CONST_city: dict[str, str],
-                CONST_country: dict[str, str],
-                CONST_email: dict[str, str],
-                CONST_linkedIn: dict[str, str],
-                CONST_phone: dict[str, str],
-                CONST_site: dict[str, str],
-                CONST_picture: dict[str, str],
-                CONST_signature: dict[str, str],
-                CONST_picCropTop: dict[str, str], # "pic" instead of "picture" to avoid being replaced by CONST_picture
-                CONST_picCropRight: dict[str, str],
-                CONST_picCropBottom: dict[str, str],
-                CONST_picCropLeft: dict[str, str],
-                CONST_myPictureStyleExtras : dict[str, str]
+                name: dict[str, str],
+                title: dict[str, str],
+                birthDay:dict[str, int],
+                birthMonth:dict[str, int],
+                birthYear: dict[str, int],
+                street:dict[str, str],
+                city: dict[str, str],
+                country: dict[str, str],
+                email: dict[str, str],
+                linkedIn: dict[str, str],
+                phone: dict[str, str],
+                site: dict[str, str],
+                picture: dict[str, str],
+                signature: dict[str, str],
+                picCropTop: dict[str, str], # "pic" instead of "picture" to avoid being replaced by picture
+                picCropRight: dict[str, str],
+                picCropBottom: dict[str, str],
+                picCropLeft: dict[str, str],
+                myPictureStyleExtras : dict[str, str]
                  ):
-        self.CONST_name = CONST_name
-        self.CONST_title = CONST_title
-        self.CONST_birthDay = CONST_birthDay
-        self.CONST_birthMonth = CONST_birthMonth
-        self.CONST_birthYear = CONST_birthYear
-        self.CONST_street = CONST_street
-        self.CONST_city = CONST_city
-        self.CONST_country = CONST_country
-        self.CONST_email = CONST_email
-        self.CONST_linkedIn = CONST_linkedIn
-        self.CONST_phone = CONST_phone
-        self.CONST_site = CONST_site
-        self.CONST_picture = CONST_picture
-        self.CONST_signature = CONST_signature
-        self.CONST_picCropTop = CONST_picCropTop
-        self.CONST_picCropRight = CONST_picCropRight
-        self.CONST_picCropBottom = CONST_picCropBottom
-        self.CONST_picCropLeft = CONST_picCropLeft
-        self.CONST_myPictureStyleExtras = CONST_myPictureStyleExtras
+        self.CONST_name = name
+        self.CONST_title = title
+        self.CONST_birthDay = birthDay
+        self.CONST_birthMonth = birthMonth
+        self.CONST_birthYear = birthYear
+        self.CONST_street = street
+        self.CONST_city = city
+        self.CONST_country = country
+        self.CONST_email = email
+        self.CONST_linkedIn = linkedIn
+        self.CONST_phone = phone
+        self.CONST_site = site
+        self.CONST_picture = picture
+        self.CONST_signature = signature
+        self.CONST_picCropTop = picCropTop
+        self.CONST_picCropRight = picCropRight
+        self.CONST_picCropBottom = picCropBottom
+        self.CONST_picCropLeft = picCropLeft
+        self.CONST_myPictureStyleExtras = myPictureStyleExtras
 
-        self.CONST_birthDate:dict[str,str] = {"" : f"{list(CONST_birthYear.values())[0]}-{list(CONST_birthMonth.values())[0]}-{list(CONST_birthDay.values())[0]}"}
+        self.CONST_birthDate:dict[str,str] = {"" : f"{list(birthYear.values())[0]}-{list(birthMonth.values())[0]}-{list(birthDay.values())[0]}"}

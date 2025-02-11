@@ -46,8 +46,8 @@ def generate_contents(
             ### add inbetween content as long as last entry is not reached
             if i != (len(source_dict) - 1):
                 generated_content += inbetween_content
-            ### add prefix and suffix
-            generated_content = f"{pre_content}{generated_content}{post_content}"
+    ### add prefix and suffix
+    generated_content = f"{pre_content}{generated_content}{post_content}"
     # Return generated string
     return generated_content
 
@@ -152,3 +152,7 @@ def generate_json(inputDict: dict, profile: str, name: str, version: str, lang: 
                     sort_keys = True,
                     default = str
                     )
+
+
+# default message for auto generated content
+auto_warning  = " /!\\ CONTENT GENERATED WITH PYTHON SCRIPT, CHANGES MADE DIRECTLY HERE MAY BE OVERWRITTEN /!\\ "

@@ -36,7 +36,7 @@ def generate_section():
 
         # Choose input template and outfile file paths depending on the desired filetype
         separator = ""
-        auto_warning = " /!\\ CONTENT GENERATED WITH PYTHON SCRIPT, CHANGES MADE DIRECTLY HERE MAY BE OVERWRITTEN /!\\ "
+        global auto_warning #tell the interpreter to find variable a in the global scope
         if filetype == "latex":
             template_path = f"./templates/sections/{section}/template.tex"
             output_path = f"../profiles/{profile}/elements/{section}/{section}_contents_{version}_{lang}.tex"
@@ -71,6 +71,7 @@ def generate_section():
         ("languade id" , f"language version of the CV content {[e.value for e in Language]}", Language),
         ("file type" , f"type of file to be generated {[e.value for e in OutputType]}", OutputType),
         )
+
 
 
 if __name__ == "__main__":

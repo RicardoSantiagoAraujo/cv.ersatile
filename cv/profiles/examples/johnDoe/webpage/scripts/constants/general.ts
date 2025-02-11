@@ -1,3 +1,4 @@
+// /!\ CONTENT GENERATED WITH PYTHON SCRIPT, CHANGES MADE DIRECTLY HERE MAY BE OVERWRITTEN /!\ 
 export var const_general : {[key: string]: string } =
 {
     name : "John Doe",

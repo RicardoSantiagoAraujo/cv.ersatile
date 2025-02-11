@@ -34,22 +34,26 @@ def generate_constants():
         generate_json(contentDict, profile, constant_type, version, lang)
 
         # Choose input template and outfile file paths depending on the desired filetype
+        global auto_warning #tell the interpreter to find variable a in the global scope
         if filetype == "latex":
             template_path = f"./templates/constants/{constant_type}/template.tex"
             output_path = f"../profiles/{profile}/constants/{constant_type}.tex"
+            auto_warning = f"%{auto_warning}\n"
         elif filetype == "ts":
             template_path = f"./templates/constants/{constant_type}/template.ts"
             output_path = f"../profiles/{profile}/webpage/scripts/constants/{constant_type}.ts"
+            auto_warning = f"//{auto_warning}\n"
         elif filetype == "scss":
             template_path = f"./templates/constants/{constant_type}/_template.scss"
             output_path = f"../profiles/{profile}/webpage/style/constants/_{constant_type}.scss"
+            auto_warning = f"//{auto_warning}\n"
         else:
             return print(f"/!\\ {filetype} generation not available for {Path(__file__).name}")
 
         output_content = generate_contents(
             source_dict = contentDict,
             template_path = template_path,
-            pre_content="",
+            pre_content=auto_warning,
             post_content="",
             inbetween_content = "",
             output_type = OutputType(filetype)

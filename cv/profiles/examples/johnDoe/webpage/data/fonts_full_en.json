@@ -1,0 +1,13 @@
+{
+    "example": {
+        "CONST_mainFont": {
+            "": "Arial"
+        },
+        "CONST_subtitleFont": {
+            "": "Times New Roman"
+        },
+        "CONST_titleFont": {
+            "": "Times New Roman"
+        }
+    }
+}

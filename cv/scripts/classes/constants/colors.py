@@ -1,4 +1,4 @@
-class Color:
+class Colors:
     def __init__(self,
                 colorPrimary: dict[str, str],
                 colorSecondary: dict[str, str],

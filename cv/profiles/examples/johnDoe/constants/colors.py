@@ -1,9 +1,9 @@
-from classes.constants.colors import Color # type: ignore
+from classes.constants.colors import Colors # type: ignore
 from datetime import date
 
 
 contentDict_full_en = {
-    "example": Color(
+    "example": Colors(
         colorPrimary= {"rgb": "1,0,1"},
         colorSecondary= {"rgb": "0,1,1"},
         black={"rgb": "0,0,0"},

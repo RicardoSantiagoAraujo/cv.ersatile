@@ -1,4 +1,5 @@
 @use 'constants/colors' as color;
+@use 'constants/fonts' as font;
 
 @use 'sections/header';
 @use 'sections/common';
@@ -13,4 +14,5 @@ body{
     margin: auto;
     margin-top: 2vh;
     background-color: color.$bgColor;
+    font-family: font.$myMainFont;
 }

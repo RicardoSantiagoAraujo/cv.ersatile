@@ -1,62 +1,78 @@
 {
     "experienceA": {
-        "EXP_columnsDef": {
-            "": "|p{0.25cm} | X | p{2.5cm}| p{4cm}|"
-        },
-        "EXP_content": {
-            "Content": [
+        "EXP_columnsDef": [
+            "",
+            "|p{0.25cm} | X | p{2.5cm}| p{4cm}|"
+        ],
+        "EXP_content": [
+            "Content",
+            [
                 "Contributed to three projects using Node.js, React, SQL, and Git for version control.",
                 "Development of critical features for the frontend and database management.",
                 "Significant optimization of application performance."
             ]
-        },
-        "EXP_employer": {
-            "Company": "Dynamic Startup"
-        },
-        "EXP_endDate": {
-            "End": ""
-        },
-        "EXP_include": {
-            "": "true"
-        },
-        "EXP_location": {
-            "Location": "London, England"
-        },
-        "EXP_postTitle": {
-            "": "Software Engineer"
-        },
-        "EXP_startDate": {
-            "Start": "2022-01-01"
-        }
+        ],
+        "EXP_employer": [
+            "Company",
+            "Dynamic Startup"
+        ],
+        "EXP_endDate": [
+            "End",
+            ""
+        ],
+        "EXP_include": [
+            "",
+            "true"
+        ],
+        "EXP_location": [
+            "Location",
+            "London, England"
+        ],
+        "EXP_postTitle": [
+            "",
+            "Software Engineer"
+        ],
+        "EXP_startDate": [
+            "Start",
+            "2022-01-01"
+        ]
     },
     "experienceB": {
-        "EXP_columnsDef": {
-            "": "|p{0.25cm} | X | p{2.5cm}| p{4cm}|"
-        },
-        "EXP_content": {
-            "Content": [
+        "EXP_columnsDef": [
+            "",
+            "|p{0.25cm} | X | p{2.5cm}| p{4cm}|"
+        ],
+        "EXP_content": [
+            "Content",
+            [
                 "Worked on UX and UI features for three different projects.",
                 "Used Sass and Tailwind to build professional websites.",
                 "Collaborated closely with an international team, alongside key stakeholders, within the Agile SCRUM framework."
             ]
-        },
-        "EXP_employer": {
-            "Company": "Large corporation"
-        },
-        "EXP_endDate": {
-            "End": "2022-06-01"
-        },
-        "EXP_include": {
-            "": "true"
-        },
-        "EXP_location": {
-            "Location": "Bristol, UK"
-        },
-        "EXP_postTitle": {
-            "": "Frontend Developer"
-        },
-        "EXP_startDate": {
-            "Start": "2014-01-01"
-        }
+        ],
+        "EXP_employer": [
+            "Company",
+            "Large corporation"
+        ],
+        "EXP_endDate": [
+            "End",
+            "2022-06-01"
+        ],
+        "EXP_include": [
+            "",
+            "true"
+        ],
+        "EXP_location": [
+            "Location",
+            "Bristol, UK"
+        ],
+        "EXP_postTitle": [
+            "",
+            "Frontend Developer"
+        ],
+        "EXP_startDate": [
+            "Start",
+            "2014-01-01"
+        ]
     }
 }

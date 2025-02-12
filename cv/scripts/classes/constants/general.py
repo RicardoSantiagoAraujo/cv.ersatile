@@ -1,24 +1,24 @@
 class General:
     def __init__(self,
-                name: dict[str, str],
-                title: dict[str, str],
-                birthDay:dict[str, int],
-                birthMonth:dict[str, int],
-                birthYear: dict[str, int],
-                street:dict[str, str],
-                city: dict[str, str],
-                country: dict[str, str],
-                email: dict[str, str],
-                linkedIn: dict[str, str],
-                phone: dict[str, str],
-                site: dict[str, str],
-                picture: dict[str, str],
-                signature: dict[str, str],
-                picCropTop: dict[str, str], # "pic" instead of "picture" to avoid being replaced by picture
-                picCropRight: dict[str, str],
-                picCropBottom: dict[str, str],
-                picCropLeft: dict[str, str],
-                myPictureStyleExtras : dict[str, str]
+                name: tuple[str, str],
+                title: tuple[str, str],
+                birthDay:tuple[str, int],
+                birthMonth:tuple[str, int],
+                birthYear: tuple[str, int],
+                street:tuple[str, str],
+                city: tuple[str, str],
+                country: tuple[str, str],
+                email: tuple[str, str],
+                linkedIn: tuple[str, str],
+                phone: tuple[str, str],
+                site: tuple[str, str],
+                picture: tuple[str, str],
+                signature: tuple[str, str],
+                picCropTop: tuple[str, str], # "pic" instead of "picture" to avoid being replaced by picture
+                picCropRight: tuple[str, str],
+                picCropBottom: tuple[str, str],
+                picCropLeft: tuple[str, str],
+                myPictureStyleExtras : tuple[str, str]
                  ):
         self.CONST_name = name
         self.CONST_title = title
@@ -40,4 +40,6 @@ class General:
         self.CONST_picCropLeft = picCropLeft
         self.CONST_myPictureStyleExtras = myPictureStyleExtras
 
-        self.CONST_birthDate:dict[str,str] = {"" : f"{list(birthYear.values())[0]}-{list(birthMonth.values())[0]}-{list(birthDay.values())[0]}"}
+        self.CONST_birthDate:tuple[str,str] = (
+            "",
+            f"{birthYear[0]}-{birthMonth[0]}-{birthDay[0]}")

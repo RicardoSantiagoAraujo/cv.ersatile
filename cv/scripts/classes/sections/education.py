@@ -3,14 +3,14 @@ from typing import Union
 
 class Education:
     def __init__(self,
-                 level: dict[str, str],
-                 institution: dict[str, str],
-                 startDate:dict[str, date],
-                 endDate:dict[str, date],
-                 location: dict[str, str],
-                 content:dict[str, Union[str, list[str]]],
-                 include: dict[str, bool],
-                 columnsDef: dict[str, str]
+                 level: tuple[str, str],
+                 institution: tuple[str, str],
+                 startDate:tuple[str, date],
+                 endDate:tuple[str, date],
+                 location: tuple[str, str],
+                 content:tuple[str, Union[str, list[str]]],
+                 include: tuple[str, bool],
+                 columnsDef: tuple[str, str]
                  ):
         self.EDU_level = level
         self.EDU_institution = institution

@@ -1,13 +1,13 @@
 class Colors:
     def __init__(self,
-                colorPrimary: dict[str, str],
-                colorSecondary: dict[str, str],
-                black:dict[str, int],
-                grayDark:dict[str, int],
-                grayMed: dict[str, int],
-                grayLight:dict[str, str],
-                bgColor: dict[str, str],
-                textColor: dict[str, str]
+                colorPrimary: tuple[str, str],
+                colorSecondary: tuple[str, str],
+                black:tuple[str, int],
+                grayDark:tuple[str, int],
+                grayMed: tuple[str, int],
+                grayLight:tuple[str, str],
+                bgColor: tuple[str, str],
+                textColor: tuple[str, str]
                  ):
         self.CONST_colorPrimary = colorPrimary
         self.CONST_colorSecondary = colorSecondary
@@ -18,8 +18,8 @@ class Colors:
         self.CONST_bgColor = bgColor
         self.CONST_textColor = textColor
 
-        def replaceCommaWithSpaceInValue(dict):
-            return {"" : list(dict.values())[0].replace(","," ")}
+        def replaceCommaWithSpaceInValue(tuple):
+            return ("" , tuple[0].replace(","," "))
 
         self.CONST_colorPrimary_scss = replaceCommaWithSpaceInValue(colorPrimary)
         self.CONST_colorSecondary_scss = replaceCommaWithSpaceInValue(colorSecondary)

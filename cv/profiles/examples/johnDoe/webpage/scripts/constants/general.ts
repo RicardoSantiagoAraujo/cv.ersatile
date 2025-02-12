@@ -20,5 +20,5 @@ export var const_general : {[key: string]: string } =
     picCropBottom :"20mm",
     picCropLeft :"10mm",
 
-    birthDate :"1993-1-1",
+    birthDate :"--",
 }

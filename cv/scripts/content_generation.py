@@ -64,9 +64,9 @@ def replace_placeholders_in_template(template:str, placeholder_strings:list, ent
     # Iterate over attributes and replace them into the template
     for attr in placeholder_strings:
         # print(attr)
-        dict = getattr(entry_object, attr)
-        key = list(dict.keys())[0]
-        val = list(dict.values())[0]
+        kv_pair = getattr(entry_object, attr)
+        key = kv_pair[0]
+        val = kv_pair[1]
         # if date, format properly
         val = formatDate(val)
         # if string, format properly

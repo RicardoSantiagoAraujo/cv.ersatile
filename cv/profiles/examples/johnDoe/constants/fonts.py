@@ -4,8 +4,8 @@ from datetime import date
 
 contentDict_full_en = {
     "example": Fonts(
-        mainFont= {"": "Arial"},
-        titleFont= {"": "Times New Roman"},
-        subtitleFont={"": "Times New Roman"},
+        mainFont= ("", "Arial"),
+        titleFont= ("", "Times New Roman"),
+        subtitleFont=("", "Times New Roman"),
     )
     }

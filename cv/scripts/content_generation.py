@@ -119,7 +119,7 @@ def formatListStrings(x, output_type:OutputType):
     return x
 
 
-def print_instructions(*args:tuple):# kwargs is a dictionary
+def print_instructions(*args:dict):# kwargs is a dictionary
     print(
     f"""
     \t =================================================================

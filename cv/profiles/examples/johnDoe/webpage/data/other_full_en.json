@@ -1,0 +1,72 @@
+{
+    "example1": {
+        "OTHER_category": [
+            "",
+            "Languages"
+        ],
+        "OTHER_content": [
+            "",
+            "English (Native), Spanish (C1)"
+        ],
+        "OTHER_include": [
+            "",
+            "true"
+        ]
+    },
+    "example2": {
+        "OTHER_category": [
+            "",
+            "Other Digital Tools"
+        ],
+        "OTHER_content": [
+            "",
+            "Adobe Photoshop \\& Adobe Illustrator and Photoshop, MS Office suite"
+        ],
+        "OTHER_include": [
+            "",
+            "true"
+        ]
+    },
+    "example3": {
+        "OTHER_category": [
+            "",
+            "Miscellaneous experience"
+        ],
+        "OTHER_content": [
+            "",
+            "Waiter at italian restaurant"
+        ],
+        "OTHER_include": [
+            "",
+            "true"
+        ]
+    },
+    "example4": {
+        "OTHER_category": [
+            "",
+            "Volunteer work"
+        ],
+        "OTHER_content": [
+            "",
+            "Active volunteer at food bank"
+        ],
+        "OTHER_include": [
+            "",
+            "true"
+        ]
+    },
+    "example5": {
+        "OTHER_category": [
+            "",
+            "Hobbies and interests"
+        ],
+        "OTHER_content": [
+            "",
+            "Table tenis, cycling, guitar, tabletop games"
+        ],
+        "OTHER_include": [
+            "",
+            "true"
+        ]
+    }
+}

@@ -1,46 +1,63 @@
 % ENGLISH VERSION (DEFAULT)
-\newcommand{\programming}{{\shortstack[l]{Programming \\ and scripting}}}
-\newcommand{\markup}{Markup}
-\newcommand{\databases}{Databases}
-\newcommand{\versioning}{Version control}
-\ifthenelse{\equal{\myLanguage}{fr}}{
+\newcommand{\programming}{{\shortstack[l]{Programming \\ and scripting}}}%
+\newcommand{\markup}{Markup}%
+\newcommand{\databases}{Databases}%
+\newcommand{\versioning}{Version control}%
+\ifthenelse{\equal{\myLanguage}{fr}}{%
     % FRENCH VERSION
-    \renewcommand{\programming}{\shortstack[l]{Langages de \\ programmation}}
-    \renewcommand{\markup}{\shortstack[l]{Langages de \\ Markup}}
-    \renewcommand{\databases}{Bases de données}
-    \renewcommand{\versioning}{Contrôle de version}
-}{}
-
+    \renewcommand{\programming}{\shortstack[l]{Langages de \\ programmation}}%
+    \renewcommand{\markup}{\shortstack[l]{Langages de \\ Markup}}%
+    \renewcommand{\databases}{Bases de données}%
+    \renewcommand{\versioning}{Contrôle de version}%
+}{}%
+%
 \renewcommand{\arraystretch}{1.0} % change all spacings at once
 \newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}} % Define a new column type for centering
-
+%
 % A4 page width : 210 mm
 % THREE COLUMNS
-\begin{myTableEnv}{ p{3.5cm} C{0.5cm} p{4.3cm} p{3cm} X}
-\noalign{\global\arrayrulewidth=0.1mm} % change line width from here on
-\arrayrulecolor{myGrayDark} % change line color from here on
-
-% PROGRAMMING LANGUAGES
-\multirow{3}{*}{\programming}
-%
-&\faJs& \textbf{Type/Javascript} & \score{5}& React, jQuery\\
-&\faFileCode& \textbf{C\#} & \score{4}& .NET\\
-&\faJava& \textbf{Java} & \score{3}& Spring
-\myhline %=========================================
-% MARKUP LANGUAGES
-\multirow{3}{*}{\markup}
-%
-&\faHtml5& \textbf{HTML/CSS} & \score{5}& Sass, Tailwind, Bootstrap\\
-&\faFilePdf& \LaTeX\ & \score{5} \\ %\textbf{LaTeX}\\
-\myhline %=========================================
-% DATABASES
-\multirow{1}{*}{\databases}
-%
-&\faDatabase&  \textbf{SQL} & \score{4} & SQL Server, MySQL, SQLite
-\myhline %=========================================
-% VERSION CONTROL
-\multirow{1}{*}{\versioning}
-%
-&\faGit*&  \textbf{git} & \score{5} & Gitflow, GitHub \\
-% \myhline %=========================================
-\end{myTableEnv}
+\begin{tabularx}{\myTableWidth}%
+    { p{3.5cm} C{0.5cm} p{4.3cm} p{3cm} X}%
+    \noalign{\global\arrayrulewidth=0.1mm} % change line width from here on
+    \arrayrulecolor{myGrayDark} % change line color from here on
+    %
+    %=========================================
+    % PROGRAMMING LANGUAGES
+    \iftrue%
+        \multirow{5}{*}{\programming}
+        %
+        &\faPython& \textbf{Python} & \score{5} & pandas, Matplotlib, Flask\\
+        &\faRProject& \textbf{R} & \score{5}& DataViz, Tidyverse\\
+        &\faJs& \textbf{Type/Javascript} & \score{5}& Angular 2/JS, D3.js, jQuery\\
+        &\faFileCode& \textbf{C\#} & \score{4}& .NET\\
+        &\faJava& \textbf{Java} & \score{3}& Spring\\
+        \myhline%
+    \fi%
+    %=========================================
+    % MARKUP LANGUAGES
+    \iftrue%
+        \multirow{3}{*}{\markup}
+        %
+        &\faHtml5& \textbf{HTML/CSS} & \score{5}& Sass, Tailwind, Bootstrap\\
+        &\faFilePdf& \LaTeX\ & \score{5} \\ %\textbf{LaTeX}\\
+        &\faFileDownload& \textbf{R Markdown} & \score{4}\\
+        \myhline%
+    \fi%
+    %=========================================
+    % DATABASES
+    \iftrue%
+        \multirow{1}{*}{\databases}
+        %
+        &\faDatabase&  \textbf{SQL} & \score{4} & SQL Server, MySQL, SQLite\\
+        \myhline%
+    \fi%
+    %=========================================
+    % VERSION CONTROL
+    \iftrue%
+        \multirow{1}{*}{\versioning}
+        %
+        &\faGit*&  \textbf{git} & \score{5} & Gitflow, GitHub \\
+        % \myhline%
+    \fi%
+    %=========================================
+\end{tabularx}%

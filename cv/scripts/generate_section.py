@@ -40,7 +40,7 @@ def generate_section():
         if filetype == "latex":
             template_path = f"./templates/sections/{section}/template.tex"
             output_path = f"../profiles/{profile}/elements/{section}/{section}_contents_{version}_{lang}.tex"
-            auto_warning = f"%{auto_warning}"
+            auto_warning = f"%{auto_warning}\n"
             if section in ["experience", "education", "popScience", "research", "teaching"]:
                 separator =  "\n\\myTablesSeparator%"
         elif filetype == "html":

@@ -65,6 +65,7 @@ function addHeader(){
 }
 
 addHeader()
+addSection("description")
 addSection("experience")
 addSection("education")
 addSection("popScience")

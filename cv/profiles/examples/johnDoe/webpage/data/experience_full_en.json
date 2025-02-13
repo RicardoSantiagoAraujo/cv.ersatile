@@ -7,9 +7,9 @@
         "EXP_content": [
             "Content",
             [
-                "Contributed to three projects using Node.js, React, SQL, and Git for version control.",
-                "Development of critical features for the frontend and database management.",
-                "Significant optimization of application performance."
+                "<classes.sections.experience.ExperienceLine object at 0x1011312e0>",
+                "<classes.sections.experience.ExperienceLine object at 0x101131340>",
+                "<classes.sections.experience.ExperienceLine object at 0x101131370>"
             ]
         ],
         "EXP_employer": [
@@ -45,9 +45,9 @@
         "EXP_content": [
             "Content",
             [
-                "Worked on UX and UI features for three different projects.",
-                "Used Sass and Tailwind to build professional websites.",
-                "Collaborated closely with an international team, alongside key stakeholders, within the Agile SCRUM framework."
+                "<classes.sections.experience.ExperienceLine object at 0x1011313d0>",
+                "<classes.sections.experience.ExperienceLine object at 0x101131400>",
+                "<classes.sections.experience.ExperienceLine object at 0x101131430>"
             ]
         ],
         "EXP_employer": [

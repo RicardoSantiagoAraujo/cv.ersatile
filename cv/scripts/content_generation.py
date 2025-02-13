@@ -5,6 +5,7 @@ from pathlib import Path
 import json
 # Classes
 from classes.sections.programming import ProgrammingItem
+from classes.sections.experience import ExperienceLine
 # Enums
 from enum import EnumType
 from enums.output_types import OutputType
@@ -81,8 +82,6 @@ def replace_placeholders_in_template(
         val = formatDate(val)
         # if string, format properly
         val = formatString(val)
-        # if list of strings, format properly
-        val = formatListStrings(val,output_type)
         # if list of subObjects, format properly
         val = formatSubObjects(val,output_type, subtemplate_path)
         # Replace in template
@@ -124,16 +123,6 @@ def formatString(x):
 def checktype(obj, type):
     return bool(obj) and all(isinstance(elem, type) for elem in obj)
 
-def formatListStrings(x, output_type:OutputType):
-    # check if it is a list AND contains only str's
-    if type(x) == list and checktype(x, str):
-        # x = x.strftime("%Y-%m-%d")
-        if (output_type==OutputType("html")):
-            x = "<ul>\n" + "".join([f"\t\t<li>{i}</li>\n" for i in x]) + "\t</ul>"
-        if (output_type==OutputType("tex")):
-            x = "\\begin{customlist}\n" + "".join([f"\t\t\t\\item {i}\n" for i in x]) + "\t\t\\end{customlist}"
-    return x
-
 
 def formatSubObjects(
         list_subobjs,
@@ -159,7 +148,7 @@ def formatSubObjects(
                     output_type=output_type
                     )
             # keep adding to string
-            generated_content += new_subcontent
+            generated_content += new_subcontent + "\n"
         return generated_content
     else:
         # Leave as is if not a list of subobjects

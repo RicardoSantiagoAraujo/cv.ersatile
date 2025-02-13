@@ -2,6 +2,6 @@ import enum
 
 class OutputType(enum.Enum):
     html = 'html'
-    latex = 'latex'
+    tex = 'tex'
     ts = 'ts'
     scss = 'scss'

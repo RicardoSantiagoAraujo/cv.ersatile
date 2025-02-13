@@ -3,6 +3,8 @@ import sys
 import os
 from pathlib import Path
 import json
+# Classes
+from classes.sections.programming import ProgrammingItem
 # Enums
 from enum import EnumType
 from enums.output_types import OutputType
@@ -25,8 +27,10 @@ def generate_contents(
     pre_content:str="",
     post_content:str="",
     inbetween_content:str="",
-    output_type:OutputType=OutputType("latex")
+    output_type:OutputType=OutputType("tex")
     ):
+    # Create subtemplate path from template path
+    subtemplate_path = getSubtemplatePath(template_path, output_type)
     # Define the generated content as a string
     generated_content = r""""""
     # Iterate over each entry in provided dictionary
@@ -38,7 +42,7 @@ def generate_contents(
             template_content = template_file.read()
             # Replace placeholder strings in template to generate an entry
             new_content = replace_placeholders_in_template(
-                template_content, entry_obj_attributes, entry_obj, output_type
+                template_content, entry_obj_attributes, entry_obj, output_type, subtemplate_path
             )
             # Add newly create entry into the output file
             generated_content += new_content
@@ -60,7 +64,13 @@ def get_obj_attributes(obj):
     return obj_attributes
 
 
-def replace_placeholders_in_template(template:str, placeholder_strings:list, entry_object, output_type:OutputType):
+def replace_placeholders_in_template(
+    template:str,
+    placeholder_strings:list,
+    entry_object,
+    output_type:OutputType,
+    subtemplate_path: str = ""
+    ):
     # Iterate over attributes and replace them into the template
     for attr in placeholder_strings:
         # print(attr)
@@ -73,6 +83,8 @@ def replace_placeholders_in_template(template:str, placeholder_strings:list, ent
         val = formatString(val)
         # if list of strings, format properly
         val = formatListStrings(val,output_type)
+        # if list of subObjects, format properly
+        val = formatSubObjects(val,output_type, subtemplate_path)
         # Replace in template
         template = template.replace(f"KEY_{attr}", str(key))
         template = template.replace(f"VAL_{attr}", str(val))
@@ -108,16 +120,50 @@ def formatString(x):
     #     x = x
     return x
 
+# check type of a variable, and if it is an item, of all contained intems
+def checktype(obj, type):
+    return bool(obj) and all(isinstance(elem, type) for elem in obj)
 
 def formatListStrings(x, output_type:OutputType):
-    if type(x) == list:
+    # check if it is a list AND contains only str's
+    if type(x) == list and checktype(x, str):
         # x = x.strftime("%Y-%m-%d")
         if (output_type==OutputType("html")):
             x = "<ul>\n" + "".join([f"\t\t<li>{i}</li>\n" for i in x]) + "\t</ul>"
-        if (output_type==OutputType("latex")):
+        if (output_type==OutputType("tex")):
             x = "\\begin{customlist}\n" + "".join([f"\t\t\t\\item {i}\n" for i in x]) + "\t\t\\end{customlist}"
     return x
 
+
+def formatSubObjects(
+        list_subobjs,
+        output_type:OutputType,
+        subtemplate_path: str
+        ):
+    # check if it is a list AND contains only subobjects
+    if type(list_subobjs) == list and checktype(list_subobjs, object):
+        # empty string to be filled
+        generated_content=""""""
+        # iterate over object
+        for subobj in list_subobjs:
+            # get attributes of sub-objects
+            entry_obj_attributes = get_obj_attributes(subobj)
+            # read subtemplate
+            with open(subtemplate_path, "r") as template_file:
+                templateItem_content = template_file.read()
+                # replace placeholders in subtemplate (this should make the function recursive!)
+                new_subcontent = replace_placeholders_in_template(
+                    template=templateItem_content,
+                    placeholder_strings= entry_obj_attributes,
+                    entry_object=subobj,
+                    output_type=output_type
+                    )
+            # keep adding to string
+            generated_content += new_subcontent
+        return generated_content
+    else:
+        # Leave as is if not a list of subobjects
+        return list_subobjs
 
 def print_instructions(*args:dict):# kwargs is a dictionary
     print(
@@ -156,3 +202,11 @@ def generate_json(inputDict: dict, profile: str, name: str, version: str, lang: 
 
 # default message for auto generated content
 auto_warning  = " /!\\ CONTENT GENERATED WITH PYTHON SCRIPT, CHANGES MADE DIRECTLY HERE MAY BE OVERWRITTEN /!\\ "
+
+
+# Create subtemplate path from template path
+def getSubtemplatePath(
+    template_path:str,
+    output_type: OutputType
+):
+    return template_path.replace(f"/template.{output_type.name}", f"/sub-template.{output_type.name}")

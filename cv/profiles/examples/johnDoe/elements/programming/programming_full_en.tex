@@ -1,6 +1,18 @@
 \section{Programming}
 \begin{mySectionContents}
 
-\input{./elements/programming/contents_table.tex}
+\renewcommand{\arraystretch}{1.0} % change all spacings at once
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}} % Define a new column type for centering
+%
+% A4 page width : 210 mm
+% THREE COLUMNS
+\begin{tabularx}{\myTableWidth}%
+    { p{3.5cm} C{0.5cm} p{4.3cm} p{3cm} X}%
+    \noalign{\global\arrayrulewidth=0.1mm} % change line width from here on
+    \arrayrulecolor{myGrayDark} % change line color from here on
+    %
+    \input{./elements/programming/programming_contents_full_en.tex}
+
+\end{tabularx}%
 
 \end{mySectionContents}

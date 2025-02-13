@@ -37,19 +37,19 @@ def generate_section():
         # Choose input template and outfile file paths depending on the desired filetype
         separator = ""
         global auto_warning #tell the interpreter to find variable a in the global scope
-        if filetype == "latex":
-            template_path = f"./templates/sections/{section}/template.tex"
+        if filetype == "tex":
             output_path = f"../profiles/{profile}/elements/{section}/{section}_contents_{version}_{lang}.tex"
             auto_warning = f"%{auto_warning}\n"
             if section in ["experience", "education", "popScience", "research", "teaching"]:
                 separator =  "\n\\myTablesSeparator%"
         elif filetype == "html":
-            template_path = f"./templates/sections/{section}/template.html"
             output_path = f"../profiles/{profile}/webpage/sections/{section}/{section}_contents_{version}_{lang}.html"
-            separator = "<!-- ====== Spacer ====== -->\n"
+            separator = "\n<!-- ====== Spacer ====== -->\n"
             auto_warning = f"<!-- {auto_warning} -->\n"
         else:
             return print(f"/!\\ {filetype} generation not available for f{Path(__file__).name}")
+
+        template_path = f"./templates/sections/{section}/template.{filetype}"
 
         output_content = generate_contents(
             source_dict = contentDict,

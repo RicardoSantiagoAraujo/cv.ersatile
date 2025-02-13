@@ -1,0 +1,88 @@
+{
+    "example1": {
+        "PROG_contents": [
+            "",
+            [
+                "<classes.sections.programming.ProgrammingItem object at 0x100a612b0>",
+                "<classes.sections.programming.ProgrammingItem object at 0x1007db3b0>",
+                "<classes.sections.programming.ProgrammingItem object at 0x100a612e0>",
+                "<classes.sections.programming.ProgrammingItem object at 0x100a61310>",
+                "<classes.sections.programming.ProgrammingItem object at 0x100a61340>"
+            ]
+        ],
+        "PROG_groupName": [
+            "",
+            "Programming and Scripting"
+        ],
+        "PROG_include": [
+            "",
+            "true"
+        ],
+        "PROG_nrow": [
+            "",
+            5
+        ]
+    },
+    "example2": {
+        "PROG_contents": [
+            "",
+            [
+                "<classes.sections.programming.ProgrammingItem object at 0x100a613d0>",
+                "<classes.sections.programming.ProgrammingItem object at 0x100a61400>",
+                "<classes.sections.programming.ProgrammingItem object at 0x100a61430>"
+            ]
+        ],
+        "PROG_groupName": [
+            "",
+            "Markup"
+        ],
+        "PROG_include": [
+            "",
+            "true"
+        ],
+        "PROG_nrow": [
+            "",
+            3
+        ]
+    },
+    "example3": {
+        "PROG_contents": [
+            "",
+            [
+                "<classes.sections.programming.ProgrammingItem object at 0x100a61490>"
+            ]
+        ],
+        "PROG_groupName": [
+            "",
+            "Databases"
+        ],
+        "PROG_include": [
+            "",
+            "true"
+        ],
+        "PROG_nrow": [
+            "",
+            1
+        ]
+    },
+    "example4": {
+        "PROG_contents": [
+            "",
+            [
+                "<classes.sections.programming.ProgrammingItem object at 0x100a614f0>"
+            ]
+        ],
+        "PROG_groupName": [
+            "",
+            "Version control"
+        ],
+        "PROG_include": [
+            "",
+            "true"
+        ],
+        "PROG_nrow": [
+            "",
+            1
+        ]
+    }
+}

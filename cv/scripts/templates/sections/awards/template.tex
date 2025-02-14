@@ -1,0 +1,13 @@
+%=========================================
+%
+\begin{itemize}
+    \setlength\itemsep{2em} % Space between items
+    % ===================
+    %%% VAL_AWARD_comment
+    \ifVAL_AWARD_include
+    \item \mySectionListHeader{VAL_AWARD_groupTitle}
+    \begin{itemize}%
+        VAL_AWARD_content%
+    \end{itemize}%
+    \fi
+\end{itemize}

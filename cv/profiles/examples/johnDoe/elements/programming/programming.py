@@ -1,8 +1,8 @@
-from classes.sections.programming import Programming, ProgrammingItem # type: ignore
+from classes.sections.programming import ProgrammingGroup, ProgrammingItem # type: ignore
 from datetime import date
 
 contentDict_full_en = {
-    "example1": Programming(
+    "example1": ProgrammingGroup(
         groupName=("","Programming and Scripting"),
         nrow=("",5),
         include=("","true"),
@@ -46,7 +46,7 @@ contentDict_full_en = {
                   ]
                   ),
         ),
-    "example2": Programming(
+    "example2": ProgrammingGroup(
         groupName=("","Markup"),
         nrow=("",3),
         include=("","true"),
@@ -76,7 +76,7 @@ contentDict_full_en = {
                   ]
                   ),
         ),
-    "example3": Programming(
+    "example3": ProgrammingGroup(
         groupName=("","Databases"),
         nrow=("",1),
         include=("","true"),
@@ -92,7 +92,7 @@ contentDict_full_en = {
                   ]
                   ),
         ),
-    "example4": Programming(
+    "example4": ProgrammingGroup(
         groupName=("","Version control"),
         nrow=("",1),
         include=("","true"),

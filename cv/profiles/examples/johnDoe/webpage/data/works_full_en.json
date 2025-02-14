@@ -1,0 +1,23 @@
+{
+    "example1": {
+        "WORK_comment": [
+            "",
+            "COMMENT"
+        ],
+        "WORK_content": [
+            "",
+            [
+                "<classes.sections.works.WorkItem object at 0x1030c7680>",
+                "<classes.sections.works.WorkItem object at 0x1030c76b0>"
+            ]
+        ],
+        "WORK_groupTitle": [
+            "",
+            "Web development"
+        ],
+        "WORK_include": [
+            "",
+            "true"
+        ]
+    }
+}

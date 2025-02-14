@@ -4,8 +4,7 @@ import os
 from pathlib import Path
 import json
 # Classes
-from classes.sections.programming import ProgrammingItem
-from classes.sections.experience import ExperienceLine
+# from classes.sections.programming import ProgrammingItem
 # Enums
 from enum import EnumType
 from enums.output_types import OutputType

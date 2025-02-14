@@ -3,11 +3,11 @@
         "PROG_contents": [
             "",
             [
-                "<classes.sections.programming.ProgrammingItem object at 0x100a612b0>",
-                "<classes.sections.programming.ProgrammingItem object at 0x1007db3b0>",
-                "<classes.sections.programming.ProgrammingItem object at 0x100a612e0>",
-                "<classes.sections.programming.ProgrammingItem object at 0x100a61310>",
-                "<classes.sections.programming.ProgrammingItem object at 0x100a61340>"
+                "<classes.sections.programming.ProgrammingItem object at 0x100ca9430>",
+                "<classes.sections.programming.ProgrammingItem object at 0x100d6ae70>",
+                "<classes.sections.programming.ProgrammingItem object at 0x100d6b020>",
+                "<classes.sections.programming.ProgrammingItem object at 0x100d6b230>",
+                "<classes.sections.programming.ProgrammingItem object at 0x100db9490>"
             ]
         ],
         "PROG_groupName": [
@@ -27,9 +27,9 @@
         "PROG_contents": [
             "",
             [
-                "<classes.sections.programming.ProgrammingItem object at 0x100a613d0>",
-                "<classes.sections.programming.ProgrammingItem object at 0x100a61400>",
-                "<classes.sections.programming.ProgrammingItem object at 0x100a61430>"
+                "<classes.sections.programming.ProgrammingItem object at 0x100db9d60>",
+                "<classes.sections.programming.ProgrammingItem object at 0x100dba540>",
+                "<classes.sections.programming.ProgrammingItem object at 0x100dba990>"
             ]
         ],
         "PROG_groupName": [
@@ -49,7 +49,7 @@
         "PROG_contents": [
             "",
             [
-                "<classes.sections.programming.ProgrammingItem object at 0x100a61490>"
+                "<classes.sections.programming.ProgrammingItem object at 0x100dbac60>"
             ]
         ],
         "PROG_groupName": [
@@ -69,7 +69,7 @@
         "PROG_contents": [
             "",
             [
-                "<classes.sections.programming.ProgrammingItem object at 0x100a614f0>"
+                "<classes.sections.programming.ProgrammingItem object at 0x100dbad50>"
             ]
         ],
         "PROG_groupName": [

@@ -9,4 +9,7 @@ class SectionType(enum.Enum):
     research = 'research'
     programming = 'programming'
     other = 'other'
+    certificates='certificates'
+    works='works'
+    awards='awards'
     publications = 'publications'

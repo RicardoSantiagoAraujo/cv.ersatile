@@ -17,7 +17,7 @@ class ProgrammingItem:
         self.PROGENTRY_include = include
 
 # Class of programming groups holding entries
-class Programming:
+class ProgrammingGroup:
     def __init__(self,
                  groupName: tuple[str, str],
                  nrow: tuple[str, int],

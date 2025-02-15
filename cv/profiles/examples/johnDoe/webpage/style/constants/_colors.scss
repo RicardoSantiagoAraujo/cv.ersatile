@@ -1,11 +1,11 @@
-// /!\ CONTENT GENERATED WITH PYTHON SCRIPT, CHANGES MADE DIRECTLY HERE MAY BE OVERWRITTEN /!\ 
-// use {rgb) //{red[0, 1], green[0, 1], blue[0, 1]) // for compatibility between latex and scss versions
+// /!\ CONTENT GENERATED WITH PYTHON SCRIPT, CHANGES MADE DIRECTLY HERE MAY BE OVERWRITTEN /!\
+// use {rgb //{red[0, 1], green[0, 1], blue[0, 1] // for compatibility between latex and scss versions
 
-$myColorPrimary: color(srgb rgb); //
-$myColorSecondary: color(srgb rgb); //
-$myBlack: color(srgb rgb); //
-$myGrayDark: color(srgb rgb); //
-$myGrayMed: color(srgb rgb); //
-$myGrayLight: color(srgb rgb); //
-$bgColor: color(srgb rgb); //
-$textColor: color(srgb rgb); //
+$myColorPrimary: #000FF0; //
+$myColorSecondary: color(srgb 0 1 1 ); //
+$myBlack: color(srgb 0 0 0 ); //
+$myGrayDark: color(srgb 0.5 5 1 ); //
+$myGrayMed: #FFFF00; //
+$myGrayLight: #00FF00; //
+$bgColor: color(srgb 1 0.9 1 ); //
+$textColor: color(srgb 0 0 0 ); //

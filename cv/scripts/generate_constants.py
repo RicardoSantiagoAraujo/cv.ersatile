@@ -35,6 +35,8 @@ def generate_constants():
 
         # Choose input template and outfile file paths depending on the desired filetype
         global auto_warning #tell the interpreter to find variable a in the global scope
+        template_path = f"./templates/constants/{constant_type}/template.{filetype}"
+
         if filetype == "tex":
             output_path = f"../profiles/{profile}/constants/{constant_type}.tex"
             auto_warning = f"%{auto_warning}\n"
@@ -44,11 +46,13 @@ def generate_constants():
         elif filetype == "scss":
             output_path = f"../profiles/{profile}/webpage/style/constants/_{constant_type}.scss"
             auto_warning = f"//{auto_warning}\n"
+            # add "_" if template is scss
+            template_path = f"./templates/constants/{constant_type}/_template.{filetype}"
         else:
             return print(f"/!\\ {filetype} generation not available for {Path(__file__).name}")
 
-        template_path = f"./templates/constants/{constant_type}/template.{filetype}"
-        
+
+
         output_content = generate_contents(
             source_dict = contentDict,
             template_path = template_path,

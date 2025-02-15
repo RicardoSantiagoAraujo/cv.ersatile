@@ -18,8 +18,14 @@ class Colors:
         self.CONST_bgColor = bgColor
         self.CONST_textColor = textColor
 
-        def replaceCommaWithSpaceInValue(tuple):
-            return ("" , tuple[0].replace(","," "))
+        def replaceCommaWithSpaceInValue(colorKV: tuple):
+            print(colorKV)
+            print()
+            if colorKV[0] == "rgb":
+                return ("" , f"color(srgb {colorKV[1].replace(","," ")} )")
+            if colorKV[0] == "HTML":
+                return ("" ,f"#{colorKV[1]}")
+            return "INVALID COLOR KEY"
 
         self.CONST_colorPrimary_scss = replaceCommaWithSpaceInValue(colorPrimary)
         self.CONST_colorSecondary_scss = replaceCommaWithSpaceInValue(colorSecondary)

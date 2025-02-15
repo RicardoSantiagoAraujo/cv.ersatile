@@ -1,10 +1,10 @@
-// use {rgb) //{red[0, 1], green[0, 1], blue[0, 1]) // for compatibility between latex and scss versions
+// use {rgb //{red[0, 1], green[0, 1], blue[0, 1] // for compatibility between latex and scss versions
 
-$myColorPrimary: color(srgb VAL_CONST_colorPrimary_scss); //
-$myColorSecondary: color(srgb VAL_CONST_colorSecondary_scss); //
-$myBlack: color(srgb VAL_CONST_black_scss); //
-$myGrayDark: color(srgb VAL_CONST_grayDark_scss); //
-$myGrayMed: color(srgb VAL_CONST_grayMed_scss); //
-$myGrayLight: color(srgb VAL_CONST_grayLight_scss); //
-$bgColor: color(srgb VAL_CONST_bgColor_scss); //
-$textColor: color(srgb VAL_CONST_textColor_scss); //
+$myColorPrimary: VAL_CONST_colorPrimary_scss; //
+$myColorSecondary: VAL_CONST_colorSecondary_scss; //
+$myBlack: VAL_CONST_black_scss; //
+$myGrayDark: VAL_CONST_grayDark_scss; //
+$myGrayMed: VAL_CONST_grayMed_scss; //
+$myGrayLight: VAL_CONST_grayLight_scss; //
+$bgColor: VAL_CONST_bgColor_scss; //
+$textColor: VAL_CONST_textColor_scss; //

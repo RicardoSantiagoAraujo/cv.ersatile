@@ -6,7 +6,7 @@
         ],
         "CONST_bgColor_scss": [
             "",
-            "rgb"
+            "color(srgb 1 0.9 1 )"
         ],
         "CONST_black": [
             "rgb",
@@ -14,15 +14,15 @@
         ],
         "CONST_black_scss": [
             "",
-            "rgb"
+            "color(srgb 0 0 0 )"
         ],
         "CONST_colorPrimary": [
-            "rgb",
-            "1,0,1"
+            "HTML",
+            "000FF0"
         ],
         "CONST_colorPrimary_scss": [
             "",
-            "rgb"
+            "#000FF0"
         ],
         "CONST_colorSecondary": [
             "rgb",
@@ -30,7 +30,7 @@
         ],
         "CONST_colorSecondary_scss": [
             "",
-            "rgb"
+            "color(srgb 0 1 1 )"
         ],
         "CONST_grayDark": [
             "rgb",
@@ -38,23 +38,23 @@
         ],
         "CONST_grayDark_scss": [
             "",
-            "rgb"
+            "color(srgb 0.5 5 1 )"
         ],
         "CONST_grayLight": [
-            "rgb",
-            "0,0.5,1"
+            "HTML",
+            "00FF00"
         ],
         "CONST_grayLight_scss": [
             "",
-            "rgb"
+            "#00FF00"
         ],
         "CONST_grayMed": [
-            "rgb",
-            "0.5,0,1"
+            "HTML",
+            "FFFF00"
         ],
         "CONST_grayMed_scss": [
             "",
-            "rgb"
+            "#FFFF00"
         ],
         "CONST_textColor": [
             "rgb",
@@ -62,7 +62,7 @@
         ],
         "CONST_textColor_scss": [
             "",
-            "rgb"
+            "color(srgb 0 0 0 )"
         ]
     }
 }

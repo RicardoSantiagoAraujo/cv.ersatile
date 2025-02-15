@@ -67,6 +67,7 @@ def get_obj_attributes(obj):
     obj_attributes = [a for a in dir(obj) if not a.startswith("__")]
     # Sort by descending order
     obj_attributes = sorted(obj_attributes, key=len, reverse=True)
+    # print(obj_attributes)
     return obj_attributes
 
 
@@ -79,6 +80,7 @@ def replace_placeholders_in_template(
 ):
     # Iterate over attributes and replace them into the template
     for attr in placeholder_strings:
+        print(attr)
         # print(attr)
         kv_pair = getattr(entry_object, attr)
         key = kv_pair[0]

@@ -4,13 +4,25 @@
             "",
             "|p{0.25cm} | X | p{2.5cm}| p{4cm}|"
         ],
+        "EXP_comment": [
+            "",
+            ""
+        ],
         "EXP_content": [
             "Content",
             [
-                "<classes.sections.experience.ExperienceSub object at 0x1011312e0>",
-                "<classes.sections.experience.ExperienceSub object at 0x101131340>",
-                "<classes.sections.experience.ExperienceSub object at 0x101131370>"
+                "<classes.sections.experience.ExperienceSub object at 0x100673500>",
+                "<classes.sections.experience.ExperienceSub object at 0x100463a70>",
+                "<classes.sections.experience.ExperienceSub object at 0x100693110>"
             ]
+        ],
+        "EXP_contentPos_tex": [
+            "",
+            "\\end{customlist}%"
+        ],
+        "EXP_contentPre_tex": [
+            "",
+            "\\begin{customlist}%"
         ],
         "EXP_employer": [
             "Company",
@@ -42,13 +54,25 @@
             "",
             "|p{0.25cm} | X | p{2.5cm}| p{4cm}|"
         ],
+        "EXP_comment": [
+            "",
+            ""
+        ],
         "EXP_content": [
             "Content",
             [
-                "<classes.sections.experience.ExperienceSub object at 0x1011313d0>",
-                "<classes.sections.experience.ExperienceSub object at 0x101131400>",
-                "<classes.sections.experience.ExperienceSub object at 0x101131430>"
+                "<classes.sections.experience.ExperienceSub object at 0x100501a90>",
+                "<classes.sections.experience.ExperienceSub object at 0x1006a4860>",
+                "<classes.sections.experience.ExperienceSub object at 0x1006a48c0>"
             ]
+        ],
+        "EXP_contentPos_tex": [
+            "",
+            "\\end{customlist}%"
+        ],
+        "EXP_contentPre_tex": [
+            "",
+            "\\begin{customlist}%"
         ],
         "EXP_employer": [
             "Company",
@@ -73,6 +97,52 @@
         "EXP_startDate": [
             "Start",
             "2014-01-01"
+        ]
+    },
+    "experienceC": {
+        "EXP_columnsDef": [
+            "",
+            "|p{0.25cm} | X | p{2.5cm}| p{4cm}|"
+        ],
+        "EXP_comment": [
+            "",
+            ""
+        ],
+        "EXP_content": [
+            "Content",
+            " Helped input data into database"
+        ],
+        "EXP_contentPos_tex": [
+            "",
+            ""
+        ],
+        "EXP_contentPre_tex": [
+            "",
+            ""
+        ],
+        "EXP_employer": [
+            "Internship",
+            "Data intern"
+        ],
+        "EXP_endDate": [
+            "End",
+            "2013-06-01"
+        ],
+        "EXP_include": [
+            "",
+            "true"
+        ],
+        "EXP_location": [
+            "Location",
+            "Bristol, UK"
+        ],
+        "EXP_postTitle": [
+            "",
+            "Frontend Developer"
+        ],
+        "EXP_startDate": [
+            "Start",
+            "2013-01-01"
         ]
     }
 }

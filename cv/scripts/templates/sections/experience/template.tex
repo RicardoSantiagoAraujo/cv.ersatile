@@ -1,6 +1,7 @@
 %
 % ==============================================
 \ifVAL_EXP_include % true/false to include/exclude
+% VAL_EXP_comment
 \begin{myTableEnv}{VAL_EXP_columnsDef}%
     \myRow
         {KEY_EXP_postTitle}{\bfseries VAL_EXP_postTitle} % Role/Title
@@ -10,9 +11,9 @@
         {KEY_EXP_location}{VAL_EXP_location}% Where
     %%% DESCRIPTION ==================
     \myTableContents{%
-        \begin{customlist}%
+VAL_EXP_contentPre_tex%
 VAL_EXP_content%
-        \end{customlist}%
+VAL_EXP_contentPos_tex%
     }%
 \end{myTableEnv}%
 %

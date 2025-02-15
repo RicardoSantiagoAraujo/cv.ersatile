@@ -19,6 +19,7 @@ class Experience:
         content: tuple[str, Union[str, list[ExperienceSub]]],
         include: tuple[str, bool],
         columnsDef: tuple[str, str],
+        comment: tuple[str, str],
     ):
         self.EXP_postTitle = postTitle
         self.EXP_employer = employer
@@ -26,5 +27,9 @@ class Experience:
         self.EXP_endDate = endDate
         self.EXP_location = location
         self.EXP_content = content
+        # Elements to wrap around content if it is a list in tex
+        self.EXP_contentPre_tex = ("", "\\begin{customlist}%" if type(content[1])==list else "")
+        self.EXP_contentPos_tex = ("", "\\end{customlist}%" if type(content[1])==list else "")
         self.EXP_include = include
         self.EXP_columnsDef = columnsDef
+        self.EXP_comment = comment

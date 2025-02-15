@@ -1,7 +1,8 @@
 from datetime import date
 from typing import Union
 
-class WorkItem:
+# Each object of WorkSub is a single awards, within the categories defined by WorkGroup
+class WorkSub:
     def __init__(self,
                  year: tuple[str, str],
                  title: tuple[str, str],
@@ -19,7 +20,7 @@ class WorkItem:
 class WorkGroup:
     def __init__(self,
                  groupTitle: tuple[str, str],
-                 content: tuple[str, list[WorkItem]],
+                 content: tuple[str, list[WorkSub]],
                  comment:tuple[str, str],
                  include:tuple[str, str],
                  ):

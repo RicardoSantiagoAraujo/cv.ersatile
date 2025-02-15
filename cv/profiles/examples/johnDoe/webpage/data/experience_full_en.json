@@ -7,9 +7,9 @@
         "EXP_content": [
             "Content",
             [
-                "<classes.sections.experience.ExperienceLine object at 0x1011312e0>",
-                "<classes.sections.experience.ExperienceLine object at 0x101131340>",
-                "<classes.sections.experience.ExperienceLine object at 0x101131370>"
+                "<classes.sections.experience.ExperienceSub object at 0x1011312e0>",
+                "<classes.sections.experience.ExperienceSub object at 0x101131340>",
+                "<classes.sections.experience.ExperienceSub object at 0x101131370>"
             ]
         ],
         "EXP_employer": [
@@ -45,9 +45,9 @@
         "EXP_content": [
             "Content",
             [
-                "<classes.sections.experience.ExperienceLine object at 0x1011313d0>",
-                "<classes.sections.experience.ExperienceLine object at 0x101131400>",
-                "<classes.sections.experience.ExperienceLine object at 0x101131430>"
+                "<classes.sections.experience.ExperienceSub object at 0x1011313d0>",
+                "<classes.sections.experience.ExperienceSub object at 0x101131400>",
+                "<classes.sections.experience.ExperienceSub object at 0x101131430>"
             ]
         ],
         "EXP_employer": [

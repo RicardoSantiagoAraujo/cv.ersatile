@@ -1,12 +1,13 @@
 from datetime import date
 from typing import Union
 
-class ExperienceLine:
+# Each ExperienceSub represents one item in a list in Experience.content
+class ExperienceSub:
     def __init__(self,
                  content: tuple[str, str]
                  ):
         self.EXPLINE_content = content
-        
+
 class Experience:
     def __init__(self,
                  postTitle: tuple[str, str],
@@ -14,7 +15,7 @@ class Experience:
                  startDate: tuple[str, date],
                  endDate: tuple[str, date],
                  location: tuple[str, str],
-                 content: tuple[str, Union[str, list[ExperienceLine]]],
+                 content: tuple[str, Union[str, list[ExperienceSub]]],
                  include: tuple[str, bool],
                  columnsDef: tuple[str, str]
                  ):

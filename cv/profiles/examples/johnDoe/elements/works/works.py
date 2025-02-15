@@ -1,4 +1,4 @@
-from classes.sections.works import WorkGroup, WorkItem # type: ignore
+from classes.sections.works import WorkGroup, WorkSub # type: ignore
 from datetime import date
 
 
@@ -9,14 +9,14 @@ contentDict_full_en = {
          include=("","true"),
         content=("",
                   [
-                      WorkItem(
+                      WorkSub(
                       year=("", ""),
                       title=("", "Weather app:"),
                       details=("", "\href{https://weather.com}{weather.com}"),
                       comment=("", "COMMENT"),
                       include=("", "true"),
                     ),
-                      WorkItem(
+                      WorkSub(
                       year=("", ""),
                       title=("", "e-commerce website"),
                       details=("", "\href{https://commerce.com}{buyandsell.com}"),

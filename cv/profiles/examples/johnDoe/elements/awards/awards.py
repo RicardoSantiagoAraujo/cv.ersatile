@@ -1,4 +1,4 @@
-from classes.sections.awards import AwardGroup, AwardItem # type: ignore
+from classes.sections.awards import AwardGroup, AwardsSub # type: ignore
 from datetime import date
 
 
@@ -9,14 +9,14 @@ contentDict_full_en = {
          include=("","true"),
         content=("",
                   [
-                      AwardItem(
+                      AwardsSub(
                       year=("", "2015"),
                       title=("", "Student Merit Award"),
                       details=("", "University of Bristol"),
                       comment=("", ""),
                       include=("", "true"),
                     ),
-                      AwardItem(
+                      AwardsSub(
                       year=("", "2018"),
                       title=("", "Hackathon competition"),
                       details=("", "Second place"),
@@ -32,7 +32,7 @@ contentDict_full_en = {
          include=("","true"),
         content=("",
                   [
-                      AwardItem(
+                      AwardsSub(
                       year=("", "2011"),
                       title=("", "National table tenis junior champion"),
                       details=("", ""),

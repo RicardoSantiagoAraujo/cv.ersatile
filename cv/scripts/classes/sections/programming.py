@@ -2,7 +2,7 @@ from datetime import date
 from typing import Union
 
 # Support class of individual entries in programming
-class ProgrammingItem:
+class ProgrammingSub:
     def __init__(self,
                  name: tuple[str, str],
                  iconLatex: tuple[str, str],
@@ -21,7 +21,7 @@ class ProgrammingGroup:
     def __init__(self,
                  groupName: tuple[str, str],
                  nrow: tuple[str, int],
-                 contents: tuple[str, list[ProgrammingItem]],
+                 contents: tuple[str, list[ProgrammingSub]],
                  include:  tuple[str, bool]
                  ):
         self.PROG_groupName = groupName

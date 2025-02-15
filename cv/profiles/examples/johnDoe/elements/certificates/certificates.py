@@ -1,4 +1,4 @@
-from classes.sections.certificates import CertificateGroup, CertificateItem # type: ignore
+from classes.sections.certificates import CertificateGroup, CertificateSub # type: ignore
 from datetime import date
 
 
@@ -9,28 +9,28 @@ contentDict_full_en = {
          include=("","true"),
         content=("",
                   [
-                      CertificateItem(
+                      CertificateSub(
                       year=("", "2011"),
                       title=("", "Cambridge English : First Certificate in English (FCE)"),
                       details=("", "Score: A"),
                       comment=("", ""),
                       include=("", "true"),
                     ),
-                      CertificateItem(
+                      CertificateSub(
                       year=("", "2012"),
                       title=("", "Cambridge English : Certificate in Advanced English (CAE)"),
                       details=("", "Score: B"),
                       comment=("", ""),
                       include=("", "true"),
                     ),
-                      CertificateItem(
+                      CertificateSub(
                       year=("", "2016"),
                       title=("", "IELTS Academic"),
                       details=("", "Overall Band Score: 8.0"),
                       comment=("", ""),
                       include=("", "true"),
                     ),
-                      CertificateItem(
+                      CertificateSub(
                       year=("", "2022"),
                       title=("", "TOEIC"),
                       details=("", ""),

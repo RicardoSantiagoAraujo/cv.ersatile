@@ -1,4 +1,4 @@
-from classes.sections.programming import ProgrammingGroup, ProgrammingItem # type: ignore
+from classes.sections.programming import ProgrammingGroup, ProgrammingSub # type: ignore
 from datetime import date
 
 contentDict_full_en = {
@@ -8,35 +8,35 @@ contentDict_full_en = {
         include=("","true"),
         contents=("",
                   [
-                      ProgrammingItem(
+                      ProgrammingSub(
                       name=("", "Python"),
                       iconLatex=("", "\\faPython"),
                       score=("", 5),
                       details=("", "pandas, Matplotlib, Flask"),
                       include=("", "true"),
                     ),
-                      ProgrammingItem(
+                      ProgrammingSub(
                       name=("", "R"),
                       iconLatex=("", "\\faRProject"),
                       score=("", 5),
                       details=("", "DataViz, Tidyverse"),
                       include=("", "true"),
                     ),
-                      ProgrammingItem(
+                      ProgrammingSub(
                       name=("", "Type/Javascript"),
                       iconLatex=("", "\\faJs"),
                       score=("", 5),
                       details=("", "Angular 2/JS, D3.js, jQuery"),
                       include=("", "true"),
                     ),
-                      ProgrammingItem(
+                      ProgrammingSub(
                       name=("", "C\#"),
                       iconLatex=("", "\\faFileCode"),
                       score=("", 4),
                       details=("", ".NET Framework"),
                       include=("", "true"),
                     ),
-                      ProgrammingItem(
+                      ProgrammingSub(
                       name=("", "Java"),
                       iconLatex=("", "\\faJava"),
                       score=("", 3),
@@ -52,21 +52,21 @@ contentDict_full_en = {
         include=("","true"),
         contents=("",
                   [
-                      ProgrammingItem(
+                      ProgrammingSub(
                       name=("", "HTML/CSS"),
                       iconLatex=("", "\\faHtml5"),
                       score=("", 5),
                       details=("", "Sass, Tailwind, Bootstrap"),
                       include=("", "true"),
                     ),
-                    ProgrammingItem(
+                    ProgrammingSub(
                       name=("", "\LaTeX"),
                       iconLatex=("","\\faFilePdf"),
                       score=("", 5),
                       details=("", ""),
                       include=("", "true"),
                     ),
-                    ProgrammingItem(
+                    ProgrammingSub(
                       name=("", "R Markdown"),
                       iconLatex=("","\\faFileDownload"),
                       score=("", 5),
@@ -82,7 +82,7 @@ contentDict_full_en = {
         include=("","true"),
         contents=("",
                   [
-                      ProgrammingItem(
+                      ProgrammingSub(
                       name=("", "Relational"),
                       iconLatex=("", "\\faDatabase"),
                       score=("", 4),
@@ -98,7 +98,7 @@ contentDict_full_en = {
         include=("","true"),
         contents=("",
                   [
-                      ProgrammingItem(
+                      ProgrammingSub(
                       name=("", "git"),
                       iconLatex=("", "\\faGit"),
                       score=("", 5),

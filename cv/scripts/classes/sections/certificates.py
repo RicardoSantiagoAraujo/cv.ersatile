@@ -1,7 +1,8 @@
 from datetime import date
 from typing import Union
 
-class CertificateItem:
+# Each object of CertificateSub is a single awards, within the categories defined by CertificateGroup
+class CertificateSub:
     def __init__(self,
                  year: tuple[str, str],
                  title: tuple[str, str],
@@ -19,7 +20,7 @@ class CertificateItem:
 class CertificateGroup:
     def __init__(self,
                  groupTitle: tuple[str, str],
-                 content: tuple[str, list[CertificateItem]],
+                 content: tuple[str, list[CertificateSub]],
                  comment:tuple[str, str],
                  include:tuple[str, str],
                  ):

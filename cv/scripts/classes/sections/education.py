@@ -1,17 +1,19 @@
 from datetime import date
 from typing import Union
 
+
 class Education:
-    def __init__(self,
-                 level: tuple[str, str],
-                 institution: tuple[str, str],
-                 startDate:tuple[str, date],
-                 endDate:tuple[str, date],
-                 location: tuple[str, str],
-                 content:tuple[str, Union[str, list[str]]],
-                 include: tuple[str, bool],
-                 columnsDef: tuple[str, str]
-                 ):
+    def __init__(
+        self,
+        level: tuple[str, str],
+        institution: tuple[str, str],
+        startDate: tuple[str, date],
+        endDate: tuple[str, date],
+        location: tuple[str, str],
+        content: tuple[str, Union[str, list[str]]],
+        include: tuple[str, bool],
+        columnsDef: tuple[str, str],
+    ):
         self.EDU_level = level
         self.EDU_institution = institution
         self.EDU_startDate = startDate

@@ -1,15 +1,17 @@
 from datetime import date
 from typing import Union
 
+
 # Each object of CertificateSub is a single awards, within the categories defined by CertificateGroup
 class CertificateSub:
-    def __init__(self,
-                 year: tuple[str, str],
-                 title: tuple[str, str],
-                 details:tuple[str, str],
-                 comment:tuple[str, str],
-                 include:tuple[str, str],
-                 ):
+    def __init__(
+        self,
+        year: tuple[str, str],
+        title: tuple[str, str],
+        details: tuple[str, str],
+        comment: tuple[str, str],
+        include: tuple[str, str],
+    ):
         self.CERTITEM_year = year
         self.CERTITEM_title = title
         self.CERTITEM_details = details
@@ -18,12 +20,13 @@ class CertificateSub:
 
 
 class CertificateGroup:
-    def __init__(self,
-                 groupTitle: tuple[str, str],
-                 content: tuple[str, list[CertificateSub]],
-                 comment:tuple[str, str],
-                 include:tuple[str, str],
-                 ):
+    def __init__(
+        self,
+        groupTitle: tuple[str, str],
+        content: tuple[str, list[CertificateSub]],
+        comment: tuple[str, str],
+        include: tuple[str, str],
+    ):
         self.CERT_groupTitle = groupTitle
         self.CERT_content = content
         self.CERT_comment = comment

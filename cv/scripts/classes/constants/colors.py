@@ -1,14 +1,15 @@
 class Colors:
-    def __init__(self,
-                colorPrimary: tuple[str, str],
-                colorSecondary: tuple[str, str],
-                black:tuple[str, int],
-                grayDark:tuple[str, int],
-                grayMed: tuple[str, int],
-                grayLight:tuple[str, str],
-                bgColor: tuple[str, str],
-                textColor: tuple[str, str]
-                 ):
+    def __init__(
+        self,
+        colorPrimary: tuple[str, str],
+        colorSecondary: tuple[str, str],
+        black: tuple[str, int],
+        grayDark: tuple[str, int],
+        grayMed: tuple[str, int],
+        grayLight: tuple[str, str],
+        bgColor: tuple[str, str],
+        textColor: tuple[str, str],
+    ):
         self.CONST_colorPrimary = colorPrimary
         self.CONST_colorSecondary = colorSecondary
         self.CONST_black = black
@@ -20,9 +21,9 @@ class Colors:
 
         def replaceCommaWithSpaceInValue(colorKV: tuple):
             if colorKV[0] == "rgb":
-                return ("" , f"color(srgb {colorKV[1].replace(","," ")} )")
+                return ("", f'color(srgb {colorKV[1].replace(","," ")} )')
             if colorKV[0] == "HTML":
-                return ("" ,f"#{colorKV[1]}")
+                return ("", f"#{colorKV[1]}")
             return "INVALID COLOR KEY"
 
         self.CONST_colorPrimary_scss = replaceCommaWithSpaceInValue(colorPrimary)

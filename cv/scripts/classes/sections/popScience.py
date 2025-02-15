@@ -1,17 +1,19 @@
 from datetime import date
 from typing import Union
 
+
 class PopScience:
-    def __init__(self,
-                 title: tuple[str, str],
-                 initiative: tuple[str, str],
-                 startDate:tuple[str, date],
-                 endDate:tuple[str, date],
-                 location: tuple[str, str],
-                 content:tuple[str, Union[str, list[str]]],
-                 include: tuple[str, bool],
-                 columnsDef: tuple[str, str]
-                 ):
+    def __init__(
+        self,
+        title: tuple[str, str],
+        initiative: tuple[str, str],
+        startDate: tuple[str, date],
+        endDate: tuple[str, date],
+        location: tuple[str, str],
+        content: tuple[str, Union[str, list[str]]],
+        include: tuple[str, bool],
+        columnsDef: tuple[str, str],
+    ):
         self.POPSCI_title = title
         self.POPSCI_initiative = initiative
         self.POPSCI_startDate = startDate

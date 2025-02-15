@@ -12,5 +12,10 @@ contentDict_full_en = {
         grayLight= ("HTML", "00FF00"),
         bgColor= ("rgb", "1,0.9,1"),
         textColor= ("rgb", "0,0,0"),
+        sectionTitleColor=("rgb","1,0.5,0.25"),
+        iconColor=("rgb","1,0.5,0.25"),
+        colorTableBorders=("rgb","1,0.5,0.25"),
+        colorTableFill=("rgb","1,0.5,0.25"),
+        sectionTitleBgColor=("rgb","1,0.5,0.25")
     )
     }

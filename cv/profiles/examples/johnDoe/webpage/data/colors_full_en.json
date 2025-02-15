@@ -32,6 +32,22 @@
             "",
             "color(srgb 0 1 1 )"
         ],
+        "CONST_colorTableBorders": [
+            "rgb",
+            "1,0.5,0.25"
+        ],
+        "CONST_colorTableBorders_scss": [
+            "",
+            "color(srgb 1 0.5 0.25 )"
+        ],
+        "CONST_colorTableFill": [
+            "rgb",
+            "1,0.5,0.25"
+        ],
+        "CONST_colorTableFill_scss": [
+            "",
+            "color(srgb 1 0.5 0.25 )"
+        ],
         "CONST_grayDark": [
             "rgb",
             "0.5,5,1"
@@ -55,6 +71,30 @@
         "CONST_grayMed_scss": [
             "",
             "#FFFF00"
+        ],
+        "CONST_iconColor": [
+            "rgb",
+            "1,0.5,0.25"
+        ],
+        "CONST_iconColor_scss": [
+            "",
+            "color(srgb 1 0.5 0.25 )"
+        ],
+        "CONST_sectionTitleBgColor": [
+            "rgb",
+            "1,0.5,0.25"
+        ],
+        "CONST_sectionTitleBgColor_scss": [
+            "",
+            "color(srgb 1 0.5 0.25 )"
+        ],
+        "CONST_sectionTitleColor": [
+            "rgb",
+            "1,0.5,0.25"
+        ],
+        "CONST_sectionTitleColor_scss": [
+            "",
+            "color(srgb 1 0.5 0.25 )"
         ],
         "CONST_textColor": [
             "rgb",

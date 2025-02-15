@@ -1,13 +1,13 @@
-
 %
 % ==============================================
 \ifVAL_POPSCI_include % true/false to include/exclude
 \begin{myTableEnv}{VAL_POPSCI_columnsDef}
     \myRow
-        {KEY_POPSCI_startDate}{\customDateFormat{VAL_POPSCI_startDate}}
+        {KEY_POPSCI_title}
+        {\bfseries VAL_POPSCI_title}
         {KEY_POPSCI_initiative}{VAL_POPSCI_initiative}
     \myRow
-        {KEY_POPSCI_title}{VAL_POPSCI_title}
+        {KEY_POPSCI_startDate}{\customDateFormat{VAL_POPSCI_startDate}}
         {}{}
     %%% DESCRIPTION ==================
     \myTableContents{%

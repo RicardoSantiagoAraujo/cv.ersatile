@@ -1,10 +1,18 @@
 // use {rgb //{red[0, 1], green[0, 1], blue[0, 1] // for compatibility between latex and scss versions
 
+////// SEMANTIC COLORS
 $myColorPrimary: VAL_CONST_colorPrimary_scss; //
 $myColorSecondary: VAL_CONST_colorSecondary_scss; //
 $myBlack: VAL_CONST_black_scss; //
 $myGrayDark: VAL_CONST_grayDark_scss; //
 $myGrayMed: VAL_CONST_grayMed_scss; //
 $myGrayLight: VAL_CONST_grayLight_scss; //
+
+////// COMPONENT COLORS
 $bgColor: VAL_CONST_bgColor_scss; //
 $textColor: VAL_CONST_textColor_scss; //
+$sectionTitleColor : VAL_CONST_sectionTitleColor;
+$iconColor: VAL_CONST_iconColor;
+$colorTableBorders: VAL_CONST_colorTableBorders;
+$colorTableFill: VAL_CONST_colorTableFill;
+$sectionTitleBgColor: VAL_CONST_sectionTitleBgColor;

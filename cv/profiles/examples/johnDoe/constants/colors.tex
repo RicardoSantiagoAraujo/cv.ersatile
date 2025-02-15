@@ -1,14 +1,27 @@
-% /!\ CONTENT GENERATED WITH PYTHON SCRIPT, CHANGES MADE DIRECTLY HERE MAY BE OVERWRITTEN /!\ 
+% /!\ CONTENT GENERATED WITH PYTHON SCRIPT, CHANGES MADE DIRECTLY HERE MAY BE OVERWRITTEN /!\
 % OPTIONALLY (RE)DIFINE ANY COLORS TO OVERWRITE DEFAULTS OR ADD NEW ONES
 
 % for compatibility between latex and scss versions:
 % OPTION 1: use {rgb}{red[0, 1], green[0, 1], blue[0, 1]}
 % OPTION 2: use hexadecimal {HTML}{FFFFFF}
-\definecolor{myColorPrimary}{HTML}{331333}
+\definecolor{myColorPrimary}{HTML}{000FF0}
 \definecolor{myColorSecondary}{rgb}{0,1,1}
 \definecolor{myBlack}{rgb}{0,0,0}
 \definecolor{myGrayDark}{rgb}{0.5,5,1}
-\definecolor{myGrayMed}{HTML}{F3FFFF}
-\definecolor{myGrayLight}{rgb}{0,0.5,1}
+\definecolor{myGrayMed}{HTML}{FFFF00}
+\definecolor{myGrayLight}{HTML}{00FF00}
 \definecolor{bgColor}{rgb}{1,0.9,1}
 \definecolor{textColor}{rgb}{0,0,0}
+
+
+\definecolor{sectionTitleBgColor}{rgb}{1,0.5,0.25}
+% Icons
+\definecolor{myIconColor}{rgb}{1,0.5,0.25}
+% Tabular header color
+% Custom colors for the section table headers
+\definecolor{myColorTableFill}{rgb}{1,0.5,0.25}
+\renewcommand{\myCellColor}{%
+    \cellcolor{myColorTableFill}% BG COLOR
+}
+% Color for the border around table cells
+\definecolor{myColorTableBorders}{rgb}{1,0.5,0.25}%

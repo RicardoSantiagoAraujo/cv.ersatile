@@ -19,8 +19,6 @@ class Colors:
         self.CONST_textColor = textColor
 
         def replaceCommaWithSpaceInValue(colorKV: tuple):
-            print(colorKV)
-            print()
             if colorKV[0] == "rgb":
                 return ("" , f"color(srgb {colorKV[1].replace(","," ")} )")
             if colorKV[0] == "HTML":

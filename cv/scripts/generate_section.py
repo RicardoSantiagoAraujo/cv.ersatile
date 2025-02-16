@@ -27,15 +27,21 @@ def generate_section():
         lang = Language(sys.argv[4]).value
         filetype = OutputType(sys.argv[5]).value
 
-        contentDict = import_contents_dict(
+        contentDict, settings = import_contents_and_settings(
             f"../profiles/{profile}/elements/{section}", section, version, lang
         )
 
         generate_json(contentDict, profile, section, version, lang)
 
+
         # Choose input template and outfile file paths depending on the desired filetype
         separator = ""
         global auto_warning  # tell the interpreter to find variable a in the global scope
+
+        template = getTemplateFolder(settings, filetype)
+
+        template_path = f"./templates/sections/{section}/{template}/template.{filetype}"
+
         if filetype == "tex":
             output_path = f"../profiles/{profile}/elements/{section}/{section}_contents_{version}_{lang}.tex"
             auto_warning = f"%{auto_warning}\n"
@@ -55,8 +61,6 @@ def generate_section():
             return print(
                 f"/!\\ {filetype} generation not available for f{Path(__file__).name}"
             )
-
-        template_path = f"./templates/sections/{section}/template.{filetype}"
 
         output_content = generate_contents(
             source_dict=contentDict,

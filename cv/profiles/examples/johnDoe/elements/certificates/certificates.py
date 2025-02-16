@@ -1,6 +1,17 @@
+from classes.settings.generationSettings import GenerationSettings # type: ignore
 from classes.sections.certificates import CertificateGroup, CertificateSub # type: ignore
 from datetime import date
 
+generation_settings = GenerationSettings(
+    templates={
+        "html":"2x2",
+        "tex":"2x2"
+        },
+    subtemplates={
+        "html":"2x2",
+        "tex":"2x2"
+        },
+)
 
 contentDict_full_en = {
     "example1": CertificateGroup(

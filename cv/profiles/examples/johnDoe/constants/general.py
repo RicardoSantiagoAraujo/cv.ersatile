@@ -1,5 +1,14 @@
+from classes.settings.generationSettings import GenerationSettings # type: ignore
 from classes.constants.general import General # type: ignore
 from datetime import date
+
+generation_settings = GenerationSettings(
+    templates={
+        "tex":"",
+        "ts":""
+        },
+    subtemplates={},
+)
 
 contentDict_full_en = {
     "example": General(

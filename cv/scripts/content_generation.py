@@ -5,6 +5,7 @@ from pathlib import Path
 import json
 
 # Classes
+# from classes.settings.generationSettings import GenerationSettings # type: ignore
 # from classes.sections.programming import ProgrammingSub
 # Enums
 from enum import EnumType
@@ -15,12 +16,24 @@ from enums.languages import Language
 
 
 # Function to import a dictionary from a different path by adding it to the recognized paths
-def import_contents_dict(path: str, type: str, version: str, lang: str):
+def import_contents_and_settings(path: str, type: str, version: str, lang: str):
     sys.path.insert(0, path)
     # __import__ works like "from ... import ...", but import can be decided at runtime
-    module = __import__(type, fromlist=[f"contentDict_{version}_{lang}"])
-    contentDict = getattr(module, f"contentDict_{version}_{lang}")
-    return contentDict
+    module_content = __import__(type, fromlist=[f"contentDict_{version}_{lang}"])
+    contentDict = getattr(module_content, f"contentDict_{version}_{lang}")
+    # Settings
+    module_settings = __import__(type, fromlist=[f"generation_settings"])
+    settings = getattr(module_settings, f"generation_settings")
+    # Return content and settings
+    return contentDict, settings
+
+
+
+def getTemplateFolder(settings, filetype):
+    template = settings.templates[filetype]
+    # template = template+"/" if template != "" else ""
+    return template
+
 
 
 def generate_contents(

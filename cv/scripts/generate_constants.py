@@ -27,15 +27,18 @@ def generate_constants():
         lang = Language(sys.argv[4]).value  # not actually useful here
         filetype = OutputType(sys.argv[5]).value
 
-        contentDict = import_contents_dict(
+        contentDict, settings = import_contents_and_settings(
             f"../profiles/{profile}/constants", constant_type, version, lang
         )
-
         generate_json(contentDict, profile, constant_type, version, lang)
 
         # Choose input template and outfile file paths depending on the desired filetype
         global auto_warning  # tell the interpreter to find variable a in the global scope
-        template_path = f"./templates/constants/{constant_type}/template.{filetype}"
+
+        template = getTemplateFolder(settings, filetype)
+
+        template_path = f"./templates/constants/{constant_type}/{template}/template.{filetype}"
+
 
         if filetype == "tex":
             output_path = f"../profiles/{profile}/constants/{constant_type}.tex"
@@ -52,7 +55,7 @@ def generate_constants():
             auto_warning = f"//{auto_warning}\n"
             # add "_" if template is scss
             template_path = (
-                f"./templates/constants/{constant_type}/_template.{filetype}"
+                f"./templates/constants/{constant_type}/{template}/_template.{filetype}"
             )
         else:
             return print(

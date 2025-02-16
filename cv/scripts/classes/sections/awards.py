@@ -2,6 +2,7 @@ from datetime import date
 from typing import Union
 
 
+
 # Each object of AwardSub is a single awards, within the categories defined by AwardGroup
 class AwardsSub:
     def __init__(

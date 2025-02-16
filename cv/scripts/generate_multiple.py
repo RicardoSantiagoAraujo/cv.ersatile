@@ -74,10 +74,10 @@ def main():
                         if result.returncode == 1:
                             failed_commands.append(current_command)
                         print("COMMAND: " + current_command)
-                        print("--------------------------------------------------")
-                        print(f"✓✓ Loop {loop_counter}/{total_loops} completed ✓")
-                        print(f"✓✓ {total_loops - error_counter}/{total_loops} were successful ✓✓")
-                        print("--------------------------------------------------\n")
+                        print("------------------------------------------------")
+                        print(f"\t ✓✓ Loop {loop_counter}/{total_loops} completed ✓✓")
+                        print(f"\t✓✓ {total_loops - error_counter}/{total_loops} were successful ✓✓")
+                        print("------------------------------------------------\n")
 
     if len(failed_commands)>0:
         print(f"FAILED CALLS ({error_counter}):")

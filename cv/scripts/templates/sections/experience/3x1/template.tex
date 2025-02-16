@@ -1,0 +1,30 @@
+%
+% ==============================================
+\ifVAL_EXP_include % true/false to include/exclude
+% VAL_EXP_comment
+\begin{myTableEnv}{VAL_EXP_columnsDef}%
+    %%% FIRST ROW --------------------
+    \myCell{1}[l]
+    {KEY_EXP_postTitle}&
+    \myCell{3}[l]
+    {\bfseries VAL_EXP_postTitle}\\
+    %%% SECOND ROW --------------------
+    \myCell{1}[l]
+    {}&
+    \myCell{3}[l]
+    {\dateRange{VAL_EXP_startDate}{VAL_EXP_endDate}}\\
+    %%% THIRD ROW --------------------
+    \myCell{1}[l]
+    {}&
+    \myCell{3}[l]
+    {VAL_EXP_employer in VAL_EXP_location}\\
+    %%% DESCRIPTION ==================
+    \myTableContents{%
+VAL_EXP_contentPre_tex%
+VAL_EXP_content%
+VAL_EXP_contentPos_tex%
+    }%
+\end{myTableEnv}%
+%
+\fi
+%

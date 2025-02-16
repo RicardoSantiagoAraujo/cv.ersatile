@@ -4,12 +4,12 @@ from datetime import date
 
 generation_settings = GenerationSettings(
     templates={
-        "html":"2x2",
-        "tex":"2x2"
+        "html":"",
+        "tex":""
         },
     subtemplates={
-        "html":"2x2",
-        "tex":"2x2"
+        "html":"",
+        "tex":""
         },
 )
 
@@ -21,7 +21,7 @@ contentDict_full_en = {
     ),
     "example2": Other(
         category=("", "Other Digital Tools"),
-        content=("", "Adobe Photoshop \& Adobe Illustrator and Photoshop, MS Office suite"),
+        content=("", "Adobe Photoshop \\& Adobe Illustrator and Photoshop, MS Office suite"),
         include=("","true"),
     ),
     "example3": Other(

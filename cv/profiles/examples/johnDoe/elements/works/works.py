@@ -4,12 +4,12 @@ from datetime import date
 
 generation_settings = GenerationSettings(
     templates={
-        "html":"2x2",
-        "tex":"2x2"
+        "html":"",
+        "tex":""
         },
     subtemplates={
-        "html":"2x2",
-        "tex":"2x2"
+        "html":"",
+        "tex":""
         },
 )
 
@@ -23,14 +23,14 @@ contentDict_full_en = {
                       WorkSub(
                       year=("", ""),
                       title=("", "Weather app:"),
-                      details=("", "\href{https://weather.com}{weather.com}"),
+                      details=("", "\\href{https://weather.com}{weather.com}"),
                       comment=("", "COMMENT"),
                       include=("", "true"),
                     ),
                       WorkSub(
                       year=("", ""),
                       title=("", "e-commerce website"),
-                      details=("", "\href{https://commerce.com}{buyandsell.com}"),
+                      details=("", "\\href{https://commerce.com}{buyandsell.com}"),
                       comment=("", "COMMENT"),
                       include=("", "true"),
                     ),

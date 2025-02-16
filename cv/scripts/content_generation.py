@@ -121,9 +121,9 @@ def generate_output_file(output_content, output_file_path):
     with open(output_file_path, "w") as output_file:
         output_file.write(output_content)
     print("\n")
-    print("+++++++++++++++++++++++++++++++++++")
-    print("Output file generated successfully!")
-    print("+++++++++++++++++++++++++++++++++++")
+    print("+++++++++++++++++++++++++++++++++++++++++")
+    print("✅ Output file generated successfully! ✅")
+    print("+++++++++++++++++++++++++++++++++++++++++")
     print(f"Output: {output_file_path}")
     print("\n")
 
@@ -177,16 +177,16 @@ def print_instructions(*args: dict):  # kwargs is a dictionary
         f"""
     \t =================================================================
     \t HOW TO USE THIS COMMAND:
-    \t python {Path(__file__).name} {" ".join(f"<{la}>" for la,de,ex in args)}
+    \t python[3] {Path(sys.argv[0]).name} {" ".join(f"<{la}>" for la,de,ex in args)}
     """
     )
     # Print list of arguments and their definitions
     for label, definition, example in args:
-        print(f"\t\t- {label} : {definition}")
+        print(f"\t\t► {label} : {definition}")
     # Print use case example, if an enum has been passes, print first element of it
     print(
         f"""
-    \t EXAMPLE: python {Path(__file__).name} {" ".join([(list(ex)[0].value if isinstance(ex, EnumType) else ex) for la,de,ex in args])}
+    \t EXAMPLE: python[3] {Path(sys.argv[0]).name} {" ".join([(list(ex)[0].value if isinstance(ex, EnumType) else ex) for la,de,ex in args])}
     \t=================================================================
     """
     )

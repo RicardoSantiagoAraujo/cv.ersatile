@@ -4,12 +4,12 @@ from datetime import date
 
 generation_settings = GenerationSettings(
     templates={
-        "html":"2x2",
-        "tex":"2x2"
+        "html":"",
+        "tex":""
         },
     subtemplates={
-        "html":"2x2",
-        "tex":"2x2"
+        "html":"",
+        "tex":""
         },
 )
 

@@ -4,12 +4,12 @@ from datetime import date
 
 generation_settings = GenerationSettings(
     templates={
-        "html":"2x2",
-        "tex":"2x2"
+        "html":"",
+        "tex":""
         },
     subtemplates={
-        "html":"2x2",
-        "tex":"2x2"
+        "html":"",
+        "tex":""
         },
 )
 
@@ -42,7 +42,7 @@ contentDict_full_en = {
                       include=("", "true"),
                     ),
                       ProgrammingSub(
-                      name=("", "C\#"),
+                      name=("", "C\\#"),
                       iconLatex=("", "\\faFileCode"),
                       score=("", 4),
                       details=("", ".NET Framework"),
@@ -72,7 +72,7 @@ contentDict_full_en = {
                       include=("", "true"),
                     ),
                     ProgrammingSub(
-                      name=("", "\LaTeX"),
+                      name=("", "\\LaTeX"),
                       iconLatex=("","\\faFilePdf"),
                       score=("", 5),
                       details=("", ""),

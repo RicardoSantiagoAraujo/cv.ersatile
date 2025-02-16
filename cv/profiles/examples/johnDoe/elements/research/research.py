@@ -15,7 +15,7 @@ generation_settings = GenerationSettings(
 
 contentDict_full_en = {
     "example": Research(
-        title=("", ""),
+        title=("", "Computer science project"),
         institute=("", "CS Institute"),
         startDate=("Start",date(2019, 1, 11)),
         endDate=("End",date(2019,6,1)),

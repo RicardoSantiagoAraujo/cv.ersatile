@@ -6,6 +6,23 @@ from content_generation import *
 ### Enums
 from enums.generated_types import GeneratedTypes
 
+###############################################################################
+###############################################################################
+
+#  CHANGE THESE TO FIT YOUR PROFILE'S PARTICULAR STRUCTURE
+profiles = ["examples/johnDoe"]
+sections = ["awards", "certificates", "description", "education", "experience", "other", "popScience", "programming", "publications", "research", "teaching", "works"]
+constants = ["fonts", "colors", "general"]
+versions =  ["full"]
+languages = ["en"]
+output_types_sections = ["tex", "html"]
+output_types_constants  = ["tex", "scss", "ts"]
+
+###############################################################################
+###############################################################################
+
+
+
 # Get directory where the script is located
 script_directory = os.path.dirname(os.path.realpath(__file__))
 # Set it as working directory
@@ -24,14 +41,6 @@ def main():
             ),
         )
         return 1
-
-    profiles = ["examples/johnDoe"]
-    sections = ["awards", "certificates", "description", "education", "experience", "other", "popScience", "programming", "publications", "research", "teaching", "works"]
-    constants = ["fonts", "colors", "general"]
-    versions =  ["full"]
-    languages = ["en"]
-    output_types_sections = ["tex", "html"]
-    output_types_constants  = ["tex", "scss", "ts"]
 
     if group == "sections":
         script= "generate_section.py"

@@ -28,10 +28,10 @@
        % right=0pt,%
        % top=0pt,%
        % bottom=0pt,%
-       colframe=bgColor,%
-       colback=myGrayLight,%
-       opacityback=0,%
-       % drop fuzzy shadow=myGrayDark,%
+       colframe=colorIconBg,% frame color
+       colback=colorIconBg,% background color
+       opacityback=1,% background opacity
+       % drop fuzzy shadow=colorGrayDark,%
        hbox,% adjust width to content
        #1%
 }
@@ -41,9 +41,9 @@
        \begin{headerInfoBox}%
               % tcolorbox helps avoid line breaks
               \small%
-              \color{myIconColor}#1%
+              \color{colorIcon}#1%
               \ \ %
-              \color{myBlack}#2%
+              \color{colorBlack}#2%
        \end{headerInfoBox}%
 }
 

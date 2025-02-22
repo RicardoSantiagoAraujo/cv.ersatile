@@ -5,35 +5,42 @@
 \usepackage{transparent}
 
 % DEFAULT COLORS
-\definecolor{myColorPrimary}{rgb}{1,0,1}
-\definecolor{myColorSecondary}{rgb}{0,1,1}
-\definecolor{myBlack}{gray}{0}
-\definecolor{myWhite}{gray}{1}
-\definecolor{myGrayDark}{gray}{0.25}
-\definecolor{myGrayMed}{gray}{0.5}
-\definecolor{myGrayLight}{gray}{0.9}
-\definecolor{bgColor}{rgb}{1,1,1}
-\definecolor{textColor}{rgb}{0,0,0}
-\definecolor{draftBgColor}{rgb}{0.1,0.0,0.05}
-\definecolor{myColorSuccess}{rgb}{0,1,0}
-\definecolor{myColorWarning}{rgb}{0,0.5,1}
-\definecolor{myColorDanger}{rgb}{1,0,0}
+\definecolor{colorPrimary}{rgb}{1,0,1}
+\definecolor{colorSecondary}{rgb}{0,1,1}
+\definecolor{colorBlack}{gray}{0}
+\definecolor{colorWhite}{gray}{1}
+\definecolor{colorGrayDark}{gray}{0.25}
+\definecolor{colorGrayMed}{gray}{0.5}
+\definecolor{colorGrayLight}{gray}{0.9}
+\definecolor{colorBg}{rgb}{1,1,1}
+\definecolor{colorText}{rgb}{0,0,0}
+\definecolor{colorDraftBg}{rgb}{0.1,0.0,0.05}
+\definecolor{colorSuccess}{rgb}{0,1,0}
+\definecolor{colorWarning}{rgb}{0,0.5,1}
+\definecolor{colorDanger}{rgb}{1,0,0}
 
 % Tabular header color
 % Custom colors for the section table headers
-\newcommand{\myCellColor}{%
-    \cellcolor{myGrayLight}% BG COLOR
+\newcommand{\setColorCell}{%
+    \cellcolor{colorGrayLight}% BG COLOR
 }
 % Color for the border around table cells
-\colorlet{myColorTableBorders}{myGrayLight}%
+\colorlet{colorTableBorders}{colorGrayLight}%
 
+%%% Sections
 % Section titles
-\colorlet{sectionTitleColor}{myGrayDark}
-\colorlet{sectionTitleBgColor}{myWhite}
-\pagecolor{bgColor} % Set your desired background color here
+\colorlet{colorSectionTitle}{colorGrayDark}
+\colorlet{colorSectionTitleBg}{colorWhite}
+% Section contents
+\colorlet{colorSectionBg}{colorBg}
+\colorlet{colorHeaderBg}{colorGrayLight}
+
+%%% Page background color
+\pagecolor{colorBg} % Set your desired background color here
 
 % Icons
-\colorlet{myIconColor}{myGrayDark}
+\colorlet{colorIcon}{colorGrayDark}
+\colorlet{colorIconBg}{colorGrayDark}
 
 %%% LOAD COLORS  FOR CHOSEN PERSON IF THEY HAVE BEEN SET
 \InputIfFileExists
@@ -48,8 +55,8 @@
 
 
 % DRAFT VERSION COLORS
-\definecolor{sectionDraftContentsBgColor}{rgb}{0.1, 0.1, 0.1}
-\definecolor{sectionDraftContentsTextColor}{RGB}{255, 255, 175}
+\definecolor{colorSectionDraftContentsBg}{rgb}{0.1, 0.1, 0.1}
+\definecolor{colorSectionDraftContentsText}{RGB}{255, 255, 175}
 % FINAL VERSION COLORS
-\colorlet{sectionFinalContentsBgColor}{bgColor}
-\colorlet{sectionFinalContentsTextColor}{textColor}
+\colorlet{colorSectionFinalContentsBg}{colorBg}
+\colorlet{colorSectionFinalContentsText}{colorText}

@@ -7,8 +7,8 @@
               right=0pt,
               top=0pt,
               bottom=0pt,
-              colback=white,
-              colframe=myGrayMed,
+              colback=colorWhite,
+              colframe=colorGrayMed,
               enlarge left by=0mm,
               boxsep=0pt,
               boxrule=1pt,
@@ -17,8 +17,8 @@
               % title=\imagename,
               finish={
                      \isDraft{
-                            \node[fill=myGrayLight!50!white,fill opacity=0.5,text opacity=1]
-                            at (frame.center) {\scriptsize\bfseries\ttfamily\color{myGrayDark!50!black}\imagename};}{}
+                            \node[fill=colorGrayLight!50!colorWhite,fill opacity=0.5,text opacity=1]
+                            at (frame.center) {\scriptsize\bfseries\ttfamily\color{colorGrayDark!50!colorBlack}\imagename};}{}
               }
        },
        % myPictureStyleExtras/.style={}
@@ -65,6 +65,7 @@
 
 
 \begin{mySectionContents}%
+[colback=colorHeaderBg]
        %
     \noindent%
     \hspace{0.2cm}% horizontal indent

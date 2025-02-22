@@ -31,7 +31,7 @@
 \newcommand{\colorSectionBox}[1]{%
   \colorbox%
     {%
-    sectionTitleBgColor% section background color
+    colorSectionTitleBg% section background color
     }%
     {%
     \parbox{\dimexpr\textwidth-2\fboxsep}%
@@ -46,7 +46,7 @@
 % Section title style, can be overwritten
 \newcommand{\mySectionTitleStyleDefault}{%
   \setTitleFont% title font
-  \color{sectionTitleColor}% text color
+  \color{colorSectionTitle}% text color
   \large% font size
   \scshape% small caps
   \lsstyle% increase spacing between letters

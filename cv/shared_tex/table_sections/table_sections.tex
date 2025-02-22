@@ -22,7 +22,7 @@
 
 %%% Table lines (horizontal/vertical):
 \setlength\arrayrulewidth{0.1pt}% thickness of rule
-\arrayrulecolor{myColorTableBorders}% color of rule
+\arrayrulecolor{colorTableBorders}% color of rule
 % % Change space above/below
 % \let\savehline\hline%
 % \def\hline{%
@@ -58,13 +58,13 @@
 {%
   {%
     % \hfill %  push right /!\ DO NOT do alignment here. Better to do it in the table definitions for flexibility as this cannot be overwritten
-    \myCellColor%
+    \setColorCell%
     % \scshape%
     #1% Right Label
   }%
   &% ..................
   {%
-    \myCellColor%
+    \setColorCell%
     % \bfseries%
     #2% Right Content
   }%
@@ -85,12 +85,12 @@
     {#1}%
     {>{\centering\hsize=\dimexpr#1\hsize+#1\tabcolsep+\arrayrulewidth\relax}#2}%
     {%
-      \myCellColor%
+      \setColorCell%
       #3%
     }%
   \else%
     % if only one column is required
-    \myCellColor%
+    \setColorCell%
     #3%
   \fi%
 }

@@ -2,18 +2,20 @@
 // use {rgb //{red[0, 1], green[0, 1], blue[0, 1] // for compatibility between latex and scss versions
 
 ////// SEMANTIC COLORS
-$myColorPrimary: #000FF0; //
-$myColorSecondary: color(srgb 0 1 1 ); //
-$myBlack: color(srgb 0 0 0 ); //
-$myGrayDark: color(srgb 0.5 5 1 ); //
-$myGrayMed: #FFFF00; //
-$myGrayLight: #00FF00; //
+$colorPrimary: #000FF0; //
+$colorSecondary: color(srgb 0 1 1 ); //
+$colorBlack: color(srgb 0 0 0 ); //
+$colorGrayDark: color(srgb 0.5 5 1 ); //
+$colorGrayMed: #FFFF00; //
+$colorGrayLight: #00FF00; //
 
 ////// COMPONENT COLORS
-$bgColor: color(srgb 1 0.9 1 ); //
-$textColor: color(srgb 0 0 0 ); //
-$sectionTitleColor : 0.1,9,0;
-$sectionTitleBgColor: 1,0.5,0.25;
-$iconColor: 1,0.5,0.25;
-$colorTableBorders: 1,0.5,0.25;
-$colorTableFill: 1,0.5,0.25;
+$colorBg: color(srgb 1 0.9 1 ); //
+$colorText: color(srgb 0 0 0 ); //
+$colorSectionTitle : color(srgb 0.1 9 0 );
+$colorSectionTitleBg: color(srgb 1 0.5 0.25 );
+$colorSectionBg: $colorBg;
+$colorHeaderBg: $colorBg;
+$colorIcon: color(srgb 1 0.5 0.25 );
+$colorTableBorders: color(srgb 1 0.5 0.25 );
+$colorTableFill: color(srgb 1 0.5 0.25 );

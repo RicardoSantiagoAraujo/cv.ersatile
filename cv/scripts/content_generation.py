@@ -93,7 +93,6 @@ def replace_placeholders_in_template(
 ):
     # Iterate over attributes and replace them into the template
     for attr in placeholder_strings:
-        # print(attr)
         kv_pair = getattr(entry_object, attr)
         key = kv_pair[0]
         val = kv_pair[1]

@@ -1,22 +1,25 @@
 @use '../constants/colors' as color;
 @use '../constants/fonts' as font;
 
+$header-height: 24vh;
 header{
-    background-color: color.$myColorPrimary;
+    background-color: color.$colorPrimary;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    height: $header-height;
+    overflow: hidden;
     .header__left{
-        background-color: color.$myColorSecondary;
+        background-color: color.$colorSecondary;
         width: 80%;
         h1{
-            font-size: 5rem;
+            font-size: 9vh;
             font-family: font.$myTitleFont;
         }
         ul{
             display: flex;
             flex-wrap: wrap;
-            background-color: color.$myColorPrimary;
+            background-color: color.$colorPrimary;
             justify-content: space-evenly;
             li{
                 list-style-type: none;
@@ -25,10 +28,18 @@ header{
         }
     }
     .header__right{
-        background-color: color.$bgColor;
+        background-color: color.$colorBg;
         width: 20%;
+        position: relative;
         img{
-            width: 100%;
+            // align-items: center;
+            // justify-content: center;
+            // width: 100%;
+            height: $header-height;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
         }
 
     }

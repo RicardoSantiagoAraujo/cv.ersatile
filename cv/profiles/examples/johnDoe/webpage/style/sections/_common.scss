@@ -12,14 +12,16 @@ section{
         text-transform: capitalize;
         margin-left: 1rem;
         font-family: font.$myTitleFont;
+        background-color: color.$colorSectionTitleBg;
+        color: color.$colorSectionTitle;
     }
 }
 
 
 .table-entry{
-    background-color: color.$myGrayMed;
+    background-color: color.$colorGrayMed;
     .table-entry__header{
-        background-color: color.$myGrayLight;
+        background-color: color.$colorGrayLight;
         display: flex;
         flex-direction: row;
         li{
@@ -29,6 +31,6 @@ section{
         }
     }
     .table-entry__contents{
-        background-color: color.$bgColor;
+        background-color: color.$colorBg;
     }
 }

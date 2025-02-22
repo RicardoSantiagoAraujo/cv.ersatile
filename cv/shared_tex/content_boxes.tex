@@ -2,10 +2,10 @@
 \tcbuselibrary{breakable, skins}
 \tcbset{
     commonDraftStyle/.style={
-        colback=sectionDraftContentsBgColor,
+        colback=colorSectionDraftContentsBg,
         opacityback=.95,% bg color opacity of the box
         colframe=white,
-        coltext=sectionDraftContentsTextColor,
+        coltext=colorSectionDraftContentsText,
         boxrule=0.1pt,
         sharp corners,
         left=0pt,
@@ -17,10 +17,10 @@
         breakable % Allow breaking across pages
     },
     commonFinalStyle/.style={
-        colback=sectionFinalContentsBgColor,
+        colback=colorSectionFinalContentsBg,
         opacityback=.9,% bg color opacity of the box
-        colframe=black,
-        coltext=sectionFinalContentsTextColor,
+        colframe=colorBlack,
+        coltext=colorSectionFinalContentsText,
         boxrule=0pt,
         sharp corners,
         left=0pt,
@@ -39,18 +39,20 @@
 
 
 
-
-\newenvironment{mySectionContents}
+\NewDocumentEnvironment{mySectionContents}
+{
+  O{colback=colorSectionBg}% #1: adjust tcolorbox style
+}
 % ======= BEFORE
 {
     % \par\medskip
     \isDraft{
       % If \isDraft is "true", this part will be executed
       \setDraftFont%
-      \begin{myDraftStyle}%
+      \begin{myDraftStyle}[#1]%
     }{%
       % If \isDraft is not "true", this part will be executed
-      \begin{myFinalStyle}%
+      \begin{myFinalStyle}[#1]%
     }%
     \myJustification% justification
 }%
@@ -73,7 +75,7 @@
   m% description
 }
 {%
-\begin{myFinalStyle}[colback=myGrayLight!50!bgColor]
+\begin{myFinalStyle}[colback=colorGrayLight!50!colorBg]
   {%
     \scshape#1%
     \ifthenelse{\equal{#1}{}}{}{:}% add ":" conditionally

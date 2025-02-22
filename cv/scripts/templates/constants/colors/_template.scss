@@ -1,18 +1,20 @@
 // use {rgb //{red[0, 1], green[0, 1], blue[0, 1] // for compatibility between latex and scss versions
 
 ////// SEMANTIC COLORS
-$myColorPrimary: VAL_CONST_colorPrimary_scss; //
-$myColorSecondary: VAL_CONST_colorSecondary_scss; //
-$myBlack: VAL_CONST_black_scss; //
-$myGrayDark: VAL_CONST_grayDark_scss; //
-$myGrayMed: VAL_CONST_grayMed_scss; //
-$myGrayLight: VAL_CONST_grayLight_scss; //
+$colorPrimary: VAL_CONST_colorPrimary_scss; //
+$colorSecondary: VAL_CONST_colorSecondary_scss; //
+$colorBlack: VAL_CONST_colorBlack_scss; //
+$colorGrayDark: VAL_CONST_colorGrayDark_scss; //
+$colorGrayMed: VAL_CONST_colorGrayMed_scss; //
+$colorGrayLight: VAL_CONST_colorGrayLight_scss; //
 
 ////// COMPONENT COLORS
-$bgColor: VAL_CONST_bgColor_scss; //
-$textColor: VAL_CONST_textColor_scss; //
-$sectionTitleColor : VAL_CONST_sectionTitleColor;
-$sectionTitleBgColor: VAL_CONST_sectionTitleBgColor;
-$iconColor: VAL_CONST_iconColor;
-$colorTableBorders: VAL_CONST_colorTableBorders;
-$colorTableFill: VAL_CONST_colorTableFill;
+$colorBg: VAL_CONST_colorBg_scss; //
+$colorText: VAL_CONST_colorText_scss; //
+$colorSectionTitle : VAL_CONST_colorSectionTitle_scss;
+$colorSectionTitleBg: VAL_CONST_colorSectionTitleBg_scss;
+$colorSectionBg: VAL_CONST_colorSectionBg_scss;
+$colorHeaderBg: VAL_CONST_colorHeaderBg_scss;
+$colorIcon: VAL_CONST_colorIcon_scss;
+$colorTableBorders: VAL_CONST_colorTableBorders_scss;
+$colorTableFill: VAL_CONST_colorTableFill_scss;

@@ -3,25 +3,41 @@
 % for compatibility between latex and scss versions:
 % OPTION 1: use {rgb}{red[0, 1], green[0, 1], blue[0, 1]}
 % OPTION 2: use hexadecimal {HTML}{FFFFFF}
-\definecolor{myColorPrimary}{KEY_CONST_colorPrimary}{VAL_CONST_colorPrimary}
-\definecolor{myColorSecondary}{KEY_CONST_colorSecondary}{VAL_CONST_colorSecondary}
-\definecolor{myBlack}{KEY_CONST_black}{VAL_CONST_black}
-\definecolor{myGrayDark}{KEY_CONST_grayDark}{VAL_CONST_grayDark}
-\definecolor{myGrayMed}{KEY_CONST_grayMed}{VAL_CONST_grayMed}
-\definecolor{myGrayLight}{KEY_CONST_grayLight}{VAL_CONST_grayLight}
-\definecolor{bgColor}{KEY_CONST_bgColor}{VAL_CONST_bgColor}
-\definecolor{textColor}{KEY_CONST_textColor}{VAL_CONST_textColor}
+VAL_CONST_colorPrimary_tex
+VAL_CONST_colorSecondary_tex
+
+VAL_CONST_colorBlack_tex
+VAL_CONST_colorWhite_tex
+
+VAL_CONST_colorGrayDark_tex
+
+VAL_CONST_colorGrayMed_tex
+
+VAL_CONST_colorGrayLight_tex
+
+VAL_CONST_colorBg_tex
+
+VAL_CONST_colorText_tex
+
+VAL_CONST_colorSectionTitleBg_tex
+
+VAL_CONST_colorSectionTitle_tex
 
 
-\definecolor{sectionTitleBgColor}{KEY_CONST_sectionTitleBgColor}{VAL_CONST_sectionTitleBgColor}
-\definecolor{sectionTitleColor}{KEY_CONST_sectionTitleColor}{VAL_CONST_sectionTitleColor}
 % Icons
-\definecolor{myIconColor}{KEY_CONST_iconColor}{VAL_CONST_iconColor}
+VAL_CONST_colorIcon_tex
+VAL_CONST_colorIconBg_tex
 % Tabular header color
 % Custom colors for the section table headers
-\definecolor{myColorTableFill}{KEY_CONST_colorTableFill}{VAL_CONST_colorTableFill}
-\renewcommand{\myCellColor}{%
-    \cellcolor{myColorTableFill}% BG COLOR
+VAL_CONST_colorTableFill_tex
+
+\renewcommand{\setColorCell}{%
+    \cellcolor{colorTableFill}% BG COLOR
 }
 % Color for the border around table cells
-\definecolor{myColorTableBorders}{KEY_CONST_colorTableBorders}{VAL_CONST_colorTableBorders}%
+VAL_CONST_colorTableBorders_tex
+
+
+
+VAL_CONST_colorSectionBg_tex
+VAL_CONST_colorHeaderBg_tex

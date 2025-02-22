@@ -8,21 +8,21 @@
 }{%
 % \noindent%
     %%% NUMBERING ================================
-    \cellcolor{myGrayDark}% change row bg color
+    \cellcolor{colorGrayDark}% change row bg color
     % \numberPublication% if number should be in separate column
     &% ------------------------------------------------
     %%% CONTENT ================================
-    % \cellcolor{myGrayLight}% change row bg color
+    % \cellcolor{colorGrayLight}% change row bg color
     \numberPublication\ \ % if number should be in same column as text
     \href{#2}{#1}%
-    % &\cellcolor{myGrayDark} test % change row bg color%
+    % &\cellcolor{colorGrayDark} test % change row bg color%
     \\% END TABLE ROW
     % \hrule% horizontal line
 }%
 
 \newcommand{\numberPublication}{%
     {%
-    \color{myGrayDark!50!myBlack}%
+    \color{colorGrayDark!50!colorBlack}%
     \bfseries%
     [\thepublicationCounter]%
     }%

@@ -5,7 +5,7 @@
 @use 'sections/common';
 
 html{
-    background-color: color.$myBlack;
+    background-color: color.$colorBlack;
 }
 
 body{
@@ -13,6 +13,6 @@ body{
     padding: 0cm;
     margin: auto;
     margin-top: 2vh;
-    background-color: color.$bgColor;
+    background-color: color.$colorBg;
     font-family: font.$myMainFont;
 }

@@ -72,19 +72,19 @@
 
 % Change bg color and other settings in draft mode
 \isDraft{%
-    \pagecolor{draftBgColor}%
+    \pagecolor{colorDraftBg}%
     % Tabular header color
-    \renewcommand{\myCellColor}{\cellcolor{myGrayMed}}%
-    \colorlet{myColorTableBorders}{myGrayLight}%
+    \renewcommand{\setColorCell}{\cellcolor{colorGrayMed}}%
+    \colorlet{colorTableBorders}{colorGrayLight}%
     % Override section text color
-    % \colorlet{sectionTitleColor}{myGrayDark}
-    \colorlet{sectionTitleColor}{myWhite}
-    \colorlet{sectionTitleBgColor}{myBlack}
+    % \colorlet{sectionTitleColor}{colorGrayDark}
+    \colorlet{colorSectionTitle}{colorWhite}
+    \colorlet{colorSectionTitleBg}{colorBlack}
     % \setmainfont{Open Dyslexic} % must first install on computer to work
     %
     %%%% Show structural frame
     \usepackage{showframe}
-    \renewcommand*\ShowFrameColor{\color{myColorSecondary}}
+    \renewcommand*\ShowFrameColor{\color{colorSecondary}}
     \renewcommand*\ShowFrameLinethickness{1pt}
 }{}
 
@@ -97,9 +97,9 @@
   \newcommand{\bulletGap}{\hspace{0.4em}}%
   \foreach \i in {1, ..., 5} {%
     \ifnum \the\numexpr \i - 1  < #1% subtract 1 to act as "<="
-        \textcolor{myIconColor}{\bullet\bulletGap}% Filled dot for score
+        \textcolor{colorIcon}{\bullet\bulletGap}% Filled dot for score
     \else%
-        \textcolor{myIconColor}{\circ\bulletGap}% Open dot for no score
+        \textcolor{colorIcon}{\circ\bulletGap}% Open dot for no score
     \fi%
   }%
 }

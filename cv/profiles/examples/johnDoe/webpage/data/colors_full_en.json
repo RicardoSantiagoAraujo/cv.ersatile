@@ -1,108 +1,140 @@
 {
     "example": {
-        "CONST_bgColor": [
-            "rgb",
-            "1,0.9,1"
-        ],
-        "CONST_bgColor_scss": [
+        "CONST_colorBg_scss": [
             "",
             "color(srgb 1 0.9 1 )"
         ],
-        "CONST_black": [
-            "rgb",
-            "0,0,0"
+        "CONST_colorBg_tex": [
+            "",
+            "\\definecolor{colorBg}{rgb}{1,0.9,1}"
         ],
-        "CONST_black_scss": [
+        "CONST_colorBlack_scss": [
             "",
             "color(srgb 0 0 0 )"
         ],
-        "CONST_colorPrimary": [
-            "HTML",
-            "000FF0"
+        "CONST_colorBlack_tex": [
+            "",
+            "\\definecolor{colorBlack}{rgb}{0,0,0}"
+        ],
+        "CONST_colorGrayDark_scss": [
+            "",
+            "color(srgb 0.5 5 1 )"
+        ],
+        "CONST_colorGrayDark_tex": [
+            "",
+            "\\definecolor{colorGrayDark}{rgb}{0.5,5,1}"
+        ],
+        "CONST_colorGrayLight_scss": [
+            "",
+            "#00FF00"
+        ],
+        "CONST_colorGrayLight_tex": [
+            "",
+            "\\definecolor{colorGrayLight}{HTML}{00FF00}"
+        ],
+        "CONST_colorGrayMed_scss": [
+            "",
+            "#FFFF00"
+        ],
+        "CONST_colorGrayMed_tex": [
+            "",
+            "\\definecolor{colorGrayMed}{HTML}{FFFF00}"
+        ],
+        "CONST_colorHeaderBg_scss": [
+            "",
+            "$colorBg"
+        ],
+        "CONST_colorHeaderBg_tex": [
+            "",
+            "\\colorlet{colorHeaderBg}{colorBg}"
+        ],
+        "CONST_colorIconBg_scss": [
+            "",
+            "$colorBg"
+        ],
+        "CONST_colorIconBg_tex": [
+            "",
+            "\\colorlet{colorIconBg}{colorBg}"
+        ],
+        "CONST_colorIcon_scss": [
+            "",
+            "color(srgb 1 0.5 0.25 )"
+        ],
+        "CONST_colorIcon_tex": [
+            "",
+            "\\definecolor{colorIcon}{rgb}{1,0.5,0.25}"
         ],
         "CONST_colorPrimary_scss": [
             "",
             "#000FF0"
         ],
-        "CONST_colorSecondary": [
-            "rgb",
-            "0,1,1"
+        "CONST_colorPrimary_tex": [
+            "",
+            "\\definecolor{colorPrimary}{HTML}{000FF0}"
         ],
         "CONST_colorSecondary_scss": [
             "",
             "color(srgb 0 1 1 )"
         ],
-        "CONST_colorTableBorders": [
-            "rgb",
-            "1,0.5,0.25"
+        "CONST_colorSecondary_tex": [
+            "",
+            "\\definecolor{colorSecondary}{rgb}{0,1,1}"
+        ],
+        "CONST_colorSectionBg_scss": [
+            "",
+            "$colorBg"
+        ],
+        "CONST_colorSectionBg_tex": [
+            "",
+            "\\colorlet{colorSectionBg}{colorBg}"
+        ],
+        "CONST_colorSectionTitleBg_scss": [
+            "",
+            "color(srgb 1 0.5 0.25 )"
+        ],
+        "CONST_colorSectionTitleBg_tex": [
+            "",
+            "\\definecolor{colorSectionTitleBg}{rgb}{1,0.5,0.25}"
+        ],
+        "CONST_colorSectionTitle_scss": [
+            "",
+            "color(srgb 0.1 9 0 )"
+        ],
+        "CONST_colorSectionTitle_tex": [
+            "",
+            "\\definecolor{colorSectionTitle}{rgb}{0.1,9,0}"
         ],
         "CONST_colorTableBorders_scss": [
             "",
             "color(srgb 1 0.5 0.25 )"
         ],
-        "CONST_colorTableFill": [
-            "rgb",
-            "1,0.5,0.25"
+        "CONST_colorTableBorders_tex": [
+            "",
+            "\\definecolor{colorTableBorders}{rgb}{1,0.5,0.25}"
         ],
         "CONST_colorTableFill_scss": [
             "",
             "color(srgb 1 0.5 0.25 )"
         ],
-        "CONST_grayDark": [
-            "rgb",
-            "0.5,5,1"
-        ],
-        "CONST_grayDark_scss": [
+        "CONST_colorTableFill_tex": [
             "",
-            "color(srgb 0.5 5 1 )"
+            "\\definecolor{colorTableFill}{rgb}{1,0.5,0.25}"
         ],
-        "CONST_grayLight": [
-            "HTML",
-            "00FF00"
-        ],
-        "CONST_grayLight_scss": [
-            "",
-            "#00FF00"
-        ],
-        "CONST_grayMed": [
-            "HTML",
-            "FFFF00"
-        ],
-        "CONST_grayMed_scss": [
-            "",
-            "#FFFF00"
-        ],
-        "CONST_iconColor": [
-            "rgb",
-            "1,0.5,0.25"
-        ],
-        "CONST_iconColor_scss": [
-            "",
-            "color(srgb 1 0.5 0.25 )"
-        ],
-        "CONST_sectionTitleBgColor": [
-            "rgb",
-            "1,0.5,0.25"
-        ],
-        "CONST_sectionTitleBgColor_scss": [
-            "",
-            "color(srgb 1 0.5 0.25 )"
-        ],
-        "CONST_sectionTitleColor": [
-            "rgb",
-            "0.1,9,0"
-        ],
-        "CONST_sectionTitleColor_scss": [
-            "",
-            "color(srgb 0.1 9 0 )"
-        ],
-        "CONST_textColor": [
-            "rgb",
-            "0,0,0"
-        ],
-        "CONST_textColor_scss": [
+        "CONST_colorText_scss": [
             "",
             "color(srgb 0 0 0 )"
+        ],
+        "CONST_colorText_tex": [
+            "",
+            "\\definecolor{colorText}{rgb}{0,0,0}"
+        ],
+        "CONST_colorWhite_scss": [
+            "",
+            "color(srgb 1 1 1 )"
+        ],
+        "CONST_colorWhite_tex": [
+            "",
+            "\\definecolor{colorWhite}{rgb}{1,1,1}"
         ]
     }
 }

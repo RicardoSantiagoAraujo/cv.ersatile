@@ -6,18 +6,8 @@ from typing import Union
 class GenerationSettings:
     def __init__(
         self,
-        templates: dict[str,str]={
-            "html":"2x2",
-            "tex":"2x2",
-            "ts":"",
-            "scss":"",
-            },
-        subtemplates: dict[str,str]={
-            "html":"2x2",
-            "tex":"2x2",
-            "ts":"",
-            "scss":"",
-            },
+        templates: dict[str,str],
+        subtemplates: dict[str,str],
     ):
         self.templates=templates
         self.subtemplates=subtemplates

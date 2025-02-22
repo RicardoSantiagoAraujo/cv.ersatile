@@ -23,27 +23,19 @@ class General:
         picCropLeft: tuple[str, str],
         myPictureStyleExtras: tuple[str, str],
     ):
-        self.CONST_name = name
-        self.CONST_title = title
-        self.CONST_birthDay = birthDay
-        self.CONST_birthMonth = birthMonth
-        self.CONST_birthYear = birthYear
-        self.CONST_street = street
-        self.CONST_city = city
-        self.CONST_country = country
-        self.CONST_email = email
-        self.CONST_linkedIn = linkedIn
-        self.CONST_phone = phone
-        self.CONST_site = site
-        self.CONST_picture = picture
-        self.CONST_signature = signature
-        self.CONST_picCropTop = picCropTop
-        self.CONST_picCropRight = picCropRight
-        self.CONST_picCropBottom = picCropBottom
-        self.CONST_picCropLeft = picCropLeft
-        self.CONST_myPictureStyleExtras = myPictureStyleExtras
+
+
+    # Loop through local variables to generate new variables
+        for key, value in locals().items():
+            if key != 'self' and key not in ["functionToIgnore"]:  # Don't assign 'self' or functions
+                # Dynamically assign the variable to the object
+                setattr(
+                    self,
+                    f"CONST_{key}",
+                    value
+                    )
 
         self.CONST_birthDate: tuple[str, str] = (
             "",
-            f"{birthYear[0]}-{birthMonth[0]}-{birthDay[0]}",
+            f"{birthYear[1]}-{birthMonth[1]}-{birthDay[1]}",
         )

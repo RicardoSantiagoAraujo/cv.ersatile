@@ -22,6 +22,7 @@ contentDict_full_en = {
         location=("Location", "Bristol, UK"),
         columnsDef=("", "|p{1.5cm} | X | p{2.5cm}| p{9cm}|"),
         include=("","true"),
+        comment=("", "COMMENT GOES HERE"),
         content=("Content",
             "Assisted first year students in practical courses."
             ),

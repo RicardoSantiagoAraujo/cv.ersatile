@@ -12,6 +12,7 @@ class Teaching:
         location: tuple[str, str],
         content: tuple[str, Union[str, list[str]]],
         include: tuple[str, bool],
+        comment: tuple[str, str],
         columnsDef: tuple[str, str],
     ):
         self.TEACH_title = title
@@ -21,4 +22,5 @@ class Teaching:
         self.TEACH_location = location
         self.TEACH_content = content
         self.TEACH_include = include
+        self.TEACH_comment = comment
         self.TEACH_columnsDef = columnsDef

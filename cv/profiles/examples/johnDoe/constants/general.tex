@@ -1,22 +1,40 @@
 % /!\ CONTENT GENERATED WITH PYTHON SCRIPT, CHANGES MADE DIRECTLY HERE MAY BE OVERWRITTEN /!\ 
-\renewcommand{\myName}{John Doe}
-\renewcommand{\myTitle}{\myName, MSc}
+
+% % % General constants for johnDoe % % %
+
+% Name
+\renewcommand{\myName}{John}
+\renewcommand{\mySurname}{Doe}
+\renewcommand{\myFullname}{John Doe}
+\renewcommand{\myTitle}{\myFullname, MSc}
+\renewcommand{\myGender}{}
+\renewcommand{\myNationality}{}
+
+% Birthday
 \renewcommand{\birthDay}{1}
 \renewcommand{\birthMonth}{1}
 \renewcommand{\birthYear}{1993}
 \renewcommand{\birthDate}{1993-1-1}
 
+% Address
 \renewcommand{\myStreet}{1 Downing Street}
 \renewcommand{\myCity}{London}
 \renewcommand{\myCountry}{UK}
+\renewcommand{\myPostcode}{000000}
+
+% Contact
 \renewcommand{\myEmail}{john.doe@gmail.com}
 \renewcommand{\myLinkedIn}{john-doe}
 \renewcommand{\myLinkedInHyperlink}{\href{https://www.linkedin.com/in/\myLinkedIn}{\myLinkedIn}}
+\renewcommand{\myGithub}{john-doe}
+\renewcommand{\myGithubHyperlink}{\href{https://github.com/\myGithub}{\myGithub}}
+
 \renewcommand{\myPhone}{1234567890}
 \renewcommand{\mySite}{johndoe.com}
 \renewcommand{\mySiteHyperlink}{\href{https://\mySite}{\mySite}}
+
+% Picture
 \renewcommand{\myPicture}{images/johnDoe_portrait.png}
-\renewcommand{\mySignature}{images/signatures/signature.png}
 \renewcommand{\myPictureCropTop}{10mm}
 \renewcommand{\myPictureCropRight}{10mm}
 \renewcommand{\myPictureCropBottom}{20mm}
@@ -25,3 +43,7 @@
     myPictureStyleExtras/.style={%
         %
         }}%
+
+
+\renewcommand{\mySignature}{images/signatures/signature.png}
+\renewcommand{\myDrivingLicense}{B}

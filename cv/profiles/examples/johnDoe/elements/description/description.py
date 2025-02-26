@@ -23,5 +23,6 @@ I am an independent and rigorous individual that thrives in diverse environments
 I am always eager to embrace new challenges, continually learning and growing in both my professional and personal endeavors.
 """
             ),
+        comment=("", "COMMENT GOES HERE"),
     ),
 }

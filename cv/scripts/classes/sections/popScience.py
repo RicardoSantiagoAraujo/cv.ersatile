@@ -12,6 +12,7 @@ class PopScience:
         location: tuple[str, str],
         content: tuple[str, Union[str, list[str]]],
         include: tuple[str, bool],
+        comment: tuple[str, str],
         columnsDef: tuple[str, str],
     ):
         self.POPSCI_title = title
@@ -21,4 +22,5 @@ class PopScience:
         self.POPSCI_location = location
         self.POPSCI_content = content
         self.POPSCI_include = include
+        self.POPSCI_comment = comment
         self.POPSCI_columnsDef = columnsDef

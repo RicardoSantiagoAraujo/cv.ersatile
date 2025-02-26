@@ -8,7 +8,8 @@ class Publication:
         key: tuple[str, str],
         fullText: tuple[str, str],
         include: tuple[str, bool],
-        hyperlink: tuple[str, bool],
+        comment: tuple[str, str],
+        hyperlink: tuple[str, str],
     ):
         self.PUB_key = key
         self.PUB_fullText = fullText
@@ -20,4 +21,5 @@ class Publication:
             ("\\fullcite{" + key_val + "}") if key_val != "" else fullText_val,
         )
         self.PUB_include = include
+        self.PUB_comment = comment
         self.PUB_hyperlink = hyperlink

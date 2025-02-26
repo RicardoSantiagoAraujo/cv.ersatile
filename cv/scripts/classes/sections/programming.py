@@ -11,12 +11,14 @@ class ProgrammingSub:
         score: tuple[str, str],
         details: tuple[str, str],
         include: tuple[str, bool],
+        comment: tuple[str, str]
     ):
         self.PROGENTRY_name = name
         self.PROGENTRY_iconLatex = iconLatex
         self.PROGENTRY_score = score
         self.PROGENTRY_details = details
         self.PROGENTRY_include = include
+        self.PROGENTRY_comment = comment
 
 
 # Class of programming groups holding entries
@@ -27,8 +29,10 @@ class ProgrammingGroup:
         nrow: tuple[str, int],
         contents: tuple[str, list[ProgrammingSub]],
         include: tuple[str, bool],
+        comment: tuple[str, str],
     ):
         self.PROG_groupName = groupName
         self.PROG_nrow = nrow
         self.PROG_contents = contents
         self.PROG_include = include
+        self.PROG_comment = comment

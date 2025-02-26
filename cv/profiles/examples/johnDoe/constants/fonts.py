@@ -15,5 +15,9 @@ contentDict_full_en = {
         mainFont= ("", "Arial"),
         titleFont= ("", "Times New Roman"),
         subtitleFont=("", "Times New Roman"),
+        mainFontBackup= ("", "Times New Roman"),
+        titleFontBackup= ("", "Times New Roman"),
+        subtitleFontBackup=("", "Times New Roman"),
+        comment=("", "Fonts for johnDoe"),
     )
     }

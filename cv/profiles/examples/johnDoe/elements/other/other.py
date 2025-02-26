@@ -18,25 +18,30 @@ contentDict_full_en = {
         category=("", "Languages"),
         content=("", "English (Native), Spanish (C1)"),
         include=("","true"),
+        comment=("", "COMMENT GOES HERE"),
     ),
     "example2": Other(
         category=("", "Other Digital Tools"),
         content=("", "Adobe Photoshop \\& Adobe Illustrator and Photoshop, MS Office suite"),
         include=("","true"),
+        comment=("", "COMMENT GOES HERE"),
     ),
     "example3": Other(
         category=("", "Miscellaneous experience"),
         content=("", "Waiter at italian restaurant"),
         include=("","true"),
+        comment=("", "COMMENT GOES HERE"),
     ),
     "example4": Other(
         category=("", "Volunteer work"),
         content=("", "Active volunteer at food bank"),
         include=("","true"),
+        comment=("", "COMMENT GOES HERE"),
     ),
     "example5": Other(
         category=("", "Hobbies and interests"),
         content=("", "Table tenis, cycling, guitar, tabletop games"),
         include=("","true"),
+        comment=("", "COMMENT GOES HERE"),
     ),
 }

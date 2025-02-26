@@ -12,6 +12,7 @@ class Education:
         location: tuple[str, str],
         content: tuple[str, Union[str, list[str]]],
         include: tuple[str, bool],
+        comment: tuple[str, str],
         columnsDef: tuple[str, str],
     ):
         self.EDU_level = level
@@ -21,4 +22,5 @@ class Education:
         self.EDU_location = location
         self.EDU_content = content
         self.EDU_include = include
+        self.EDU_comment = comment
         self.EDU_columnsDef = columnsDef

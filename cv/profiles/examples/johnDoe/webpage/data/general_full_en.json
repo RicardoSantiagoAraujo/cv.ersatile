@@ -20,13 +20,33 @@
             "",
             "London"
         ],
+        "CONST_comment": [
+            "",
+            "General constants for johnDoe"
+        ],
         "CONST_country": [
             "",
             "UK"
         ],
+        "CONST_drivingLicense": [
+            "",
+            "B"
+        ],
         "CONST_email": [
             "",
             "john.doe@gmail.com"
+        ],
+        "CONST_fullname": [
+            "",
+            "John Doe"
+        ],
+        "CONST_gender": [
+            "",
+            ""
+        ],
+        "CONST_github": [
+            "",
+            "john-doe"
         ],
         "CONST_linkedIn": [
             "",
@@ -38,7 +58,11 @@
         ],
         "CONST_name": [
             "",
-            "John Doe"
+            "John"
+        ],
+        "CONST_nationality": [
+            "",
+            ""
         ],
         "CONST_phone": [
             "",
@@ -64,6 +88,10 @@
             "",
             "images/johnDoe_portrait.png"
         ],
+        "CONST_postcode": [
+            "",
+            "000000"
+        ],
         "CONST_signature": [
             "",
             "images/signatures/signature.png"
@@ -75,6 +103,10 @@
         "CONST_street": [
             "",
             "1 Downing Street"
+        ],
+        "CONST_surname": [
+            "",
+            "Doe"
         ],
         "CONST_title": [
             "",

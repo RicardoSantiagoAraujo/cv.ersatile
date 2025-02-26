@@ -26,6 +26,7 @@ contentDict_full_en = {
         location=("Location", "London, England"),
         columnsDef=("", "|p{1.5cm} | X | p{2.5cm}| p{3.5cm}|"),
         include=("","true"),
+        comment=("", "COMMENT GOES HERE"),
         content=("Content",
             "Major role in the organisation of a popular science workshop."
             ),

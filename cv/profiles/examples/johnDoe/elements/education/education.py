@@ -22,6 +22,7 @@ contentDict_full_en = {
         location=("Location", "Briston, UK"),
         columnsDef=("", "|p{0.2cm} | X | p{2.5cm}| p{2.0cm}|"),
         include=("","true"),
+        comment=("", "COMMENT GOES HERE"),
         content=("Content",""
             ),
     ),
@@ -33,6 +34,7 @@ contentDict_full_en = {
         location=("Location", "London, UK"),
         columnsDef=("", "|p{0.2cm} | X | p{2.5cm}| p{2.0cm}|"),
         include=("","true"),
+        comment=("", "COMMENT GOES HERE"),
         content=("Content","First rank honors in class."
             ),
     ),

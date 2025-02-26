@@ -1,13 +1,17 @@
 {
     "example1": {
+        "PROG_comment": [
+            "",
+            "COMMENT GOES HERE"
+        ],
         "PROG_contents": [
             "",
             [
-                "<classes.sections.programming.ProgrammingSub object at 0x104d8f830>",
-                "<classes.sections.programming.ProgrammingSub object at 0x104da8e00>",
-                "<classes.sections.programming.ProgrammingSub object at 0x104daa570>",
-                "<classes.sections.programming.ProgrammingSub object at 0x104daa690>",
-                "<classes.sections.programming.ProgrammingSub object at 0x104daa990>"
+                "<classes.sections.programming.ProgrammingSub object at 0x102dc3860>",
+                "<classes.sections.programming.ProgrammingSub object at 0x102ddce00>",
+                "<classes.sections.programming.ProgrammingSub object at 0x102dde570>",
+                "<classes.sections.programming.ProgrammingSub object at 0x102dde690>",
+                "<classes.sections.programming.ProgrammingSub object at 0x102dde990>"
             ]
         ],
         "PROG_groupName": [
@@ -24,12 +28,16 @@
         ]
     },
     "example2": {
+        "PROG_comment": [
+            "",
+            "COMMENT GOES HERE"
+        ],
         "PROG_contents": [
             "",
             [
-                "<classes.sections.programming.ProgrammingSub object at 0x104daaba0>",
-                "<classes.sections.programming.ProgrammingSub object at 0x104daacf0>",
-                "<classes.sections.programming.ProgrammingSub object at 0x104daad20>"
+                "<classes.sections.programming.ProgrammingSub object at 0x102ddeba0>",
+                "<classes.sections.programming.ProgrammingSub object at 0x102ddecf0>",
+                "<classes.sections.programming.ProgrammingSub object at 0x102dded20>"
             ]
         ],
         "PROG_groupName": [
@@ -46,10 +54,14 @@
         ]
     },
     "example3": {
+        "PROG_comment": [
+            "",
+            "COMMENT GOES HERE"
+        ],
         "PROG_contents": [
             "",
             [
-                "<classes.sections.programming.ProgrammingSub object at 0x104dab260>"
+                "<classes.sections.programming.ProgrammingSub object at 0x102ddf260>"
             ]
         ],
         "PROG_groupName": [
@@ -66,10 +78,14 @@
         ]
     },
     "example4": {
+        "PROG_comment": [
+            "",
+            "COMMENT GOES HERE"
+        ],
         "PROG_contents": [
             "",
             [
-                "<classes.sections.programming.ProgrammingSub object at 0x104dd8140>"
+                "<classes.sections.programming.ProgrammingSub object at 0x102e0c140>"
             ]
         ],
         "PROG_groupName": [

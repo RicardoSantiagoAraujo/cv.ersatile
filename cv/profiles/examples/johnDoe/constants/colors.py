@@ -28,6 +28,7 @@ contentDict_full_en = {
         colorTableFill=("rgb","1,0.5,0.25"),
         colorSectionTitleBg=("rgb","1,0.5,0.25"),
         colorSectionBg=("","colorBg"),
-        colorHeaderBg=("","colorBg")
+        colorHeaderBg=("","colorBg"),
+        comment=("","Color palette for JohnDoe")
     )
     }

@@ -22,6 +22,7 @@ contentDict_full_en = {
         location=("Location", "Manchester, UK"),
         columnsDef=("", "|p{1.5cm} | X | p{2.5cm}| p{5cm}|"),
         include=("","true"),
+        comment=("", "COMMENT GOES HERE"),
         content=("Content",
             "I did my master thesis in a computer science research laboratory."
             ),

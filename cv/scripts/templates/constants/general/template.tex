@@ -1,21 +1,39 @@
+
+% % % VAL_CONST_comment % % %
+
+% Name
 \renewcommand{\myName}{VAL_CONST_name}
-\renewcommand{\myTitle}{\myName, VAL_CONST_title}
+\renewcommand{\mySurname}{VAL_CONST_surname}
+\renewcommand{\myFullname}{VAL_CONST_fullname}
+\renewcommand{\myTitle}{\myFullname, VAL_CONST_title}
+\renewcommand{\myGender}{VAL_CONST_gender}
+\renewcommand{\myNationality}{VAL_CONST_nationality}
+
+% Birthday
 \renewcommand{\birthDay}{VAL_CONST_birthDay}
 \renewcommand{\birthMonth}{VAL_CONST_birthMonth}
 \renewcommand{\birthYear}{VAL_CONST_birthYear}
 \renewcommand{\birthDate}{VAL_CONST_birthDate}
 
+% Address
 \renewcommand{\myStreet}{VAL_CONST_street}
 \renewcommand{\myCity}{VAL_CONST_city}
 \renewcommand{\myCountry}{VAL_CONST_country}
+\renewcommand{\myPostcode}{VAL_CONST_postcode}
+
+% Contact
 \renewcommand{\myEmail}{VAL_CONST_email}
 \renewcommand{\myLinkedIn}{VAL_CONST_linkedIn}
 \renewcommand{\myLinkedInHyperlink}{\href{https://www.linkedin.com/in/\myLinkedIn}{\myLinkedIn}}
+\renewcommand{\myGithub}{VAL_CONST_github}
+\renewcommand{\myGithubHyperlink}{\href{https://github.com/\myGithub}{\myGithub}}
+
 \renewcommand{\myPhone}{VAL_CONST_phone}
 \renewcommand{\mySite}{VAL_CONST_site}
 \renewcommand{\mySiteHyperlink}{\href{https://\mySite}{\mySite}}
+
+% Picture
 \renewcommand{\myPicture}{VAL_CONST_picture}
-\renewcommand{\mySignature}{VAL_CONST_signature}
 \renewcommand{\myPictureCropTop}{VAL_CONST_picCropTop}
 \renewcommand{\myPictureCropRight}{VAL_CONST_picCropRight}
 \renewcommand{\myPictureCropBottom}{VAL_CONST_picCropBottom}
@@ -24,3 +42,7 @@
     myPictureStyleExtras/.style={%
         VAL_CONST_myPictureStyleExtras%
         }}%
+
+
+\renewcommand{\mySignature}{VAL_CONST_signature}
+\renewcommand{\myDrivingLicense}{VAL_CONST_drivingLicense}

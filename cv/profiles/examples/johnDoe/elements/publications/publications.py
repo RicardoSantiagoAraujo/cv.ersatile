@@ -18,12 +18,14 @@ contentDict_full_en = {
         key=("", "mypublications:johnDoe"),
         fullText=("", "Entry contents"),
         include=("","true"),
+        comment=("", "COMMENT GOES HERE"),
         hyperlink=("",""),
     ),
     "example2": Publication(
         key=("", ""),
         fullText=("", "John Doe (Feb. 2023). “The Joy of Fullstack Developing”"),
         include=("","true"),
+        comment=("", "COMMENT GOES HERE"),
         hyperlink=("",""),
     ),
 }

@@ -1,5 +1,9 @@
 {
     "example1": {
+        "PUB_comment": [
+            "",
+            "COMMENT GOES HERE"
+        ],
         "PUB_fullText": [
             "",
             "Entry contents"
@@ -22,6 +26,10 @@
         ]
     },
     "example2": {
+        "PUB_comment": [
+            "",
+            "COMMENT GOES HERE"
+        ],
         "PUB_fullText": [
             "",
             "John Doe (Feb. 2023). \u201cThe Joy of Fullstack Developing\u201d"

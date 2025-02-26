@@ -135,6 +135,10 @@
         "CONST_colorWhite_tex": [
             "",
             "\\definecolor{colorWhite}{rgb}{1,1,1}"
+        ],
+        "CONST_comment": [
+            "",
+            "Color palette for JohnDoe"
         ]
     }
 }

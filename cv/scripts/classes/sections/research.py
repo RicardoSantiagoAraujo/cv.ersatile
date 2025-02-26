@@ -12,6 +12,7 @@ class Research:
         location: tuple[str, str],
         content: tuple[str, Union[str, list[str]]],
         include: tuple[str, bool],
+        comment: tuple[str, str],
         columnsDef: tuple[str, str],
     ):
         self.RES_title = title
@@ -21,4 +22,5 @@ class Research:
         self.RES_location = location
         self.RES_content = content
         self.RES_include = include
+        self.RES_comment = comment
         self.RES_columnsDef = columnsDef

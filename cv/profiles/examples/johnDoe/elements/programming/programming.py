@@ -18,6 +18,7 @@ contentDict_full_en = {
         groupName=("","Programming and Scripting"),
         nrow=("",5),
         include=("","true"),
+        comment=("", "COMMENT GOES HERE"),
         contents=("",
                   [
                       ProgrammingSub(
@@ -26,6 +27,7 @@ contentDict_full_en = {
                       score=("", 5),
                       details=("", "pandas, Matplotlib, Flask"),
                       include=("", "true"),
+                      comment=("", "COMMENT GOES HERE"),
                     ),
                       ProgrammingSub(
                       name=("", "R"),
@@ -33,6 +35,7 @@ contentDict_full_en = {
                       score=("", 5),
                       details=("", "DataViz, Tidyverse"),
                       include=("", "true"),
+                      comment=("", "COMMENT GOES HERE"),
                     ),
                       ProgrammingSub(
                       name=("", "Type/Javascript"),
@@ -40,6 +43,7 @@ contentDict_full_en = {
                       score=("", 5),
                       details=("", "Angular 2/JS, D3.js, jQuery"),
                       include=("", "true"),
+                      comment=("", "COMMENT GOES HERE"),
                     ),
                       ProgrammingSub(
                       name=("", "C\\#"),
@@ -47,6 +51,7 @@ contentDict_full_en = {
                       score=("", 4),
                       details=("", ".NET Framework"),
                       include=("", "true"),
+                      comment=("", "COMMENT GOES HERE"),
                     ),
                       ProgrammingSub(
                       name=("", "Java"),
@@ -54,6 +59,7 @@ contentDict_full_en = {
                       score=("", 3),
                       details=("", "Spring"),
                       include=("", "true"),
+                      comment=("", "COMMENT GOES HERE"),
                     )
                   ]
                   ),
@@ -62,6 +68,7 @@ contentDict_full_en = {
         groupName=("","Markup"),
         nrow=("",3),
         include=("","true"),
+        comment=("", "COMMENT GOES HERE"),
         contents=("",
                   [
                       ProgrammingSub(
@@ -70,6 +77,7 @@ contentDict_full_en = {
                       score=("", 5),
                       details=("", "Sass, Tailwind, Bootstrap"),
                       include=("", "true"),
+                      comment=("", "COMMENT GOES HERE"),
                     ),
                     ProgrammingSub(
                       name=("", "\\LaTeX"),
@@ -77,6 +85,7 @@ contentDict_full_en = {
                       score=("", 5),
                       details=("", ""),
                       include=("", "true"),
+                      comment=("", "COMMENT GOES HERE"),
                     ),
                     ProgrammingSub(
                       name=("", "R Markdown"),
@@ -84,6 +93,7 @@ contentDict_full_en = {
                       score=("", 5),
                       details=("", ""),
                       include=("", "true"),
+                      comment=("", "COMMENT GOES HERE"),
                     ),
                   ]
                   ),
@@ -92,6 +102,7 @@ contentDict_full_en = {
         groupName=("","Databases"),
         nrow=("",1),
         include=("","true"),
+        comment=("", "COMMENT GOES HERE"),
         contents=("",
                   [
                       ProgrammingSub(
@@ -100,6 +111,7 @@ contentDict_full_en = {
                       score=("", 4),
                       details=("", "SQL Server, MySQL, SQLite"),
                       include=("", "true"),
+                      comment=("", "COMMENT GOES HERE"),
                     ),
                   ]
                   ),
@@ -108,6 +120,7 @@ contentDict_full_en = {
         groupName=("","Version control"),
         nrow=("",1),
         include=("","true"),
+        comment=("", "COMMENT GOES HERE"),
         contents=("",
                   [
                       ProgrammingSub(
@@ -116,6 +129,7 @@ contentDict_full_en = {
                       score=("", 5),
                       details=("", "Gitflow, GitHub, Gitlab"),
                       include=("", "true"),
+                      comment=("", "COMMENT GOES HERE"),
                     ),
                   ]
                   ),

@@ -4,6 +4,10 @@
             "",
             "|p{1.5cm} | X | p{2.5cm}| p{9cm}|"
         ],
+        "TEACH_comment": [
+            "",
+            "COMMENT GOES HERE"
+        ],
         "TEACH_content": [
             "Content",
             "Assisted first year students in practical courses."

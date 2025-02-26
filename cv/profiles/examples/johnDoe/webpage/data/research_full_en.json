@@ -4,6 +4,10 @@
             "",
             "|p{1.5cm} | X | p{2.5cm}| p{5cm}|"
         ],
+        "RES_comment": [
+            "",
+            "COMMENT GOES HERE"
+        ],
         "RES_content": [
             "Content",
             "I did my master thesis in a computer science research laboratory."

@@ -23,6 +23,8 @@ class Colors:
         # Tables
         colorTableBorders: tuple[str, str],
         colorTableFill: tuple[str, str],
+        #### ======== Meta about color palette
+        comment: tuple[str, str]
     ):
 
         # Adjusting for TEX
@@ -46,7 +48,7 @@ class Colors:
 
         # Loop through local variables to generate new variables
         for key, value in locals().items():
-            if key != 'self' and key not in ["colorForTEX","colorForSCSS"]:  # Don't assign 'self' or functions
+            if key != 'self' and key not in ["colorForTEX","colorForSCSS", "comment"]:  # Don't assign 'self' or functions
                 # Dynamically assign the variable to the object
                 setattr(
                     self,
@@ -57,4 +59,11 @@ class Colors:
                     self,
                     f"CONST_{key}_scss",
                     colorForSCSS(value)
+                    )
+            # attributes to include as is :
+            if key in ["comment"]:
+                setattr(
+                    self,
+                    f"CONST_{key}",
+                    value
                     )

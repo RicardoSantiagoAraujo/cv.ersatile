@@ -5,7 +5,7 @@
 \renewcommand{\myName}{VAL_CONST_name}
 \renewcommand{\mySurname}{VAL_CONST_surname}
 \renewcommand{\myFullname}{VAL_CONST_fullname}
-\renewcommand{\myTitle}{\myFullname, VAL_CONST_title}
+\renewcommand{\myTitle}{\myFullname\ifthenelse{\equal{VAL_CONST_title}{}}{}{, VAL_CONST_title}}
 \renewcommand{\myGender}{VAL_CONST_gender}
 \renewcommand{\myNationality}{VAL_CONST_nationality}
 

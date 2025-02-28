@@ -35,19 +35,15 @@ class General:
         signature: tuple[str, str],
         drivingLicense: tuple[str, str],
         # Meta
-        comment: tuple[str, str]
+        comment: tuple[str, str],
     ):
-
-
-    # Loop through local variables to generate new variables
+        # Loop through local variables to generate new variables
         for key, value in locals().items():
-            if key != 'self' and key not in ["functionToIgnore"]:  # Don't assign 'self' or functions
+            if key != "self" and key not in [
+                "functionToIgnore"
+            ]:  # Don't assign 'self' or functions
                 # Dynamically assign the variable to the object
-                setattr(
-                    self,
-                    f"CONST_{key}",
-                    value
-                    )
+                setattr(self, f"CONST_{key}", value)
 
         self.CONST_birthDate: tuple[str, str] = (
             "",

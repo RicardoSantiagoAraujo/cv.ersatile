@@ -10,7 +10,7 @@ class Fonts:
         titleFontBackup: tuple[str, str],
         subtitleFontBackup: tuple[str, int],
         # Meta
-        comment: tuple[str, int]
+        comment: tuple[str, int],
     ):
         self.CONST_mainFont = mainFont
         self.CONST_titleFont = titleFont

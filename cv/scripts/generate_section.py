@@ -33,7 +33,6 @@ def generate_section():
 
         generate_json(contentDict, profile, section, version, lang)
 
-
         # Choose input template and outfile file paths depending on the desired filetype
         separator = ""
         global auto_warning  # tell the interpreter to find variable a in the global scope

@@ -6,8 +6,8 @@ from typing import Union
 class GenerationSettings:
     def __init__(
         self,
-        templates: dict[str,str],
-        subtemplates: dict[str,str],
+        templates: dict[str, str],
+        subtemplates: dict[str, str],
     ):
-        self.templates=templates
-        self.subtemplates=subtemplates
+        self.templates = templates
+        self.subtemplates = subtemplates

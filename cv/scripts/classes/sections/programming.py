@@ -11,7 +11,7 @@ class ProgrammingSub:
         score: tuple[str, str],
         details: tuple[str, str],
         include: tuple[str, bool],
-        comment: tuple[str, str]
+        comment: tuple[str, str],
     ):
         self.PROGENTRY_name = name
         self.PROGENTRY_iconLatex = iconLatex

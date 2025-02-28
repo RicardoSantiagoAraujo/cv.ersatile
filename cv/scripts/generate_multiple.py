@@ -11,16 +11,28 @@ from enums.generated_types import GeneratedTypes
 
 #  CHANGE THESE TO FIT YOUR PROFILE'S PARTICULAR STRUCTURE
 profiles = ["examples/johnDoe"]
-sections = ["awards", "certificates", "description", "education", "experience", "other", "popScience", "programming", "publications", "research", "teaching", "works"]
+sections = [
+    "awards",
+    "certificates",
+    "description",
+    "education",
+    "experience",
+    "other",
+    "popScience",
+    "programming",
+    "publications",
+    "research",
+    "teaching",
+    "works",
+]
 constants = ["fonts", "colors", "general"]
-versions =  ["full"]
+versions = ["full"]
 languages = ["en"]
 output_types_sections = ["tex", "html"]
-output_types_constants  = ["tex", "scss", "ts"]
+output_types_constants = ["tex", "scss", "ts"]
 
 ###############################################################################
 ###############################################################################
-
 
 
 # Get directory where the script is located
@@ -43,17 +55,22 @@ def main():
         return 1
 
     if group == "sections":
-        script= "generate_section.py"
+        script = "generate_section.py"
         chosen_content = sections
         output_types = output_types_sections
     if group == "constants":
-        script= "generate_constants.py"
+        script = "generate_constants.py"
         chosen_content = constants
         output_types = output_types_constants
 
-
     # Total number of loops that will be run
-    total_loops  = len(profiles)*len(chosen_content)*len(versions)*len(languages)*len(output_types)
+    total_loops = (
+        len(profiles)
+        * len(chosen_content)
+        * len(versions)
+        * len(languages)
+        * len(output_types)
+    )
     # Counter for  loops
     loop_counter = 0
     # Counter for failed loops
@@ -67,16 +84,17 @@ def main():
             for version in versions:
                 for language in languages:
                     for output_type in output_types:
-                        result =  subprocess.run(
+                        result = subprocess.run(
                             [
-                            "python3",
-                            script,
-                            profile,
-                            element,
-                            version,
-                            language,
-                            output_type
-                            ])
+                                "python3",
+                                script,
+                                profile,
+                                element,
+                                version,
+                                language,
+                                output_type,
+                            ]
+                        )
                         loop_counter += 1
                         error_counter += result.returncode
                         current_command = " ".join(result.args)
@@ -85,16 +103,17 @@ def main():
                         print("COMMAND: " + current_command)
                         print("------------------------------------------------")
                         print(f"\t ✓✓ Loop {loop_counter}/{total_loops} completed ✓✓")
-                        print(f"\t✓✓ {total_loops - error_counter}/{total_loops} were successful ✓✓")
+                        print(
+                            f"\t✓✓ {total_loops - error_counter}/{total_loops} were successful ✓✓"
+                        )
                         print("------------------------------------------------\n")
 
-    if len(failed_commands)>0:
+    if len(failed_commands) > 0:
         print(f"FAILED CALLS ({error_counter}):")
         for command in failed_commands:
             print("❌" + command)
     else:
         print("✅✅✅ All loops were successful ✅✅✅")
-
 
 
 if __name__ == "__main__":

@@ -28,12 +28,10 @@ def import_contents_and_settings(path: str, type: str, version: str, lang: str):
     return contentDict, settings
 
 
-
 def getTemplateFolder(settings, filetype):
     template = settings.templates[filetype]
     # template = template+"/" if template != "" else ""
     return template
-
 
 
 def generate_contents(

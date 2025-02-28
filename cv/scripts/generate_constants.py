@@ -37,8 +37,9 @@ def generate_constants():
 
         template = getTemplateFolder(settings, filetype)
 
-        template_path = f"./templates/constants/{constant_type}/{template}/template.{filetype}"
-
+        template_path = (
+            f"./templates/constants/{constant_type}/{template}/template.{filetype}"
+        )
 
         if filetype == "tex":
             output_path = f"../profiles/{profile}/constants/{constant_type}.tex"

@@ -10,12 +10,14 @@ class AwardsSub:
         year: tuple[str, str],
         title: tuple[str, str],
         details: tuple[str, str],
+        hyperlink: tuple[str, str],
         comment: tuple[str, str],
         include: tuple[str, str],
     ):
         self.AWARDITEM_year = year
         self.AWARDITEM_title = title
         self.AWARDITEM_details = details
+        self.AWARDITEM_hyperlink = hyperlink
         self.AWARDITEM_comment = comment
         self.AWARDITEM_include = include
 

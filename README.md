@@ -12,6 +12,24 @@ Finally, for a given profile, it is possible to hold multiple versions, which le
 While you may keep make all yours changes directly to the tex files in elements, I advice you to make use of the python integration that is built into c.v.ersatile. This way, you can neatly separate from content, easily switch between different section styles, and benefit from an HTML version of your CV as well, ready to be deployed as a personal website.
 
 
+### Requirements
+#### On Windows
+##### Recommended Set-up with Visual Studio Code:
+- Install the LaTeX distribution [Miktex](https://miktex.org/download)
+- Install the Pearl distribution [Strawberry](https://strawberryperl.com/)
+- Install the Latex Workshop extension
+- Ideally, set the compilation output path in **settings.json** to 
+
+````
+"latex-workshop.latex.outDir": "%DIR%/auxiliary_files"
+```` 
+
+and add "-outdir=%OUTDIR%" as an argument in "latex-workshop.latex.recipes".
+
+
+> You may need to restart Visual Studio Code or your machine.
+
+
 ###  Troubleshooting bibliography in LaTeX documents
 #### Running Biber
 Make sure to run it from directory where root tex file is located, qnd not to include file extension

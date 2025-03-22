@@ -30,7 +30,7 @@ class Experience:
         # Elements to wrap around content if it is a list in tex
         self.EXP_contentPre_tex = (
             "",
-            "\\begin{customlist}%" if type(content[1]) == list else "",
+            "\\begin{customlist}[topsep=0pt]%" if type(content[1]) == list else "",
         )
         self.EXP_contentPos_tex = (
             "",

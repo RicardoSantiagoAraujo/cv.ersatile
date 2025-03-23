@@ -15,7 +15,8 @@ class AwardsSub:
     ):
         self.AWARDITEM_year = year
         self.AWARDITEM_title = title
-        self.AWARDITEM_details = details
+        # add ":" after title only if necessary
+        self.AWARDITEM_details = (details[0],(f": {details[1]}." if details[1] != "" else ""))
         self.AWARDITEM_hyperlink = hyperlink
         self.AWARDITEM_comment = comment
         self.AWARDITEM_include = include

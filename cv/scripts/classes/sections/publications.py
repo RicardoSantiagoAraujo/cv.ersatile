@@ -14,7 +14,7 @@ class Publication:
         self.PUB_key = key
         self.PUB_fullText = fullText
         # Generate atribute specifically for latex
-        key_val = str(key[0])
+        key_val = str(key[1])
         fullText_val = str(fullText[1])
         self.PUB_latexEntry = (
             "",

@@ -15,7 +15,7 @@ class CertificateSub:
         self.CERTITEM_year = year
         self.CERTITEM_title = title
         # add ":" after title only if necessary
-        self.CERTITEM_details = (details[0],(f": {details[1]}" if details[1] != "" else ""))
+        self.CERTITEM_details = (details[0],(f": {details[1]}." if details[1] != "" else ""))
         self.CERTITEM_comment = comment
         self.CERTITEM_include = include
 

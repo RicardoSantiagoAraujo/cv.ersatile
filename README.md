@@ -18,11 +18,11 @@ While you may keep make all yours changes directly to the tex files in elements,
 - Install the LaTeX distribution [Miktex](https://miktex.org/download)
 - Install the Pearl distribution [Strawberry](https://strawberryperl.com/)
 - Install the Latex Workshop extension
-- Ideally, set the compilation output path in **settings.json** to 
+- Ideally, set the compilation output path in **settings.json** to
 
 ````
 "latex-workshop.latex.outDir": "%DIR%/auxiliary_files"
-```` 
+````
 
 and add "-outdir=%OUTDIR%" as an argument in "latex-workshop.latex.recipes".
 
@@ -30,28 +30,28 @@ and add "-outdir=%OUTDIR%" as an argument in "latex-workshop.latex.recipes".
 > You may need to restart Visual Studio Code or your machine.
 
 
-###  Troubleshooting bibliography in LaTeX documents
-#### Running Biber
-Make sure to run it from directory where root tex file is located, qnd not to include file extension
-```
-biber path/to/output/files/without/extension
-```
-
-#### Clearing Biber cache:
-https://tex.stackexchange.com/questions/140814/biblatex-biber-fails-with-a-strange-error-about-missing-recode-data-xml-file
-
-If citations are coming out empty ([citation_code]), you might need to clear the biber cache: Biber creates binaries in a cache folder, and sometimes that can get corrupted. In order to solve the problem, you need to manually delete the cache folders.
-You can find the location of the cache folder by looking at the .blg file, or by using the command.
-```
-biber --cache
-```
-On Linux and Mac, this can be combined to delete the offending folder in one command:
-```
-rm -rf `biber --cache`
-```
 
 
-### Converting from pdf to word:
-```
-pandoc <source_name.tex> -o <destination_name.docx>
-```
+### Suggested Usage:
+
+You can pull the contents of this repository to the root one of your as follows:
+
+- First, you add this repository as a remote to your own:
+````
+git remote add {desired name of remote}  {address of remote}
+git remote add cv.ersatile  https://github.com/RicardoSantiagoAraujo/cv.ersatile.git
+````
+- You can then simply pull from it by specifying the remote. Use the option flag if you get an unrelated histories error.
+````
+git pull {name of remote} {branch to pull from} [--allow-unrelated-histories]
+git pull cv.ersatile main
+````
+
+Ideally, you wouldn't touch any of the existing files... instead, you should add new profiles as needed based on the available examples.
+
+
+
+### Troubleshooting compilation
+- Use lualatex to compile
+- Ensure required fonts are installed on the computer (even if there is a fallback system in place)
+- Some packages might need to be installed, so ensure you have an internet connection

@@ -1,5 +1,5 @@
-from scripts.classes.settings.generationSettings import GenerationSettings  # type: ignore
-from scripts.classes.sections.experience import Experience, ExperienceSub  # type: ignore
+from scripts.classes.settings.GenerationSettings import GenerationSettings  # type: ignore
+from scripts.classes.sections.Experience import Experience, ExperienceSub  # type: ignore
 
 from datetime import date
 

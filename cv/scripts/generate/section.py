@@ -11,11 +11,11 @@ os.chdir(script_directory)
 from scripts.utils.content_generation import *
 
 ### Enums
-from scripts.enums.output_types import OutputType
-from scripts.enums.constant_types import ConstantType
-from scripts.enums.languages import Language
-from scripts.enums.profiles import Profile
-from scripts.enums.versions import Version
+from scripts.enums.OutputTypes import OutputType
+from scripts.enums.SectionTypes import SectionType
+from scripts.enums.Languages import Language
+from scripts.enums.Profiles import Profile
+from scripts.enums.Versions import Version
 
 
 #### Python script to generate a file

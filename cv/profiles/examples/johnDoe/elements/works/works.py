@@ -1,5 +1,5 @@
-from scripts.classes.settings.generationSettings import GenerationSettings  # type: ignore
-from scripts.classes.sections.works import WorkGroup, WorkSub  # type: ignore
+from scripts.classes.settings.GenerationSettings import GenerationSettings  # type: ignore
+from scripts.classes.sections.Works import WorkGroup, WorkSub  # type: ignore
 from datetime import date
 
 generation_settings = GenerationSettings(

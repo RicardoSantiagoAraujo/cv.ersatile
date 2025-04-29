@@ -5,7 +5,7 @@ from scripts.utils.content_generation import *
 import scripts.utils.style_console_text as sty
 
 ### Enums
-from scripts.enums.generated_types import GeneratedTypes
+from scripts.enums.GeneratedTypes import GeneratedTypes
 
 ###############################################################################
 ###############################################################################

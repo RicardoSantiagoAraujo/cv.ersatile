@@ -7,10 +7,10 @@
         "CERT_content": [
             "",
             [
-                "<scripts.classes.sections.certificates.CertificateSub object at 0x000001DC3C515100>",
-                "<scripts.classes.sections.certificates.CertificateSub object at 0x000001DC3C562070>",
-                "<scripts.classes.sections.certificates.CertificateSub object at 0x000001DC3C562100>",
-                "<scripts.classes.sections.certificates.CertificateSub object at 0x000001DC3C5626A0>"
+                "<scripts.classes.sections.Certificates.CertificateSub object at 0x00000227FE5553A0>",
+                "<scripts.classes.sections.Certificates.CertificateSub object at 0x00000227FE591DF0>",
+                "<scripts.classes.sections.Certificates.CertificateSub object at 0x00000227FE5A32E0>",
+                "<scripts.classes.sections.Certificates.CertificateSub object at 0x00000227FE5A34C0>"
             ]
         ],
         "CERT_groupTitle": [

@@ -11,9 +11,9 @@
         "EXP_content": [
             "Content",
             [
-                "<scripts.classes.sections.experience.ExperienceSub object at 0x000001E617115100>",
-                "<scripts.classes.sections.experience.ExperienceSub object at 0x000001E6171620A0>",
-                "<scripts.classes.sections.experience.ExperienceSub object at 0x000001E617162130>"
+                "<scripts.classes.sections.Experience.ExperienceSub object at 0x000002BACB4553A0>",
+                "<scripts.classes.sections.Experience.ExperienceSub object at 0x000002BACB491D90>",
+                "<scripts.classes.sections.Experience.ExperienceSub object at 0x000002BACB4A3400>"
             ]
         ],
         "EXP_contentPos_tex": [
@@ -61,9 +61,9 @@
         "EXP_content": [
             "Content",
             [
-                "<scripts.classes.sections.experience.ExperienceSub object at 0x000001E617162790>",
-                "<scripts.classes.sections.experience.ExperienceSub object at 0x000001E617162820>",
-                "<scripts.classes.sections.experience.ExperienceSub object at 0x000001E617162880>"
+                "<scripts.classes.sections.Experience.ExperienceSub object at 0x000002BACB4A35B0>",
+                "<scripts.classes.sections.Experience.ExperienceSub object at 0x000002BACB4A3640>",
+                "<scripts.classes.sections.Experience.ExperienceSub object at 0x000002BACB4A36A0>"
             ]
         ],
         "EXP_contentPos_tex": [

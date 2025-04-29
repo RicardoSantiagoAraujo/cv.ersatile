@@ -1,5 +1,5 @@
-from scripts.classes.settings.generationSettings import GenerationSettings  # type: ignore
-from scripts.classes.constants.fonts import Fonts  # type: ignore
+from scripts.classes.settings.GenerationSettings import GenerationSettings  # type: ignore
+from scripts.classes.constants.Fonts import Fonts  # type: ignore
 from datetime import date
 
 generation_settings = GenerationSettings(

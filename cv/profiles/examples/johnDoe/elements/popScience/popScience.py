@@ -1,5 +1,5 @@
-from scripts.classes.settings.generationSettings import GenerationSettings  # type: ignore
-from scripts.classes.sections.popScience import PopScience  # type: ignore
+from scripts.classes.settings.GenerationSettings import GenerationSettings  # type: ignore
+from scripts.classes.sections.PopScience import PopScience  # type: ignore
 from datetime import date
 
 ### SETTINGS

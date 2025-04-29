@@ -1,5 +1,5 @@
-from scripts.classes.settings.generationSettings import GenerationSettings  # type: ignore
-from scripts.classes.sections.awards import AwardGroup, AwardsSub  # type: ignore
+from scripts.classes.settings.GenerationSettings import GenerationSettings  # type: ignore
+from scripts.classes.sections.Awards import AwardGroup, AwardsSub  # type: ignore
 from datetime import date
 
 

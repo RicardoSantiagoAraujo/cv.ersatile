@@ -1,5 +1,5 @@
-from scripts.classes.settings.generationSettings import GenerationSettings  # type: ignore
-from scripts.classes.sections.certificates import CertificateGroup, CertificateSub  # type: ignore
+from scripts.classes.settings.GenerationSettings import GenerationSettings  # type: ignore
+from scripts.classes.sections.Certificates import CertificateGroup, CertificateSub  # type: ignore
 from datetime import date
 
 generation_settings = GenerationSettings(

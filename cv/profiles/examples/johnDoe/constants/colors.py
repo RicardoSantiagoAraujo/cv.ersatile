@@ -1,5 +1,5 @@
-from scripts.classes.settings.generationSettings import GenerationSettings  # type: ignore
-from scripts.classes.constants.colors import Colors  # type: ignore
+from scripts.classes.settings.GenerationSettings import GenerationSettings  # type: ignore
+from scripts.classes.constants.Colors import Colors  # type: ignore
 from datetime import date
 
 generation_settings = GenerationSettings(

@@ -3,18 +3,11 @@ import sys
 import os
 from pathlib import Path
 import json
-from scripts.utils.style_console_text import blue,green, reset
+from scripts.utils.style_console_text import blue, green, reset
 
-
-# Classes
-# from scripts.classes.settings.generationSettings import GenerationSettings # type: ignore
-# from scripts.classes.sections.programming import ProgrammingSub
 # Enums
 from enum import EnumMeta  # an alias of EnumType in 3.11+, so can still use it
-from scripts.enums.output_types import OutputType
-from scripts.enums.section_types import SectionType
-from scripts.enums.constant_types import ConstantType
-from scripts.enums.languages import Language
+from scripts.enums.OutputTypes import OutputType
 
 
 # Function to import a dictionary from a different path by adding it to the recognized paths
@@ -180,8 +173,8 @@ def print_instructions(*args: dict):  # kwargs is a dictionary
     """
     )
     # Print list of arguments and their definitions
-    for label, definition, enum  in args:
-        availanle_options = ", ".join([f'{blue}{e.value}{reset}' for e in enum])
+    for label, definition, enum in args:
+        availanle_options = ", ".join([f"{blue}{e.value}{reset}" for e in enum])
         print(f"\t\t► {green}{label}{reset} : {definition} ({availanle_options})")
     # Print use case example, if an enum has been passed, print first element of it
     print(

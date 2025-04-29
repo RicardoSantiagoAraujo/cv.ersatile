@@ -2,13 +2,16 @@ from datetime import date
 from typing import Union
 
 
-# Each ExperienceSub represents one item in a list in Experience.content
 class ExperienceSub:
+    """ Class to specify individual characteristics or achievements within a professional experience."""
     def __init__(self, content: tuple[str, str]):
         self.EXPLINE_content = content
 
 
 class Experience:
+    """Individual experience item, like a job or an internship.
+    This class is used to create a list of experiences, each with its own title, employer, dates, location, and content.
+    """
     def __init__(
         self,
         postTitle: tuple[str, str],

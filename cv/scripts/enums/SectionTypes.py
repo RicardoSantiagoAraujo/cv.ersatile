@@ -2,6 +2,7 @@ import enum
 
 
 class SectionType(enum.Enum):
+    """ Names of sections that the CV supports."""
     description = "description"
     education = "education"
     experience = "experience"

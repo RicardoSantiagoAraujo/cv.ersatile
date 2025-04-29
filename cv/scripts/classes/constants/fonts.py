@@ -1,4 +1,7 @@
 class Fonts:
+    """Class to define fonts used in the CV generation.
+    This class contains things like the main fonts and backup fonts.
+    """
     def __init__(
         self,
         # Fonts

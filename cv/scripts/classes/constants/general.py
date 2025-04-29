@@ -1,4 +1,6 @@
 class General:
+    """Class to store general constants (personal data about the CV owner, among other general CV parameters) for the CV generation.
+    """
     def __init__(
         self,
         # NAME
@@ -45,11 +47,13 @@ class General:
                 # Dynamically assign the variable to the object
                 setattr(self, f"CONST_{key}", value)
 
+        # Create an attribute with birthday as a full string
         self.CONST_birthDate: tuple[str, str] = (
             "",
             f"{birthYear[1]}-{birthMonth[1]}-{birthDay[1]}",
         )
 
+        # Create a fullname attribute
         self.CONST_fullname: tuple[str, str] = (
             "",
             f"{name[1]} {surname[1]}",

@@ -2,8 +2,9 @@ from datetime import date
 from typing import Union
 
 
-# Each object of CertificateSub is a single awards, within the categories defined by CertificateGroup
 class CertificateSub:
+    """Each object of CertificateSub is a single awards, within the categories defined by CertificateGroup
+    """
     def __init__(
         self,
         year: tuple[str, str],
@@ -21,6 +22,8 @@ class CertificateSub:
 
 
 class CertificateGroup:
+    """Group of certificates for a single category of certificate, like languages, courses, etc.
+    """
     def __init__(
         self,
         groupTitle: tuple[str, str],

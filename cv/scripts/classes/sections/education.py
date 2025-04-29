@@ -3,6 +3,8 @@ from typing import Union
 
 
 class Education:
+    """Individual education item, like a degree or a course. This class is used to create a list of educations, each with its own title, institution, dates, location, and content.
+    """
     def __init__(
         self,
         level: tuple[str, str],

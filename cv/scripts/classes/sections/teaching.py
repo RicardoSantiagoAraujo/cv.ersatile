@@ -3,6 +3,8 @@ from typing import Union
 
 
 class Teaching:
+    """Individual teaching experiences. Each one can be something like a course, lecture, or internship student.
+    """
     def __init__(
         self,
         title: tuple[str, str],

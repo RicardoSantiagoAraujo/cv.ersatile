@@ -3,6 +3,8 @@ from typing import Union
 
 
 class Research:
+    """Reseach experience in science. Each entry is a research experience like a postdoc, a PhD, a lab rotation, etc.
+    """
     def __init__(
         self,
         title: tuple[str, str],

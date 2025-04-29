@@ -3,6 +3,7 @@ from typing import Union
 
 
 class Publication:
+    """Publication entry in the CV. Each entry is a publication like a paper, a book, etc."""
     def __init__(
         self,
         key: tuple[str, str],

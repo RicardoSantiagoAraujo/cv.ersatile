@@ -2,8 +2,10 @@ from datetime import date
 from typing import Union
 
 
-# Each object of AwardSub is a single awards, within the categories defined by AwardGroup
+ 
 class AwardsSub:
+    """Each object of AwardSub is a single awards, within the categories defined by AwardGroup
+    """
     def __init__(
         self,
         year: tuple[str, str],
@@ -23,6 +25,8 @@ class AwardsSub:
 
 
 class AwardGroup:
+    """Group of awards for a single category of awards, like university, sports, etc.
+    """
     def __init__(
         self,
         groupTitle: tuple[str, str],

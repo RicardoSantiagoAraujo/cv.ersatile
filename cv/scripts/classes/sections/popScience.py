@@ -3,6 +3,8 @@ from typing import Union
 
 
 class PopScience:
+    """Individual experiences in the field of popular science communication and media.
+    """
     def __init__(
         self,
         title: tuple[str, str],

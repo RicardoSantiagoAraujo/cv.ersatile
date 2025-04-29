@@ -2,8 +2,9 @@ from datetime import date
 from typing import Union
 
 
-# Each object of AwardSub is a single awards, within the categories defined by AwardGroup
 class GenerationSettings:
+    """Helper class to generate the CV. It  specifies the templates and subtemplates you wish to use in generating a CV section.
+    """
     def __init__(
         self,
         templates: dict[str, str],

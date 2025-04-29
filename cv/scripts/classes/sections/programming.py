@@ -4,6 +4,7 @@ from typing import Union
 
 # Support class of individual entries in programming
 class ProgrammingSub:
+    """ Subdivide a programming group into individual entries, like Python, R, etc."""
     def __init__(
         self,
         name: tuple[str, str],
@@ -23,6 +24,8 @@ class ProgrammingSub:
 
 # Class of programming groups holding entries
 class ProgrammingGroup:
+    """Category of programming languages, tools or skills, like data science, web development, etc.
+    """
     def __init__(
         self,
         groupName: tuple[str, str],

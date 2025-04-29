@@ -1,7 +1,10 @@
 class Colors:
+    """Class to hold colors used in the CV generation to customize the look of the CV.
+    This class contains base colors (primary, secondary, etc.) and component-specific colors (background, text, etc.)
+    """
     def __init__(
         self,
-        #### ======== Semantic colors
+        #### ======== Base colors
         colorPrimary: tuple[str, str],
         colorSecondary: tuple[str, str],
         colorBlack: tuple[str, int],
@@ -27,7 +30,16 @@ class Colors:
         comment: tuple[str, str],
     ):
         # Adjusting for TEX
-        def colorForTEX(key, colorKV: tuple):
+        def colorForTEX(key, colorKV: tuple) -> str | tuple[str, str]:
+            """ Create a LaTeX color definition for the given color.
+
+            Args:
+                key (_type_): _description_
+                colorKV (tuple): tuple containing the color type and value
+
+            Returns:
+                str | tuple[str, str]: either an error warning or a tuple whose second element is the LaTeX color definition
+            """
             if colorKV[0] in ["rgb", "HTML"]:
                 return ("", f"\\definecolor{{{key}}}{{{colorKV[0]}}}{{{colorKV[1]}}}")
             if colorKV[0] == "":  # copy another color
@@ -35,7 +47,15 @@ class Colors:
             return "INVALID COLOR KEY"
 
         # Adjusting for SCSS
-        def colorForSCSS(colorKV: tuple):
+        def colorForSCSS(colorKV: tuple) -> str | tuple[str, str]:
+            """Create a SCSS color definition for the given color.
+
+            Args:
+                colorKV (tuple): either an error warning or a tuple whose second element is the SCSS color definition
+
+            Returns:
+            str | tuple[str, str]: either an error warning or a tuple whose second element is the SCSS color definition
+            """
             if colorKV[0] == "rgb":
                 return ("", f'color(srgb {colorKV[1].replace(","," ")} )')
             if colorKV[0] == "HTML":
@@ -45,7 +65,7 @@ class Colors:
             return "INVALID COLOR KEY"
 
         # Loop through local variables to generate new variables
-        for key, value in locals().items():
+        for key, value in locals().items(): 
             if key != "self" and key not in [
                 "colorForTEX",
                 "colorForSCSS",

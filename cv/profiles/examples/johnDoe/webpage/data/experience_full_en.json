@@ -11,9 +11,9 @@
         "EXP_content": [
             "Content",
             [
-                "<classes.sections.experience.ExperienceSub object at 0x1046537a0>",
-                "<classes.sections.experience.ExperienceSub object at 0x10466e4b0>",
-                "<classes.sections.experience.ExperienceSub object at 0x10466e8d0>"
+                "<scripts.classes.sections.experience.ExperienceSub object at 0x000001E617115100>",
+                "<scripts.classes.sections.experience.ExperienceSub object at 0x000001E6171620A0>",
+                "<scripts.classes.sections.experience.ExperienceSub object at 0x000001E617162130>"
             ]
         ],
         "EXP_contentPos_tex": [
@@ -22,7 +22,7 @@
         ],
         "EXP_contentPre_tex": [
             "",
-            "\\begin{customlist}%"
+            "\\begin{customlist}[topsep=0pt]%"
         ],
         "EXP_employer": [
             "Company",
@@ -61,9 +61,9 @@
         "EXP_content": [
             "Content",
             [
-                "<classes.sections.experience.ExperienceSub object at 0x10466eb10>",
-                "<classes.sections.experience.ExperienceSub object at 0x10466eae0>",
-                "<classes.sections.experience.ExperienceSub object at 0x10466ec30>"
+                "<scripts.classes.sections.experience.ExperienceSub object at 0x000001E617162790>",
+                "<scripts.classes.sections.experience.ExperienceSub object at 0x000001E617162820>",
+                "<scripts.classes.sections.experience.ExperienceSub object at 0x000001E617162880>"
             ]
         ],
         "EXP_contentPos_tex": [
@@ -72,7 +72,7 @@
         ],
         "EXP_contentPre_tex": [
             "",
-            "\\begin{customlist}%"
+            "\\begin{customlist}[topsep=0pt]%"
         ],
         "EXP_employer": [
             "Company",

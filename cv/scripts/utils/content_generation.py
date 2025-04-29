@@ -3,16 +3,18 @@ import sys
 import os
 from pathlib import Path
 import json
+from scripts.utils.style_console_text import blue,green, reset
+
 
 # Classes
-# from classes.settings.generationSettings import GenerationSettings # type: ignore
-# from classes.sections.programming import ProgrammingSub
+# from scripts.classes.settings.generationSettings import GenerationSettings # type: ignore
+# from scripts.classes.sections.programming import ProgrammingSub
 # Enums
-from enum import EnumType
-from enums.output_types import OutputType
-from enums.section_types import SectionType
-from enums.constant_types import ConstantType
-from enums.languages import Language
+from enum import EnumMeta  # an alias of EnumType in 3.11+, so can still use it
+from scripts.enums.output_types import OutputType
+from scripts.enums.section_types import SectionType
+from scripts.enums.constant_types import ConstantType
+from scripts.enums.languages import Language
 
 
 # Function to import a dictionary from a different path by adding it to the recognized paths
@@ -119,9 +121,9 @@ def generate_output_file(output_content, output_file_path):
         output_file.write(output_content)
     print("\n")
     print("+++++++++++++++++++++++++++++++++++++++++")
-    print("✅ Output file generated successfully! ✅")
+    print(f"✅ {green}Output file generated successfully!{reset} ✅")
     print("+++++++++++++++++++++++++++++++++++++++++")
-    print(f"Output: {output_file_path}")
+    print(f"Output: {blue}{output_file_path}{reset}")
     print("\n")
 
 
@@ -174,16 +176,17 @@ def print_instructions(*args: dict):  # kwargs is a dictionary
         f"""
     \t =================================================================
     \t HOW TO USE THIS COMMAND:
-    \t python[3] {Path(sys.argv[0]).name} {" ".join(f"<{la}>" for la,de,ex in args)}
+    \t {blue}python[3] {Path(sys.argv[0]).name} {" ".join(f"<{la}>" for la,de,ex in args)}{reset}
     """
     )
     # Print list of arguments and their definitions
-    for label, definition, example in args:
-        print(f"\t\t► {label} : {definition}")
-    # Print use case example, if an enum has been passes, print first element of it
+    for label, definition, enum  in args:
+        availanle_options = ", ".join([f'{blue}{e.value}{reset}' for e in enum])
+        print(f"\t\t► {green}{label}{reset} : {definition} ({availanle_options})")
+    # Print use case example, if an enum has been passed, print first element of it
     print(
         f"""
-    \t EXAMPLE: python[3] {Path(sys.argv[0]).name} {" ".join([(list(ex)[0].value if isinstance(ex, EnumType) else ex) for la,de,ex in args])}
+    \tEXAMPLE:{blue} python[3] {Path(sys.argv[0]).name} {" ".join([(list(ex)[0].value if isinstance(ex, EnumMeta) else ex) for la,de,ex in args])}{reset}
     \t=================================================================
     """
     )
@@ -196,18 +199,14 @@ def generate_json(inputDict: dict, profile: str, name: str, version: str, lang: 
         merged_data[label] = obj.__dict__
 
     # save dictionary as json
-    with open(
-        f"../profiles/{profile}/webpage/data/{name}_{version}_{lang}.json", "w"
-    ) as outfile:
+    with open(f"../../profiles/{profile}/webpage/data/{name}_{version}_{lang}.json", "w") as outfile:
         json.dump(merged_data, outfile, indent=4, sort_keys=True, default=str)
 
 
 # default message for auto generated content
-auto_warning = " /!\\ CONTENT GENERATED WITH PYTHON SCRIPT, CHANGES MADE DIRECTLY HERE MAY BE OVERWRITTEN /!\\ "
+auto_warning = f" /!\\ CONTENT GENERATED WITH PYTHON SCRIPT, CHANGES MADE DIRECTLY HERE MAY BE OVERWRITTEN /!\\ "
 
 
 # Create subtemplate path from template path
 def getSubtemplatePath(template_path: str, output_type: OutputType):
-    return template_path.replace(
-        f"/template.{output_type.name}", f"/sub-template.{output_type.name}"
-    )
+    return template_path.replace(f"/template.{output_type.name}", f"/sub-template.{output_type.name}")

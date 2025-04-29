@@ -1,20 +1,21 @@
 from datetime import date
 import sys
 import os
+from scripts.utils.style_console_text import blue, green, reset
 
 # Get directory where the script is located
 script_directory = os.path.dirname(os.path.realpath(__file__))
 # Set it as working directory
 os.chdir(script_directory)
 # print(script_directory)
-from content_generation import *
+from scripts.utils.content_generation import *
 
 ### Enums
-from enums.output_types import OutputType
-from enums.constant_types import ConstantType
-from enums.languages import Language
-from enums.profiles import Profile
-from enums.versions import Version
+from scripts.enums.output_types import OutputType
+from scripts.enums.constant_types import ConstantType
+from scripts.enums.languages import Language
+from scripts.enums.profiles import Profile
+from scripts.enums.versions import Version
 
 
 #### Python script to generate a file
@@ -28,7 +29,7 @@ def generate_section():
         filetype = OutputType(sys.argv[5]).value
 
         contentDict, settings = import_contents_and_settings(
-            f"../profiles/{profile}/elements/{section}", section, version, lang
+            f"../../profiles/{profile}/elements/{section}", section, version, lang
         )
 
         generate_json(contentDict, profile, section, version, lang)
@@ -39,10 +40,10 @@ def generate_section():
 
         template = getTemplateFolder(settings, filetype)
 
-        template_path = f"./templates/sections/{section}/{template}/template.{filetype}"
+        template_path = f"./../templates/sections/{section}/{template}/template.{filetype}"
 
         if filetype == "tex":
-            output_path = f"../profiles/{profile}/elements/{section}/{section}_contents_{version}_{lang}.tex"
+            output_path = f"../../profiles/{profile}/elements/{section}/{section}_contents_{version}_{lang}.tex"
             auto_warning = f"%{auto_warning}\n"
             if section in [
                 "experience",
@@ -53,13 +54,13 @@ def generate_section():
             ]:
                 separator = "\n\\myTablesSeparator%"
         elif filetype == "html":
-            output_path = f"../profiles/{profile}/webpage/sections/{section}/{section}_contents_{version}_{lang}.html"
+            output_path = (
+                f"../../profiles/{profile}/webpage/sections/{section}/{section}_contents_{version}_{lang}.html"
+            )
             separator = "\n<!-- ====== Spacer ====== -->\n"
             auto_warning = f"<!-- {auto_warning} -->\n"
         else:
-            return print(
-                f"/!\\ {filetype} generation not available for f{Path(__file__).name}"
-            )
+            return print(f"/!\\ {filetype} generation not available for f{Path(__file__).name}")
 
         output_content = generate_contents(
             source_dict=contentDict,
@@ -77,27 +78,27 @@ def generate_section():
         print_instructions(
             (
                 "profile id",
-                f"id of the person whose CV is to be generated {[e.value for e in Profile]}",
+                f"id of the person whose CV is to be generated",
                 Profile,
             ),
             (
                 "section",
-                f"CV section to be generated {[e.value for e in SectionType]}",
+                f"CV section to be generated",
                 SectionType,
             ),
             (
                 "version",
-                f"CV version to be generated {[e.value for e in Version]}",
+                f"CV version to be generated",
                 Version,
             ),
             (
                 "languade id",
-                f"language version of the CV content {[e.value for e in Language]}",
+                f"language version of the CV content",
                 Language,
             ),
             (
                 "file type",
-                f"type of file to be generated {[e.value for e in OutputType]}",
+                f"type of file to be generated",
                 OutputType,
             ),
         )

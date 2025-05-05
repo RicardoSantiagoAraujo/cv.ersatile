@@ -124,8 +124,19 @@ def replace_placeholders_in_template(
     entry_object,
     output_type: OutputType,
     subtemplate_path: str = "",
-):
-    # Iterate over attributes and replace them into the template
+) -> str:
+    """Function to iterate over attributes and replace them into the template
+
+    Args:
+        template (str): template string to be used for generation
+        placeholder_strings (list): list of strings to be replaced in the template
+        entry_object (_type_): _object to be used for generation, from which the attributes are taken 
+        output_type (OutputType): output type of the generated file (e.g. tex, html, etc.)
+        subtemplate_path (str, optional): Path to subtemplate to be used and included into template, if any exists. Defaults to "".
+
+    Returns:
+        str: template with placeholders replaced by values from the entry object
+    """
     for attr in placeholder_strings:
         kv_pair = getattr(entry_object, attr)
         key = kv_pair[0]
@@ -142,8 +153,15 @@ def replace_placeholders_in_template(
     return template
 
 
-def generate_output_file(output_content, output_file_path):
-    # Open a new .tex file and write the LaTeX content into it
+def generate_output_file(output_content: str, output_file_path: str) -> None:
+    """function to generate the output file at the specified path
+    This function will create the file if it does not exist and write the generated content into it.
+
+    Args:
+        output_content (str): contents to be written into the file
+        output_file_path (str): location of the file to be created
+    """
+    # Open a new file and write the generated content into it
     # Check whether the specified path exists or not
     output_file_dir = os.path.dirname(output_file_path)
     isExist = os.path.exists(output_file_dir)
@@ -161,25 +179,62 @@ def generate_output_file(output_content, output_file_path):
     print("\n")
 
 
-def formatDate(x):
-    if type(x) == date:
-        x = x.strftime("%Y-%m-%d")
-    return x
+def formatDate(var: any) -> any:
+    """function to format a variable into a string if it is a data object, and do nothing otherwise.
+    This function will convert a date object into a string in the format YYYY-MM-DD.
+
+    Args:
+        var (any): variable to be formatted as a string, if it is a data object
+
+    Returns:
+        any: transformed variable, if it was a date object, or the original variable otherwise
+    """
+    if type(var) == date:
+        var = var.strftime("%Y-%m-%d")
+    return var
 
 
-def formatString(x):
-    # if type(x) == str:
-    #     x = x
-    return x
+def formatString(var: any) -> any:
+    """Function to format a string variable, and do nothing if it is not a string.
 
+    Args:
+        var (any): variable to be formatted as a string, if it is a string
 
-# check type of a variable, and if it is an item, of all contained intems
-def checktype(obj, type):
+    Returns:
+        any: transformed variable, if it was a string, or the original variable otherwise
+    """
+    # if type(var) == str:
+    #     var = var
+    return var
+
+ 
+def checktype(obj: any, type: any) -> bool:
+    """Cjeck if an object is a list and contains only elements of a given type.
+    This function will return True if the object is a list and all its elements are of the specified type, and False otherwise.
+
+    Args:
+        obj (any): object to be checked
+        type (any): type to be checked against
+
+    Returns:
+        bool: True if the object is a list and all its elements are of the specified type, False otherwise
+    """
     return bool(obj) and all(isinstance(elem, type) for elem in obj)
 
 
-def formatSubObjects(list_subobjs, output_type: OutputType, subtemplate_path: str):
-    # check if it is a list AND contains only subobjects
+def formatSubObjects(list_subobjs:list[object], output_type: OutputType, subtemplate_path: str) -> any:
+    """function to format a list of sub-objects into a string, using a subtemplate.
+    This function will iterate over the list of sub-objects and replace the placeholders in the subtemplate with the values from the sub-objects.
+
+    Args:
+        list_subobjs (list[object]): list of sub-objects to be formatted, if it is not a list, it will be returned as is
+        output_type (OutputType): output type of the generated file (e.g. tex, html, etc.)
+        subtemplate_path (str): path to subtemplate to be used and included into template, if any exists.
+
+    Returns:
+        any: either the formatted string of sub-objects, or the original object if it is not a list
+    """    
+    # check if it is a list AND contains only sub-objects
     if type(list_subobjs) == list and checktype(list_subobjs, object):
         # empty string to be filled
         generated_content = """"""
@@ -205,10 +260,15 @@ def formatSubObjects(list_subobjs, output_type: OutputType, subtemplate_path: st
         return list_subobjs
 
 
-def print_instructions(module_dotted_name: str, *args: dict) -> None: # kwargs is a dictionary
+def print_instructions(script_name_obj: str, *args: dict) -> None: # kwargs is a dictionary
+    """ print instructions on how to use the command line interface for this module
+
+    Args:
+        script_name_obj (str): name object where the dotted path to the script is stored
+    """    
     print("--------------------------")
     print(sys.argv)
-    module_name = sys.modules[module_dotted_name].__spec__.name
+    module_name = sys.modules[script_name_obj].__spec__.name
 
     print(
         f"""
@@ -230,8 +290,16 @@ def print_instructions(module_dotted_name: str, *args: dict) -> None: # kwargs i
     )
 
 
-def generate_json(inputDict: dict, profile: str, name: str, version: str, lang: str):
-    # Convert objects to dictionaries, place each one in a merged dictionary
+def generate_json(inputDict: dict, profile: str, name: str, version: str, lang: str) -> None:
+    """Function to Convert objects to dictionaries, and save them as a json file.
+
+    Args:
+        inputDict (dict): input dictionary containing the objects to be converted
+        profile (str): profile to be used for the output file
+        name (str): section or constants name to be used for the output file
+        version (str): version of the content (e.g. full, generic, etc.)
+        lang (str): language of the content (e.g. en, de, etc.)
+    """
     merged_data = {}
     for label, obj in inputDict.items():
         merged_data[label] = obj.__dict__
@@ -244,7 +312,14 @@ def generate_json(inputDict: dict, profile: str, name: str, version: str, lang: 
 # default message for auto generated content
 auto_warning = f" /!\\ CONTENT GENERATED WITH PYTHON SCRIPT, CHANGES MADE DIRECTLY HERE MAY BE OVERWRITTEN /!\\ "
 
+def getSubtemplatePath(template_path: str, output_type: OutputType) -> str:
+    """ Create subtemplate path from template path
 
-# Create subtemplate path from template path
-def getSubtemplatePath(template_path: str, output_type: OutputType):
+    Args:
+        template_path (str): template path
+        output_type (OutputType): output type of the generated file (e.g. tex, html, etc.)
+
+    Returns:
+        str: subtemplate path, which is the same as the template path but with "template" replaced by "sub-template"
+    """
     return template_path.replace(f"/template.{output_type.name}", f"/sub-template.{output_type.name}")

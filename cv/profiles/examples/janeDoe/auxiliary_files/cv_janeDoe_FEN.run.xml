@@ -80,9 +80,9 @@
       <file>cv_janeDoe_FEN.bcf</file>
     </requires>
     <requires type="editable">
-      <file>./../../../assets/bibliography_files/bibliography.bib</file>
+      <file>./../../../assets/bibliography_files/shared_bibliography.bib</file>
       <file>assets/bibliography_files/bibliography.bib</file>
-      <file>assets/bibliography_files/my_publications.tex</file>
+      <file>assets/bibliography_files/my_publications.bib</file>
     </requires>
   </external>
 </requests>

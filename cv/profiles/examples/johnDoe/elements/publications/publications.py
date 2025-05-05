@@ -17,7 +17,7 @@ contentDict_full_en = {
     ),
     "example2": Publication(
         key=("", ""),
-        fullText=("", "John Doe (Feb. 2023). “The Joy of Fullstack Developing”"),
+        fullText=("", "John Doe (Feb. 2023). The Joy of Fullstack Developing"),
         include=("", "true"),
         comment=("", "COMMENT GOES HERE"),
         hyperlink=("", ""),

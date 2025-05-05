@@ -47,6 +47,7 @@ def main():
         group = GeneratedTypes(sys.argv[1]).value
     else:
         print_instructions(
+            __name__,
             (
                 "Type of content",
                 f"Type of content to be generated",

@@ -2,9 +2,8 @@ from datetime import date
 import sys
 import os
 from pathlib import Path
-import json
-from scripts.utils.style_console_text import blue, green, reset
-
+import json 
+import scripts.utils.style_console_text as sty
 # Enums
 from enum import EnumMeta  # an alias of EnumType in 3.11+, so can still use it
 from scripts.enums.OutputTypes import OutputType
@@ -114,9 +113,9 @@ def generate_output_file(output_content, output_file_path):
         output_file.write(output_content)
     print("\n")
     print("+++++++++++++++++++++++++++++++++++++++++")
-    print(f"✅ {green}Output file generated successfully!{reset} ✅")
+    print(f"✅ {sty.green}Output file generated successfully!{sty.reset} ✅")
     print("+++++++++++++++++++++++++++++++++++++++++")
-    print(f"Output: {blue}{output_file_path}{reset}")
+    print(f"Output: {sty.blue}{output_file_path}{sty.reset}")
     print("\n")
 
 
@@ -164,22 +163,26 @@ def formatSubObjects(list_subobjs, output_type: OutputType, subtemplate_path: st
         return list_subobjs
 
 
-def print_instructions(*args: dict):  # kwargs is a dictionary
+def print_instructions(module_dotted_name: str, *args: dict) -> None: # kwargs is a dictionary
+    print("--------------------------")
+    print(sys.argv)
+    module_name = sys.modules[module_dotted_name].__spec__.name
+
     print(
         f"""
     \t =================================================================
     \t HOW TO USE THIS COMMAND:
-    \t {blue}python[3] {Path(sys.argv[0]).name} {" ".join(f"<{la}>" for la,de,ex in args)}{reset}
+    \t {sty.blue} python[3] -m {sty.yellow} {module_name} {sty.cyan} {" ".join(f"<{la}>" for la,de,ex in args)}{sty.reset}
     """
     )
     # Print list of arguments and their definitions
     for label, definition, enum in args:
-        availanle_options = ", ".join([f"{blue}{e.value}{reset}" for e in enum])
-        print(f"\t\t► {green}{label}{reset} : {definition} ({availanle_options})")
+        availanle_options = ", ".join([f"{sty.blue}{e.value}{sty.reset}" for e in enum])
+        print(f"\t\t► {sty.green}{label}{sty.reset} : {definition} ({availanle_options})")
     # Print use case example, if an enum has been passed, print first element of it
     print(
         f"""
-    \tEXAMPLE:{blue} python[3] {Path(sys.argv[0]).name} {" ".join([(list(ex)[0].value if isinstance(ex, EnumMeta) else ex) for la,de,ex in args])}{reset}
+    \tEXAMPLE:{sty.blue} python[3] -m {sty.yellow} {module_name} {sty.cyan} {" ".join([(list(ex)[0].value if isinstance(ex, EnumMeta) else ex) for la,de,ex in args])}{sty.reset}
     \t=================================================================
     """
     )

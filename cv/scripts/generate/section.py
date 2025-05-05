@@ -76,6 +76,7 @@ def generate_section():
         )
     else:
         print_instructions(
+            __name__,
             (
                 "profile id",
                 f"id of the person whose CV is to be generated",

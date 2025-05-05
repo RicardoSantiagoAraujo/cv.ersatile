@@ -69,6 +69,7 @@ def generate_constants():
         )
     else:
         print_instructions(
+            __name__,
             (
                 "profile id",
                 f"id of the person whose CV is to be generated",

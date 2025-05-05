@@ -42,7 +42,15 @@ script_directory = os.path.dirname(os.path.realpath(__file__))
 # os.chdir(script_directory)
 
 
-def main():
+def main() -> int | None:
+    """ Python script to generate multiple files for sections or constants.
+    This script generates files for sections or constants based on the provided profile, section type, version, language, and file type.
+    It loops through all combinations of profiles, sections/constants, versions, languages, and output types.
+
+    Returns:
+        int | None: Either none or an integer indicating the exit status of the script.
+    """
+
     if len(sys.argv) == 2:
         group = GeneratedTypes(sys.argv[1]).value
     else:

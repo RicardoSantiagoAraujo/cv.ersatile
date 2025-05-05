@@ -19,7 +19,11 @@ from scripts.enums.Versions import Version
 
 
 #### Python script to generate a file
-def generate_section():
+def main() -> None:
+    """Python script to generate a file for sections.
+    This script generates a file for sections based on the provided profile, section type, version, language, and file type.
+
+    """
     # check if correct number of arguments is passed:
     if len(sys.argv) == 6:
         profile = Profile(sys.argv[1]).value
@@ -106,4 +110,4 @@ def generate_section():
 
 
 if __name__ == "__main__":
-    generate_section()
+    main()

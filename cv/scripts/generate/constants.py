@@ -19,7 +19,10 @@ from scripts.enums.Versions import Version
 
 
 #### Python script to generate a file
-def generate_constants():
+def main() -> None:
+    """Python script to generate a file for constants.
+    This script generates a file for constants based on the provided profile, constant type, version, language, and file type.
+    """
     # check if correct number of arguments is passed:
     if len(sys.argv) == 6:
         profile = Profile(sys.argv[1]).value
@@ -99,4 +102,4 @@ def generate_constants():
 
 
 if __name__ == "__main__":
-    generate_constants()
+    main()

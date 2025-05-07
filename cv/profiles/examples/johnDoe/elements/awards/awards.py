@@ -22,6 +22,7 @@ contentDict_full_en = {
                     details=("", "University of Bristol"),
                     comment=("", ""),
                     include=("", "true"),
+                    hyperlink=("","")
                 ),
                 AwardsSub(
                     year=("", "2018"),
@@ -29,6 +30,7 @@ contentDict_full_en = {
                     details=("", "Second place"),
                     comment=("", ""),
                     include=("", "true"),
+                    hyperlink=("","")
                 ),
             ],
         ),
@@ -46,6 +48,7 @@ contentDict_full_en = {
                     details=("", ""),
                     comment=("", ""),
                     include=("", "true"),
+                    hyperlink=("","")
                 ),
             ],
         ),

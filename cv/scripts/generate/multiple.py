@@ -108,7 +108,8 @@ def main() -> int | None:
                             ]
                         )
                         loop_counter += 1
-                        error_counter += result.returncode
+                        wasError = 1 if result.returncode != 0 else 0
+                        error_counter += wasError
                         current_command = " ".join(result.args)
                         print(f"COMMAND: {sty.bright_blue}{current_command}{sty.reset}")
                         if result.returncode == 1:

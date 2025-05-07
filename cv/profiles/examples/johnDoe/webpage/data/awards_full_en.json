@@ -7,8 +7,8 @@
         "AWARD_content": [
             "",
             [
-                "<classes.sections.awards.AwardsSub object at 0x100a47770>",
-                "<classes.sections.awards.AwardsSub object at 0x100a477d0>"
+                "<scripts.classes.sections.Awards.AwardsSub object at 0x1048e36e0>",
+                "<scripts.classes.sections.Awards.AwardsSub object at 0x1048e35f0>"
             ]
         ],
         "AWARD_groupTitle": [
@@ -28,7 +28,7 @@
         "AWARD_content": [
             "",
             [
-                "<classes.sections.awards.AwardsSub object at 0x100a62480>"
+                "<scripts.classes.sections.Awards.AwardsSub object at 0x1048e3b00>"
             ]
         ],
         "AWARD_groupTitle": [

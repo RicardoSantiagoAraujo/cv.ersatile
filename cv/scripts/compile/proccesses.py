@@ -1,6 +1,6 @@
 import subprocess
 import os
-from scripts.utils.style_console_text import red, green, blue, bold, reset
+import scripts.utils.style_console_text as sty
 from scripts.compile.parameters import (
     build_folder__aux_files,
     build_folder__main_output,
@@ -15,7 +15,7 @@ def trigger_biber( latex_doc_name:str,  printout: bool = True) -> None:
         latex_doc_name (str): filename of document's main tex file.
         printout (bool, optional): Whether to print log to console or not. Defaults to True.
     """
-    print(f"\n{blue}trigger_biber ...{reset}")
+    print(f"\n{sty.blue}trigger_biber ...{sty.reset}")
     result = subprocess.run(
         ["biber", os.path.join(build_folder__aux_files, f"{latex_doc_name}")],
          capture_output=True, text=True
@@ -32,7 +32,7 @@ def trigger_lualatex(latex_doc_name: str, printout: bool = True) -> None:
         latex_doc_name (str): filename of document's main tex file.
         printout (bool, optional): Whether to print log to console or not. Defaults to True.
     """
-    print(f"\n{blue}trigger_lualatex ...{reset}")
+    print(f"\n{sty.blue}trigger_lualatex ...{sty.reset}")
     result = subprocess.run(
         [
             "lualatex",

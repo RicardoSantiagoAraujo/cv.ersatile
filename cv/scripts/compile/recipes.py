@@ -1,8 +1,7 @@
 import subprocess
 import os
-from scripts.utils.style_console_text import red, green, blue, bold, reset
-from scripts.compile.functions import (
-    create_build_directories, profiles_names, profiles_dir_path, build_message
+import scripts.utils.style_console_text as sty
+from scripts.compile.functions import (build_message
 )
 from scripts.compile.proccesses import trigger_biber, trigger_lualatex
 
@@ -18,7 +17,6 @@ def recipe__full(args: argparse.Namespace, latex_doc_name: str):
         args (argparse.Namespace): arguments object
         latex_doc_name (str): name of main latex file to be used for compilation
     """
-    thing_name = args.profile_name
     verbose_bool = args.verbose
     timer_bool = args.timer
 
@@ -43,7 +41,6 @@ def recipe__biber(args: argparse.Namespace, latex_doc_name: str):
         args (argparse.Namespace): arguments object
         latex_doc_name (str): name of main latex file to be used for compilation
     """
-    thing_name = args.profile_name
     verbose_bool = args.verbose
     timer_bool = args.timer
 
@@ -64,7 +61,6 @@ def recipe__lualatex(args: argparse.Namespace, latex_doc_name: str):
         args (argparse.Namespace): arguments object
         latex_doc_name (str): name of main latex file to be used for compilation
     """
-    thing_name = args.profile_name
     verbose_bool = args.verbose
     timer_bool = args.timer
 

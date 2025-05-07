@@ -2,7 +2,7 @@ from datetime import date
 import sys
 import os
 from pathlib import Path
-import json 
+import json
 from typing import Dict, Tuple
 import scripts.utils.style_console_text as sty
 # Enums
@@ -14,7 +14,7 @@ def import_contents_and_settings(path: str, type: str, version: str, lang: str) 
     """ Function to dynamically import a dictionary from a different path by adding it to the recognized paths
 
     Args:
-        path (str): path to the folder where the contentDict is located 
+        path (str): path to the folder where the contentDict is located
         type (str): type of content (e.g. experience, education, etc.)
         version (str): version of the content (e.g. full, generic, etc.)
         lang (str): language of the content (e.g. en, de, etc.)
@@ -69,7 +69,7 @@ def generate_contents(
 
     Returns:
         str: generated content as a string with placeholders replaced by values from the dictionary
-    """    
+    """
     # Create subtemplate path from template path
     subtemplate_path = getSubtemplatePath(template_path, output_type)
     # Define the generated content as a string
@@ -130,7 +130,7 @@ def replace_placeholders_in_template(
     Args:
         template (str): template string to be used for generation
         placeholder_strings (list): list of strings to be replaced in the template
-        entry_object (_type_): _object to be used for generation, from which the attributes are taken 
+        entry_object (_type_): _object to be used for generation, from which the attributes are taken
         output_type (OutputType): output type of the generated file (e.g. tex, html, etc.)
         subtemplate_path (str, optional): Path to subtemplate to be used and included into template, if any exists. Defaults to "".
 
@@ -207,7 +207,7 @@ def formatString(var: any) -> any:
     #     var = var
     return var
 
- 
+
 def checktype(obj: any, type: any) -> bool:
     """Cjeck if an object is a list and contains only elements of a given type.
     This function will return True if the object is a list and all its elements are of the specified type, and False otherwise.
@@ -233,7 +233,7 @@ def formatSubObjects(list_subobjs:list[object], output_type: OutputType, subtemp
 
     Returns:
         any: either the formatted string of sub-objects, or the original object if it is not a list
-    """    
+    """
     # check if it is a list AND contains only sub-objects
     if type(list_subobjs) == list and checktype(list_subobjs, object):
         # empty string to be filled
@@ -265,9 +265,7 @@ def print_instructions(script_name_obj: str, *args: dict) -> None: # kwargs is a
 
     Args:
         script_name_obj (str): name object where the dotted path to the script is stored
-    """    
-    print("--------------------------")
-    print(sys.argv)
+    """
     module_name = sys.modules[script_name_obj].__spec__.name
 
     print(

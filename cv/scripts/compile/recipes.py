@@ -26,13 +26,13 @@ def recipe__full(args: argparse.Namespace, latex_doc_name: str):
     time_start = datetime.now()
 
     time_prev, step_counter = build_message("start of compilation",step_counter, time_start, isTimer=timer_bool)
-    trigger_lualatex(thing_name, latex_doc_name,  printout=verbose_bool)
+    trigger_lualatex(latex_doc_name,  printout=verbose_bool)
     time_prev, step_counter  = build_message("end of lualatex compilation",step_counter, time_start, time_prev, isTimer=timer_bool)
-    trigger_biber(thing_name, latex_doc_name,  printout=verbose_bool)
+    trigger_biber(latex_doc_name,  printout=verbose_bool)
     time_prev, step_counter  = build_message("end of biber compilation", step_counter, time_start, time_prev, isTimer=timer_bool)
-    trigger_lualatex(thing_name, latex_doc_name,  printout=verbose_bool)
+    trigger_lualatex(latex_doc_name,  printout=verbose_bool)
     time_prev, step_counter  = build_message("end of lualatex compilation", step_counter, time_start, time_prev, isTimer=timer_bool)
-    trigger_lualatex(thing_name,latex_doc_name, printout=verbose_bool)
+    trigger_lualatex(latex_doc_name, printout=verbose_bool)
     time_prev, step_counter  = build_message("end of lualatex compilation (LAST)",step_counter, time_start, time_prev, isTimer=timer_bool)
 
 
@@ -51,7 +51,7 @@ def recipe__biber(args: argparse.Namespace, latex_doc_name: str):
     time_start = datetime.now()
 
     time_prev, step_counter = build_message("start of compilation",step_counter, time_start, isTimer=timer_bool)
-    trigger_biber(thing_name, latex_doc_name,  printout=verbose_bool)
+    trigger_biber(latex_doc_name,  printout=verbose_bool)
     time_prev, step_counter  = build_message("end of biber compilation", step_counter, time_start, time_prev, isTimer=timer_bool)
 
 
@@ -72,5 +72,5 @@ def recipe__lualatex(args: argparse.Namespace, latex_doc_name: str):
     time_start = datetime.now()
 
     time_prev, step_counter = build_message("start of compilation",step_counter, time_start, isTimer=timer_bool)
-    trigger_lualatex(thing_name, latex_doc_name,  printout=verbose_bool)
-    time_prev, step_counter  = build_message("end of biber compilation", step_counter, time_start, time_prev, isTimer=timer_bool)
+    trigger_lualatex(latex_doc_name,  printout=verbose_bool)
+    time_prev, step_counter  = build_message("end of lualatex compilation", step_counter, time_start, time_prev, isTimer=timer_bool)

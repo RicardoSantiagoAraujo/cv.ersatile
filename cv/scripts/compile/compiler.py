@@ -2,21 +2,17 @@ import subprocess
 import os
 from scripts.utils.style_console_text import red, green, blue, bold, reset
 from scripts.compile.functions import (
-    create_build_directories, profiles_names, profiles_dir_path, build_message, get_build_directory, ask_which_version_to_compile
+    create_build_directories, get_build_directory, ask_which_version_to_compile
 )
-from .parameters import (
-    profiles_directory,
-    build_folder__aux_files,
-    build_folder__main_output,
-)
+
 from scripts.compile.recipes import recipe__biber, recipe__full, recipe__lualatex
 from scripts.enums.Recipe import Recipe
 import argparse
 from datetime import datetime
 
 
-def perform_build_steps(args: argparse.Namespace):
-    """Compile a LaTeX document (article or portfolio) with lualaTeX.
+def perform_build_steps(args: argparse.Namespace) -> None:
+    """Compile a LaTeX document with lualaTeX.
 
     Args:
         args (argparse.Namespace): namespace with arguments parsed via command line.

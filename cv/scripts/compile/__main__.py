@@ -16,8 +16,8 @@ from scripts.compile.compiler import perform_build_steps
 from scripts.compile.watch import watcher
 from scripts.compile.parameters import watch_frequency_seconds, file_types_to_watch, paths_to_ignore
 
-def main():
-    """Main function of script to compile an existing LaTeX document (article or portfolio) into a PDF."""
+def main() -> None:
+    """Main function of script to compile an existing LaTeX document into a PDF."""
 
     prompts.first_prompt("Script for pdf compilation from existing document"
     )

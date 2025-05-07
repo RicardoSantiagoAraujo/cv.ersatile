@@ -133,7 +133,7 @@ def deal_with_user_input(args__cmd_line: argparse.Namespace) -> argparse.Namespa
         else:
             # Exit loop
             args__cmd_line.cv_document = cv_doc_from_cmd_line
-            args__cmd_line.profile_name = [cv["profile"] for cv in all_cv_documents if cv.get("doc") == cv_doc_from_cmd_line][0] 
+            args__cmd_line.profile_name = [cv["profile"] for cv in all_cv_documents if cv.get("doc") == cv_doc_from_cmd_line][0]
             keep_asking = False
 
     if not vars(args__cmd_line).get("cv_document"):
@@ -143,7 +143,16 @@ def deal_with_user_input(args__cmd_line: argparse.Namespace) -> argparse.Namespa
     return args__cmd_line
 
 
-def ask_which_version_to_compile(build_dir: "str") -> str:
+def ask_which_version_to_compile(build_dir: str) -> str:
+    """Ask user which version of the cv for a given profile to compile.
+    Additionally, perform tests for availability, quit commands and index inputs.
+
+    Args:
+        args__cmd_line (argparse.Namespace): user passed arguments through the command line
+
+    Returns:
+        argparse.Namespace: Validated and updated arguments
+    """
     keep_asking = True
     while keep_asking == True:
         v_names = list_existing_versions(

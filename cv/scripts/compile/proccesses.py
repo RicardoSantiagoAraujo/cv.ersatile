@@ -8,11 +8,10 @@ from scripts.compile.parameters import (
 from datetime import datetime
 
 
-def trigger_biber(thing_name: str, latex_doc_name:str,  printout: bool = True) -> None:
+def trigger_biber( latex_doc_name:str,  printout: bool = True) -> None:
     """Trigger biber
 
     Args:
-        thing_name (str): name of document to compile.
         latex_doc_name (str): filename of document's main tex file.
         printout (bool, optional): Whether to print log to console or not. Defaults to True.
     """
@@ -26,11 +25,10 @@ def trigger_biber(thing_name: str, latex_doc_name:str,  printout: bool = True) -
         print(result.stdout)
 
 
-def trigger_lualatex(thing_name: str, latex_doc_name: str, printout: bool = True) -> None:
+def trigger_lualatex(latex_doc_name: str, printout: bool = True) -> None:
     """Trigger biblatex compilation
 
     Args:
-        thing_name (str): name of document to compile.
         latex_doc_name (str): filename of document's main tex file.
         printout (bool, optional): Whether to print log to console or not. Defaults to True.
     """
@@ -39,7 +37,7 @@ def trigger_lualatex(thing_name: str, latex_doc_name: str, printout: bool = True
         [
             "lualatex",
             "--interaction=nonstopmode",
-            f"--job-name={thing_name}",  # output file(s) name
+            f"--job-name={latex_doc_name}",  # output file(s) name
             f"--output-directory={build_folder__main_output}",  # output directory of pdf file
             f"--aux-directory={build_folder__aux_files}",  # output directory of all other auxiliary files
             f"{latex_doc_name}",

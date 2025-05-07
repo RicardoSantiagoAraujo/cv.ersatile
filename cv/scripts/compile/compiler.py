@@ -23,7 +23,11 @@ def perform_build_steps(args: argparse.Namespace):
     """
 
     build_directory = get_build_directory(args)
-    latex_doc_name = ask_which_version_to_compile(build_directory)
+    if not vars(args).get("cv_document"):
+        latex_doc_name = ask_which_version_to_compile(build_directory)
+    else:
+        latex_doc_name = args.cv_document
+
 
     try:
         # print( os.path.join(dir_path, thing_name + ".tex"))

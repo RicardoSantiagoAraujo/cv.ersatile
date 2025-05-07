@@ -7,7 +7,7 @@ from scripts.enums.Recipe import Recipe
 from scripts.utils.style_console_text import blue,green, reset
 
 from .functions import (
-    profiles_list_as_string,
+    all_cv_documents,
     deal_with_user_input,
     get_build_directory
 )
@@ -25,10 +25,10 @@ def main():
     parser = argparse.ArgumentParser(description="arTeX compilation with biblatex.")
     # Add arguments
     parser.add_argument(
-        "profile_name",
+        "cv_document",
         nargs="?",
         type=str,
-        help=f"Profile to compile from. Available options: {profiles_list_as_string}.",
+        help=f"CV document to be compiled. Available options: {", ".join([f"{blue}{doc}{reset}" for doc in all_cv_documents])}",
         default=None,
     )
     parser.add_argument(

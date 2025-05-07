@@ -20,6 +20,18 @@ profiles_dir_path = os.path.join(base_dir, profiles_directory)
 
 profiles_names = list_existing_profiles(profiles_dir_path, print_list=False)
 examples_names = list_existing_profiles(profiles_dir_path+examples_folder, print_list=False)
+all_names = profiles_names + examples_names
+
+# create list of all cv versions that can be compiled from all profiles (each entry is a tupple of cv doc name and its profile)
+all_cv_documents = []
+for name in profiles_names:
+    versions = list_existing_versions(os.path.join(profiles_dir_path, name))
+    all_cv_documents += [{"doc":version, "profile":name} for version in versions]
+for name in examples_names:
+    versions = list_existing_versions(os.path.join(profiles_dir_path, examples_folder, name))
+    all_cv_documents += [{"doc":version, "profile":name} for version in versions]
+# remove extensions
+all_cv_documents = [{"doc":os.path.splitext(x["doc"])[0], "profile":x["profile"]} for x in all_cv_documents]
 
 def list_as_string(list: list[any], sep:str=", ") -> str:
     """create a string out of a python list.
@@ -47,7 +59,7 @@ def enum_list_as_string(enumName: enum.Enum, sep:str=", ") -> str:
     return sep.join([f"{sty.blue}{e.value}{sty.reset}" for e in enumName])
 
 
-profiles_list_as_string = list_as_string(profiles_names)
+profiles_list_as_string = list_as_string(profiles_names) + list_as_string(examples_names)
 
 
 def deal_with_user_input(args__cmd_line: argparse.Namespace) -> argparse.Namespace:
@@ -60,21 +72,23 @@ def deal_with_user_input(args__cmd_line: argparse.Namespace) -> argparse.Namespa
     Returns:
         argparse.Namespace: Validated and updated arguments
     """
-
+    # Make variable all_names accessible within function
+    global all_names
+    global all_cv_documents
     # If something has been provided in the command line as first argument but it is the build recipe:
-    if args__cmd_line.profile_name in [e.value for e in Recipe]:
+    if args__cmd_line.cv_document in [e.value for e in Recipe]:
         # Pass it to the right arg and empty the thing_name arg
-        args__cmd_line.recipe = args__cmd_line.profile_name
-        args__cmd_line.profile_name = None
+        args__cmd_line.recipe = args__cmd_line.cv_document
+        args__cmd_line.cv_document = None
 
 
     # get and test user input thing (target document) as passed through the command line; may be empty in which case input is collected with the input() command
-    thing_name_from_cmd_line = args__cmd_line.profile_name
+    cv_doc_from_cmd_line = args__cmd_line.cv_document
 
     keep_asking = True
     while keep_asking == True:
         # If no thing name has been provided in the command line directly, request it from the user
-        if thing_name_from_cmd_line == None:
+        if cv_doc_from_cmd_line == None:
             profile_names = list_existing_profiles(
                 profiles_dir_path,
                 header_message="Your CV Profiles:",
@@ -109,17 +123,23 @@ def deal_with_user_input(args__cmd_line: argparse.Namespace) -> argparse.Namespa
 
         # If thing name has been provided...
         # ...but it does not actually exist:
-        elif thing_name_from_cmd_line not in all_names:
-            print(f"\n\n\n{sty.red}thing_name{sty.reset} does not exist, pick from options:\n")
+
+
+        elif cv_doc_from_cmd_line not in [x["doc"] for x in all_cv_documents]:
+            print(f"\n\n\n{sty.red}cv document{sty.reset} does not exist, pick from options:\n")
             # Restart proccess
             thing_name = None
         # ...and it exists:
         else:
             # Exit loop
-            args__cmd_line.profile_name = thing_name_from_cmd_line
+            args__cmd_line.cv_document = cv_doc_from_cmd_line
+            args__cmd_line.profile_name = [cv["profile"] for cv in all_cv_documents if cv.get("doc") == cv_doc_from_cmd_line][0] 
             keep_asking = False
 
-    print(f"Chosen profile: {sty.blue}{args__cmd_line.profile_name}{sty.reset}")
+    if not vars(args__cmd_line).get("cv_document"):
+        print(f"Chosen profile: {sty.blue}{args__cmd_line.profile_name}{sty.reset}")
+    else:
+        print(f"Chosen cv document: {sty.blue}{args__cmd_line.cv_document}{sty.reset}")
     return args__cmd_line
 
 

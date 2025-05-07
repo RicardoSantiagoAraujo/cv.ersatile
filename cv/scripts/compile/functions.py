@@ -3,7 +3,7 @@ import os
 import argparse
 from datetime import datetime
 from scripts.utils.helpers import list_existing_profiles, list_existing_versions
-from scripts.utils.style_console_text import red, green, blue, bold, reset
+import scripts.utils.style_console_text as sty
 import enum
 from scripts.compile.parameters import (
     profiles_directory,
@@ -31,7 +31,7 @@ def list_as_string(list: list[any], sep:str=", ") -> str:
     Returns:
         str: A string made out of the list items.
     """
-    return sep.join([f"{blue}{e}{reset}" for e in list])
+    return sep.join([f"{sty.blue}{e}{sty.reset}" for e in list])
 
 
 def enum_list_as_string(enumName: enum.Enum, sep:str=", ") -> str:
@@ -44,7 +44,7 @@ def enum_list_as_string(enumName: enum.Enum, sep:str=", ") -> str:
     Returns:
         str: A sring made out of the Enum options.
     """
-    return sep.join([f"{blue}{e.value}{reset}" for e in enumName])
+    return sep.join([f"{sty.blue}{e.value}{sty.reset}" for e in enumName])
 
 
 profiles_list_as_string = list_as_string(profiles_names)
@@ -62,14 +62,14 @@ def deal_with_user_input(args__cmd_line: argparse.Namespace) -> argparse.Namespa
     """
 
     # If something has been provided in the command line as first argument but it is the build recipe:
-    if args__cmd_line.thing_name in [e.value for e in Recipe]:
+    if args__cmd_line.profile_name in [e.value for e in Recipe]:
         # Pass it to the right arg and empty the thing_name arg
-        args__cmd_line.recipe = args__cmd_line.thing_name
-        args__cmd_line.thing_name = None
+        args__cmd_line.recipe = args__cmd_line.profile_name
+        args__cmd_line.profile_name = None
 
 
     # get and test user input thing (target document) as passed through the command line; may be empty in which case input is collected with the input() command
-    thing_name_from_cmd_line = args__cmd_line.thing_name
+    thing_name_from_cmd_line = args__cmd_line.profile_name
 
     keep_asking = True
     while keep_asking == True:
@@ -77,7 +77,7 @@ def deal_with_user_input(args__cmd_line: argparse.Namespace) -> argparse.Namespa
         if thing_name_from_cmd_line == None:
             profile_names = list_existing_profiles(
                 profiles_dir_path,
-                header_message="Yout Profiles:",
+                header_message="Your CV Profiles:",
             )
             example_names = list_existing_profiles(
                 profiles_dir_path+examples_folder,
@@ -87,11 +87,11 @@ def deal_with_user_input(args__cmd_line: argparse.Namespace) -> argparse.Namespa
             all_names = profile_names + example_names
             indexes = list(range(1, len(all_names) + 1))
             choice = input(
-                f"Which profile ? ({blue}choose from options above{reset}): "
+                f"Which profile do you want to compile from ? ({sty.blue}choose from options above{sty.reset}): "
             )
             #  if user passed an instruction to quit the program:
             if choice in ["q", "quit"]:
-                print(f"\n💀💀💀 {red}Program quit without compiling anything.{reset}")
+                print(f"\n💀💀💀 {sty.red}Program quit without compiling anything.{sty.reset}")
                 exit()
             # if user picked a valid index (number):
             elif choice.isdigit() and int(choice) in indexes:
@@ -101,26 +101,25 @@ def deal_with_user_input(args__cmd_line: argparse.Namespace) -> argparse.Namespa
                 thing_name = choice
             # if invalid choice (non existing name or index):
             else:
-                print(f"\n\n\n{red}Invalid choice{reset}, pick from options:\n")
+                print(f"\n\n\n{sty.red}Invalid choice{sty.reset}, pick from options:\n")
                 continue
 
-            args__cmd_line.thing_name = thing_name
-            print_choice_mesg(args__cmd_line)
+            args__cmd_line.profile_name = thing_name
             keep_asking = False
 
         # If thing name has been provided...
         # ...but it does not actually exist:
         elif thing_name_from_cmd_line not in all_names:
-            print(f"\n\n\n{red}thing_name{reset} does not exist, pick from options:\n")
+            print(f"\n\n\n{sty.red}thing_name{sty.reset} does not exist, pick from options:\n")
             # Restart proccess
             thing_name = None
         # ...and it exists:
         else:
             # Exit loop
-            args__cmd_line.thing_name = thing_name_from_cmd_line
-            print_choice_mesg(args__cmd_line)
+            args__cmd_line.profile_name = thing_name_from_cmd_line
             keep_asking = False
 
+    print(f"Chosen profile: {sty.blue}{args__cmd_line.profile_name}{sty.reset}")
     return args__cmd_line
 
 
@@ -129,36 +128,39 @@ def ask_which_version_to_compile(build_dir: "str") -> str:
     while keep_asking == True:
         v_names = list_existing_versions(
             build_dir,
-            header_message="Available versions:",
+            header_message="\nAvailable versions:",
         )
         indexes = list(range(1, len(v_names) + 1))
         choice = input(
-            f"Which version do you want to compile? ({blue}choose from options above{reset}): "
+            f"Which version do you want to compile? ({sty.blue}choose from options above{sty.reset}): "
         )
         #  if user passed an instruction to quit the program:
         if choice in ["q", "quit"]:
-            print(f"\n💀💀💀 {red}Program quit without compiling anything.{reset}")
+            print(f"\n💀💀💀 {sty.red}Program quit without compiling anything.{sty.reset}")
             exit()
         # if user picked a valid index (number):
         elif choice.isdigit() and int(choice) in indexes:
-            return v_names[int(choice) - 1]
+            version_to_compile = v_names[int(choice) - 1]
         # if user wrote the article name directly and it is valid:
         elif choice in v_names or choice+".tex" in v_names:
-            return choice
+            version_to_compile =  choice
         # if invalid choice (non existing name or index):
         else:
-            print(f"\n\n\n{red}Invalid choice{reset}, pick from options:\n")
+            print(f"\n\n\n{sty.red}Invalid choice{sty.reset}, pick from options:\n")
             continue
+        print_choice_mesg(version_to_compile)
+        return version_to_compile
 
 
 
-def print_choice_mesg(args:argparse.Namespace) -> None:
+
+def print_choice_mesg(choice:str) -> None:
     """print a string announcing the document chosen by the user.
 
     Args:
         args (argparse.Namespace): an argument namespace.
     """
-    print(f"You have chosen to compile {blue}{args.thing_name}{reset} in {blue}{args.recipe}{reset} recipe\n...")
+    print(f"You have chosen to compile {sty.green}{choice}{sty.reset}\n...")
 
 
 
@@ -171,11 +173,11 @@ def get_build_directory(args: argparse.Namespace) -> str:
     Returns:
         str: path to build directory
     """
-    if args.thing_name in profiles_names:
+    if args.profile_name in profiles_names:
         dir_path = profiles_dir_path
-    elif args.thing_name in examples_names:
+    elif args.profile_name in examples_names:
         dir_path = profiles_dir_path + examples_folder
-    build_directory = os.path.join(dir_path, args.thing_name)
+    build_directory = os.path.join(dir_path, args.profile_name)
     return build_directory
 
 
@@ -205,13 +207,13 @@ def build_message(msg: str, counter: int,time_start : datetime, time_prev: datet
         datetime: _description_
     """
     counter+=1
-    print(f"{blue}{msg}{reset} (step {counter})")
+    print(f"{sty.blue}{msg}{sty.reset} (step {counter})")
     if isTimer:
         time_now = datetime.now()
         delta_start = time_now - time_start
-        print(f"\t⏲ {"Elapsed time since beginning:":<30} {green}{round(delta_start.total_seconds(), 2)}{reset} seconds")
+        print(f"\t⏲ {"Elapsed time since beginning:":<30} {sty.green}{round(delta_start.total_seconds(), 2)}{sty.reset} seconds")
         if time_prev != None:
             delta_prev = time_now - time_prev
-            print(f"\t⏲ {"Elapsed time since prev. step:":<30} {green}{round(delta_prev.total_seconds(), 2)}{reset} seconds")
+            print(f"\t⏲ {"Elapsed time since prev. step:":<30} {sty.green}{round(delta_prev.total_seconds(), 2)}{sty.reset} seconds")
         return (time_now, counter)
     return (None, counter)

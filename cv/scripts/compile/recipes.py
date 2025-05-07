@@ -18,7 +18,7 @@ def recipe__full(args: argparse.Namespace, latex_doc_name: str):
         args (argparse.Namespace): arguments object
         latex_doc_name (str): name of main latex file to be used for compilation
     """
-    thing_name = args.thing_name
+    thing_name = args.profile_name
     verbose_bool = args.verbose
     timer_bool = args.timer
 
@@ -43,7 +43,7 @@ def recipe__biber(args: argparse.Namespace, latex_doc_name: str):
         args (argparse.Namespace): arguments object
         latex_doc_name (str): name of main latex file to be used for compilation
     """
-    thing_name = args.thing_name
+    thing_name = args.profile_name
     verbose_bool = args.verbose
     timer_bool = args.timer
 
@@ -64,7 +64,7 @@ def recipe__lualatex(args: argparse.Namespace, latex_doc_name: str):
         args (argparse.Namespace): arguments object
         latex_doc_name (str): name of main latex file to be used for compilation
     """
-    thing_name = args.thing_name
+    thing_name = args.profile_name
     verbose_bool = args.verbose
     timer_bool = args.timer
 

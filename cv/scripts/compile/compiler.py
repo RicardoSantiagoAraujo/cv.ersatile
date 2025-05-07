@@ -44,7 +44,7 @@ def perform_build_steps(args: argparse.Namespace):
                 print(f"{red}CHOSEN COMPILATION RECIPE ({args.recipe}) DOES NOT EXIST {reset}")
                 exit()
 
-        print(f"\n✅ {green}Compilation in {bold}{args.recipe}{reset}{green} recipe finished for {bold}{args.thing_name}{reset} \n")
+        print(f"\n✅ {green}Compilation in {bold}{args.recipe}{reset}{green} recipe finished for {bold}{args.profile_name}{reset} \n")
 
     except subprocess.CalledProcessError as e:
         print("Compilation log:")

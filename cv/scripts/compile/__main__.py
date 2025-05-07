@@ -25,10 +25,10 @@ def main():
     parser = argparse.ArgumentParser(description="arTeX compilation with biblatex.")
     # Add arguments
     parser.add_argument(
-        "thing_name",
+        "profile_name",
         nargs="?",
         type=str,
-        help=f"Document to compile. Available options: {profiles_list_as_string}.",
+        help=f"Profile to compile from. Available options: {profiles_list_as_string}.",
         default=None,
     )
     parser.add_argument(

@@ -76,13 +76,13 @@
       {%
       % else
       % INPUT GENERIC VERSION
-      % \textcolor{myColorDanger}{Generic input: \genericFileAddress} % Print the file address string to check
+      % \textcolor{colorDanger}{Generic input: \genericFileAddress} % Print the file address string to check
       % SHOW THIS BEFORE GENERIC INPUT
       \InputIfFileExists{\genericFileAddress}
       {% if generic file exists, run this before it
       }
       {% if it generic file does not exist, run this}
-        \textcolor{myColorDanger}{Generic input missing: \genericFileAddress} % Print the file address string to check
+        \textcolor{colorDanger}{Generic input missing: \genericFileAddress} % Print the file address string to check
       }%
       }%
   }
@@ -119,26 +119,26 @@
     % else
         % \hrule%
         \section{%
-            \color{myColorWarning}%
+            \color{colorWarning}%
             \centering%
             \bfseries%
             \hrule%
             Missing Section Contents for %
-            \color{myColorDanger}%
+            \color{colorDanger}%
             \currentSection %
             % \hrule% causes error
         }
         \begin{mySectionContents}
             \centering%
             %%% FILE ADDRESS
-            \color{myColorDanger}%
+            \color{colorDanger}%
             \detokenize{#1} %
             (\detokenize{\myPersonId}: \myPersonId)\\%
             %%% MESSAGE TEXT
-            \color{myColorWarning}%
+            \color{colorWarning}%
             File has not yet been created, or the path is wrong.\\%
             %%% USEFUL VARIABLES TO KNOW
-            \color{myColorSuccess}%
+            \color{colorSuccess}%
             \hrule
             Section: \currentSection\hspace{1cm} %
             Version: \myVersion\hspace{1cm} %

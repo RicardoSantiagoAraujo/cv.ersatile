@@ -1,9 +1,59 @@
-%OPTIONALLY (RE)DIFINE ANY COLORS TO OVERWRITE DEFAULTS OR ADD NEW ONES
-\definecolor{colorPrimary}{rgb}{1,0,1}
-\definecolor{colorSecondary}{rgb}{0,1,1}
-\definecolor{colorBlack}{gray}{0}
-\definecolor{colorGrayDark}{rgb}{0.1,0,1}
-\definecolor{colorGrayMed}{rgb}{0.1,0,1}
-\definecolor{colorGrayLight}{rgb}{0,0.1,1}
-\definecolor{colorBg}{rgb}{1,0.7,1}
-\definecolor{colorText}{rgb}{0.5,0,0}
+% /!\ CONTENT GENERATED WITH PYTHON SCRIPT, CHANGES MADE DIRECTLY HERE MAY BE OVERWRITTEN /!\ 
+% OPTIONALLY (RE)DIFINE ANY COLORS TO OVERWRITE DEFAULTS OR ADD NEW ONES
+
+% for compatibility between latex and scss versions:
+% OPTION 1: use {rgb}{red[0, 1], green[0, 1], blue[0, 1]}
+% OPTION 2: use hexadecimal {HTML}{FFFFFF}
+
+% % % Color palette for JohnDoe % % %
+
+
+% --- Base colors
+\definecolor{colorPrimary}{HTML}{000F00}
+\definecolor{colorSecondary}{rgb}{0,0,1}
+
+\definecolor{colorBlack}{rgb}{0,0,0}
+\definecolor{colorWhite}{rgb}{1,1,1}
+
+\definecolor{colorGrayDark}{rgb}{0.5,5,1}
+
+\definecolor{colorGrayMed}{HTML}{FFFF00}
+
+\definecolor{colorGrayLight}{HTML}{00FF00}
+
+% --- Semantic colors
+
+
+\definecolor{colorSuccess}{HTML}{00FF00}
+
+\definecolor{colorWarning}{HTML}{990000}
+
+\definecolor{colorDanger}{HTML}{FF0000}
+
+% --- Component colors
+\definecolor{colorBg}{rgb}{1,0.9,1}
+
+\definecolor{colorText}{rgb}{0,0,0}
+
+\definecolor{colorSectionTitleBg}{rgb}{1,0.25,0.25}
+
+\definecolor{colorSectionTitle}{rgb}{0.1,9,0}
+
+
+% Icons
+\definecolor{colorIcon}{rgb}{1,0.25,0.25}
+\colorlet{colorIconBg}{colorBg}
+% Tabular header color
+% Custom colors for the section table headers
+\definecolor{colorTableFill}{rgb}{1,0.25,0.25}
+
+\renewcommand{\setColorCell}{%
+    \cellcolor{colorTableFill}% BG COLOR
+}
+% Color for the border around table cells
+\definecolor{colorTableBorders}{rgb}{1,0.25,0.25}
+
+
+
+\colorlet{colorSectionBg}{colorBg}
+\colorlet{colorHeaderBg}{colorBg}

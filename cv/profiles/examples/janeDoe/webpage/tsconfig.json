@@ -1,0 +1,9 @@
+// command to compile continuously  tsc --watch
+
+{
+    "compilerOptions": {
+      "target": "ES5",
+      "module": "es6",
+      "sourceMap": true
+    }
+  }

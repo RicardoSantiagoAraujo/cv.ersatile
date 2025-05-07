@@ -1,0 +1,43 @@
+{
+    "example1": {
+        "AWARD_comment": [
+            "",
+            "ACADEMIC"
+        ],
+        "AWARD_content": [
+            "",
+            [
+                "<classes.sections.awards.AwardsSub object at 0x100a47770>",
+                "<classes.sections.awards.AwardsSub object at 0x100a477d0>"
+            ]
+        ],
+        "AWARD_groupTitle": [
+            "",
+            "Academic"
+        ],
+        "AWARD_include": [
+            "",
+            "true"
+        ]
+    },
+    "example2": {
+        "AWARD_comment": [
+            "",
+            "SPORTS"
+        ],
+        "AWARD_content": [
+            "",
+            [
+                "<classes.sections.awards.AwardsSub object at 0x100a62480>"
+            ]
+        ],
+        "AWARD_groupTitle": [
+            "",
+            "Sports"
+        ],
+        "AWARD_include": [
+            "",
+            "true"
+        ]
+    }
+}

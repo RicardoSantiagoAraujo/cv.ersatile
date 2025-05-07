@@ -9,6 +9,7 @@ generation_settings = GenerationSettings(
 
 contentDict_full_en = {
     "example": Colors(
+        # base colors
         colorPrimary=("HTML", "000FF0"),
         colorSecondary=("rgb", "0,1,1"),
         colorBlack=("rgb", "0,0,0"),
@@ -16,6 +17,11 @@ contentDict_full_en = {
         colorGrayDark=("rgb", "0.5,5,1"),
         colorGrayMed=("HTML", "FFFF00"),
         colorGrayLight=("HTML", "00FF00"),
+        # semantic colors
+        colorSuccess=("HTML", "00FF00"),
+        colorWarning=("HTML", "990000"),
+        colorDanger=("HTML", "FF0000"),
+        # component colors
         colorBg=("rgb", "1,0.9,1"),
         colorText=("rgb", "0,0,0"),
         colorSectionTitle=("rgb", "0.1,9,0"),

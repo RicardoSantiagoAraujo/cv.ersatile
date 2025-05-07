@@ -1,0 +1,32 @@
+{
+    "example": {
+        "CONST_comment": [
+            "",
+            "Fonts for johnDoe"
+        ],
+        "CONST_mainFont": [
+            "",
+            "Arial"
+        ],
+        "CONST_mainFontBackup": [
+            "",
+            "Times New Roman"
+        ],
+        "CONST_subtitleFont": [
+            "",
+            "Times New Roman"
+        ],
+        "CONST_subtitleFontBackup": [
+            "",
+            "Times New Roman"
+        ],
+        "CONST_titleFont": [
+            "",
+            "Times New Roman"
+        ],
+        "CONST_titleFontBackup": [
+            "",
+            "Times New Roman"
+        ]
+    }
+}

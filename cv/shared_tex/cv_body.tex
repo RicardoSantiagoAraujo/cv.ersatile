@@ -8,7 +8,7 @@
 \foreach \cvSection in \onlyfiles {% iterate over section items to include them one by one
     \ifthenelse{\equal{\cvSection}{}}{}% check if is not empty
     {%
-        % \textcolor{myColorSuccess}{SECTION : \cvSection}% line for debugging
+        % \textcolor{colorSuccess}{SECTION : \cvSection}% line for debugging
         \addContent{\cvSection}%
     }%
 }%

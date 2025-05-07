@@ -1,0 +1,116 @@
+{
+    "example": {
+        "CONST_birthDate": [
+            "",
+            "1995-1-1"
+        ],
+        "CONST_birthDay": [
+            "",
+            1
+        ],
+        "CONST_birthMonth": [
+            "",
+            1
+        ],
+        "CONST_birthYear": [
+            "",
+            1995
+        ],
+        "CONST_city": [
+            "",
+            "New York"
+        ],
+        "CONST_comment": [
+            "",
+            "General constants for janeDoe"
+        ],
+        "CONST_country": [
+            "",
+            "USA"
+        ],
+        "CONST_drivingLicense": [
+            "",
+            "B"
+        ],
+        "CONST_email": [
+            "",
+            "jane.doe@gmail.com"
+        ],
+        "CONST_fullname": [
+            "",
+            "Jane Doe"
+        ],
+        "CONST_gender": [
+            "",
+            ""
+        ],
+        "CONST_github": [
+            "",
+            "jane-doe"
+        ],
+        "CONST_linkedIn": [
+            "",
+            "jane-doe"
+        ],
+        "CONST_myPictureStyleExtras": [
+            "",
+            ""
+        ],
+        "CONST_name": [
+            "",
+            "Jane"
+        ],
+        "CONST_nationality": [
+            "",
+            ""
+        ],
+        "CONST_phone": [
+            "",
+            "1234567890"
+        ],
+        "CONST_picCropBottom": [
+            "",
+            "20mm"
+        ],
+        "CONST_picCropLeft": [
+            "",
+            "10mm"
+        ],
+        "CONST_picCropRight": [
+            "",
+            "10mm"
+        ],
+        "CONST_picCropTop": [
+            "",
+            "10mm"
+        ],
+        "CONST_picture": [
+            "",
+            "images/janeDoe_portrait.png"
+        ],
+        "CONST_postcode": [
+            "",
+            "000000"
+        ],
+        "CONST_signature": [
+            "",
+            "images/signatures/signature.png"
+        ],
+        "CONST_site": [
+            "",
+            "janedoe.com"
+        ],
+        "CONST_street": [
+            "",
+            "1 Wall Street"
+        ],
+        "CONST_surname": [
+            "",
+            "Doe"
+        ],
+        "CONST_title": [
+            "",
+            "MSc"
+        ]
+    }
+}

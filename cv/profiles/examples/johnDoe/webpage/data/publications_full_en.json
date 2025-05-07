@@ -2,7 +2,7 @@
     "example1": {
         "PUB_comment": [
             "",
-            "COMMENT GOES HERE"
+            "Example of publication from profile's own publication list (<profile>/assets/bibliography_files/my_publications.bib)"
         ],
         "PUB_fullText": [
             "",
@@ -28,7 +28,33 @@
     "example2": {
         "PUB_comment": [
             "",
-            "COMMENT GOES HERE"
+            "Example of publication from profile's referenced publication list (<profile>/assets/bibliography_files/bibliography.bib)"
+        ],
+        "PUB_fullText": [
+            "",
+            ""
+        ],
+        "PUB_hyperlink": [
+            "",
+            ""
+        ],
+        "PUB_include": [
+            "",
+            "true"
+        ],
+        "PUB_key": [
+            "",
+            "publicationToReference"
+        ],
+        "PUB_latexEntry": [
+            "",
+            "\\fullcite{publicationToReference}"
+        ]
+    },
+    "example3": {
+        "PUB_comment": [
+            "",
+            "Example of publication created here directly"
         ],
         "PUB_fullText": [
             "",
@@ -49,6 +75,32 @@
         "PUB_latexEntry": [
             "",
             "John Doe (Feb. 2023). The Joy of Fullstack Developing"
+        ]
+    },
+    "example4": {
+        "PUB_comment": [
+            "",
+            "Example of publication from bibliography shared between profiles (cv/assets/bibliography_files/shared_bibliography)"
+        ],
+        "PUB_fullText": [
+            "",
+            ""
+        ],
+        "PUB_hyperlink": [
+            "",
+            ""
+        ],
+        "PUB_include": [
+            "",
+            "true"
+        ],
+        "PUB_key": [
+            "",
+            "laland_how_2010"
+        ],
+        "PUB_latexEntry": [
+            "",
+            "\\fullcite{laland_how_2010}"
         ]
     }
 }

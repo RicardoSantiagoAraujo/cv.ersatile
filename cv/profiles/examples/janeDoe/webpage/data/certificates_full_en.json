@@ -1,0 +1,25 @@
+{
+    "example1": {
+        "CERT_comment": [
+            "",
+            "ENGLISH"
+        ],
+        "CERT_content": [
+            "",
+            [
+                "<scripts.classes.sections.Certificates.CertificateSub object at 0x00000227FE5553A0>",
+                "<scripts.classes.sections.Certificates.CertificateSub object at 0x00000227FE591DF0>",
+                "<scripts.classes.sections.Certificates.CertificateSub object at 0x00000227FE5A32E0>",
+                "<scripts.classes.sections.Certificates.CertificateSub object at 0x00000227FE5A34C0>"
+            ]
+        ],
+        "CERT_groupTitle": [
+            "",
+            "English"
+        ],
+        "CERT_include": [
+            "",
+            "true"
+        ]
+    }
+}

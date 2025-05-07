@@ -1,0 +1,150 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{publicationToReference}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0060148a119ee9040585f72e72a7bc1d}{%
+           family={author},
+           familyi={a\bibinitperiod},
+           prefix={article},
+           prefixi={a\bibinitperiod},
+           prefixun=0}}%
+      }
+      \list{publisher}{1}{%
+        {International Publisher}%
+      }
+      \strng{namehash}{0060148a119ee9040585f72e72a7bc1d}
+      \strng{fullhash}{0060148a119ee9040585f72e72a7bc1d}
+      \strng{bibnamehash}{0060148a119ee9040585f72e72a7bc1d}
+      \strng{authorbibnamehash}{0060148a119ee9040585f72e72a7bc1d}
+      \strng{authornamehash}{0060148a119ee9040585f72e72a7bc1d}
+      \strng{authorfullhash}{0060148a119ee9040585f72e72a7bc1d}
+      \field{sortinit}{a}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{article abstract}
+      \field{journaltitle}{International publication}
+      \field{month}{6}
+      \field{title}{Academic publication}
+      \field{volume}{1}
+      \field{year}{2020}
+      \keyw{keyword 1,keyword 2}
+    \endentry
+    \entry{mypublications:johnDoe}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=bd051a2f7a5f377e3a62581b0e0f8577}{%
+           family={Doe},
+           familyi={D\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {International Publisher}%
+      }
+      \strng{namehash}{6eb389989020e8246fee90ac93fcecbe}
+      \strng{fullhash}{6eb389989020e8246fee90ac93fcecbe}
+      \strng{bibnamehash}{6eb389989020e8246fee90ac93fcecbe}
+      \strng{authorbibnamehash}{6eb389989020e8246fee90ac93fcecbe}
+      \strng{authornamehash}{6eb389989020e8246fee90ac93fcecbe}
+      \strng{authorfullhash}{6eb389989020e8246fee90ac93fcecbe}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{article abstract}
+      \field{journaltitle}{International publication}
+      \field{month}{6}
+      \field{title}{Academic publication}
+      \field{volume}{1}
+      \field{year}{2020}
+      \keyw{keyword 1,keyword 2}
+    \endentry
+    \entry{laland_how_2010}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=1dbb2552a5305c6cbdff301c156b17ae}{%
+           family={Laland},
+           familyi={L\bibinitperiod},
+           given={Kevin\bibnamedelima N.},
+           giveni={K\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=38d29b81bcdeaaa17a8b2489380e95d0}{%
+           family={Odling-Smee},
+           familyi={O\bibinithyphendelim S\bibinitperiod},
+           given={John\bibnamedelima F.},
+           giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0d3998e9cf6eafeefafd4883792c2d27}{%
+           family={Myles},
+           familyi={M\bibinitperiod},
+           given={Sean},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b1e9ce13c589f182352419b3f05d73af}
+      \strng{fullhash}{b1e9ce13c589f182352419b3f05d73af}
+      \strng{bibnamehash}{b1e9ce13c589f182352419b3f05d73af}
+      \strng{authorbibnamehash}{b1e9ce13c589f182352419b3f05d73af}
+      \strng{authornamehash}{b1e9ce13c589f182352419b3f05d73af}
+      \strng{authorfullhash}{b1e9ce13c589f182352419b3f05d73af}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{issn}{1471-0056}
+      \field{journaltitle}{Nature Reviews Genetics}
+      \field{number}{2}
+      \field{shorttitle}{How culture shaped the human genome}
+      \field{title}{How culture shaped the human genome: bringing genetics and the human sciences together}
+      \field{urlday}{2}
+      \field{urlmonth}{1}
+      \field{urlyear}{2012}
+      \field{volume}{11}
+      \field{year}{2010}
+      \field{urldateera}{ce}
+      \field{pages}{137\bibrangedash 148}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1038/nrg2734
+      \endverb
+      \verb{file}
+      \verb Laland et al. - 2010 - How culture shaped the human genome bringing gene.pdf:C\:\\Users\\ricar\\Zotero\\storage\\6D5BVU5C\\Laland et al. - 2010 - How culture shaped the human genome bringing gene.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1038/nrg2734
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1038/nrg2734
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

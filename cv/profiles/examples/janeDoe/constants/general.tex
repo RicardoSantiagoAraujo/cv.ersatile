@@ -1,27 +1,49 @@
-\renewcommand{\myName}{Jane Doe}
-\renewcommand{\myTitle}{\myName, PhD}
+% /!\ CONTENT GENERATED WITH PYTHON SCRIPT, CHANGES MADE DIRECTLY HERE MAY BE OVERWRITTEN /!\ 
+
+% % % General constants for janeDoe % % %
+
+% Name
+\renewcommand{\myName}{Jane}
+\renewcommand{\mySurname}{Doe}
+\renewcommand{\myFullname}{Jane Doe}
+\renewcommand{\myTitle}{\myFullname\ifthenelse{\equal{MSc}{}}{}{, MSc}}
+\renewcommand{\myGender}{}
+\renewcommand{\myNationality}{}
+
+% Birthday
 \renewcommand{\birthDay}{1}
 \renewcommand{\birthMonth}{1}
-\renewcommand{\birthYear}{1992}
-\renewcommand{\myStreet}{1 Nowhere Street}
-%16 Impasse des Réfractaires Maquisards
-\renewcommand{\myCity}{Chicago}
-\renewcommand{\myCountry}{United States}
+\renewcommand{\birthYear}{1995}
+\renewcommand{\birthDate}{1995-1-1}
+
+% Address
+\renewcommand{\myStreet}{1 Wall Street}
+\renewcommand{\myCity}{New York}
+\renewcommand{\myCountry}{USA}
+\renewcommand{\myPostcode}{000000}
+
+% Contact
 \renewcommand{\myEmail}{jane.doe@gmail.com}
 \renewcommand{\myLinkedIn}{jane-doe}
 \renewcommand{\myLinkedInHyperlink}{\href{https://www.linkedin.com/in/\myLinkedIn}{\myLinkedIn}}
+\renewcommand{\myGithub}{jane-doe}
+\renewcommand{\myGithubHyperlink}{\href{https://github.com/\myGithub}{\myGithub}}
+
 \renewcommand{\myPhone}{1234567890}
 \renewcommand{\mySite}{janedoe.com}
 \renewcommand{\mySiteHyperlink}{\href{https://\mySite}{\mySite}}
+
+% Picture
 \renewcommand{\myPicture}{images/janeDoe_portrait.png}
-\renewcommand{\myPictureCropTop}{-5mm}
-\renewcommand{\myPictureCropRight}{-5mm}
-\renewcommand{\myPictureCropBottom}{0mm}
-\renewcommand{\myPictureCropLeft}{-5mm}
-\tcbset{
-    myPictureStyleExtras/.style={
-        % arc=30pt,
-        circular arc,
-        boxrule=1pt,
-        drop fuzzy shadow=black!90
-        }}
+\renewcommand{\myPictureCropTop}{10mm}
+\renewcommand{\myPictureCropRight}{10mm}
+\renewcommand{\myPictureCropBottom}{20mm}
+\renewcommand{\myPictureCropLeft}{10mm}
+\tcbset{%
+    myPictureStyleExtras/.style={%
+        %
+        }}%
+
+
+\renewcommand{\mySignature}{images/signatures/signature.png}
+\renewcommand{\myDrivingLicense}{B}

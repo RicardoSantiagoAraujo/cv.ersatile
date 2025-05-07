@@ -1,0 +1,78 @@
+{
+    "educationA": {
+        "EDU_columnsDef": [
+            "",
+            "|p{0.2cm} | X | p{2.5cm}| p{2.0cm}|"
+        ],
+        "EDU_comment": [
+            "",
+            "COMMENT GOES HERE"
+        ],
+        "EDU_content": [
+            "Content",
+            ""
+        ],
+        "EDU_endDate": [
+            "End",
+            "2016-07-01"
+        ],
+        "EDU_include": [
+            "",
+            "true"
+        ],
+        "EDU_institution": [
+            "University",
+            "University of Bristol"
+        ],
+        "EDU_level": [
+            "",
+            "Master in Computer Science"
+        ],
+        "EDU_location": [
+            "Location",
+            "Briston, UK"
+        ],
+        "EDU_startDate": [
+            "Start",
+            "2016-02-01"
+        ]
+    },
+    "educationB": {
+        "EDU_columnsDef": [
+            "",
+            "|p{0.2cm} | X | p{2.5cm}| p{2.0cm}|"
+        ],
+        "EDU_comment": [
+            "",
+            "COMMENT GOES HERE"
+        ],
+        "EDU_content": [
+            "Content",
+            "First rank honors in class."
+        ],
+        "EDU_endDate": [
+            "End",
+            "2026-07-01"
+        ],
+        "EDU_include": [
+            "",
+            "true"
+        ],
+        "EDU_institution": [
+            "University",
+            "UCL"
+        ],
+        "EDU_level": [
+            "",
+            "Bachelor in Computer Science"
+        ],
+        "EDU_location": [
+            "Location",
+            "London, UK"
+        ],
+        "EDU_startDate": [
+            "Start",
+            "2013-09-01"
+        ]
+    }
+}

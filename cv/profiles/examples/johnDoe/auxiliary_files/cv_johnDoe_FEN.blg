@@ -1,0 +1,21 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'auxiliary_files/cv_johnDoe_FEN.blg'
+[38] biber-darwin:340> INFO - === Wed May  7, 2025, 12:04:44
+[47] Biber.pm:419> INFO - Reading 'auxiliary_files/cv_johnDoe_FEN.bcf'
+[91] Biber.pm:979> INFO - Found 3 citekeys in bib section 0
+[98] Biber.pm:4419> INFO - Processing section 0
+[104] Biber.pm:4610> INFO - Looking for bibtex file './../../../assets/bibliography_files/shared_bibliography.bib' for section 0
+[205] bibtex.pm:1713> INFO - LaTeX decoding ...
+[1428] bibtex.pm:1519> INFO - Found BibTeX data source './../../../assets/bibliography_files/shared_bibliography.bib'
+[1682] Biber.pm:4610> INFO - Looking for bibtex file 'assets/bibliography_files/bibliography.bib' for section 0
+[1693] bibtex.pm:1713> INFO - LaTeX decoding ...
+[1695] bibtex.pm:1519> INFO - Found BibTeX data source 'assets/bibliography_files/bibliography.bib'
+[1706] Biber.pm:4610> INFO - Looking for bibtex file 'assets/bibliography_files/my_publications.bib' for section 0
+[1709] bibtex.pm:1713> INFO - LaTeX decoding ...
+[1718] bibtex.pm:1519> INFO - Found BibTeX data source 'assets/bibliography_files/my_publications.bib'
+[1741] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1741] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1742] Biber.pm:4239> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[1742] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[1752] bbl.pm:660> INFO - Writing 'auxiliary_files/cv_johnDoe_FEN.bbl' with encoding 'UTF-8'
+[1755] bbl.pm:763> INFO - Output to auxiliary_files/cv_johnDoe_FEN.bbl

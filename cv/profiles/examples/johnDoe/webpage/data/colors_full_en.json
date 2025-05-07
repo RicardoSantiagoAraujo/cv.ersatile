@@ -16,6 +16,14 @@
             "",
             "\\definecolor{colorBlack}{rgb}{0,0,0}"
         ],
+        "CONST_colorDanger_scss": [
+            "",
+            "#FF0000"
+        ],
+        "CONST_colorDanger_tex": [
+            "",
+            "\\definecolor{colorDanger}{HTML}{FF0000}"
+        ],
         "CONST_colorGrayDark_scss": [
             "",
             "color(srgb 0.5 5 1 )"
@@ -104,6 +112,14 @@
             "",
             "\\definecolor{colorSectionTitle}{rgb}{0.1,9,0}"
         ],
+        "CONST_colorSuccess_scss": [
+            "",
+            "#00FF00"
+        ],
+        "CONST_colorSuccess_tex": [
+            "",
+            "\\definecolor{colorSuccess}{HTML}{00FF00}"
+        ],
         "CONST_colorTableBorders_scss": [
             "",
             "color(srgb 1 0.5 0.25 )"
@@ -127,6 +143,14 @@
         "CONST_colorText_tex": [
             "",
             "\\definecolor{colorText}{rgb}{0,0,0}"
+        ],
+        "CONST_colorWarning_scss": [
+            "",
+            "#990000"
+        ],
+        "CONST_colorWarning_tex": [
+            "",
+            "\\definecolor{colorWarning}{HTML}{990000}"
         ],
         "CONST_colorWhite_scss": [
             "",

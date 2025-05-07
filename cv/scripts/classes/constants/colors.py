@@ -12,6 +12,10 @@ class Colors:
         colorGrayDark: tuple[str, int],
         colorGrayMed: tuple[str, int],
         colorGrayLight: tuple[str, str],
+        #### ======== Semantic colors
+        colorSuccess: tuple[str, str],
+        colorWarning: tuple[str, str],
+        colorDanger: tuple[str, str],
         #### ======== Component colors
         colorBg: tuple[str, str],
         colorText: tuple[str, str],
@@ -65,7 +69,7 @@ class Colors:
             return "INVALID COLOR KEY"
 
         # Loop through local variables to generate new variables
-        for key, value in locals().items(): 
+        for key, value in locals().items():
             if key != "self" and key not in [
                 "colorForTEX",
                 "colorForSCSS",

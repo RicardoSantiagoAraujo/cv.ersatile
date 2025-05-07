@@ -7,11 +7,11 @@
         "PROG_contents": [
             "",
             [
-                "<scripts.classes.sections.Programming.ProgrammingSub object at 0x000001FD0BFE53A0>",
-                "<scripts.classes.sections.Programming.ProgrammingSub object at 0x000001FD0C021E20>",
-                "<scripts.classes.sections.Programming.ProgrammingSub object at 0x000001FD0C021D90>",
-                "<scripts.classes.sections.Programming.ProgrammingSub object at 0x000001FD0C021EE0>",
-                "<scripts.classes.sections.Programming.ProgrammingSub object at 0x000001FD0C035340>"
+                "<scripts.classes.sections.Programming.ProgrammingSub object at 0x104fa37a0>",
+                "<scripts.classes.sections.Programming.ProgrammingSub object at 0x104fe37a0>",
+                "<scripts.classes.sections.Programming.ProgrammingSub object at 0x104fe37d0>",
+                "<scripts.classes.sections.Programming.ProgrammingSub object at 0x104fe3830>",
+                "<scripts.classes.sections.Programming.ProgrammingSub object at 0x104fe3bf0>"
             ]
         ],
         "PROG_groupName": [
@@ -35,9 +35,9 @@
         "PROG_contents": [
             "",
             [
-                "<scripts.classes.sections.Programming.ProgrammingSub object at 0x000001FD0C035520>",
-                "<scripts.classes.sections.Programming.ProgrammingSub object at 0x000001FD0C035550>",
-                "<scripts.classes.sections.Programming.ProgrammingSub object at 0x000001FD0C035580>"
+                "<scripts.classes.sections.Programming.ProgrammingSub object at 0x104fe3d10>",
+                "<scripts.classes.sections.Programming.ProgrammingSub object at 0x104fe3d40>",
+                "<scripts.classes.sections.Programming.ProgrammingSub object at 0x104fe3d70>"
             ]
         ],
         "PROG_groupName": [
@@ -61,7 +61,7 @@
         "PROG_contents": [
             "",
             [
-                "<scripts.classes.sections.Programming.ProgrammingSub object at 0x000001FD0C035610>"
+                "<scripts.classes.sections.Programming.ProgrammingSub object at 0x104fe3dd0>"
             ]
         ],
         "PROG_groupName": [
@@ -85,7 +85,7 @@
         "PROG_contents": [
             "",
             [
-                "<scripts.classes.sections.Programming.ProgrammingSub object at 0x000001FD0C0356A0>"
+                "<scripts.classes.sections.Programming.ProgrammingSub object at 0x104fe3e30>"
             ]
         ],
         "PROG_groupName": [

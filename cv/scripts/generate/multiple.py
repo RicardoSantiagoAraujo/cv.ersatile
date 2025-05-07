@@ -110,7 +110,7 @@ def main() -> int | None:
                         loop_counter += 1
                         error_counter += result.returncode
                         current_command = " ".join(result.args)
-                        print(f"COMMAND: {sty.bright_blue}{current_command}{reset}") 
+                        print(f"COMMAND: {sty.bright_blue}{current_command}{sty.reset}")
                         if result.returncode == 1:
                             failed_commands.append(current_command)
                             print(f"{sty.bright_red}{sty.bold}❌ ERROR ❌{sty.reset}")

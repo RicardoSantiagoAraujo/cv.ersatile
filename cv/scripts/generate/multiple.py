@@ -88,13 +88,14 @@ def main() -> int | None:
             for version in versions:
                 for language in languages:
                     for output_type in output_types:
-                        print( "python -m",
+                        print( "python[3] -m",
                                 script,
                                 profile,
                                 element,
                                 version,
                                 language,
                                 output_type,)
+                        # might need to change to "python3" to work
                         result = subprocess.run(
                             [
                                 "python",
@@ -112,7 +113,7 @@ def main() -> int | None:
                         error_counter += wasError
                         current_command = " ".join(result.args)
                         print(f"COMMAND: {sty.bright_blue}{current_command}{sty.reset}")
-                        if result.returncode == 1:
+                        if result.returncode == 1 or wasError == 1:
                             failed_commands.append(current_command)
                             print(f"{sty.bright_red}{sty.bold}❌ ERROR ❌{sty.reset}")
                         print("------------------------------------------------")

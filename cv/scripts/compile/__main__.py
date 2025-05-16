@@ -4,7 +4,7 @@
 import argparse
 import scripts.utils.prompts as prompts
 from scripts.enums.Recipe import Recipe
-from scripts.utils.style_console_text import blue,green, reset
+import scripts.utils.style_console_text as sty
 
 from .functions import (
     all_cv_documents,
@@ -28,14 +28,14 @@ def main() -> None:
         "cv_document",
         nargs="?",
         type=str,
-        help=f"CV document to be compiled. Available options: {', '.join([f'{blue}{doc}{reset}' for doc in all_cv_documents])}",
+        help=f"CV document to be compiled. Available options: {', '.join([f'{sty.blue}{doc}{sty.reset}' for doc in all_cv_documents])}",
         default=None,
     )
     parser.add_argument(
         "recipe",
         nargs="?",
         type=str,
-        help=f"Compilation recipe. Available options: {', '.join([f'{blue}{e.value}{reset}' for e in Recipe])}.",
+        help=f"Compilation recipe. Available options: {', '.join([f'{sty.blue}{e.value}{sty.reset}' for e in Recipe])}.",
         default=Recipe.full.value,
     )
     parser.add_argument(
@@ -54,7 +54,7 @@ def main() -> None:
 
     if args.watch:
         # Continuous atch for changes:
-        print(f"\n👀👀👀 {green}Watching for changes...{reset}\n")
+        print(f"\n👀👀👀 {sty.green}Watching for changes...{sty.reset}\n")
         watcher(function_to_trigger=perform_build_steps,
                 function_arguments=args,
                 path_to_watch=get_build_directory(args),

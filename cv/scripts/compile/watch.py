@@ -5,7 +5,7 @@ import os
 import threading
 import time
 from pathlib import Path
-from scripts.utils.style_console_text import red, green, blue, reset
+import scripts.utils.style_console_text as sty
 import argparse
 from typing import Callable
 
@@ -24,13 +24,13 @@ class MyHandler(FileSystemEventHandler):
         self.lock = threading.Lock()  # 🛡 Lock to prevent re-entry
 
     def on_modified(self, event):
-        self.on_generic( event, f"{blue}Modified{reset}")
+        self.on_generic( event, f"{sty.blue}Modified{sty.reset}")
 
     def on_created(self, event):
-        self.on_generic(event, f"{green}Created{reset}")
+        self.on_generic(event, f"{sty.green}Created{sty.reset}")
 
     def on_deleted(self, event):
-        self.on_generic(event,f"{red}Deleted{reset}")
+        self.on_generic(event,f"{sty.red}Deleted{sty.reset}")
 
 
     def on_generic(self, event, task:str) -> None:

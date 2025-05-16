@@ -182,7 +182,7 @@ def list_existing_profiles(
         if len(names) == 0:
             print(f"{sty.yellow}No items available.{sty.reset}")
         for i, name in enumerate(names, 1):
-            print(f"{i + cnt_start} - {name}")
+            print(f"{i + cnt_start} - {sty.cyan}{name}{sty.reset}")
         print("")
     return names
 
@@ -208,7 +208,7 @@ def list_existing_versions(
         if len(names) == 0:
             print(f"{sty.yellow}No items available.{sty.reset}")
         for i, name in enumerate(names, 1):
-            print(f"{i + cnt_start} - {name}")
+            print(f"{i + cnt_start} - {sty.cyan}{name}{sty.reset}")
         print("")
     return names
 

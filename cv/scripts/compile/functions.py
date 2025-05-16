@@ -2,6 +2,7 @@
 import os
 import argparse
 from datetime import datetime
+from typing import Optional
 from scripts.utils.helpers import list_existing_profiles, list_existing_versions
 import scripts.utils.style_console_text as sty
 import enum
@@ -222,7 +223,7 @@ def create_build_directories() -> None:
         os.makedirs(build_folder__aux_files)
 
 
-def build_message(msg: str, counter: int,time_start : datetime, time_prev: datetime | None = None, isTimer: bool = True) -> datetime:
+def build_message(msg: str, counter: int,time_start : datetime, time_prev : Optional[datetime] = None, isTimer: bool = True) -> datetime:
     """Print message reporting the compilation progress.
 
     Args:
@@ -240,9 +241,9 @@ def build_message(msg: str, counter: int,time_start : datetime, time_prev: datet
     if isTimer:
         time_now = datetime.now()
         delta_start = time_now - time_start
-        print(f"\t⏲ {"Elapsed time since beginning:":<30} {sty.green}{round(delta_start.total_seconds(), 2)}{sty.reset} seconds")
+        print(f"\t⏲ {'Elapsed time since beginning:':<30} {sty.green}{round(delta_start.total_seconds(), 2)}{sty.reset} seconds")
         if time_prev != None:
             delta_prev = time_now - time_prev
-            print(f"\t⏲ {"Elapsed time since prev. step:":<30} {sty.green}{round(delta_prev.total_seconds(), 2)}{sty.reset} seconds")
+            print(f"\t⏲ {'Elapsed time since prev. step:':<30} {sty.green}{round(delta_prev.total_seconds(), 2)}{sty.reset} seconds")
         return (time_now, counter)
     return (None, counter)

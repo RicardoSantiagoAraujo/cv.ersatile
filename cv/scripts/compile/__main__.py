@@ -22,20 +22,20 @@ def main() -> None:
     prompts.first_prompt("Script for pdf compilation from existing document"
     )
     # Create command line argument parser
-    parser = argparse.ArgumentParser(description="arTeX compilation with biblatex.")
+    parser = argparse.ArgumentParser(description="cv.ersatile compilation with latex recipes.")
     # Add arguments
     parser.add_argument(
         "cv_document",
         nargs="?",
         type=str,
-        help=f"CV document to be compiled. Available options: {", ".join([f"{blue}{doc}{reset}" for doc in all_cv_documents])}",
+        help=f"CV document to be compiled. Available options: {', '.join([f'{blue}{doc}{reset}' for doc in all_cv_documents])}",
         default=None,
     )
     parser.add_argument(
         "recipe",
         nargs="?",
         type=str,
-        help=f"Compilation recipe. Available options: {", ".join([f"{blue}{e.value}{reset}" for e in Recipe])}.",
+        help=f"Compilation recipe. Available options: {', '.join([f'{blue}{e.value}{reset}' for e in Recipe])}.",
         default=Recipe.full.value,
     )
     parser.add_argument(

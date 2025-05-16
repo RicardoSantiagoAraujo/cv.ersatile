@@ -1,0 +1,12 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'auxiliary_files\cv_janeDoe_FEN.blg'
+[95] biber-MSWIN64:340> INFO - === 
+[147] Biber.pm:419> INFO - Reading 'auxiliary_files\cv_janeDoe_FEN.bcf'
+[237] Biber.pm:979> INFO - Found 1 citekeys in bib section 0
+[248] Biber.pm:4419> INFO - Processing section 0
+[258] Biber.pm:4610> INFO - Looking for bibtex file './../../../assets/bibliography_files/shared_bibliography.bib' for section 0
+[395] bibtex.pm:1713> INFO - LaTeX decoding ...
+[2062] bibtex.pm:1519> INFO - Found BibTeX data source './../../../assets/bibliography_files/shared_bibliography.bib'
+[2162] Biber.pm:4610> INFO - Looking for bibtex file 'assets/bibliography_files/bibliography.bib' for section 0
+[2426] Utils.pm:410> ERROR - Cannot find 'assets/bibliography_files/bibliography.bib'!
+[2426] Biber.pm:136> INFO - ERRORS: 1

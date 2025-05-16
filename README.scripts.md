@@ -4,6 +4,18 @@ This projects includes a bunch of functionalities incapsulated in the scripts mo
 The scripts module is divided into submodules, which you can run from the project root directory. Documentation for the scripts module is found inside the scripts/documentation directory.
 
 
+## COMPILE
+
+Compilation of a CV version using a chosen recipe.
+
+
+### Usage:
+```
+python -m scripts.compile [-h] [-v] [-t] [-w] [cv_document] [recipe]
+```
+
+
+
 ## GENERATE
 
 Generate a file from a python object (individual/multiple CV section(s) or set(s) of constants)

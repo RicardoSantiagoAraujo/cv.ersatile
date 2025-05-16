@@ -1,12 +1,12 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'auxiliary_files\cv_janeDoe_FEN.tex.blg'
-[110] biber-MSWIN64:340> INFO - === 
-[157] Biber.pm:419> INFO - Reading 'auxiliary_files\cv_janeDoe_FEN.tex.bcf'
-[300] Biber.pm:979> INFO - Found 1 citekeys in bib section 0
-[321] Biber.pm:4419> INFO - Processing section 0
-[341] Biber.pm:4610> INFO - Looking for bibtex file './../../../assets/bibliography_files/shared_bibliography.bib' for section 0
-[503] bibtex.pm:1713> INFO - LaTeX decoding ...
-[2200] bibtex.pm:1519> INFO - Found BibTeX data source './../../../assets/bibliography_files/shared_bibliography.bib'
-[2285] Biber.pm:4610> INFO - Looking for bibtex file 'assets/bibliography_files/bibliography.bib' for section 0
-[2538] Utils.pm:410> ERROR - Cannot find 'assets/bibliography_files/bibliography.bib'!
-[2538] Biber.pm:136> INFO - ERRORS: 1
+[101] biber-MSWIN64:340> INFO - === 
+[147] Biber.pm:419> INFO - Reading 'auxiliary_files\cv_janeDoe_FEN.tex.bcf'
+[237] Biber.pm:979> INFO - Found 1 citekeys in bib section 0
+[248] Biber.pm:4419> INFO - Processing section 0
+[259] Biber.pm:4610> INFO - Looking for bibtex file './../../../assets/bibliography_files/shared_bibliography.bib' for section 0
+[391] bibtex.pm:1713> INFO - LaTeX decoding ...
+[1900] bibtex.pm:1519> INFO - Found BibTeX data source './../../../assets/bibliography_files/shared_bibliography.bib'
+[1994] Biber.pm:4610> INFO - Looking for bibtex file 'assets/bibliography_files/bibliography.bib' for section 0
+[2233] Utils.pm:410> ERROR - Cannot find 'assets/bibliography_files/bibliography.bib'!
+[2233] Biber.pm:136> INFO - ERRORS: 1

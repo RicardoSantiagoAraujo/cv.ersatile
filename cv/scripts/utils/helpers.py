@@ -130,14 +130,14 @@ def replace_string_in_tex_file(
     global replace_str_cnt
     # Open the .tex file and read the contents
     try:
-        with open(os.path.join(new_folder, file_name), "r", encoding="utf-8") as file:
+        with open(os.path.join(new_folder, file_name), "r", encoding="utf-8", encoding="utf-8") as file:
             file_content = file.read()
 
         # Replace the specific word with the new word
         modified_content = file_content.replace(old_word, new_word)
 
         # Open the file again in write mode and save the modified content
-        with open(os.path.join(new_folder, file_name), "w", encoding="utf-8") as file:
+        with open(os.path.join(new_folder, file_name), "w", encoding="utf-8", encoding="utf-8") as file:
             file.write(modified_content)
     except:
         exit_code = 1

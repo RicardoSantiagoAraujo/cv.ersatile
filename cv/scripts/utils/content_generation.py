@@ -79,7 +79,7 @@ def generate_contents(
         # Get list of non-special attributes of entry class
         entry_obj_attributes = get_obj_attributes(entry_obj)
         # Read contents of template file:
-        with open(template_path, "r") as template_file:
+        with open(template_path, "r", encoding="utf-8") as template_file:
             template_content = template_file.read()
             # Replace placeholder strings in template to generate an entry
             new_content = replace_placeholders_in_template(
@@ -169,7 +169,7 @@ def generate_output_file(output_content: str, output_file_path: str) -> None:
         # Create a new directory because it does not exist
         os.makedirs(output_file_dir)
         print("The new directory is created!")
-    with open(output_file_path, "w") as output_file:
+    with open(output_file_path, "w", encoding="utf-8") as output_file:
         output_file.write(output_content)
     print("\n")
     print("+++++++++++++++++++++++++++++++++++++++++")
@@ -243,7 +243,7 @@ def formatSubObjects(list_subobjs:list[object], output_type: OutputType, subtemp
             # get attributes of sub-objects
             entry_obj_attributes = get_obj_attributes(subobj)
             # read subtemplate
-            with open(subtemplate_path, "r") as template_file:
+            with open(subtemplate_path, "r", encoding="utf-8") as template_file:
                 templateItem_content = template_file.read()
                 # replace placeholders in subtemplate (this should make the function recursive!)
                 new_subcontent = replace_placeholders_in_template(
@@ -303,7 +303,7 @@ def generate_json(inputDict: dict, profile: str, name: str, version: str, lang: 
         merged_data[label] = obj.__dict__
 
     # save dictionary as json
-    with open(f"../../profiles/{profile}/webpage/data/{name}_{version}_{lang}.json", "w") as outfile:
+    with open(f"../../profiles/{profile}/webpage/data/{name}_{version}_{lang}.json", "w", encoding="utf-8") as outfile:
         json.dump(merged_data, outfile, indent=4, sort_keys=True, default=str)
 
 

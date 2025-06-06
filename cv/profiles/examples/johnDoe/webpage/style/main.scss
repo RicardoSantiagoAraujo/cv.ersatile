@@ -1,18 +1,13 @@
 @use 'constants/colors' as color;
 @use 'constants/fonts' as font;
 
-@use 'sections/header';
-@use 'sections/common';
+@use '../../../../../shared_web/style/main_shared';
 
-html{
+html {
     background-color: color.$colorBlack;
 }
 
-body{
-    width: 60%;
-    padding: 0cm;
-    margin: auto;
-    margin-top: 2vh;
+body {
     background-color: color.$colorBg;
     font-family: font.$myMainFont;
 }

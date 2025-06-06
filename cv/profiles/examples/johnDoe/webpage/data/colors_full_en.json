@@ -2,11 +2,11 @@
     "example": {
         "CONST_colorBg_scss": [
             "",
-            "color(srgb 1 0.9 1 )"
+            "color(srgb 1 0.99 1 )"
         ],
         "CONST_colorBg_tex": [
             "",
-            "\\definecolor{colorBg}{rgb}{1,0.9,1}"
+            "\\definecolor{colorBg}{rgb}{1,0.99,1}"
         ],
         "CONST_colorBlack_scss": [
             "",
@@ -26,27 +26,27 @@
         ],
         "CONST_colorGrayDark_scss": [
             "",
-            "color(srgb 0.5 5 1 )"
+            "color(srgb 0.1 0.1 0.1 )"
         ],
         "CONST_colorGrayDark_tex": [
             "",
-            "\\definecolor{colorGrayDark}{rgb}{0.5,5,1}"
+            "\\definecolor{colorGrayDark}{rgb}{0.1,0.1,0.1}"
         ],
         "CONST_colorGrayLight_scss": [
             "",
-            "#00FF00"
+            "color(srgb 0.8 0.8 0.8 )"
         ],
         "CONST_colorGrayLight_tex": [
             "",
-            "\\definecolor{colorGrayLight}{HTML}{00FF00}"
+            "\\definecolor{colorGrayLight}{rgb}{0.8,0.8,0.8}"
         ],
         "CONST_colorGrayMed_scss": [
             "",
-            "#FFFF00"
+            "color(srgb 0.5 0.5 0.5 )"
         ],
         "CONST_colorGrayMed_tex": [
             "",
-            "\\definecolor{colorGrayMed}{HTML}{FFFF00}"
+            "\\definecolor{colorGrayMed}{rgb}{0.5,0.5,0.5}"
         ],
         "CONST_colorHeaderBg_scss": [
             "",
@@ -66,27 +66,27 @@
         ],
         "CONST_colorIcon_scss": [
             "",
-            "color(srgb 1 0.5 0.25 )"
+            "color(srgb 0.3 0.2 0.2 )"
         ],
         "CONST_colorIcon_tex": [
             "",
-            "\\definecolor{colorIcon}{rgb}{1,0.5,0.25}"
+            "\\definecolor{colorIcon}{rgb}{0.3,0.2,0.2}"
         ],
         "CONST_colorPrimary_scss": [
             "",
-            "#000FF0"
+            "#000000"
         ],
         "CONST_colorPrimary_tex": [
             "",
-            "\\definecolor{colorPrimary}{HTML}{000FF0}"
+            "\\definecolor{colorPrimary}{HTML}{000000}"
         ],
         "CONST_colorSecondary_scss": [
             "",
-            "color(srgb 0 1 1 )"
+            "color(srgb 0 0 0 )"
         ],
         "CONST_colorSecondary_tex": [
             "",
-            "\\definecolor{colorSecondary}{rgb}{0,1,1}"
+            "\\definecolor{colorSecondary}{rgb}{0,0,0}"
         ],
         "CONST_colorSectionBg_scss": [
             "",
@@ -98,19 +98,19 @@
         ],
         "CONST_colorSectionTitleBg_scss": [
             "",
-            "color(srgb 1 0.5 0.25 )"
+            "color(srgb 0.85  0.95  0.95 )"
         ],
         "CONST_colorSectionTitleBg_tex": [
             "",
-            "\\definecolor{colorSectionTitleBg}{rgb}{1,0.5,0.25}"
+            "\\definecolor{colorSectionTitleBg}{rgb}{0.85, 0.95, 0.95}"
         ],
         "CONST_colorSectionTitle_scss": [
             "",
-            "color(srgb 0.1 9 0 )"
+            "color(srgb 0 0 0 )"
         ],
         "CONST_colorSectionTitle_tex": [
             "",
-            "\\definecolor{colorSectionTitle}{rgb}{0.1,9,0}"
+            "\\definecolor{colorSectionTitle}{rgb}{0,0,0}"
         ],
         "CONST_colorSuccess_scss": [
             "",
@@ -122,19 +122,19 @@
         ],
         "CONST_colorTableBorders_scss": [
             "",
-            "color(srgb 1 0.5 0.25 )"
+            "$colorTableFill"
         ],
         "CONST_colorTableBorders_tex": [
             "",
-            "\\definecolor{colorTableBorders}{rgb}{1,0.5,0.25}"
+            "\\colorlet{colorTableBorders}{colorTableFill}"
         ],
         "CONST_colorTableFill_scss": [
             "",
-            "color(srgb 1 0.5 0.25 )"
+            "color(srgb 0.8  0.9  0.9 )"
         ],
         "CONST_colorTableFill_tex": [
             "",
-            "\\definecolor{colorTableFill}{rgb}{1,0.5,0.25}"
+            "\\definecolor{colorTableFill}{rgb}{0.8, 0.9, 0.9}"
         ],
         "CONST_colorText_scss": [
             "",

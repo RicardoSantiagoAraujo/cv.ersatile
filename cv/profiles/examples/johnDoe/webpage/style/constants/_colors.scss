@@ -4,20 +4,20 @@
 // // //  Color palette for JohnDoe // // //
 
 ////// SEMANTIC COLORS
-$colorPrimary: #000FF0; //
-$colorSecondary: color(srgb 0 1 1 ); //
+$colorPrimary: #000000; //
+$colorSecondary: color(srgb 0 0 0 ); //
 $colorBlack: color(srgb 0 0 0 ); //
-$colorGrayDark: color(srgb 0.5 5 1 ); //
-$colorGrayMed: #FFFF00; //
-$colorGrayLight: #00FF00; //
+$colorGrayDark: color(srgb 0.1 0.1 0.1 ); //
+$colorGrayMed: color(srgb 0.5 0.5 0.5 ); //
+$colorGrayLight: color(srgb 0.8 0.8 0.8 ); //
 
 ////// COMPONENT COLORS
-$colorBg: color(srgb 1 0.9 1 ); //
+$colorBg: color(srgb 1 0.99 1 ); //
 $colorText: color(srgb 0 0 0 ); //
-$colorSectionTitle : color(srgb 0.1 9 0 );
-$colorSectionTitleBg: color(srgb 1 0.5 0.25 );
+$colorSectionTitle : color(srgb 0 0 0 );
+$colorSectionTitleBg: color(srgb 0.85  0.95  0.95 );
 $colorSectionBg: $colorBg;
 $colorHeaderBg: $colorBg;
-$colorIcon: color(srgb 1 0.5 0.25 );
-$colorTableBorders: color(srgb 1 0.5 0.25 );
-$colorTableFill: color(srgb 1 0.5 0.25 );
+$colorIcon: color(srgb 0.3 0.2 0.2 );
+$colorTableFill: color(srgb 0.8  0.9  0.9 );
+$colorTableBorders: $colorTableFill;

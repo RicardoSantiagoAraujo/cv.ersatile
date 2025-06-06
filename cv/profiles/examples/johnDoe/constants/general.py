@@ -33,7 +33,7 @@ contentDict_full_en = {
         picCropLeft=("", "10mm"),
         myPictureStyleExtras=("", ""),
         drivingLicense=("", "B"),
-        signature=("", "images/signatures/signature.png"),
+        signature=("", "images/signatures/johnDoe.png"),
         comment=("", "General constants for johnDoe"),
     )
 }

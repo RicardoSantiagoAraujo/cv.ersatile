@@ -1,12 +1,11 @@
-import { const_general } from "../constants/general.js";
-import { version, lang } from "../main.js";
-
+import { WebsiteConfig } from "../classes/WebsiteConfig";
 
 /**
  * Function to add a section to the html document.
  * @param section_name Name of the section to be added
+ * @param config Website configuration object
  */
-export function addSection(section_name: string){
+export function addSection(section_name: string, config: WebsiteConfig){
     var sec_el: HTMLElement = document.createElement('section');
     let sec_class: string = "section-" + section_name;
     sec_el.classList.add(sec_class);
@@ -16,7 +15,7 @@ export function addSection(section_name: string){
     `;
     document.body!.appendChild(sec_el);
 
-    fetch(`./sections/${section_name}/${section_name}_contents_${version}_${lang}.html`)
+    fetch(`./sections/${section_name}/${section_name}_contents_${config.version}_${config.lang}.html`)
     .then((response) => {
         if (!response.ok) {
           throw new Error('Failed to fetch HTML file');
@@ -39,7 +38,7 @@ export function addSection(section_name: string){
 /**
  * Function to add a header to the html document.
  */
-export function addHeader(){
+export function addHeader(const_general){
   var sec_el: HTMLElement = document.createElement('header');
   let header_class: string = "header";
   sec_el.classList.add(header_class);
@@ -84,6 +83,19 @@ export function updateMeta(name: string, content: string): void {
   }
   meta.content = content;
 }
+
+
+/**
+ *  Function change title of the document in the title tag.
+ * @param config Website configuration object
+ */
+export function updateTitle(config: WebsiteConfig): void {
+  console.log("Updating title to: ", config.title);
+  let titleTag = document.querySelector("title") as HTMLTitleElement;
+  console.log(titleTag)
+  titleTag.textContent = config.title;
+}
+
 
 
 /**

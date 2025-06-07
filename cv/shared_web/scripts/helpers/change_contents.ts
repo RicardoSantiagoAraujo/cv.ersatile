@@ -37,8 +37,10 @@ export function addSection(section_name: string, config: WebsiteConfig){
 
 /**
  * Function to add a header to the html document.
+ * @param const_general user general data object
+ * @param config Website configuration object
  */
-export function addHeader(const_general){
+export function addHeader(const_general, config: WebsiteConfig): void {
   var sec_el: HTMLElement = document.createElement('header');
   let header_class: string = "header";
   sec_el.classList.add(header_class);
@@ -54,18 +56,39 @@ export function addHeader(const_general){
     .then((htmlContent) => {
       // Do something with the HTML content
       document.querySelector("header."+header_class)!.innerHTML += htmlContent; // Insert HTML into a DOM element
-      for (let key in const_general) {
-        let value = const_general[key];
-        let el = document.querySelector(`header.${header_class} [data-general=${key}]`);
-        if (el){
-          el.innerHTML = value;
+      var subjectName = document.querySelector("header .subject-name")
+      var subjectTitle = document.querySelector("header .subject-title")
+      var headerList = document.querySelector("header .header__list")
+      var headerPicture = document.querySelector("header .header__right img")
+      subjectName!.textContent = `${const_general.name} ${const_general.surname}`;
+      if (const_general.title){subjectTitle!.textContent = `, ${const_general.title}`};
+      if (const_general.picture){
+        headerPicture!.setAttribute("src", "../assets/" + const_general.picture);
+      }
+      for (let key of config.InfoInInHeader) {
+        if (!const_general[key]){
+          continue; // Skip keys not chosen to be included in the header
         }
+        // Create a new element (e.g., a div or span)
+        let el = document.createElement('ki');
+        // Set the data-general attribute
+        el.setAttribute('data-general', key);
+        // Optionally, add a class or other attributes
+        el.classList.add('header__list__item');
+        // Set the inner HTML
+        el.innerHTML = const_general[key];
+        // Append the new element to the header
+        headerList.appendChild(el);
       }
     })
     .catch((error) => {
       console.error("Error:", error);
     });
 }
+
+
+
+
 
 /**
  *  Function to update or add a meta tag to the document head.

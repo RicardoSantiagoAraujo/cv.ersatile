@@ -18,6 +18,7 @@ header {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-evenly;
+            gap: 0.1rem; 
 
             li {
                 list-style-type: none;

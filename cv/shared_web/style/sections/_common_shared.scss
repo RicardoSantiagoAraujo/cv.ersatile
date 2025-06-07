@@ -7,10 +7,11 @@ section {
 
 
 
-section {
+header, section {
     h1 {
         text-transform: capitalize;
-        margin-left: 1rem;
+        margin-left: 0rem;
+        padding-left: 1rem;
     }
 }
 

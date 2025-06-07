@@ -10,6 +10,7 @@ const websiteConfig: WebsiteConfig = new WebsiteConfig({
   lang: "en",
   version: "full",
   title: "John Doe's CV",
+  InfoInInHeader: ["email", "phone", "street", "city","country", "site"],
 });
 
 ///////////////////////////////////////////////////////////////////////
@@ -17,7 +18,7 @@ const websiteConfig: WebsiteConfig = new WebsiteConfig({
 contents.updateMeta("author", `${const_general.name} ${const_general.surname}`);
 contents.setDocumentLanguage("en");
 contents.updateTitle(websiteConfig);
-contents.addHeader(const_general);
+contents.addHeader(const_general, websiteConfig);
 contents.addSection("description", websiteConfig);
 contents.addSection("experience", websiteConfig);
 contents.addSection("education", websiteConfig);

@@ -2,7 +2,11 @@
 
 header,
 section {
-    padding: 0.5cm 1cm;
+    padding: 0cm 1cm 0.5cm;
+    transition: 0.1s ease-in-out;
+    &:last-child {
+        padding-bottom: 1cm;
+    }
 }
 
 
@@ -10,11 +14,31 @@ section {
 header, section {
     h1 {
         text-transform: capitalize;
-        margin-left: 0rem;
+        margin: 1rem 0px;
         padding-left: 1rem;
     }
 }
 
+h1.section__title {
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+}
+
+.section--hidden{
+    padding: 0cm 1cm 0cm;
+    .section__title {
+        margin: 0.1rem 0px;
+        position: relative;
+        &:after{
+            content: '+';
+            position: absolute;
+            right: 6px;
+        }
+    }
+    .section__content{
+        display: none;
+    }
+}
 
 .table-entry {
 

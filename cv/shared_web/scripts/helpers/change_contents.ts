@@ -6,14 +6,18 @@ import { WebsiteConfig } from "../classes/WebsiteConfig";
  * @param config Website configuration object
  */
 export function addSection(section_name: string, config: WebsiteConfig){
-    var sec_el: HTMLElement = document.createElement('section');
-    let sec_class: string = "section-" + section_name;
-    sec_el.classList.add(sec_class);
-    sec_el.innerHTML=
-    `
-    <h1>${section_name}</h1>
-    `;
-    document.body!.appendChild(sec_el);
+    var secEl: HTMLElement = document.createElement('section');
+    let secClass: string = "section-" + section_name;
+    secEl.classList.add(secClass);
+    // Create a new element (e.g., a div or span)
+    let secTitle = document.createElement('h1');
+    // Optionally, add a class or other attributes
+    secTitle.classList.add('section__title');
+    // Set the inner HTML
+    secTitle.innerHTML = `${section_name}`;
+    // Append the new element to the header
+    secEl.appendChild(secTitle);
+    document.body!.appendChild(secEl);
 
     fetch(`./sections/${section_name}/${section_name}_contents_${config.version}_${config.lang}.html`)
     .then((response) => {
@@ -27,7 +31,13 @@ export function addSection(section_name: string, config: WebsiteConfig){
         // Wrap it into a div element
         let content_container = document.createElement('div');
         content_container.innerHTML = htmlContent;
-        document.querySelector("section."+sec_class)!.append(content_container); // Insert HTML into a DOM element
+        content_container.classList.add('section__content');
+        document.querySelector("section."+secClass)!.append(content_container); // Insert HTML into a DOM element
+
+        secTitle.addEventListener('click', function() {
+          console.log(`Section ${section_name} clicked!`);
+          secEl.classList.toggle('section--hidden'); // Toggle visibility of the section contents
+        });
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -41,11 +51,11 @@ export function addSection(section_name: string, config: WebsiteConfig){
  * @param config Website configuration object
  */
 export function addHeader(const_general, config: WebsiteConfig): void {
-  var sec_el: HTMLElement = document.createElement('header');
+  var secEl: HTMLElement = document.createElement('header');
   let header_class: string = "header";
-  sec_el.classList.add(header_class);
-  sec_el.innerHTML=``;
-  document.body!.appendChild(sec_el);
+  secEl.classList.add(header_class);
+  secEl.innerHTML=``;
+  document.body!.appendChild(secEl);
   fetch(`./sections/header/header.html`)
   .then((response) => {
       if (!response.ok) {

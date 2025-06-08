@@ -19,6 +19,47 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{shared_bibitem_2000}{article}{}
+      \name{author}{2}{}{%
+        {{un=1,uniquepart=given,hash=1318a946c3fffa54cec1130748f21c17}{%
+           family={Author},
+           familyi={A\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=1}}%
+        {{un=1,uniquepart=given,hash=bfd608ec341f02d80ef61a344bb781ac}{%
+           family={Author},
+           familyi={A\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod},
+           givenun=1}}%
+      }
+      \strng{namehash}{a376abc21ef134623537071e88ee9d8a}
+      \strng{fullhash}{a376abc21ef134623537071e88ee9d8a}
+      \strng{bibnamehash}{a376abc21ef134623537071e88ee9d8a}
+      \strng{authorbibnamehash}{a376abc21ef134623537071e88ee9d8a}
+      \strng{authornamehash}{a376abc21ef134623537071e88ee9d8a}
+      \strng{authorfullhash}{a376abc21ef134623537071e88ee9d8a}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{issn}{1000-2000}
+      \field{journaltitle}{Made up Journal}
+      \field{number}{1}
+      \field{shorttitle}{shared}
+      \field{title}{Example of a shared bibliography item}
+      \field{urlday}{1}
+      \field{urlmonth}{1}
+      \field{urlyear}{2000}
+      \field{volume}{1}
+      \field{year}{2000}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 100}
+      \range{pages}{100}
+    \endentry
     \entry{publicationToReference}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=0060148a119ee9040585f72e72a7bc1d}{%
@@ -84,65 +125,6 @@
       \field{volume}{1}
       \field{year}{2020}
       \keyw{keyword 1,keyword 2}
-    \endentry
-    \entry{laland_how_2010}{article}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=1dbb2552a5305c6cbdff301c156b17ae}{%
-           family={Laland},
-           familyi={L\bibinitperiod},
-           given={Kevin\bibnamedelima N.},
-           giveni={K\bibinitperiod\bibinitdelim N\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=38d29b81bcdeaaa17a8b2489380e95d0}{%
-           family={Odling-Smee},
-           familyi={O\bibinithyphendelim S\bibinitperiod},
-           given={John\bibnamedelima F.},
-           giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=0d3998e9cf6eafeefafd4883792c2d27}{%
-           family={Myles},
-           familyi={M\bibinitperiod},
-           given={Sean},
-           giveni={S\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{b1e9ce13c589f182352419b3f05d73af}
-      \strng{fullhash}{b1e9ce13c589f182352419b3f05d73af}
-      \strng{bibnamehash}{b1e9ce13c589f182352419b3f05d73af}
-      \strng{authorbibnamehash}{b1e9ce13c589f182352419b3f05d73af}
-      \strng{authornamehash}{b1e9ce13c589f182352419b3f05d73af}
-      \strng{authorfullhash}{b1e9ce13c589f182352419b3f05d73af}
-      \field{sortinit}{L}
-      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{issn}{1471-0056}
-      \field{journaltitle}{Nature Reviews Genetics}
-      \field{number}{2}
-      \field{shorttitle}{How culture shaped the human genome}
-      \field{title}{How culture shaped the human genome: bringing genetics and the human sciences together}
-      \field{urlday}{2}
-      \field{urlmonth}{1}
-      \field{urlyear}{2012}
-      \field{volume}{11}
-      \field{year}{2010}
-      \field{urldateera}{ce}
-      \field{pages}{137\bibrangedash 148}
-      \range{pages}{12}
-      \verb{doi}
-      \verb 10.1038/nrg2734
-      \endverb
-      \verb{file}
-      \verb Laland et al. - 2010 - How culture shaped the human genome bringing gene.pdf:C\:\\Users\\ricar\\Zotero\\storage\\6D5BVU5C\\Laland et al. - 2010 - How culture shaped the human genome bringing gene.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb http://dx.doi.org/10.1038/nrg2734
-      \endverb
-      \verb{url}
-      \verb http://dx.doi.org/10.1038/nrg2734
-      \endverb
     \endentry
   \enddatalist
 \endrefsection

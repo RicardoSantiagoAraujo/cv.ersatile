@@ -5,45 +5,46 @@ import { WebsiteConfig } from "../classes/WebsiteConfig";
  * @param section_name Name of the section to be added
  * @param config Website configuration object
  */
-export function addSection(section_name: string, config: WebsiteConfig){
-    var secEl: HTMLElement = document.createElement('section');
-    let secClass: string = "section-" + section_name;
-    secEl.classList.add(secClass);
-    // Create a new element (e.g., a div or span)
-    let secTitle = document.createElement('h1');
-    // Optionally, add a class or other attributes
-    secTitle.classList.add('section__title');
-    // Set the inner HTML
-    secTitle.innerHTML = `${section_name}`;
-    // Append the new element to the header
-    secEl.appendChild(secTitle);
-    document.body!.appendChild(secEl);
+export function addSection(section_name: string, config: WebsiteConfig) {
+  var secEl: HTMLElement = document.createElement("section");
+  let secClass: string = "section-" + section_name;
+  secEl.classList.add(secClass);
+  // Create a new element (e.g., a div or span)
+  let secTitle = document.createElement("h1");
+  // Optionally, add a class or other attributes
+  secTitle.classList.add("section__title");
+  // Set the inner HTML
+  secTitle.innerHTML = `${section_name}`;
+  // Append the new element to the header
+  secEl.appendChild(secTitle);
+  document.body!.appendChild(secEl);
 
-    fetch(`./sections/${section_name}/${section_name}_contents_${config.version}_${config.lang}.html`)
+  fetch(
+    `./sections/${section_name}/${section_name}_contents_${config.version}_${config.lang}.html`
+  )
     .then((response) => {
-        if (!response.ok) {
-          throw new Error('Failed to fetch HTML file');
-        }
-        return response.text(); // Get the HTML as text
-      })
-      .then((htmlContent) => {
-        // Do something with the HTML content
-        // Wrap it into a div element
-        let content_container = document.createElement('div');
-        content_container.innerHTML = htmlContent;
-        content_container.classList.add('section__content');
-        document.querySelector("section."+secClass)!.append(content_container); // Insert HTML into a DOM element
+      if (!response.ok) {
+        throw new Error("Failed to fetch HTML file");
+      }
+      return response.text(); // Get the HTML as text
+    })
+    .then((htmlContent) => {
+      // Do something with the HTML content
+      // Wrap it into a div element
+      let content_container = document.createElement("div");
+      content_container.innerHTML = htmlContent;
+      content_container.classList.add("section__content");
+      document.querySelector("section." + secClass)!.append(content_container); // Insert HTML into a DOM element
 
-        secTitle.addEventListener('click', function() {
-          console.log(`Section ${section_name} clicked!`);
-          secEl.classList.toggle('section--hidden'); // Toggle visibility of the section contents
-        });
-      })
-      .catch((error) => {
-        console.error("Error:", error);
+      secTitle.addEventListener("click", function () {
+        console.log(`Section ${section_name} clicked!`);
+        secEl.classList.toggle("section--hidden"); // Toggle visibility of the section contents
       });
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
 }
-
 
 /**
  * Function to add a header to the html document.
@@ -51,54 +52,56 @@ export function addSection(section_name: string, config: WebsiteConfig){
  * @param config Website configuration object
  */
 export function addHeader(const_general, config: WebsiteConfig): void {
-  var secEl: HTMLElement = document.createElement('header');
+  var secEl: HTMLElement = document.createElement("header");
   let header_class: string = "header";
   secEl.classList.add(header_class);
-  secEl.innerHTML=``;
+  secEl.innerHTML = ``;
   document.body!.appendChild(secEl);
   fetch(`./sections/header/header.html`)
-  .then((response) => {
+    .then((response) => {
       if (!response.ok) {
-        throw new Error('Failed to fetch HTML file');
+        throw new Error("Failed to fetch HTML file");
       }
       return response.text(); // Get the HTML as text
     })
     .then((htmlContent) => {
       // Do something with the HTML content
-      document.querySelector("header."+header_class)!.innerHTML += htmlContent; // Insert HTML into a DOM element
-      var subjectName = document.querySelector("header .subject-name")
-      var subjectTitle = document.querySelector("header .subject-title")
-      var headerList = document.querySelector("header .header__list")
-      var headerPicture = document.querySelector("header .header__right img")
+      document.querySelector("header." + header_class)!.innerHTML +=
+        htmlContent; // Insert HTML into a DOM element
+      var subjectName = document.querySelector("header .subject-name");
+      var subjectTitle = document.querySelector("header .subject-title");
+      var headerList = document.querySelector("header .header__list");
+      var headerPicture = document.querySelector("header .header__right img");
       subjectName!.textContent = `${const_general.name} ${const_general.surname}`;
-      if (const_general.title){subjectTitle!.textContent = `, ${const_general.title}`};
-      if (const_general.picture){
-        headerPicture!.setAttribute("src", "../assets/" + const_general.picture);
+      if (const_general.title) {
+        subjectTitle!.textContent = `, ${const_general.title}`;
+      }
+      if (const_general.picture) {
+        headerPicture!.setAttribute(
+          "src",
+          "../assets/" + const_general.picture
+        );
       }
       for (let key of config.InfoInInHeader) {
-        if (!const_general[key]){
+        if (!const_general[key]) {
           continue; // Skip keys not chosen to be included in the header
         }
         // Create a new element (e.g., a div or span)
-        let el = document.createElement('ki');
+        let el = document.createElement("ki");
         // Set the data-general attribute
-        el.setAttribute('data-general', key);
+        el.setAttribute("data-general", key);
         // Optionally, add a class or other attributes
-        el.classList.add('header__list__item');
+        el.classList.add("header__list__item");
         // Set the inner HTML
         el.innerHTML = const_general[key];
         // Append the new element to the header
-        headerList.appendChild(el);
+        headerList?.appendChild(el);
       }
     })
     .catch((error) => {
       console.error("Error:", error);
     });
 }
-
-
-
-
 
 /**
  *  Function to update or add a meta tag to the document head.
@@ -110,13 +113,12 @@ export function updateMeta(name: string, content: string): void {
 
   if (!meta) {
     // Create the meta tag if it doesn't exist
-    meta = document.createElement('meta');
+    meta = document.createElement("meta");
     meta.name = name;
     document.head.appendChild(meta);
   }
   meta.content = content;
 }
-
 
 /**
  *  Function change title of the document in the title tag.
@@ -125,11 +127,9 @@ export function updateMeta(name: string, content: string): void {
 export function updateTitle(config: WebsiteConfig): void {
   console.log("Updating title to: ", config.title);
   let titleTag = document.querySelector("title") as HTMLTitleElement;
-  console.log(titleTag)
+  console.log(titleTag);
   titleTag.textContent = config.title;
 }
-
-
 
 /**
  * Function to set the document language.

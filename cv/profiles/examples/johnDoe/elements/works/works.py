@@ -17,7 +17,7 @@ contentDict_full_en = {
             [
                 WorkSub(
                     year=("", ""),
-                    title=("", "Weather app:"),
+                    title=("", "Weather app"),
                     details=("", "\\href{https://weather.com}{weather.com}"),
                     comment=("", "COMMENT"),
                     include=("", "true"),

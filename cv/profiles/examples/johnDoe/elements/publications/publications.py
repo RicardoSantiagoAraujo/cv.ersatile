@@ -17,7 +17,7 @@ contentDict_full_en = {
     ),
     "example2": Publication(
         key=("", "publicationToReference"),
-        fullText=("", ""),
+        fullText=("", "personal publication"),
         include=("", "true"),
         comment=("", "Example of publication from profile's referenced publication list (<profile>/assets/bibliography_files/bibliography.bib)"),
         hyperlink=("", ""),
@@ -30,8 +30,8 @@ contentDict_full_en = {
         hyperlink=("", ""),
     ),
     "example4": Publication(
-        key=("", "laland_how_2010"),
-        fullText=("", ""),
+        key=("", "shared_bibitem_2000"),
+        fullText=("", "shared bibliography item"),
         include=("", "true"),
         comment=("", "Example of publication from bibliography shared between profiles (cv/assets/bibliography_files/shared_bibliography)"),
         hyperlink=("", ""),

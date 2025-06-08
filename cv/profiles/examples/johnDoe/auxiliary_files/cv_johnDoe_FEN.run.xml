@@ -81,6 +81,7 @@
     </requires>
     <requires type="editable">
       <file>./../../../assets/bibliography_files/shared_bibliography.bib</file>
+      <file>./../../../assets/bibliography_files/shared_bibliography_examples.bib</file>
       <file>assets/bibliography_files/bibliography.bib</file>
       <file>assets/bibliography_files/my_publications.bib</file>
     </requires>

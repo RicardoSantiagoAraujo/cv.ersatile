@@ -2,21 +2,25 @@
 
 This feature is a webversion of the CV generated from the python scripts, and is an additional feature of the cv.ersatile, which is otherwise built around the tex output.
 
-### Set-up
-To use itm you will need to first install:
 
-To run the website, go to the website root directory and then:
-1. npm
-2. typescript
-3. scss
+### Use
+First, ensure you are at the profiles/{profile_name}/webpage/ directory.
 
-### Utilisation
 1. start by ensuring all npm packages are properly installed:
 ```
 npm install
 ```
 
-2. then, run the typescript transpiler:
+2. Run the typescript transpiler:
 ```
 tsc --watch
 ```
+
+2. Run a SCSS transpiler:
+```
+sass --watch styles/main.scss:styles/main.css
+```
+
+3. Configure webpage in scripts/main.ts
+
+There are default styles being imported from a shared folder, but feel free to overwrite them in your styles/folder.

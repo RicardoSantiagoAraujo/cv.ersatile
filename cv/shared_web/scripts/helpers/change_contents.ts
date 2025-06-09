@@ -47,6 +47,17 @@ export function addSection(section_name: string, config: WebsiteConfig) {
 }
 
 /**
+ * Function to loop through desired sections and add them to the html document. 
+ * @param config Website configuration object
+ */
+export function addMultipleSections(config: WebsiteConfig)
+  {
+    for (let section_name of config.sectionsToInclude) {
+      addSection(section_name, config);
+    }
+}
+
+/**
  * Function to add a header to the html document.
  * @param const_general user general data object
  * @param config Website configuration object
@@ -82,7 +93,7 @@ export function addHeader(const_general, config: WebsiteConfig): void {
           "../assets/" + const_general.picture
         );
       }
-      for (let key of config.InfoInInHeader) {
+      for (let key of config.infoInInHeader) {
         if (!const_general[key]) {
           continue; // Skip keys not chosen to be included in the header
         }

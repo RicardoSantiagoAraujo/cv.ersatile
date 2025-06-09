@@ -21,6 +21,6 @@ tsc --watch
 sass --watch styles/main.scss:styles/main.css
 ```
 
-3. Configure webpage in scripts/main.ts
+3. Configure webpage in websiteConfig.json
 
 There are default styles being imported from a shared folder, but feel free to overwrite them in your styles/folder.

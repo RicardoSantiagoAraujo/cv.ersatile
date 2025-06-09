@@ -3,13 +3,16 @@ export class WebsiteConfig {
     lang: string;
     version: string;
     title: string;
-    InfoInInHeader: string[];
+    infoInInHeader: string[];
+    sectionsToInclude: string[];
 
     constructor(
-      { lang, version, title, InfoInInHeader }: { lang: string; version: string, title: string, InfoInInHeader: string[] }) {
+      { lang, version, title, infoInInHeader, sectionsToInclude }: 
+      { lang: string; version: string, title: string, infoInInHeader: string[], sectionsToInclude: string[] }) {
       this.lang = lang;
       this.version = version;
       this.title = title;
-      this.InfoInInHeader = InfoInInHeader;
+      this.infoInInHeader = infoInInHeader;
+      this.sectionsToInclude = sectionsToInclude;
     }
   }

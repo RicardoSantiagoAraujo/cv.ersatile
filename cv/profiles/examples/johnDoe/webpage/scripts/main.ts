@@ -1,5 +1,7 @@
 import { const_general } from "./constants/general.js";
 
+const link = document.createElement('link');
+link.rel = 'stylesheet';
 let contents: any;
 let WebsiteConfig: any;
 
@@ -9,7 +11,7 @@ try {
   contents = await import("../../../../shared_web/scripts/helpers/change_contents.js");
   // @ts-ignore
   WebsiteConfig = (await import("../../../../shared_web/scripts/classes/WebsiteConfig.js")).WebsiteConfig;
-
+  link.href = '../../../../shared_web/style/main_shared'; 
 } catch (e1) {
   try {
     // ====== IMPORTS WHEN PROFILES IN A SUBFOLDER LIKE "EXAMPLES" ======
@@ -17,13 +19,17 @@ try {
     contents = await import("../../../../../shared_web/scripts/helpers/change_contents.js");
     // @ts-ignore
     WebsiteConfig = (await import("../../../../../shared_web/scripts/classes/WebsiteConfig.js")).WebsiteConfig;
+    link.href = '../../../../../shared_web/style/main_shared';
   } catch (e2) {
     console.error("Failed to load files from both paths");
     throw e2; // or handle error gracefully
   }
 }
+document.head.appendChild(link);
 import configData from './../websiteConfig.json';
 const websiteConfig = new WebsiteConfig(configData);
+
+
 
 ///////////////////////////////////////////////////////////////////////
 contents.updateMeta("author", `${const_general.name} ${const_general.surname}`);

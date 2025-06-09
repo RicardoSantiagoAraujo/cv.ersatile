@@ -1,5 +1,5 @@
 // ============ Default values shared between all profiles
-@use '../../../../../shared_web/style/main_shared'; // adjust the path as necessary (usually, you need to go down one less level compared to the examples)
+// @use '../../../../../shared_web/style/main_shared'; // added via typescript. If you must do it here, adjust the path as necessary (usually, you need to go down one less level compared to the examples)
 
 // ============ Profile specific values
 @use 'constants/colors' as color;

@@ -1,6 +1,7 @@
 import subprocess
 import os
 import sys
+from typing import Optional
 from scripts.utils.content_generation import *
 import scripts.utils.style_console_text as sty
 
@@ -42,7 +43,7 @@ script_directory = os.path.dirname(os.path.realpath(__file__))
 # os.chdir(script_directory)
 
 
-def main() -> int | None:
+def main() -> Optional[int]:
     """ Python script to generate multiple files for sections or constants.
     This script generates files for sections or constants based on the provided profile, section type, version, language, and file type.
     It loops through all combinations of profiles, sections/constants, versions, languages, and output types.
@@ -98,7 +99,7 @@ def main() -> int | None:
                         # might need to change to "python3" to work
                         result = subprocess.run(
                             [
-                                "python",
+                                "python3",
                                 "-m",
                                 script,
                                 profile,
@@ -130,4 +131,4 @@ def main() -> int | None:
 
 
 if __name__ == "__main__":
-    main()
+    main() 

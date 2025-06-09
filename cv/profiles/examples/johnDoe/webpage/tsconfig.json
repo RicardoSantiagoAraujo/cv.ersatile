@@ -9,5 +9,8 @@
         "dom",
         "es2016"
       ],
+      "allowSyntheticDefaultImports": true,
+      "moduleResolution": "node",
+      "resolveJsonModule": true
     }
   }

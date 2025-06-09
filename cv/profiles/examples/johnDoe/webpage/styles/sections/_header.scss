@@ -1,22 +1,23 @@
-@use '../constants/colors' as color;
-@use '../constants/fonts' as font;
+@use '../constants/colors' as mycolor;
+@use '../constants/fonts' as myfont;
+@use 'sass:color';
 
 header {
-    background-color: color.$colorHeaderBg;
+    background-color: mycolor.$colorHeaderBg;
 
     .header__left {
-        background-color: color.$colorHeaderBg;
+        background-color: mycolor.$colorHeaderBg;
 
         h1 {
-            font-family: font.$myTitleFont;
+            font-family: myfont.$myTitleFont;
         }
 
         ul {
-            background-color: color.$colorHeaderBg;
+            background-color: mycolor.$colorHeaderBg;
         }
     }
 
     .header__right {
-        background-color: color.$colorHeaderBg;
+        background-color: mycolor.$colorHeaderBg;
     }
 }

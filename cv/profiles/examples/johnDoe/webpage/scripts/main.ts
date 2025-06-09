@@ -2,7 +2,6 @@
 import { const_general } from "./constants/general.js";
 import configData from "../websiteConfig.js";
 
-
 // *********** SHARED IMPORTS ***********
 let importManager: any;
 try {
@@ -36,4 +35,5 @@ functions.updateMeta(
 functions.setDocumentLanguage(websiteConfig.lang);
 functions.updateTitle(websiteConfig);
 functions.addHeader(const_general, websiteConfig);
+functions.setTextures(websiteConfig.backgroundTexture, websiteConfig.pageTexture);
 functions.addMultipleSections(websiteConfig);

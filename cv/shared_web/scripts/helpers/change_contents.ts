@@ -149,5 +149,20 @@ export function setDocumentLanguage(lang: string): void {
   document.documentElement.lang = lang;
 }
 
-// Usage
-setDocumentLanguage("fr"); // Changes to French
+
+
+/**
+ * Function to set the document language.
+ * @param lang Language code to be set (e.g., "en", "fr", "de")
+ */
+export function setTextures(bg_texture: string, page_texture): void {
+  if (bg_texture != "" && bg_texture) {
+    document.documentElement.style.background = `${bg_texture}`;
+  }
+  if (page_texture != "" && page_texture) {
+    document.body.style.background = `${page_texture}`;
+    document.body.style.boxShadow = "0 1px 3px rgba(0, 0, 0, 0.12)," +
+    "0 4px 6px rgba(0, 0, 0, 0.16)," +
+    "0 10px 20px rgba(0, 0, 0, 0.19)";
+  }
+}

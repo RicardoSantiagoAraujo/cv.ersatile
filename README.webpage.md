@@ -6,12 +6,8 @@ This feature is a web version of the CV generated from the python scripts, and i
 ### Use
 First, ensure you are at the **profiles/{profile_name}/webpage/** directory.
 
-1. start by ensuring all npm packages are properly installed:
-```
-npm install
-```
 
-2. Run the typescript transpiler:
+1. Run the typescript transpiler:
 ```
 tsc --watch
 ```

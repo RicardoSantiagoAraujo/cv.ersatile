@@ -47,7 +47,7 @@ export function addSection(section_name: string, config: WebsiteConfig) {
 }
 
 /**
- * Function to loop through desired sections and add them to the html document. 
+ * Function to loop through desired sections and add them to the html document.
  * @param config Website configuration object
  */
 export function addMultipleSections(config: WebsiteConfig)
@@ -136,9 +136,8 @@ export function updateMeta(name: string, content: string): void {
  * @param config Website configuration object
  */
 export function updateTitle(config: WebsiteConfig): void {
-  console.log("Updating title to: ", config.title);
+  // console.log("Updating title to: ", config.title);
   let titleTag = document.querySelector("title") as HTMLTitleElement;
-  console.log(titleTag);
   titleTag.textContent = config.title;
 }
 

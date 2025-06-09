@@ -1,39 +1,39 @@
+// *********** PROFILE SPECIFIC IMPORTS ***********
 import { const_general } from "./constants/general.js";
+import configData from "../websiteConfig.js";
 
-const link = document.createElement('link');
-link.rel = 'stylesheet';
-let contents: any;
-let WebsiteConfig: any;
 
+// *********** SHARED IMPORTS ***********
+let importManager: any;
 try {
-  // ====== IMPORTS WHEN PROFILES ARE AT THE PROFILES ROOTFOLDER ======
-  // @ts-ignore
-  contents = await import("../../../../shared_web/scripts/helpers/change_contents.js");
-  // @ts-ignore
-  WebsiteConfig = (await import("../../../../shared_web/scripts/classes/WebsiteConfig.js")).WebsiteConfig;
-  link.href = '../../../../shared_web/style/main_shared'; 
+  // IMPORTS WHEN PROFILES ARE AT THE PROFILES ROOTFOLDER
+  importManager = await import(
+    // @ts-ignore
+    "../../../../shared_web/scripts/helpers/manage_imports.js"
+  );
 } catch (e1) {
   try {
-    // ====== IMPORTS WHEN PROFILES IN A SUBFOLDER LIKE "EXAMPLES" ======
-    // @ts-ignore
-    contents = await import("../../../../../shared_web/scripts/helpers/change_contents.js");
-    // @ts-ignore
-    WebsiteConfig = (await import("../../../../../shared_web/scripts/classes/WebsiteConfig.js")).WebsiteConfig;
-    link.href = '../../../../../shared_web/style/main_shared';
+    // IMPORTS WHEN PROFILES IN A SUBFOLDER LIKE "EXAMPLES"
+    importManager = await import(
+      // @ts-ignore
+      "../../../../../shared_web/scripts/helpers/manage_imports.js"
+    );
   } catch (e2) {
-    console.error("Failed to load files from both paths");
+    console.error("Failed to load files from both paths !");
     throw e2; // or handle error gracefully
   }
 }
-document.head.appendChild(link);
-import configData from './../websiteConfig.json';
-const websiteConfig = new WebsiteConfig(configData);
-
-
 
 ///////////////////////////////////////////////////////////////////////
-contents.updateMeta("author", `${const_general.name} ${const_general.surname}`);
-contents.setDocumentLanguage(websiteConfig.lang);
-contents.updateTitle(websiteConfig);
-contents.addHeader(const_general, websiteConfig);
-contents.addMultipleSections(websiteConfig); 
+const { functions, websiteConfig } = await importManager.import_shared_files(
+  configData
+);
+
+functions.updateMeta(
+  "author",
+  `${const_general.name} ${const_general.surname}`
+);
+functions.setDocumentLanguage(websiteConfig.lang);
+functions.updateTitle(websiteConfig);
+functions.addHeader(const_general, websiteConfig);
+functions.addMultipleSections(websiteConfig);

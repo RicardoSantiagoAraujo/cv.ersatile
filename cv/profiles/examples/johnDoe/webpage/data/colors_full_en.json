@@ -2,7 +2,7 @@
     "example": {
         "CONST_colorBg_scss": [
             "",
-            "color(srgb 1 0.99 1 )"
+            "rgb( 100.0%, 99.0%, 100.0% )"
         ],
         "CONST_colorBg_tex": [
             "",
@@ -10,7 +10,7 @@
         ],
         "CONST_colorBlack_scss": [
             "",
-            "color(srgb 0 0 0 )"
+            "rgb( 0.0%, 0.0%, 0.0% )"
         ],
         "CONST_colorBlack_tex": [
             "",
@@ -26,7 +26,7 @@
         ],
         "CONST_colorGrayDark_scss": [
             "",
-            "color(srgb 0.1 0.1 0.1 )"
+            "rgb( 10.0%, 10.0%, 10.0% )"
         ],
         "CONST_colorGrayDark_tex": [
             "",
@@ -34,7 +34,7 @@
         ],
         "CONST_colorGrayLight_scss": [
             "",
-            "color(srgb 0.8 0.8 0.8 )"
+            "rgb( 80.0%, 80.0%, 80.0% )"
         ],
         "CONST_colorGrayLight_tex": [
             "",
@@ -42,7 +42,7 @@
         ],
         "CONST_colorGrayMed_scss": [
             "",
-            "color(srgb 0.5 0.5 0.5 )"
+            "rgb( 50.0%, 50.0%, 50.0% )"
         ],
         "CONST_colorGrayMed_tex": [
             "",
@@ -66,7 +66,7 @@
         ],
         "CONST_colorIcon_scss": [
             "",
-            "color(srgb 0.3 0.2 0.2 )"
+            "rgb( 30.0%, 20.0%, 20.0% )"
         ],
         "CONST_colorIcon_tex": [
             "",
@@ -82,7 +82,7 @@
         ],
         "CONST_colorSecondary_scss": [
             "",
-            "color(srgb 0 0 0 )"
+            "rgb( 0.0%, 0.0%, 0.0% )"
         ],
         "CONST_colorSecondary_tex": [
             "",
@@ -98,7 +98,7 @@
         ],
         "CONST_colorSectionTitleBg_scss": [
             "",
-            "color(srgb 0.85  0.95  0.95 )"
+            "rgb( 85.0%, 95.0%, 95.0% )"
         ],
         "CONST_colorSectionTitleBg_tex": [
             "",
@@ -106,7 +106,7 @@
         ],
         "CONST_colorSectionTitle_scss": [
             "",
-            "color(srgb 0 0 0 )"
+            "rgb( 0.0%, 0.0%, 0.0% )"
         ],
         "CONST_colorSectionTitle_tex": [
             "",
@@ -130,7 +130,7 @@
         ],
         "CONST_colorTableFill_scss": [
             "",
-            "color(srgb 0.8  0.9  0.9 )"
+            "rgb( 80.0%, 90.0%, 90.0% )"
         ],
         "CONST_colorTableFill_tex": [
             "",
@@ -138,7 +138,7 @@
         ],
         "CONST_colorText_scss": [
             "",
-            "color(srgb 0 0 0 )"
+            "rgb( 0.0%, 0.0%, 0.0% )"
         ],
         "CONST_colorText_tex": [
             "",
@@ -154,7 +154,7 @@
         ],
         "CONST_colorWhite_scss": [
             "",
-            "color(srgb 1 1 1 )"
+            "rgb( 100.0%, 100.0%, 100.0% )"
         ],
         "CONST_colorWhite_tex": [
             "",

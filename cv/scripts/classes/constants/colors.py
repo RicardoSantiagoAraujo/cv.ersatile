@@ -1,3 +1,6 @@
+from typing import Union, List
+
+
 class Colors:
     """Class to hold colors used in the CV generation to customize the look of the CV.
     This class contains base colors (primary, secondary, etc.) and component-specific colors (background, text, etc.)
@@ -34,7 +37,7 @@ class Colors:
         comment: tuple[str, str],
     ):
         # Adjusting for TEX
-        def colorForTEX(key, colorKV: tuple) -> str | tuple[str, str]:
+        def colorForTEX(key, colorKV: tuple) -> Union[str, tuple[str, str]]:
             """ Create a LaTeX color definition for the given color.
 
             Args:
@@ -51,7 +54,7 @@ class Colors:
             return "INVALID COLOR KEY"
 
         # Adjusting for SCSS
-        def colorForSCSS(colorKV: tuple) -> str | tuple[str, str]:
+        def colorForSCSS(colorKV: tuple) ->Union[str, tuple[str, str]]:
             """Create a SCSS color definition for the given color.
 
             Args:
@@ -61,7 +64,8 @@ class Colors:
             str | tuple[str, str]: either an error warning or a tuple whose second element is the SCSS color definition
             """
             if colorKV[0] == "rgb":
-                return ("", f'color(srgb {colorKV[1].replace(","," ")} )')
+                # return ("", f'color(srgb {colorKV[1].replace(","," ")} )') # using css's 'srgb' function
+                return ("", f'rgb( {"%, ".join([str(float(val) * 100) for val in colorKV[1].split(",")]) + "%"} )') # using "rgb(r, g, b)" format, so that it can the opacity can be changed with SCSS
             if colorKV[0] == "HTML":
                 return ("", f"#{colorKV[1]}")
             if colorKV[0] == "":  # copy another color

@@ -50,7 +50,7 @@ def main() -> None:
             output_path = f"../../profiles/{profile}/webpage/scripts/constants/{constant_type}.ts"
             auto_warning = f"//{auto_warning}\n"
         elif filetype == "scss":
-            output_path = f"../../profiles/{profile}/webpage/style/constants/_{constant_type}.scss"
+            output_path = f"../../profiles/{profile}/webpage/styles/constants/_{constant_type}.scss"
             auto_warning = f"//{auto_warning}\n"
             # add "_" if template is scss
             template_path = f"./../templates/constants/{constant_type}/{template}/_template.{filetype}"

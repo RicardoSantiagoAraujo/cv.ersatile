@@ -1,23 +1,26 @@
+@use 'sass:color';
 @use '../constants/colors' as mycolor;
 @use '../constants/fonts' as myfont;
-@use 'sass:color';
 
+
+$bgOpacity: 0.0;
 header {
-    background-color: mycolor.$colorHeaderBg;
+    // background-color: mycolor.$colorHeaderBg;
+    background-color: color.change(mycolor.$colorHeaderBg, $alpha: $bgOpacity);
 
     .header__left {
-        background-color: mycolor.$colorHeaderBg;
+        // background-color: color.change(mycolor.$colorHeaderBg, $alpha: $bgOpacity);
 
         h1 {
             font-family: myfont.$myTitleFont;
         }
 
         ul {
-            background-color: mycolor.$colorHeaderBg;
+            background-color:  color.change(mycolor.$colorHeaderBg, $alpha: $bgOpacity);
         }
     }
 
     .header__right {
-        background-color: mycolor.$colorHeaderBg;
+        // background-color: color.change(mycolor.$colorHeaderBg, $alpha: $bgOpacity);
     }
 }

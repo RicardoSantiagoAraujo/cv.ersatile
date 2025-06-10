@@ -1,26 +1,28 @@
-@use '../constants/colors' as color;
-@use '../constants/fonts' as font;
+@use 'sass:color';
+@use '../constants/colors' as mycolor;
+@use '../constants/fonts' as myfont;
 
 
 
+$bgOpacity: 0.5;
 section {
     h1 {
-        font-family: font.$myTitleFont;
-        background-color: color.$colorSectionTitleBg;
-        color: color.$colorSectionTitle;
+        font-family: myfont.$myTitleFont;
+        background-color: color.change(mycolor.$colorSectionTitleBg, $alpha: $bgOpacity);
+        color: color.change(mycolor.$colorSectionTitle, $alpha: $bgOpacity);
     }
 }
 
 
 .table-entry {
-    background-color: color.$colorSectionBg;
+    background-color: color.change(mycolor.$colorSectionBg, $alpha: $bgOpacity);
 
     .table-entry__header {
-        background-color: color.$colorTableFill;
+        background-color: color.change(mycolor.$colorTableFill, $alpha: $bgOpacity);
 
     }
 
     .table-entry__contents {
-        background-color: color.$colorSectionBg;
+        background-color: color.change(mycolor.$colorSectionBg, $alpha: $bgOpacity);
     }
 }

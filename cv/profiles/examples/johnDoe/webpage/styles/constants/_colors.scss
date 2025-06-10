@@ -1,23 +1,23 @@
-// /!\ CONTENT GENERATED WITH PYTHON SCRIPT, CHANGES MADE DIRECTLY HERE MAY BE OVERWRITTEN /!\
+// /!\ CONTENT GENERATED WITH PYTHON SCRIPT, CHANGES MADE DIRECTLY HERE MAY BE OVERWRITTEN /!\ 
 // use {rgb //{red[0, 1], green[0, 1], blue[0, 1] // for compatibility between latex and scss versions
 
 // // //  Color palette for JohnDoe // // //
 
 ////// SEMANTIC COLORS
 $colorPrimary: #000000; //
-$colorSecondary: color(srgb 0 0 0 ); //
-$colorBlack: color(srgb 0 0 0 ); //
-$colorGrayDark: color(srgb 0.1 0.1 0.1 ); //
-$colorGrayMed: color(srgb 0.5 0.5 0.5 ); //
-$colorGrayLight: color(srgb 0.8 0.8 0.8 ); //
+$colorSecondary: rgb( 0.0%, 0.0%, 0.0% ); //
+$colorBlack: rgb( 0.0%, 0.0%, 0.0% ); //
+$colorGrayDark: rgb( 10.0%, 10.0%, 10.0% ); //
+$colorGrayMed: rgb( 50.0%, 50.0%, 50.0% ); //
+$colorGrayLight: rgb( 80.0%, 80.0%, 80.0% ); //
 
 ////// COMPONENT COLORS
-$colorBg: color(srgb 1 0.99 1 ); //
-$colorText: color(srgb 0 0 0 ); //
-$colorSectionTitle : color(srgb 0 0 0 );
-$colorSectionTitleBg: color(srgb 0.85  0.95  0.95 );
+$colorBg: rgb( 100.0%, 99.0%, 100.0% ); //
+$colorText: rgb( 0.0%, 0.0%, 0.0% ); //
+$colorSectionTitle : rgb( 0.0%, 0.0%, 0.0% );
+$colorSectionTitleBg: rgb( 85.0%, 95.0%, 95.0% );
 $colorSectionBg: $colorBg;
 $colorHeaderBg: $colorBg;
-$colorIcon: color(srgb 0.3 0.2 0.2 );
-$colorTableFill: color(srgb 0.8  0.9  0.9 );
+$colorIcon: rgb( 30.0%, 20.0%, 20.0% );
+$colorTableFill: rgb( 80.0%, 90.0%, 90.0% );
 $colorTableBorders: $colorTableFill;

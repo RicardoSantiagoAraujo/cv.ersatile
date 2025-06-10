@@ -25,6 +25,6 @@ export default {
       "works",
       "publications"
     ],
-    "backgroundTexture": "url(https://media.istockphoto.com/id/1368151405/photo/bamboo-wood-surface-with-texture-and-pattern-light-bamboo-background-for-decorating-furniture.jpg?s=612x612&w=0&k=20&c=kKHgmh8JInES6QlcTIGwHIyef4PSY9ZfJLC5KKUfSYA=)",
+    "backgroundTexture": "rgba(194, 136, 27, 0.35) url(./../../../../shared_web/assets/textures/wood_1.jpg)",
     "pageTexture": "url(./../../../../shared_web/assets/textures/white_paper_1.jpg)",
 }

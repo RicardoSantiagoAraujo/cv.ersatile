@@ -50,11 +50,10 @@ export function addSection(section_name: string, config: WebsiteConfig) {
  * Function to loop through desired sections and add them to the html document.
  * @param config Website configuration object
  */
-export function addMultipleSections(config: WebsiteConfig)
-  {
-    for (let section_name of config.sectionsToInclude) {
-      addSection(section_name, config);
-    }
+export function addMultipleSections(config: WebsiteConfig) {
+  for (let section_name of config.sectionsToInclude) {
+    addSection(section_name, config);
+  }
 }
 
 /**
@@ -149,8 +148,6 @@ export function setDocumentLanguage(lang: string): void {
   document.documentElement.lang = lang;
 }
 
-
-
 /**
  * Function to set the document language.
  * @param lang Language code to be set (e.g., "en", "fr", "de")
@@ -158,11 +155,18 @@ export function setDocumentLanguage(lang: string): void {
 export function setTextures(bg_texture: string, page_texture): void {
   if (bg_texture != "" && bg_texture) {
     document.documentElement.style.background = `${bg_texture}`;
+    document.documentElement.style.backgroundSize = "100vw 100vh ";
+    document.documentElement.style.backgroundRepeat = "repeat-y";
+    document.documentElement.style.backgroundBlendMode = "overlay";
   }
   if (page_texture != "" && page_texture) {
     document.body.style.background = `${page_texture}`;
-    document.body.style.boxShadow = "0 1px 3px rgba(0, 0, 0, 0.12)," +
-    "0 4px 6px rgba(0, 0, 0, 0.16)," +
-    "0 10px 20px rgba(0, 0, 0, 0.19)";
+    // document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundRepeat = "repeat-y";
+    document.body.style.backgroundBlendMode = "overlay";
+    document.body.style.boxShadow =
+      "0 1px 3px rgba(0, 0, 0, 0.12)," +
+      "0 4px 6px rgba(0, 0, 0, 0.16)," +
+      "0 10px 20px rgba(0, 0, 0, 0.19)";
   }
 }

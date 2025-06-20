@@ -2,7 +2,7 @@
     a4paper,
     oneside,
     final,
-    11pt, % font size
+    9pt, % font size
     % landscape % page orientation (seems to not work through geom package)
     ]{scrartcl} % Paper options using the scrartcl class
 %
@@ -18,7 +18,7 @@
 \setbool{isDraft}{false} % true or false
 %
 % OTHER CV SETTINGS +++++++++++++++++++++++++++++++++
-\setbool{isIncludeTOC}{true} % add table of contents
+\setbool{isIncludeTOC}{false} % add table of contents
 \setbool{isFooter}{false} % true or false. /!\ Might be invisible if not enough bottom margin
 \setbool{isIncludeInfoRibbons}{true} % true or false
 \setlength{\parindent}{0pt}% paragraph indent
@@ -41,32 +41,32 @@
 % how to use: \titlespacing*{<command>}{<left>}{<before-sep>}{<after-sep>}
 \titlespacing*{\section}
 {0pt} %left spacing
-{0.5cm} %before spacing
-{0.3cm} %after spacing
+{0.1cm} %before spacing
+{0.0cm} %after spacing
 %
 % Vertical separation between tables
 \renewcommand{\myTablesSeparator}{\vspace{-2pt}}
 %
 % PAGE DIMENSIONS +++++++++++++++++++++++++++++++++
 \newgeometry{
- left=1cm,
- right=1cm,
- top=1cm,
- bottom=1cm, % must leave enough space for footer to be visible
+ left=0.1cm,
+ right=0.1cm,
+ top=0.1cm,
+ bottom=0.1cm, % must leave enough space for footer to be visible
 }
 %  \usepackage[subtle]{savetrees} % "subtle", "moderate", "extreme" or comment out
 %
 % CV HEADER +++++++++++++++++++++++++++++++++
 \setbool{isIncludeHeaderInfos}{true} % true or false
 \setbool{isIncludeWebsite}{false} % "true" or false
-\setbool{isIncludeMovingMessage}{true} % true or false
+\setbool{isIncludeMovingMessage}{false} % true or false
 \setbool{isIncludeMyPhoto}{true} % true or false
-\setbool{isIncludeMySignature}{true} % true or false
+\setbool{isIncludeMySignature}{false} % true or false
 \renewcommand{\myJobTitle}{Science, data and software}
-\renewcommand{\myHeaderHeight}{4cm}
+\renewcommand{\myHeaderHeight}{2.5cm}
 \renewcommand{\myPictureWidth}{2cm}
-\renewcommand{\myTitleFontSize}{20}
-\renewcommand{\mySubtitleFontSize}{14}
+\renewcommand{\myTitleFontSize}{14}
+\renewcommand{\mySubtitleFontSize}{12}
 %
 %  Lists
 \setbool{isCollapseLists}{false} % true or false

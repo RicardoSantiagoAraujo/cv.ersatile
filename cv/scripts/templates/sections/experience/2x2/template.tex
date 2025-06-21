@@ -3,10 +3,10 @@
 \ifVAL_EXP_include % true/false to include/exclude
 % VAL_EXP_comment
 \begin{myTableEnv}{VAL_EXP_columnsDef}%
-    \myRow
+    \myRow%
         {KEY_EXP_postTitle}{\bfseries VAL_EXP_postTitle} % Role/Title
         {KEY_EXP_employer}{VAL_EXP_employer} % Employer/Institution
-    \myRow
+    \myRow%
         {}{\dateRange{VAL_EXP_startDate}{VAL_EXP_endDate}}% When
         {KEY_EXP_location}{VAL_EXP_location}% Where
     %%% DESCRIPTION ==================
@@ -17,5 +17,5 @@ VAL_EXP_contentPos_tex%
     }%
 \end{myTableEnv}%
 %
-\fi
+\fi%
 %

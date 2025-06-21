@@ -20,7 +20,7 @@
 % OTHER CV SETTINGS +++++++++++++++++++++++++++++++++
 \setbool{isIncludeTOC}{false} % add table of contents
 \setbool{isFooter}{false} % true or false. /!\ Might be invisible if not enough bottom margin
-\setbool{isIncludeInfoRibbons}{true} % true or false
+\setbool{isIncludeInfoRibbons}{false} % true or false
 \setlength{\parindent}{0pt}% paragraph indent
 %
 \input{\pathToRoot/shared_tex/cv_settings.tex}
@@ -41,7 +41,7 @@
 % how to use: \titlespacing*{<command>}{<left>}{<before-sep>}{<after-sep>}
 \titlespacing*{\section}
 {0pt} %left spacing
-{0.1cm} %before spacing
+{0.0cm} %before spacing
 {0.0cm} %after spacing
 %
 % Vertical separation between tables
@@ -49,10 +49,10 @@
 %
 % PAGE DIMENSIONS +++++++++++++++++++++++++++++++++
 \newgeometry{
- left=0.1cm,
- right=0.1cm,
- top=0.1cm,
- bottom=0.1cm, % must leave enough space for footer to be visible
+ left=0cm,
+ right=0cm,
+ top=0cm,
+ bottom=0cm, % must leave enough space for footer to be visible
 }
 %  \usepackage[subtle]{savetrees} % "subtle", "moderate", "extreme" or comment out
 %
@@ -83,7 +83,7 @@
 \renewcommand{\mySpacingBetweenPublications}{1.2}
 \renewcommand{\myPublicationsFontSize}{\scriptsize}
 %%% PAGINATION +++++++++++++++++++++++++++++++++
-\setbool{isIncludePagination}{true} % add page numbers
+\setbool{isIncludePagination}{false} % add page numbers
 \renewcommand{\paginationPositionXYAdj}{-0.5cm, 0.5cm}
 %
 %%% BACKGROUND +++++++++++++++++++++++++++++++++

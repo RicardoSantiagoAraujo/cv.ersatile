@@ -1,20 +1,19 @@
-
 %
 % ==============================================
 \ifVAL_TEACH_include % true/false to include/exclude
 % VAL_TEACH_comment
-\begin{myTableEnv}{VAL_TEACH_columnsDef}
-    \myRow
-        {KEY_TEACH_startDate}{\customDateFormat{VAL_TEACH_startDate}}
-        {KEY_TEACH_institute}{VAL_TEACH_institute}
-    \myRow
-        {KEY_TEACH_title}{VAL_TEACH_title}
-        {KEY_TEACH_location}{VAL_TEACH_location}
+\begin{myTableEnv}{VAL_TEACH_columnsDef}%
+    \myRow%
+        {KEY_TEACH_startDate}{\customDateFormat{VAL_TEACH_startDate}}%
+        {KEY_TEACH_institute}{VAL_TEACH_institute}%
+    \myRow%
+        {KEY_TEACH_title}{VAL_TEACH_title}%
+        {KEY_TEACH_location}{VAL_TEACH_location}%
     %%% DESCRIPTION ==================
     \myTableContents{%
     VAL_TEACH_content%
-    }
-\end{myTableEnv}
+    }%
+\end{myTableEnv}%
 %
-\fi
+\fi%
 %

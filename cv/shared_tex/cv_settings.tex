@@ -159,10 +159,14 @@
 \newlist{mylist}{enumerate}{1}
 \setlist[mylist]{
   % label=(\arabic*),
-  label=--,
+  label=·, % • · † ▸ –
   itemsep=0pt,
   parsep=0pt,
-  leftmargin=* % 0pt could take it too far left
+  topsep=0pt,
+  nosep,
+  partopsep=0pt,
+  leftmargin=*, % 0pt could take it too far left
+  after=\vspace{-\baselineskip} % remove space below table
   }
 
 % COLLAPSED LIST (INLINE ITEMS)

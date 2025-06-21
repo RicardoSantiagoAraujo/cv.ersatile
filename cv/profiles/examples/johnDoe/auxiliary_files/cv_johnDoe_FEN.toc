@@ -6,7 +6,7 @@
 \contentsline {section}{\numberline {5}Popular science}{2}{section.5}%
 \contentsline {section}{\numberline {6}Teaching Experience}{2}{section.6}%
 \contentsline {section}{\numberline {7}Programming}{2}{section.7}%
-\contentsline {section}{\numberline {8}Other skills and experience}{3}{section.8}%
+\contentsline {section}{\numberline {8}Other skills and experience}{2}{section.8}%
 \contentsline {section}{\numberline {9}Works}{3}{section.9}%
 \contentsline {section}{\numberline {10}Grant and Awards}{3}{section.10}%
 \contentsline {section}{\numberline {11}Certificates}{3}{section.11}%

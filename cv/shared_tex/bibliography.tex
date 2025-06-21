@@ -38,6 +38,7 @@
 
 \NewDocumentEnvironment{myPublicationsTable}{}
 {%
+    \vspace{-\baselineskip} % remove space below table
     \renewcommand{\arraystretch}{\mySpacingBetweenPublications}% change all spacings at once
     \setlength\tabcolsep{0pt}% change cell margin
     \noindent%
@@ -45,8 +46,9 @@
     \tabularx{\myTableWidth}{m{0cm} X}% first column controls left margin, may add content to it
     % \noalign{\global\arrayrulewidth=0.1mm} % change line width from here on
     % \arrayrulecolor{colorGrayDark} % change line color from here on
-}
+}%
 {%
     % \myhline %=========================================
     \endtabularx%
+    \vspace{-\baselineskip} % remove space below table
 }

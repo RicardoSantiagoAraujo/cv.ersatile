@@ -60,10 +60,10 @@ scripts.classes.sections.popScience module
    :show-inheritance:
    :undoc-members:
 
-scripts.classes.sections.programming module
+scripts.classes.sections.informatics module
 -------------------------------------------
 
-.. automodule:: scripts.classes.sections.programming
+.. automodule:: scripts.classes.sections.informatics
    :members:
    :show-inheritance:
    :undoc-members:

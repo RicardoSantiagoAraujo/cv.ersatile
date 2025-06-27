@@ -21,7 +21,7 @@ sections = [
     "experience",
     "other",
     "popScience",
-    "programming",
+    "informatics",
     "publications",
     "research",
     "teaching",
@@ -44,7 +44,7 @@ script_directory = os.path.dirname(os.path.realpath(__file__))
 
 
 def main() -> Optional[int]:
-    """ Python script to generate multiple files for sections or constants.
+    """Python script to generate multiple files for sections or constants.
     This script generates files for sections or constants based on the provided profile, section type, version, language, and file type.
     It loops through all combinations of profiles, sections/constants, versions, languages, and output types.
 
@@ -89,13 +89,15 @@ def main() -> Optional[int]:
             for version in versions:
                 for language in languages:
                     for output_type in output_types:
-                        print( "python[3] -m",
-                                script,
-                                profile,
-                                element,
-                                version,
-                                language,
-                                output_type,)
+                        print(
+                            "python[3] -m",
+                            script,
+                            profile,
+                            element,
+                            version,
+                            language,
+                            output_type,
+                        )
                         # might need to change to "python3" to work
                         result = subprocess.run(
                             [
@@ -119,7 +121,9 @@ def main() -> Optional[int]:
                             print(f"{sty.bright_red}{sty.bold}❌ ERROR ❌{sty.reset}")
                         print("------------------------------------------------")
                         print(f"\t✓✓ Loop {sty.cyan}{loop_counter}/{total_loops}{sty.reset} completed ✓✓")
-                        print(f"\t✓✓ {sty.green}{loop_counter - error_counter}/{total_loops}{sty.reset} were successful ✓✓")
+                        print(
+                            f"\t✓✓ {sty.green}{loop_counter - error_counter}/{total_loops}{sty.reset} were successful ✓✓"
+                        )
                         print("------------------------------------------------\n")
 
     if len(failed_commands) > 0:
@@ -131,4 +135,4 @@ def main() -> Optional[int]:
 
 
 if __name__ == "__main__":
-    main() 
+    main()

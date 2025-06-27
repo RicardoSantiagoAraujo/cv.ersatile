@@ -2,9 +2,10 @@ from datetime import date
 from typing import Union
 
 
-# Support class of individual entries in programming
-class ProgrammingSub:
-    """ Subdivide a programming group into individual entries, like Python, R, etc."""
+# Support class of individual entries in informatics
+class InformaticsSub:
+    """Subdivide a informatics group into individual entries, like Python, R, etc."""
+
     def __init__(
         self,
         name: tuple[str, str],
@@ -22,15 +23,15 @@ class ProgrammingSub:
         self.PROGENTRY_comment = comment
 
 
-# Class of programming groups holding entries
-class ProgrammingGroup:
-    """Category of programming languages, tools or skills, like data science, web development, etc.
-    """
+# Class of informatics groups holding entries
+class InformaticsGroup:
+    """Category of informatics languages, tools or skills, like data science, web development, etc."""
+
     def __init__(
         self,
         groupName: tuple[str, str],
         nrow: tuple[str, int],
-        contents: tuple[str, list[ProgrammingSub]],
+        contents: tuple[str, list[InformaticsSub]],
         include: tuple[str, bool],
         comment: tuple[str, str],
     ):

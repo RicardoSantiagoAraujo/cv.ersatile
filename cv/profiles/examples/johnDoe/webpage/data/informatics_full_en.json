@@ -7,16 +7,16 @@
         "PROG_contents": [
             "",
             [
-                "<scripts.classes.sections.Programming.ProgrammingSub object at 0x1052038f0>",
-                "<scripts.classes.sections.Programming.ProgrammingSub object at 0x105203ce0>",
-                "<scripts.classes.sections.Programming.ProgrammingSub object at 0x105203d70>",
-                "<scripts.classes.sections.Programming.ProgrammingSub object at 0x105203dd0>",
-                "<scripts.classes.sections.Programming.ProgrammingSub object at 0x105203e00>"
+                "<scripts.classes.sections.Informatics.InformaticsSub object at 0x1052038f0>",
+                "<scripts.classes.sections.Informatics.InformaticsSub object at 0x105203ce0>",
+                "<scripts.classes.sections.Informatics.InformaticsSub object at 0x105203d70>",
+                "<scripts.classes.sections.Informatics.InformaticsSub object at 0x105203dd0>",
+                "<scripts.classes.sections.Informatics.InformaticsSub object at 0x105203e00>"
             ]
         ],
         "PROG_groupName": [
             "",
-            "Programming and Scripting"
+            "Informatics and Scripting"
         ],
         "PROG_include": [
             "",
@@ -35,9 +35,9 @@
         "PROG_contents": [
             "",
             [
-                "<scripts.classes.sections.Programming.ProgrammingSub object at 0x105203e90>",
-                "<scripts.classes.sections.Programming.ProgrammingSub object at 0x105203ec0>",
-                "<scripts.classes.sections.Programming.ProgrammingSub object at 0x105203ef0>"
+                "<scripts.classes.sections.Informatics.InformaticsSub object at 0x105203e90>",
+                "<scripts.classes.sections.Informatics.InformaticsSub object at 0x105203ec0>",
+                "<scripts.classes.sections.Informatics.InformaticsSub object at 0x105203ef0>"
             ]
         ],
         "PROG_groupName": [
@@ -61,7 +61,7 @@
         "PROG_contents": [
             "",
             [
-                "<scripts.classes.sections.Programming.ProgrammingSub object at 0x105203f50>"
+                "<scripts.classes.sections.Informatics.InformaticsSub object at 0x105203f50>"
             ]
         ],
         "PROG_groupName": [
@@ -85,7 +85,7 @@
         "PROG_contents": [
             "",
             [
-                "<scripts.classes.sections.Programming.ProgrammingSub object at 0x105203fb0>"
+                "<scripts.classes.sections.Informatics.InformaticsSub object at 0x105203fb0>"
             ]
         ],
         "PROG_groupName": [

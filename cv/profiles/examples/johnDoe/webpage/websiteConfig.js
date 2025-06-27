@@ -18,7 +18,7 @@ export default {
       "popScience",
       "research",
       "teaching",
-      "programming",
+      "informatics",
       "other",
       "awards",
       "certificates",

@@ -1,5 +1,5 @@
 from scripts.classes.settings.GenerationSettings import GenerationSettings  # type: ignore
-from scripts.classes.sections.Programming import ProgrammingGroup, ProgrammingSub  # type: ignore
+from scripts.classes.sections.Informatics import InformaticsGroup, InformaticsSub  # type: ignore
 from datetime import date
 
 generation_settings = GenerationSettings(
@@ -8,15 +8,15 @@ generation_settings = GenerationSettings(
 )
 
 contentDict_full_en = {
-    "example1": ProgrammingGroup(
-        groupName=("", "Programming and Scripting"),
+    "example1": InformaticsGroup(
+        groupName=("", "Informatics and Scripting"),
         nrow=("", 5),
         include=("", "true"),
         comment=("", "COMMENT GOES HERE"),
         contents=(
             "",
             [
-                ProgrammingSub(
+                InformaticsSub(
                     name=("", "Python"),
                     iconLatex=("", "\\faPython"),
                     score=("", 5),
@@ -24,7 +24,7 @@ contentDict_full_en = {
                     include=("", "true"),
                     comment=("", "COMMENT GOES HERE"),
                 ),
-                ProgrammingSub(
+                InformaticsSub(
                     name=("", "R"),
                     iconLatex=("", "\\faRProject"),
                     score=("", 5),
@@ -32,7 +32,7 @@ contentDict_full_en = {
                     include=("", "true"),
                     comment=("", "COMMENT GOES HERE"),
                 ),
-                ProgrammingSub(
+                InformaticsSub(
                     name=("", "Type/Javascript"),
                     iconLatex=("", "\\faJs"),
                     score=("", 5),
@@ -40,7 +40,7 @@ contentDict_full_en = {
                     include=("", "true"),
                     comment=("", "COMMENT GOES HERE"),
                 ),
-                ProgrammingSub(
+                InformaticsSub(
                     name=("", "C\\#"),
                     iconLatex=("", "\\faFileCode"),
                     score=("", 4),
@@ -48,7 +48,7 @@ contentDict_full_en = {
                     include=("", "true"),
                     comment=("", "COMMENT GOES HERE"),
                 ),
-                ProgrammingSub(
+                InformaticsSub(
                     name=("", "Java"),
                     iconLatex=("", "\\faJava"),
                     score=("", 3),
@@ -59,7 +59,7 @@ contentDict_full_en = {
             ],
         ),
     ),
-    "example2": ProgrammingGroup(
+    "example2": InformaticsGroup(
         groupName=("", "Markup"),
         nrow=("", 3),
         include=("", "true"),
@@ -67,7 +67,7 @@ contentDict_full_en = {
         contents=(
             "",
             [
-                ProgrammingSub(
+                InformaticsSub(
                     name=("", "HTML/CSS"),
                     iconLatex=("", "\\faHtml5"),
                     score=("", 5),
@@ -75,7 +75,7 @@ contentDict_full_en = {
                     include=("", "true"),
                     comment=("", "COMMENT GOES HERE"),
                 ),
-                ProgrammingSub(
+                InformaticsSub(
                     name=("", "\\LaTeX"),
                     iconLatex=("", "\\faFilePdf"),
                     score=("", 5),
@@ -83,7 +83,7 @@ contentDict_full_en = {
                     include=("", "true"),
                     comment=("", "COMMENT GOES HERE"),
                 ),
-                ProgrammingSub(
+                InformaticsSub(
                     name=("", "R Markdown"),
                     iconLatex=("", "\\faFileDownload"),
                     score=("", 5),
@@ -94,7 +94,7 @@ contentDict_full_en = {
             ],
         ),
     ),
-    "example3": ProgrammingGroup(
+    "example3": InformaticsGroup(
         groupName=("", "Databases"),
         nrow=("", 1),
         include=("", "true"),
@@ -102,7 +102,7 @@ contentDict_full_en = {
         contents=(
             "",
             [
-                ProgrammingSub(
+                InformaticsSub(
                     name=("", "Relational"),
                     iconLatex=("", "\\faDatabase"),
                     score=("", 4),
@@ -113,7 +113,7 @@ contentDict_full_en = {
             ],
         ),
     ),
-    "example4": ProgrammingGroup(
+    "example4": InformaticsGroup(
         groupName=("", "Version control"),
         nrow=("", 1),
         include=("", "true"),
@@ -121,7 +121,7 @@ contentDict_full_en = {
         contents=(
             "",
             [
-                ProgrammingSub(
+                InformaticsSub(
                     name=("", "git"),
                     iconLatex=("", "\\faGit"),
                     score=("", 5),

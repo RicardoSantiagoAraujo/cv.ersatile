@@ -95,13 +95,16 @@
 % Create scores in a range
 \newcommand{\score}[1]{%
   \newcommand{\bulletGap}{\hspace{0.4em}}%
-  \foreach \i in {1, ..., 5} {%
-    \ifnum \the\numexpr \i - 1  < #1% subtract 1 to act as "<="
-        \textcolor{colorIcon}{\bullet\bulletGap}% Filled dot for score
-    \else%
-        \textcolor{colorIcon}{\circ\bulletGap}% Open dot for no score
-    \fi%
+  \ifthenelse{\boolean{isIncludeScores}}{%
+    \foreach \i in {1, ..., 5} {%
+      \ifnum \the\numexpr \i - 1  < #1% subtract 1 to act as "<="
+          \textcolor{colorIcon}{\bullet\bulletGap}% Filled dot for score
+      \else%
+          \textcolor{colorIcon}{\circ\bulletGap}% Open dot for no score
+      \fi%
+    }%
   }%
+  {}%
 }
 
 % Justification options

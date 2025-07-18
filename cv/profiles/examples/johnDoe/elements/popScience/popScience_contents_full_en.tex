@@ -1,4 +1,4 @@
-% /!\ CONTENT GENERATED WITH PYTHON SCRIPT, CHANGES MADE DIRECTLY HERE MAY BE OVERWRITTEN /!\
+% /!\ CONTENT GENERATED WITH PYTHON SCRIPT, CHANGES MADE DIRECTLY HERE MAY BE OVERWRITTEN /!\ 
 %
 % ==============================================
 \iftrue % true/false to include/exclude
@@ -7,10 +7,10 @@
     \myRow
         {}
         {\bfseries Organisation of workshop}
-        {Initiative}{PopSci Project}
+        {Initiative}{PopSci Project}%
     \myRow
-        {Start}{\customDateFormat{2022-09-15}}
-        {Location}{London, England}
+        {Start}{\customDateFormat{2022-09-15}} 
+        {\ifthenelse{\boolean{isIncludeLocations}}{Location}{}}{\ifthenelse{\boolean{isIncludeLocations}}{London, England}{}}% Where
     %%% DESCRIPTION ==================
     \myTableContents{%
     Major role in the organisation of a popular science workshop.%

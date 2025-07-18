@@ -20,9 +20,17 @@
     {VAL_EXP_employer in VAL_EXP_location}\\
     %%% DESCRIPTION ==================
     \myTableContents{%
-VAL_EXP_contentPre_tex%
-VAL_EXP_content%
-VAL_EXP_contentPos_tex%
+    \ifthenelse{\boolean{isShortenedContents}}
+    {
+        VAL_EXP_contentShortPre_tex%
+        VAL_EXP_contentShort%
+        VAL_EXP_contentShortPos_tex%
+    }
+    {%
+        VAL_EXP_contentPre_tex%
+        VAL_EXP_content%
+        VAL_EXP_contentPos_tex%
+    }%
     }%
 \end{myTableEnv}%
 %

@@ -17,7 +17,8 @@ contentDict_full_en = {
         columnsDef=("", "|p{0.2cm} | X | p{2.5cm}| p{2.0cm}|"),
         include=("", "true"),
         comment=("", "COMMENT GOES HERE"),
-        content=("Content", ""),
+        content=("Content", "Long description of the education with additional details."),
+        contentShort=("Content", "Short description of the education"),
     ),
     "educationB": Education(
         level=("", "Bachelor in Computer Science"),
@@ -28,6 +29,7 @@ contentDict_full_en = {
         columnsDef=("", "|p{0.2cm} | X | p{2.5cm}| p{2.0cm}|"),
         include=("", "true"),
         comment=("", "COMMENT GOES HERE"),
-        content=("Content", "First rank honors in class."),
+        content=("Content", "Long description of the education with additional details."),
+        contentShort=("Content", "Short description of the education"),
     ),
 }

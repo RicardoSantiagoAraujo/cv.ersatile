@@ -18,6 +18,10 @@ contentDict_full_en = {
                 # "COMMENT OUT TO NOT INCLUDE THIS LINE"
             ),
         ),
+        contentShort=(
+            "",
+            "I am a software developer who loves building applications and learning about new technologies.",
+        ),
         comment=("", "COMMENT GOES HERE"),
     ),
 }

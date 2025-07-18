@@ -25,14 +25,23 @@ contentDict_full_en = {
                     content=(
                         "",
                         "Contributed to three projects using Node.js, React, SQL, and Git for version control.",
-                    )
+                    ),
+                    include=("", "true"),
+                    comment=("", ""),
                 ),
                 ExperienceSub(
-                    content=("", "Development of critical features for the frontend and database management.")
+                    content=("", "Development of critical features for the frontend and database management."),
+                    include=("", "true"),
+                    comment=("", ""),
                 ),
-                ExperienceSub(content=("", "Significant optimization of application performance.")),
+                ExperienceSub(
+                    content=("", "Significant optimization of application performance."),
+                    include=("", "true"),
+                    comment=("", ""),
+                ),
             ],
         ),
+        contentShort=("Content", "short content test"),
     ),
     "experienceB": Experience(
         postTitle=("", "Frontend Developer"),
@@ -46,16 +55,27 @@ contentDict_full_en = {
         content=(
             "Content",
             [
-                ExperienceSub(content=("", "Worked on UX and UI features for three different projects.")),
-                ExperienceSub(content=("", "Used Sass and Tailwind to build professional websites.")),
+                ExperienceSub(
+                    content=("", "Worked on UX and UI features for three different projects."),
+                    include=("", "true"),
+                    comment=("", ""),
+                ),
+                ExperienceSub(
+                    content=("", "Used Sass and Tailwind to build professional websites."),
+                    include=("", "true"),
+                    comment=("", ""),
+                ),
                 ExperienceSub(
                     content=(
                         "",
                         "Collaborated closely with an international team, alongside key stakeholders, within the Agile SCRUM framework.",
-                    )
+                    ),
+                    include=("", "true"),
+                    comment=("", ""),
                 ),
             ],
         ),
+        contentShort=("Content", "short content test"),
     ),
     "experienceC": Experience(
         postTitle=("", "Frontend Developer"),
@@ -67,5 +87,6 @@ contentDict_full_en = {
         include=("", "true"),
         comment=("", ""),
         content=("Content", """ Helped input data into database"""),
+        contentShort=("Content", "short content test"),
     ),
 }

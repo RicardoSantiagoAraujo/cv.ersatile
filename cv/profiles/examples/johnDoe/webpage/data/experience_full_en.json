@@ -11,9 +11,9 @@
         "EXP_content": [
             "Content",
             [
-                "<scripts.classes.sections.Experience.ExperienceSub object at 0x1032bb830>",
-                "<scripts.classes.sections.Experience.ExperienceSub object at 0x1032bbce0>",
-                "<scripts.classes.sections.Experience.ExperienceSub object at 0x1032bbdd0>"
+                "<scripts.classes.sections.Experience.ExperienceSub object at 0x0000023F272A0160>",
+                "<scripts.classes.sections.Experience.ExperienceSub object at 0x0000023F272CEEE0>",
+                "<scripts.classes.sections.Experience.ExperienceSub object at 0x0000023F272CEF70>"
             ]
         ],
         "EXP_contentPos_tex": [
@@ -23,6 +23,18 @@
         "EXP_contentPre_tex": [
             "",
             "\\begin{customlist}[topsep=0pt]%"
+        ],
+        "EXP_contentShort": [
+            "Content",
+            "short content test"
+        ],
+        "EXP_contentShortPos_tex": [
+            "",
+            ""
+        ],
+        "EXP_contentShortPre_tex": [
+            "",
+            ""
         ],
         "EXP_employer": [
             "Company",
@@ -61,9 +73,9 @@
         "EXP_content": [
             "Content",
             [
-                "<scripts.classes.sections.Experience.ExperienceSub object at 0x1032bbe30>",
-                "<scripts.classes.sections.Experience.ExperienceSub object at 0x1032bbe60>",
-                "<scripts.classes.sections.Experience.ExperienceSub object at 0x1032bbe90>"
+                "<scripts.classes.sections.Experience.ExperienceSub object at 0x0000023F272E5610>",
+                "<scripts.classes.sections.Experience.ExperienceSub object at 0x0000023F272E5670>",
+                "<scripts.classes.sections.Experience.ExperienceSub object at 0x0000023F272E56D0>"
             ]
         ],
         "EXP_contentPos_tex": [
@@ -73,6 +85,18 @@
         "EXP_contentPre_tex": [
             "",
             "\\begin{customlist}[topsep=0pt]%"
+        ],
+        "EXP_contentShort": [
+            "Content",
+            "short content test"
+        ],
+        "EXP_contentShortPos_tex": [
+            "",
+            ""
+        ],
+        "EXP_contentShortPre_tex": [
+            "",
+            ""
         ],
         "EXP_employer": [
             "Company",
@@ -117,6 +141,18 @@
             ""
         ],
         "EXP_contentPre_tex": [
+            "",
+            ""
+        ],
+        "EXP_contentShort": [
+            "Content",
+            "short content test"
+        ],
+        "EXP_contentShortPos_tex": [
+            "",
+            ""
+        ],
+        "EXP_contentShortPre_tex": [
             "",
             ""
         ],

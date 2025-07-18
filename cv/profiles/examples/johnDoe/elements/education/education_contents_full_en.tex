@@ -9,10 +9,10 @@
         {University}{University} % Employer/Institution
     \myRow%
         {}{\dateRange[excludeDay][false]{2016-02-01}{2016-07-01}}% When
-        {Location}{Briston, UK}% Where
+        {\ifthenelse{\boolean{isIncludeLocations}}{Location}{}}{\ifthenelse{\boolean{isIncludeLocations}}{Briston, UK}{}}% Where
     %%% DESCRIPTION ==================
     \myTableContents{%
-        %
+        \ifthenelse{\boolean{isShortenedContents}}{Short description of the education}{Long description of the education with additional details.}%
     }%
 \end{myTableEnv}%
 %
@@ -28,10 +28,10 @@
         {University}{University} % Employer/Institution
     \myRow%
         {}{\dateRange[excludeDay][false]{2013-09-01}{2026-07-01}}% When
-        {Location}{London, UK}% Where
+        {\ifthenelse{\boolean{isIncludeLocations}}{Location}{}}{\ifthenelse{\boolean{isIncludeLocations}}{London, UK}{}}% Where
     %%% DESCRIPTION ==================
     \myTableContents{%
-        First rank honors in class.%
+        \ifthenelse{\boolean{isShortenedContents}}{Short description of the education}{Long description of the education with additional details.}%
     }%
 \end{myTableEnv}%
 %

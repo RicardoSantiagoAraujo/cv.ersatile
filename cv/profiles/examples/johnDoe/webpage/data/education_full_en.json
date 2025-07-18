@@ -10,7 +10,11 @@
         ],
         "EDU_content": [
             "Content",
-            ""
+            "Long description of the education with additional details."
+        ],
+        "EDU_contentShort": [
+            "Content",
+            "Short description of the education"
         ],
         "EDU_endDate": [
             "End",
@@ -48,7 +52,11 @@
         ],
         "EDU_content": [
             "Content",
-            "First rank honors in class."
+            "Long description of the education with additional details."
+        ],
+        "EDU_contentShort": [
+            "Content",
+            "Short description of the education"
         ],
         "EDU_endDate": [
             "End",

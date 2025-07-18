@@ -7,8 +7,8 @@
     \myRow%
         {}{CS Institute}%
         {Start}{\customDateFormat{2019-01-11}}%
-    \myRow%
-        {Location}{Manchester, UK}%
+    \myRow% 
+        {\ifthenelse{\boolean{isIncludeLocations}}{Location}{}}{\ifthenelse{\boolean{isIncludeLocations}}{Manchester, UK}{}}% Where
         {}{Computer science project}%
     %%% DESCRIPTION ==================
     \myTableContents{%

@@ -1,6 +1,6 @@
 % VAL_DESC_comment
 %
 \begin{FlushLeft}% justification
-\myJustification%
-VAL_DESC_content%
+\myJustification% 
+\ifthenelse{\boolean{isShortenedContents}}{VAL_DESC_contentShort}{VAL_DESC_content}%
 \end{FlushLeft}%

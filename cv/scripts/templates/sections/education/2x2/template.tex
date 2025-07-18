@@ -8,10 +8,10 @@
         {KEY_EDU_institution}{KEY_EDU_institution} % Employer/Institution
     \myRow%
         {}{\dateRange[excludeDay][false]{VAL_EDU_startDate}{VAL_EDU_endDate}}% When
-        {KEY_EDU_location}{VAL_EDU_location}% Where
+        {\ifthenelse{\boolean{isIncludeLocations}}{KEY_EDU_location}{}}{\ifthenelse{\boolean{isIncludeLocations}}{VAL_EDU_location}{}}% Where
     %%% DESCRIPTION ==================
     \myTableContents{%
-        VAL_EDU_content%
+        \ifthenelse{\boolean{isShortenedContents}}{VAL_EDU_contentShort}{VAL_EDU_content}%
     }%
 \end{myTableEnv}%
 %

@@ -8,8 +8,9 @@
         {Start}{\customDateFormat{2018-01-01}}%
         {}{}%
     \myRow%
-        {Position}{UX design course teaching assistant}%
-        {Location}{Bristol, UK}%
+        {Position}{UX design course teaching assistant}% 
+        {\ifthenelse{\boolean{isIncludeLocations}}{Location}{}}{\ifthenelse{\boolean{isIncludeLocations}}{Bristol, UK}{}}% Where
+    
     %%% DESCRIPTION ==================
     \myTableContents{%
     Assisted first year students in practical courses.%

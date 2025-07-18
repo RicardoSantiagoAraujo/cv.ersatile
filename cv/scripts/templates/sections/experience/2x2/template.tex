@@ -8,12 +8,20 @@
         {KEY_EXP_employer}{VAL_EXP_employer} % Employer/Institution
     \myRow%
         {}{\dateRange{VAL_EXP_startDate}{VAL_EXP_endDate}}% When
-        {KEY_EXP_location}{VAL_EXP_location}% Where
+        {\ifthenelse{\boolean{isIncludeLocations}}{KEY_EXP_location}{}}{\ifthenelse{\boolean{isIncludeLocations}}{VAL_EXP_location}{}}% Where
     %%% DESCRIPTION ==================
     \myTableContents{%
-VAL_EXP_contentPre_tex%
-VAL_EXP_content%
-VAL_EXP_contentPos_tex%
+    \ifthenelse{\boolean{isShortenedContents}}
+    {
+        VAL_EXP_contentShortPre_tex%
+        VAL_EXP_contentShort%
+        VAL_EXP_contentShortPos_tex%
+    }
+    {%
+        VAL_EXP_contentPre_tex%
+        VAL_EXP_content%
+        VAL_EXP_contentPos_tex%
+    }%
     }%
 \end{myTableEnv}%
 %

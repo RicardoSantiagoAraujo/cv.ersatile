@@ -1,29 +1,34 @@
-% /!\ CONTENT GENERATED WITH PYTHON SCRIPT, CHANGES MADE DIRECTLY HERE MAY BE OVERWRITTEN /!\
+% /!\ CONTENT GENERATED WITH PYTHON SCRIPT, CHANGES MADE DIRECTLY HERE MAY BE OVERWRITTEN /!\ 
 %
 % ==============================================
 \iftrue % true/false to include/exclude
-%
+% 
 \begin{myTableEnv}{|p{0.25cm} | X | p{2.5cm}| p{4cm}|}%
     \myRow%
         {}{\bfseries Software Engineer} % Role/Title
         {Company}{Dynamic Startup} % Employer/Institution
     \myRow%
         {}{\dateRange{2022-01-01}{}}% When
-        {Location}{London, England}% Where
+        {\ifthenelse{\boolean{isIncludeLocations}}{Location}{}}{\ifthenelse{\boolean{isIncludeLocations}}{London, England}{}}% Where
     %%% DESCRIPTION ==================
     \myTableContents{%
-\begin{customlist}[topsep=0pt]%%
-        \item Contributed to three projects using Node.js, React, SQL, and Git for version control.%
-        %  VAL_EXPLINE_comment
-%
+    \ifthenelse{\boolean{isShortenedContents}}
+    {
+        %
+        short content test%
+        %
+    }
+    {%
+        \begin{customlist}[topsep=0pt]%%
+                \item Contributed to three projects using Node.js, React, SQL, and Git for version control.%
+        %   %
         \item Development of critical features for the frontend and database management.%
-        %  VAL_EXPLINE_comment
-%
+        %   %
         \item Significant optimization of application performance.%
-        %  VAL_EXPLINE_comment
+        %   %
 %
-%
-\end{customlist}%%
+        \end{customlist}%%
+    }%
     }%
 \end{myTableEnv}%
 %
@@ -32,28 +37,33 @@
 \myTablesSeparator%%
 % ==============================================
 \iftrue % true/false to include/exclude
-%
+% 
 \begin{myTableEnv}{|p{0.25cm} | X | p{2.5cm}| p{4cm}|}%
     \myRow%
         {}{\bfseries Frontend Developer} % Role/Title
         {Company}{Large corporation} % Employer/Institution
     \myRow%
         {}{\dateRange{2014-01-01}{2022-06-01}}% When
-        {Location}{Bristol, UK}% Where
+        {\ifthenelse{\boolean{isIncludeLocations}}{Location}{}}{\ifthenelse{\boolean{isIncludeLocations}}{Bristol, UK}{}}% Where
     %%% DESCRIPTION ==================
     \myTableContents{%
-\begin{customlist}[topsep=0pt]%%
-        \item Worked on UX and UI features for three different projects.%
-        %  VAL_EXPLINE_comment
-%
+    \ifthenelse{\boolean{isShortenedContents}}
+    {
+        %
+        short content test%
+        %
+    }
+    {%
+        \begin{customlist}[topsep=0pt]%%
+                \item Worked on UX and UI features for three different projects.%
+        %   %
         \item Used Sass and Tailwind to build professional websites.%
-        %  VAL_EXPLINE_comment
-%
+        %   %
         \item Collaborated closely with an international team, alongside key stakeholders, within the Agile SCRUM framework.%
-        %  VAL_EXPLINE_comment
+        %   %
 %
-%
-\end{customlist}%%
+        \end{customlist}%%
+    }%
     }%
 \end{myTableEnv}%
 %
@@ -62,19 +72,27 @@
 \myTablesSeparator%%
 % ==============================================
 \iftrue % true/false to include/exclude
-%
+% 
 \begin{myTableEnv}{|p{0.25cm} | X | p{2.5cm}| p{4cm}|}%
     \myRow%
         {}{\bfseries Frontend Developer} % Role/Title
         {Internship}{Data intern} % Employer/Institution
     \myRow%
         {}{\dateRange{2013-01-01}{2013-06-01}}% When
-        {Location}{Bristol, UK}% Where
+        {\ifthenelse{\boolean{isIncludeLocations}}{Location}{}}{\ifthenelse{\boolean{isIncludeLocations}}{Bristol, UK}{}}% Where
     %%% DESCRIPTION ==================
     \myTableContents{%
-%
- Helped input data into database%
-%
+    \ifthenelse{\boolean{isShortenedContents}}
+    {
+        %
+        short content test%
+        %
+    }
+    {%
+        %
+         Helped input data into database%
+        %
+    }%
     }%
 \end{myTableEnv}%
 %

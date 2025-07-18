@@ -13,6 +13,7 @@ class Education:
         endDate: tuple[str, date],
         location: tuple[str, str],
         content: tuple[str, Union[str, list[str]]],
+        contentShort: tuple[str, Union[str, list[str]]],
         include: tuple[str, bool],
         comment: tuple[str, str],
         columnsDef: tuple[str, str],
@@ -23,6 +24,7 @@ class Education:
         self.EDU_endDate = endDate
         self.EDU_location = location
         self.EDU_content = content
+        self.EDU_contentShort = contentShort
         self.EDU_include = include
         self.EDU_comment = comment
         self.EDU_columnsDef = columnsDef

@@ -24,7 +24,7 @@
 
 
 \createAndSetBoolean{isDraft}{true} % true or false
-\createAndSetBoolean{isShortenedContents}{true} % true or false 
+\createAndSetBoolean{isShortenedContents}{true} % true or false
 \createAndSetBoolean{isIncludeLocations}{true} % true or false
 \createAndSetBoolean{isIncludeScores}{true} % true or false
 \createAndSetBoolean{isIncludeWebsite}{true} % true or false
@@ -38,6 +38,7 @@
 \createAndSetBoolean{isIncludeInfoRibbons}{false} % true or false
 \createAndSetBoolean{isIncludeTOC}{false} % true or false
 \createAndSetBoolean{isIncludePagination}{false} % true or false
+\createAndSetBoolean{isTwoColumnsStructure}{false} % true or false
 
 
 
@@ -47,8 +48,17 @@
 \usepackage{xstring} % Needed for string manipulation
 
 % Reproduce includeonly functionality with input
-\newcommand{\addonlyfiles}[1]{%
-  \def\onlyfiles{#1}%
+\newcommand{\sectionsSingleColumn}[1]{%
+  \def\singleColumn{#1}%
+}
+\newcommand{\sectionsTwoColumnTop}[1]{%
+  \def\twoColumnTop{#1}%
+}
+\newcommand{\sectionsTwoColumnLeft}[1]{%
+  \def\twoColumnLeft{#1}%
+}
+\newcommand{\sectionsTwoColumnRight}[1]{%
+  \def\twoColumnRight{#1}%
 }
 
 % Macro to keep track of current section
@@ -68,7 +78,7 @@
   \def\specificFileAddress{elements/#1/#1\_#2\_#3.tex}
   \def\genericFileAddress{elements/#1/#1\_generic\_#3.tex}
   % \textcolor{green}{Specific input: \specificFileAddress} % Print the file address string to check
-  \IfSubStr{\onlyfiles}{#1}{ %%% only if it is part of \addonlyfiles list
+  \IfSubStr{\singleColumn}{#1}{ %%% only if it is part of \sectionsSingleColumn list
   %
     \InputIfFileExists{\specificFileAddress}
       {%

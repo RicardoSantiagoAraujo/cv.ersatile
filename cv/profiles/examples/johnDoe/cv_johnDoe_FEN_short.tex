@@ -15,7 +15,7 @@
 \renewcommand{\myVersion}{full}
 \renewcommand{\myPersonId}{johnDoe}
 \renewcommand{\myLanguage}{en}
-\setbool{isDraft}{true} % true or false
+\setbool{isDraft}{false} % true or false
 \setbool{isShortenedContents}{true} % true or false
 \setbool{isIncludeLocations}{false} % true or false
 \setbool{isIncludeScores}{true} % true or false
@@ -112,19 +112,45 @@
 \renewcommand{\myBgVshift}{0\paperheight}% shift backround vertically
 %
 % INCLUDE ONLY CHOSEN SECTIONS +++++++++++++++++++++++++++++++++
-\addonlyfiles{%
+\sectionsSingleColumn{%
     header,%
     description,%
-    experience,%
     education,%
-    research,%
-    popScience,%
-    teaching,%
+    experience,%
+    % research,%
+    % popScience,%
+    % teaching,%
     informatics,%
     other,%
-    works,%
+    % works,%
     awards,%
     certificates,%
     publications,%
 }
+\setbool{isTwoColumnsStructure}{true} % true or false
+\sectionsTwoColumnTop{%
+    header,%
+    % description,%
+}
+\sectionsTwoColumnLeft{%
+    description,%
+    awards,%
+    certificates,%
+    publications,%
+}
+\sectionsTwoColumnRight{%
+    experience,%
+    education,%
+    % research,%
+    % popScience,%
+    % teaching,%
+    informatics,%
+    other,%
+    % works,%
+    % awards,%
+    % certificates,%
+    % publications,%
+}
+
+
 \input{\pathToRoot/shared_tex/cv_body.tex}

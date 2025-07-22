@@ -1,0 +1,53 @@
+
+\NewDocumentCommand{\sectionsDoubleColumns}
+{
+    m % section items for TOP, as single column
+    m % section items for LEFT side of double columns
+    m % section items for RIGHT side of double columns
+    m % section items for BOTTOM, as single column
+}
+{%
+    \def\oneColumnTop{#1}%
+    \def\twoColumnLeft{#2}%
+    \def\twoColumnRight{#3}%
+    \def\oneColumnBottom{#4}%
+}
+
+\NewDocumentCommand{\insertContent}
+{%
+    O{0cm}% optional : vertical space after each section
+    m% mandatory: section item list
+}{%
+    \foreach \cvSection in #2 {% iterate over section items to include them one by one
+        \ifthenelse{\equal{\cvSection}{}}{}% check if is not empty
+        {%
+            \addContent{\cvSection}%
+            \par% Space above is essential
+            \vspace{#1}%
+        }%
+    }
+}
+
+\newcommand{\widhColumnLeft}{0.25\textwidth}%
+\newcommand{\widhColumnRight}{0.75\textwidth}%
+\newcommand{\vspaceColumnLeft}{0cm}%
+\newcommand{\vspaceColumnRight}{0cm}%
+
+\NewDocumentCommand{\insertTwoColumnsStructure}
+{}
+{%
+    %%% >>>>>>>>>>>>> CONTENT AT THE TOP ======================
+    \insertContent{\oneColumnTop}%
+    %%% >>>>>>>>>>>>> CONTENT ON THE LEFT ======================
+    \par%%% SPACE
+    \begin{minipage}[t]{\widhColumnLeft}%
+        \insertContent[\vspaceColumnLeft]{\twoColumnLeft}%
+    \end{minipage}%
+    \hfill % horizontal space between columns
+    %%% >>>>>>>>>>>>> CONTENT ON THE RIGHT ======================
+    \begin{minipage}[t]{\widhColumnRight}%
+        \insertContent[\vspaceColumnRight]{\twoColumnRight}%
+    \end{minipage}%
+    %%% >>>>>>>>>>>>> CONTENT AT THE BOTTOM ======================
+    \insertContent{\oneColumnBottom}%
+}

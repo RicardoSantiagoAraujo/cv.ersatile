@@ -112,11 +112,12 @@
 \renewcommand{\myBgVshift}{0\paperheight}% shift backround vertically
 %
 % INCLUDE ONLY CHOSEN SECTIONS +++++++++++++++++++++++++++++++++
+%%% >>>> SINGLE COLUMN STRUCTURE |-------------------|
 \sectionsSingleColumn{%
     header,%
     description,%
-    education,%
     experience,%
+    education,%
     % research,%
     % popScience,%
     % teaching,%
@@ -127,18 +128,24 @@
     certificates,%
     publications,%
 }
+
+%%% >>>> DOUBLE COLUMN STRUCTURE |---------|---------|
 \setbool{isTwoColumnsStructure}{true} % true or false
-\sectionsTwoColumnTop{%
+\renewcommand{\widhColumnLeft}{0.25\textwidth}%
+\renewcommand{\widhColumnRight}{0.75\textwidth}%
+\renewcommand{\vspaceColumnLeft}{1cm}%
+\renewcommand{\vspaceColumnRight}{0cm}%
+\sectionsDoubleColumns%
+{% TOP CONTENTS
     header,%
-    % description,%
 }
-\sectionsTwoColumnLeft{%
+{% LEFT SIDE CONTENTS
     description,%
     awards,%
     certificates,%
     publications,%
 }
-\sectionsTwoColumnRight{%
+{% RIGHT SIDE CONTENTS
     experience,%
     education,%
     % research,%
@@ -146,11 +153,8 @@
     % teaching,%
     informatics,%
     other,%
-    % works,%
-    % awards,%
-    % certificates,%
-    % publications,%
 }
-
+{% BOTTOM CONTENTS
+}
 
 \input{\pathToRoot/shared_tex/cv_body.tex}

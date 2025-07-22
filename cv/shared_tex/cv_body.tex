@@ -5,31 +5,7 @@
 %
 \ifthenelse{\boolean{isTwoColumnsStructure}}%
 {%%% SPLIT CV INTO TWO COLUMNS
-    \begin{minipage}{1\textwidth}%
-        \foreach \cvSection in \twoColumnTop {% iterate over section items to include them one by one
-        \ifthenelse{\equal{\cvSection}{}}{}% check if is not empty
-        {%
-            \addContent{\cvSection}%
-        }%
-    }%
-    \end{minipage}%
-
-    \begin{minipage}{0.25\textwidth}%
-        \foreach \cvSection in \twoColumnLeft {% iterate over section items to include them one by one
-        \ifthenelse{\equal{\cvSection}{}}{}% check if is not empty
-        {%
-            \addContent{\cvSection}%
-        }%
-    }%
-    \end{minipage}%
-    \begin{minipage}{0.75\textwidth}%
-        \foreach \cvSection in \twoColumnRight {% iterate over section items to include them one by one
-        \ifthenelse{\equal{\cvSection}{}}{}% check if is not empty
-        {%
-            \addContent{\cvSection}%
-        }%
-    }%
-    \end{minipage}%
+    \insertTwoColumnsStructure%
 }
 {%%% KEEP CV IN ONE COLUMN
     \begin{center} % Center everything in the document

@@ -1,0 +1,25 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'auxiliary_files/cv_johnDoe_FEN_short.blg'
+[36] biber-darwin:340> INFO - === Tue Jul 22, 2025, 23:28:59
+[44] Biber.pm:419> INFO - Reading 'auxiliary_files/cv_johnDoe_FEN_short.bcf'
+[88] Biber.pm:979> INFO - Found 3 citekeys in bib section 0
+[96] Biber.pm:4419> INFO - Processing section 0
+[102] Biber.pm:4610> INFO - Looking for bibtex file './../../../assets/bibliography_files/shared_bibliography.bib' for section 0
+[102] Biber.pm:4610> INFO - Looking for bibtex file './../../../assets/bibliography_files/shared_bibliography_examples.bib' for section 0
+[103] bibtex.pm:1713> INFO - LaTeX decoding ...
+[105] bibtex.pm:1519> INFO - Found BibTeX data source './../../../assets/bibliography_files/shared_bibliography_examples.bib'
+[120] Biber.pm:4610> INFO - Looking for bibtex file 'assets/bibliography_files/bibliography.bib' for section 0
+[121] bibtex.pm:1713> INFO - LaTeX decoding ...
+[122] bibtex.pm:1519> INFO - Found BibTeX data source 'assets/bibliography_files/bibliography.bib'
+[124] Biber.pm:4610> INFO - Looking for bibtex file 'assets/bibliography_files/my_publications.bib' for section 0
+[124] bibtex.pm:1713> INFO - LaTeX decoding ...
+[125] bibtex.pm:1519> INFO - Found BibTeX data source 'assets/bibliography_files/my_publications.bib'
+[134] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[134] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[134] Biber.pm:4239> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[134] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[135] bbl.pm:660> INFO - Writing 'auxiliary_files/cv_johnDoe_FEN_short.bbl' with encoding 'UTF-8'
+[136] bbl.pm:763> INFO - Output to auxiliary_files/cv_johnDoe_FEN_short.bbl
+[136] Biber.pm:131> WARN - Data source './../../../assets/bibliography_files/shared_bibliography.bib' contains no BibTeX entries/macros, ignoring
+[136] Biber.pm:131> WARN - BibTeX subsystem: /var/folders/m9/6fmtj66j7l35vky8zyh0jp8r0000gn/T/biber_tmp_MZyC/68d454a1c3e770bbc818a2cb3f24c339_15864.utf8, line 3, warning: 121 characters of junk seen at toplevel
+[136] Biber.pm:133> INFO - WARNINGS: 2

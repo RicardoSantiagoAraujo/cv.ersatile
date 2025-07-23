@@ -33,6 +33,24 @@
 \newcommand{\vspaceColumnLeft}{0cm}%
 \newcommand{\vspaceColumnRight}{0cm}%
 
+\newsavebox\thesmashminipage%
+\NewDocumentEnvironment{smashminipage}%
+{%
+    m  % width of the minipage
+}%
+{%
+    % \begin{lrbox}{\thesmashminipage}%
+    \begin{minipage}[t]{#1}%
+    % \null\par\vspace{-\baselineskip}%
+}%
+{%
+    \end{minipage}%
+    % \end{lrbox}%
+    % \smash{\usebox{\thesmashminipage}}%
+    % \clearpage% force new page after the minipage
+}%
+
+
 \NewDocumentCommand{\insertTwoColumnsStructure}
 {}
 {%
@@ -40,14 +58,14 @@
     \insertContent{\oneColumnTop}%
     %%% >>>>>>>>>>>>> CONTENT ON THE LEFT ======================
     \par%%% SPACE
-    \begin{minipage}[t]{\widhColumnLeft}%
+    \begin{smashminipage}{\widhColumnLeft}%
         \insertContent[\vspaceColumnLeft]{\twoColumnLeft}%
-    \end{minipage}%
+    \end{smashminipage}%
     \hfill % horizontal space between columns
     %%% >>>>>>>>>>>>> CONTENT ON THE RIGHT ======================
-    \begin{minipage}[t]{\widhColumnRight}%
+    \begin{smashminipage}{\widhColumnRight}%
         \insertContent[\vspaceColumnRight]{\twoColumnRight}%
-    \end{minipage}%
+    \end{smashminipage}%
     %%% >>>>>>>>>>>>> CONTENT AT THE BOTTOM ======================
     \insertContent{\oneColumnBottom}%
 }

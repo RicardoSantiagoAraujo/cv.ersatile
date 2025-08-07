@@ -44,4 +44,4 @@ Temporary Items
 *.css.map
 *.js
 *.js.map
-!websiteConfig.js
+!*./webpage/websiteConfig.js

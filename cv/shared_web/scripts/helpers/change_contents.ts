@@ -1,5 +1,6 @@
 import { WebsiteConfig } from "../classes/WebsiteConfig";
 
+
 /**
  * Function to add a section to the html document.
  * @param section_name Name of the section to be added

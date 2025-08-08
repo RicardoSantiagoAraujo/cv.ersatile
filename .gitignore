@@ -42,6 +42,10 @@ Temporary Items
 *.pyc
 *.css
 *.css.map
-*.js
-*.js.map
+*/**/webpage/scripts/*.js
+*/**/webpage/scripts/*.js.map
+*/**/scripts/docs/**/*.js
+*/**/scripts/docs/**/*.js.map
+*/**/cv.ersatile_website/**/*.js
+*/**/cv.ersatile_website/**/*.js.map
 !*/**/webpage/websiteConfig.js

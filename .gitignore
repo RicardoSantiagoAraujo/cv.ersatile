@@ -49,3 +49,6 @@ Temporary Items
 *.css
 *.css.map
 !*/**/webpage/websiteConfig.js
+
+# pdf files that should be published in repo
+!*/**/published_pdfs/**/*.pdf

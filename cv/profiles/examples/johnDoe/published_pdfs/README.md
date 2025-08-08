@@ -1,0 +1,1 @@
+PDFs inside this folder are pushed to the repository and can be accessed online.

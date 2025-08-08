@@ -3,7 +3,6 @@
  * @param section_name Name of the section to be added
  * @param config Website configuration object
  */
-
 export function addSection(section_name, config) {
     var secEl = document.createElement("section");
     let secClass = "section-" + section_name;

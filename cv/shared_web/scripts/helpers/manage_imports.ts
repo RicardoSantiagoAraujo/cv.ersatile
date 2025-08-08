@@ -1,4 +1,4 @@
-export async function import_shared_files(configData: any) {
+export async function import_shared_files(configData: any, pathAdjust: string) {
   // Shared functions
   let functions: any = await import("./change_contents.js");
 
@@ -9,7 +9,7 @@ export async function import_shared_files(configData: any) {
   // Shares stylesheet
   const link = document.createElement("link");
   link.rel = "stylesheet";
-  link.href = "./../../../../shared_web/styles/main_shared.css";
+  link.href = pathAdjust + "../../../shared_web/styles/main_shared.css";
   document.head.appendChild(link);
 
   // Return an object containing the imported modules and the instantiated config

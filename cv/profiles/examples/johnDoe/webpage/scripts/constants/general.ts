@@ -33,6 +33,6 @@ export var const_general : {[key: string]: string } =
     picCropBottom :"20mm",
     picCropLeft :"10mm",
     // OTHER
-    signature :"images/signatures/signature.png",
+    signature :"images/signatures/johnDoe.png",
     drivingLicense :"B",
 }

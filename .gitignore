@@ -44,8 +44,8 @@ Temporary Items
 *.css.map
 
 # Do not transcribe TS files unless necessary for host platform (e.g. Netlify)
-*/**/webpage/scripts/*.js
-*/**/webpage/scripts/*.js.map
+*/**/webpage/scripts/**/*.js
+*/**/webpage/scripts/**/*.js.map
 */**/scripts/docs/**/*.js
 */**/scripts/docs/**/*.js.map
 */**/cv.ersatile_website/**/*.js

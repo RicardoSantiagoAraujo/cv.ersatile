@@ -31,7 +31,7 @@ export var const_general = {
     picCropBottom: "20mm",
     picCropLeft: "10mm",
     // OTHER
-    signature: "images/signatures/signature.png",
+    signature: "images/signatures/johnDoe.png",
     drivingLicense: "B",
 };
 //# sourceMappingURL=general.js.map

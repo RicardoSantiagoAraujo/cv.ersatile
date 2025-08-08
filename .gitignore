@@ -42,6 +42,8 @@ Temporary Items
 *.pyc
 *.css
 *.css.map
+
+# Do not transcribe TS files unless necessary for host platform (e.g. Netlify)
 */**/webpage/scripts/*.js
 */**/webpage/scripts/*.js.map
 */**/scripts/docs/**/*.js

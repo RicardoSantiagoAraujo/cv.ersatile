@@ -45,10 +45,6 @@ Temporary Items
 */**/node_modules/
 
 # Do not transcribe TS files unless necessary for host platform (e.g. Netlify)
-*/**/webpage/scripts/**/*.js
-*/**/webpage/scripts/**/*.js.map
-*/**/scripts/docs/**/*.js
-*/**/scripts/docs/**/*.js.map
-*/**/cv.ersatile_website/**/*.js
-*/**/cv.ersatile_website/**/*.js.map
+*.js
+*.js.map
 !*/**/webpage/websiteConfig.js

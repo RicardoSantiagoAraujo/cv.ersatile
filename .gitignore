@@ -40,11 +40,12 @@ Temporary Items
 
 # Other stuff
 *.pyc
-*.css
-*.css.map
 */**/node_modules/
 
-# Do not transcribe TS files unless necessary for host platform (e.g. Netlify)
+# Do not transcribe TS and SCSS files unless necessary for host platform (e.g. Netlify)
 *.js
 *.js.map
+!*/**/webpage/websiteConfig.js
+*.css
+*.css.map
 !*/**/webpage/websiteConfig.js

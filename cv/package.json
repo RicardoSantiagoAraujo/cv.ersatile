@@ -1,5 +1,11 @@
 {
   "devDependencies": {
+    "sass": "^1.90.0",
     "typescript": "^5.9.2"
+  },
+  "scripts": {
+    "build:ts": "tsc --project ./profiles/examples/johnDoe/webpage/tsconfig.json",
+    "build:scss": "sass --no-source-map --update .:.",
+    "build": "npm run build:ts && npm run build:scss"
   }
 }

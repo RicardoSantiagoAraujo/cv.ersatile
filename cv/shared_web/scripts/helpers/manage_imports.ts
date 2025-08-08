@@ -9,7 +9,7 @@ export async function import_shared_files(configData: any, pathAdjust: string) {
   // Shares stylesheet
   const link = document.createElement("link");
   link.rel = "stylesheet";
-  link.href = pathAdjust + "../../../shared_web/styles/main_shared.scss";
+  link.href = pathAdjust + "../../../shared_web/styles/main_shared.css";
   document.head.appendChild(link);
 
   // Return an object containing the imported modules and the instantiated config

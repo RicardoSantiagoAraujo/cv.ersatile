@@ -12,7 +12,7 @@ from scripts.enums.GeneratedTypes import GeneratedTypes
 ###############################################################################
 
 #  CHANGE THESE TO FIT YOUR PROFILE'S PARTICULAR STRUCTURE
-profiles = ["test"]
+profiles = ["examples/johnDoe"]
 sections = [
     "awards",
     "certificates",

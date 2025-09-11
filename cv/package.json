@@ -5,7 +5,8 @@
   },
   "scripts": {
     "build:ts": "tsc --project ./profiles/examples/johnDoe/webpage/tsconfig.json",
+    "build:ts_cvertex": "tsc --project ./cv.ertex/tsconfig.json",
     "build:scss": "sass --no-source-map --update .:.",
-    "build": "npm run build:ts && npm run build:scss"
+    "build": "npm run build:ts && npm run build:ts_cvertex && npm run build:scss"
   }
 }

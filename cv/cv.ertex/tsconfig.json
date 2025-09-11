@@ -1,0 +1,13 @@
+// command to compile continuously  tsc --watch
+
+{
+  "compilerOptions": {
+    "target": "es2022",
+    "module": "es2022",
+    "sourceMap": true,
+    "lib": ["dom", "es2022"],
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true
+  }
+}

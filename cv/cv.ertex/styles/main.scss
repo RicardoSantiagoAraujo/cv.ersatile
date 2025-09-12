@@ -64,3 +64,14 @@ a:hover {
   padding: 2rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
+
+main{
+  min-height: 80vh;
+}
+footer {
+  bottom: 0rem;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #777;
+}

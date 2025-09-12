@@ -1,6 +1,8 @@
 import { config } from "../config.js";
-import * as utils  from "./utils";
+import * as utils from "./utils.js";
 
+console.log("Creating PDF and HTML links...");
+console.log("utils:", utils);
 
-utils.createPdfLinks(config)
-utils.createHtmlLinks(config)
+utils.createPdfLinks(config);
+utils.createHtmlLinks(config);

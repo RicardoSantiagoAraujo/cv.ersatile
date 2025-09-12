@@ -48,7 +48,7 @@ Temporary Items
 !*/**/webpage/websiteConfig.js
 *.css
 *.css.map
-!*/**/webpage/websiteConfig.js
+!*/**/cv.ertex/config.js
 
 # pdf files that should be published in repo
 !*/**/published_pdfs/**/*.pdf

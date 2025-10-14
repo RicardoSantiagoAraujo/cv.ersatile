@@ -20,11 +20,15 @@ async function checkHref(
 
 function createLink(href: string, item: any, list: HTMLElement) {
   checkHref(href).then((result) => {
+    if (!item.include) {
+      console.log("Skipping link for", item.name);
+      return;
+    }
     var li = document.createElement("li");
     var a = document.createElement("a");
     a.href = href;
     if (result.ok) {
-      a.textContent = item.name;
+      a.textContent = `(${item.language}) ${item.name}`;
     } else {
       a.textContent = `[${result.status}] ` + item.name;
       a.style.color = "red";

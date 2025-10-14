@@ -3,18 +3,24 @@ export const config = {
         {
             profile: "examples/johnDoe",
             name: "John Doe",
+            language: "EN",
+            include: true,
             filename: "cv_johnDoe_FEN"
         },
         {
             profile: "examples/johnDoe",
             name: "John Doe (shortened)",
+            language: "EN",
+            include: true,
             filename: "cv_johnDoe_FEN_short"
         }
     ],
     htmls: [
         {
             profile: "examples/johnDoe",
-            name: "John Doe"
+            name: "John Doe",
+            language: "EN",
+            include: true,
         }
     ],
 }

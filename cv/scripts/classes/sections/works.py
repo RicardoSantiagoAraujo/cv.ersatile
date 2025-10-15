@@ -11,8 +11,8 @@ class WorkSub:
         year: tuple[str, str],
         title: tuple[str, str],
         subtitle: tuple[str, str],
-        content: tuple[str, str],
-        contentShort: tuple[str, str],
+        details: tuple[str, str],
+        detailsShort: tuple[str, str],
         authors: tuple[str, str],
         repository: tuple[str, str],
         externalLink: tuple[str, str],
@@ -23,8 +23,8 @@ class WorkSub:
         self.WORKITEM_title = title
         self.WORKITEM_subtitle = subtitle
         self.WORKITEM_authors = authors
-        self.WORKITEM_content = content
-        self.WORKITEM_contentShort = contentShort
+        self.WORKITEM_details = details
+        self.WORKITEM_detailsShort = detailsShort
         self.WORKITEM_repository = repository
         self.WORKITEM_externalLink = externalLink
         self.WORKITEM_comment = comment

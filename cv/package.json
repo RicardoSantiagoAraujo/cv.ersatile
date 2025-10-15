@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "@types/node": "^24.3.2",
     "sass": "^1.90.0",
     "typescript": "^5.9.2"
   },
@@ -7,6 +8,10 @@
     "build:ts": "tsc --project ./profiles/examples/johnDoe/webpage/tsconfig.json",
     "build:ts_cvertex": "tsc --project ./cv.ertex/tsconfig.json",
     "build:scss": "sass --no-source-map --update .:.",
-    "build": "npm run build:ts && npm run build:ts_cvertex && npm run build:scss"
+    "build:docs": "python -m sphinx -b html scripts/docs/source scripts/docs/build/html",
+    "build": "npm run build:ts && npm run build:ts_cvertex && npm run build:scss && npm run build:docs"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2"
   }
 }

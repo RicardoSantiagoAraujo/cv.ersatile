@@ -1,25 +1,25 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'auxiliary_files/cv_johnDoe_FEN.blg'
-[36] biber-darwin:340> INFO - === Mon Aug  4, 2025, 21:56:36
-[45] Biber.pm:419> INFO - Reading 'auxiliary_files/cv_johnDoe_FEN.bcf'
-[90] Biber.pm:979> INFO - Found 3 citekeys in bib section 0
-[97] Biber.pm:4419> INFO - Processing section 0
-[103] Biber.pm:4610> INFO - Looking for bibtex file './../../../assets/bibliography_files/shared_bibliography.bib' for section 0
-[103] Biber.pm:4610> INFO - Looking for bibtex file './../../../assets/bibliography_files/shared_bibliography_examples.bib' for section 0
-[104] bibtex.pm:1713> INFO - LaTeX decoding ...
-[105] bibtex.pm:1519> INFO - Found BibTeX data source './../../../assets/bibliography_files/shared_bibliography_examples.bib'
-[121] Biber.pm:4610> INFO - Looking for bibtex file 'assets/bibliography_files/bibliography.bib' for section 0
-[122] bibtex.pm:1713> INFO - LaTeX decoding ...
-[123] bibtex.pm:1519> INFO - Found BibTeX data source 'assets/bibliography_files/bibliography.bib'
-[125] Biber.pm:4610> INFO - Looking for bibtex file 'assets/bibliography_files/my_publications.bib' for section 0
-[125] bibtex.pm:1713> INFO - LaTeX decoding ...
-[127] bibtex.pm:1519> INFO - Found BibTeX data source 'assets/bibliography_files/my_publications.bib'
-[135] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[135] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[135] Biber.pm:4239> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[135] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[136] bbl.pm:660> INFO - Writing 'auxiliary_files/cv_johnDoe_FEN.bbl' with encoding 'UTF-8'
-[137] bbl.pm:763> INFO - Output to auxiliary_files/cv_johnDoe_FEN.bbl
-[138] Biber.pm:131> WARN - Data source './../../../assets/bibliography_files/shared_bibliography.bib' contains no BibTeX entries/macros, ignoring
-[138] Biber.pm:131> WARN - BibTeX subsystem: /var/folders/m9/6fmtj66j7l35vky8zyh0jp8r0000gn/T/biber_tmp_PeOi/68d454a1c3e770bbc818a2cb3f24c339_30336.utf8, line 3, warning: 121 characters of junk seen at toplevel
-[138] Biber.pm:133> INFO - WARNINGS: 2
+[92] biber-MSWIN64:340> INFO - === 
+[133] Biber.pm:419> INFO - Reading 'auxiliary_files/cv_johnDoe_FEN.bcf'
+[236] Biber.pm:979> INFO - Found 3 citekeys in bib section 0
+[248] Biber.pm:4419> INFO - Processing section 0
+[260] Biber.pm:4610> INFO - Looking for bibtex file './../../../assets/bibliography_files/shared_bibliography.bib' for section 0
+[286] Biber.pm:4610> INFO - Looking for bibtex file './../../../assets/bibliography_files/shared_bibliography_examples.bib' for section 0
+[344] bibtex.pm:1713> INFO - LaTeX decoding ...
+[351] bibtex.pm:1519> INFO - Found BibTeX data source './../../../assets/bibliography_files/shared_bibliography_examples.bib'
+[375] Biber.pm:4610> INFO - Looking for bibtex file 'assets/bibliography_files/bibliography.bib' for section 0
+[437] bibtex.pm:1713> INFO - LaTeX decoding ...
+[442] bibtex.pm:1519> INFO - Found BibTeX data source 'assets/bibliography_files/bibliography.bib'
+[445] Biber.pm:4610> INFO - Looking for bibtex file 'assets/bibliography_files/my_publications.bib' for section 0
+[509] bibtex.pm:1713> INFO - LaTeX decoding ...
+[514] bibtex.pm:1519> INFO - Found BibTeX data source 'assets/bibliography_files/my_publications.bib'
+[527] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[527] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[527] Biber.pm:4239> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[527] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[530] bbl.pm:660> INFO - Writing 'auxiliary_files/cv_johnDoe_FEN.bbl' with encoding 'UTF-8'
+[531] bbl.pm:763> INFO - Output to auxiliary_files/cv_johnDoe_FEN.bbl
+[532] Biber.pm:131> WARN - Data source './../../../assets/bibliography_files/shared_bibliography.bib' contains no BibTeX entries/macros, ignoring
+[532] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\RICARD~1.SAN\AppData\Local\Temp\biber_tmp_DJYs\68d454a1c3e770bbc818a2cb3f24c339_14976.utf8, line 3, warning: 121 characters of junk seen at toplevel
+[532] Biber.pm:133> INFO - WARNINGS: 2

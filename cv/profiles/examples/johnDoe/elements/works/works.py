@@ -10,6 +10,7 @@ generation_settings = GenerationSettings(
 contentDict_full_en = {
     "example1": WorkGroup(
         groupTitle=("", "Web development"),
+        description=("", "Software development projects for the web"),
         comment=("", "COMMENT"),
         include=("", "true"),
         content=(
@@ -18,14 +19,24 @@ contentDict_full_en = {
                 WorkSub(
                     year=("", ""),
                     title=("", "Weather app"),
-                    details=("", "\\href{https://weather.com}{weather.com}"),
+                    subtitle=("", "subtitle"),
+                    authors=("", "Author list"),
+                    content=("", "App to check weather"),
+                    contentShort=("", "App to check weather"),
+                    externalLink=("", "\\href{https://weather.com}{weather.com}"),
+                    repository=("", "\\href{https://github.com}{Github}"),
                     comment=("", "COMMENT"),
                     include=("", "true"),
                 ),
                 WorkSub(
                     year=("", ""),
                     title=("", "e-commerce website"),
-                    details=("", "\\href{https://commerce.com}{buyandsell.com}"),
+                    subtitle=("", "subtitle"),
+                    authors=("", "Author list"),
+                    content=("", "App to sell stuff"),
+                    contentShort=("", "App to sell stuff"),
+                    externalLink=("", "\\href{https://commerce.com}{buyandsell.com}"),
+                    repository=("", "\\href{https://github.com}{Github}"),
                     comment=("", "COMMENT"),
                     include=("", "true"),
                 ),

@@ -7,9 +7,13 @@
         "WORK_content": [
             "",
             [
-                "<scripts.classes.sections.Works.WorkSub object at 0x104c6b380>",
-                "<scripts.classes.sections.Works.WorkSub object at 0x104c6b7d0>"
+                "<scripts.classes.sections.Works.WorkSub object at 0x000001CFED799FA0>",
+                "<scripts.classes.sections.Works.WorkSub object at 0x000001CFED76D490>"
             ]
+        ],
+        "WORK_description": [
+            "",
+            "Software development projects for the web"
         ],
         "WORK_groupTitle": [
             "",
